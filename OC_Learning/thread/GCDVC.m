@@ -23,7 +23,8 @@
 {
 //    [self asyncConcurrent];
 //    [self asyncSerial];
-    [self syncConcurrent];
+//    [self syncConcurrent];
+    [self barier];
 }
 //异步函数+并发队列
 -(void)asyncConcurrent
@@ -148,6 +149,25 @@
 }
 -(void) task
 {
-    NSLog(@"%@",__func__);
+    NSLog(@"%s",__func__);
 }
+
+-(void) barier
+{
+    dispatch_queue_t queue = dispatch_queue_create("ds", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_sync(queue, ^{
+        NSLog(@"missionA:%@",[NSThread currentThread]);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"missionB:%@",[NSThread currentThread]);
+    });
+    //栅栏函数,同步函数没有必要使用栅栏函数,栅栏函数不能使用全局并发队列
+    dispatch_barrier_async(queue, ^{
+        NSLog(@"+++++++++++++++");
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"missionC:%@",[NSThread currentThread]);
+    });
+}
+
 @end
