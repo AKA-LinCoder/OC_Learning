@@ -52,9 +52,7 @@
 //    [self performSelector:@selector(showImage:) onThread:[NSThread mainThread] withObject:image waitUntilDone:YES];
     //第三种写法
     [self.imageView performSelector:@selector(setImage:) onThread:[NSThread mainThread] withObject:image waitUntilDone:YES];
-    NSLog(@"dsadas");
-    
-   
+
 }
 
 -(void) showImage:(UIImage *) image
@@ -62,6 +60,7 @@
    
     self.imageView.image = image;
     NSLog(@"%@",[NSThread currentThread]);
+    
 }
 
 

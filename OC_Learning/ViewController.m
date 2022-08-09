@@ -10,6 +10,7 @@
 #import "NSThreadVC.h"
 #import "ThreadSafetyVC.h"
 #import "ThreadSendInfoVC.h"
+#import "GCDVC.h"
 
 
 
@@ -84,6 +85,9 @@
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==3){
         ThreadSendInfoVC *vc = [[ThreadSendInfoVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row==4){
+        GCDVC *vc = [[GCDVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
     
