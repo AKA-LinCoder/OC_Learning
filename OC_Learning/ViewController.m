@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import "PthreadVC.h"
 #import "NSThreadVC.h"
+#import "ThreadSafetyVC.h"
+#import "ThreadSendInfoVC.h"
 
 
 
@@ -32,7 +34,7 @@
     //2.获取当前线程
     NSThread *currentThread = [NSThread currentThread];
     NSLog(@"%@",currentThread);
-    self.array = @[@"pthread",@"NSThread",@"GCD",@"NSOperation"];
+    self.array = @[@"pthread",@"NSThread",@"线程安全",@"线程间通信",@"GCD",@"NSOperation"];
     [self.view addSubview:self.tableView];
 }
 
@@ -76,6 +78,12 @@
        
     }else if(indexPath.row==1){
         NSThreadVC *vc = [[NSThreadVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row==2){
+        ThreadSafetyVC *vc = [[ThreadSafetyVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row==3){
+        ThreadSendInfoVC *vc = [[ThreadSendInfoVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
     

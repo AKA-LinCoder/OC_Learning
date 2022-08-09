@@ -16,6 +16,8 @@
 		6934223728918CD2007561A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934223628918CD2007561A1 /* main.m */; };
 		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
 		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
+		6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864628A26CB800F4239C /* ThreadSafetyVC.m */; };
+		6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864928A279D200F4239C /* ThreadSendInfoVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
 		6973863F28A24AAB00F4239C /* NSThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
 		6973864128A2526000F4239C /* .gitgnore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitgnore.md; sourceTree = "<group>"; };
+		6973864528A26CB800F4239C /* ThreadSafetyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadSafetyVC.h; sourceTree = "<group>"; };
+		6973864628A26CB800F4239C /* ThreadSafetyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadSafetyVC.m; sourceTree = "<group>"; };
+		6973864828A279D200F4239C /* ThreadSendInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadSendInfoVC.h; sourceTree = "<group>"; };
+		6973864928A279D200F4239C /* ThreadSendInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadSendInfoVC.m; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,10 @@
 				6973863C28A23B4100F4239C /* PthreadVC.m */,
 				6973863E28A24AAB00F4239C /* NSThreadVC.h */,
 				6973863F28A24AAB00F4239C /* NSThreadVC.m */,
+				6973864528A26CB800F4239C /* ThreadSafetyVC.h */,
+				6973864628A26CB800F4239C /* ThreadSafetyVC.m */,
+				6973864828A279D200F4239C /* ThreadSendInfoVC.h */,
+				6973864928A279D200F4239C /* ThreadSendInfoVC.m */,
 			);
 			path = thread;
 			sourceTree = "<group>";
@@ -172,6 +182,8 @@
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
+				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
+				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
 			);
