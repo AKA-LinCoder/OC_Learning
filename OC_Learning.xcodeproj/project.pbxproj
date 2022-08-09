@@ -14,6 +14,9 @@
 		6934223128918CD2007561A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6934223028918CD2007561A1 /* Assets.xcassets */; };
 		6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6934223228918CD2007561A1 /* LaunchScreen.storyboard */; };
 		6934223728918CD2007561A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934223628918CD2007561A1 /* main.m */; };
+		6973863328A1FB4700F4239C /* MyableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863228A1FB4700F4239C /* MyableViewController.m */; };
+		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
+		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,14 @@
 		6934223328918CD2007561A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6934223528918CD2007561A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6934223628918CD2007561A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6973863128A1FB4700F4239C /* MyableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyableViewController.h; sourceTree = "<group>"; };
+		6973863228A1FB4700F4239C /* MyableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyableViewController.m; sourceTree = "<group>"; };
+		6973863B28A23B4100F4239C /* PthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadVC.h; sourceTree = "<group>"; };
+		6973863C28A23B4100F4239C /* PthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadVC.m; sourceTree = "<group>"; };
+		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
+		6973863F28A24AAB00F4239C /* NSThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
+		6973864128A2526000F4239C /* .gitgnore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitgnore.md; sourceTree = "<group>"; };
+		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +56,7 @@
 		6934221828918CD0007561A1 = {
 			isa = PBXGroup;
 			children = (
+				6973864128A2526000F4239C /* .gitgnore.md */,
 				6934222328918CD0007561A1 /* OC_Learning */,
 				6934222228918CD0007561A1 /* Products */,
 			);
@@ -61,6 +73,7 @@
 		6934222328918CD0007561A1 /* OC_Learning */ = {
 			isa = PBXGroup;
 			children = (
+				6973863428A23A5800F4239C /* thread */,
 				6934222428918CD0007561A1 /* AppDelegate.h */,
 				6934222528918CD0007561A1 /* AppDelegate.m */,
 				6934222728918CD0007561A1 /* SceneDelegate.h */,
@@ -72,8 +85,22 @@
 				6934223228918CD2007561A1 /* LaunchScreen.storyboard */,
 				6934223528918CD2007561A1 /* Info.plist */,
 				6934223628918CD2007561A1 /* main.m */,
+				69D61FEC289EAB8800123581 /* SportProtocol.h */,
+				6973863128A1FB4700F4239C /* MyableViewController.h */,
+				6973863228A1FB4700F4239C /* MyableViewController.m */,
 			);
 			path = OC_Learning;
+			sourceTree = "<group>";
+		};
+		6973863428A23A5800F4239C /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				6973863B28A23B4100F4239C /* PthreadVC.h */,
+				6973863C28A23B4100F4239C /* PthreadVC.m */,
+				6973863E28A24AAB00F4239C /* NSThreadVC.h */,
+				6973863F28A24AAB00F4239C /* NSThreadVC.m */,
+			);
+			path = thread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
+				6973863328A1FB4700F4239C /* MyableViewController.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
+				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
+				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
