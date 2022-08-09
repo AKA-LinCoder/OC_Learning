@@ -19,6 +19,7 @@
 		6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864628A26CB800F4239C /* ThreadSafetyVC.m */; };
 		6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864928A279D200F4239C /* ThreadSendInfoVC.m */; };
 		6973864D28A289C800F4239C /* GCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864C28A289C800F4239C /* GCDVC.m */; };
+		6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		6973864928A279D200F4239C /* ThreadSendInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadSendInfoVC.m; sourceTree = "<group>"; };
 		6973864B28A289C800F4239C /* GCDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDVC.h; sourceTree = "<group>"; };
 		6973864C28A289C800F4239C /* GCDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDVC.m; sourceTree = "<group>"; };
+		6973864E28A29ADD00F4239C /* GCDSendInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSendInfoVC.h; sourceTree = "<group>"; };
+		6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSendInfoVC.m; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +112,8 @@
 				6973864928A279D200F4239C /* ThreadSendInfoVC.m */,
 				6973864B28A289C800F4239C /* GCDVC.h */,
 				6973864C28A289C800F4239C /* GCDVC.m */,
+				6973864E28A29ADD00F4239C /* GCDSendInfoVC.h */,
+				6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */,
 			);
 			path = thread;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
+				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
