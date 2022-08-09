@@ -125,4 +125,29 @@
     });
     
 }
+//延迟执行
+-(void) delay
+{
+    //1.
+    [self performSelector:@selector(task) withObject:nil afterDelay:2.0];
+    //2.
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(task) userInfo:nil repeats:YES];
+    //3.
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self task];
+    });
+}
+//一次性代码,整个应用程序中只会执行一次
+-(void) once
+{
+    //不能放在懒加载中，主要用在单例设计模式
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"once");
+    });
+}
+-(void) task
+{
+    NSLog(@"%@",__func__);
+}
 @end
