@@ -14,7 +14,6 @@
 		6934223128918CD2007561A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6934223028918CD2007561A1 /* Assets.xcassets */; };
 		6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6934223228918CD2007561A1 /* LaunchScreen.storyboard */; };
 		6934223728918CD2007561A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934223628918CD2007561A1 /* main.m */; };
-		6973863328A1FB4700F4239C /* MyableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863228A1FB4700F4239C /* MyableViewController.m */; };
 		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
 		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
 /* End PBXBuildFile section */
@@ -32,8 +31,6 @@
 		6934223328918CD2007561A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6934223528918CD2007561A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6934223628918CD2007561A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6973863128A1FB4700F4239C /* MyableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyableViewController.h; sourceTree = "<group>"; };
-		6973863228A1FB4700F4239C /* MyableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyableViewController.m; sourceTree = "<group>"; };
 		6973863B28A23B4100F4239C /* PthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadVC.h; sourceTree = "<group>"; };
 		6973863C28A23B4100F4239C /* PthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadVC.m; sourceTree = "<group>"; };
 		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
@@ -86,8 +83,6 @@
 				6934223528918CD2007561A1 /* Info.plist */,
 				6934223628918CD2007561A1 /* main.m */,
 				69D61FEC289EAB8800123581 /* SportProtocol.h */,
-				6973863128A1FB4700F4239C /* MyableViewController.h */,
-				6973863228A1FB4700F4239C /* MyableViewController.m */,
 			);
 			path = OC_Learning;
 			sourceTree = "<group>";
@@ -174,7 +169,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
-				6973863328A1FB4700F4239C /* MyableViewController.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
