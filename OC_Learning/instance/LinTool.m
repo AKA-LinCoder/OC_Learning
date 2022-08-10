@@ -6,6 +6,7 @@
 //
 
 #import "LinTool.h"
+
 //单例
 @implementation LinTool
 //0.提供全局变量
@@ -45,4 +46,13 @@ static LinTool *_intance;
 - (nonnull id)mutableCopyWithZone:(nullable NSZone *)zone {
     return  _intance;
 }
+
+//MRC模式下，需要重写release(重写，里面什么也没有，让引用计数器无法减一),retain(返回_instance),retainCount(返回一个很大的数)方法
+#if __has_feature(objc_arc)
+//NSLog(@"已开启ARC");
+#else
+//NSLog(@"MRC");
+
+#endif
 @end
+

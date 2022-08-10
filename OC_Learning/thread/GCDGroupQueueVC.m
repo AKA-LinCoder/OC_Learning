@@ -19,6 +19,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.imageView];
+#if __has_feature(objc_arc)
+NSLog(@"已开启ARC");
+#else
+NSLog(@"MRC");
+
+#endif
 }
 - (UIImageView *)imageView
 {

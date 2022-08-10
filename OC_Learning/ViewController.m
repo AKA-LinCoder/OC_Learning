@@ -13,6 +13,7 @@
 #import "GCDVC.h"
 #import "GCDSendInfoVC.h"
 #import "GCDGroupQueueVC.h"
+#import "NSOperationVC.h"
 
 
 
@@ -96,6 +97,9 @@
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==6){
         GCDGroupQueueVC *vc = [[GCDGroupQueueVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if(indexPath.row ==7){
+        NSOperationVC *vc = [[NSOperationVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
     
