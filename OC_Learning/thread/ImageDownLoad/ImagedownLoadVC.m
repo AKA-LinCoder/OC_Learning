@@ -61,6 +61,13 @@
     
    
 }
+- (void)didReceiveMemoryWarning
+{
+    //避免内存警告
+    //不会影响当前显示的图片
+    [self.images removeAllObjects];
+    [self.queue cancelAllOperations];
+}
 
 #pragma mark - Table view data source
 
