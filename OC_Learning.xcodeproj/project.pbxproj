@@ -18,6 +18,7 @@
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
 		695E8CEC28A3881400A7914A /* LinOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CEB28A3881400A7914A /* LinOperation.m */; };
+		695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CEE28A3982300A7914A /* NSOperationSerndInfoVC.m */; };
 		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
 		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
 		6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864628A26CB800F4239C /* ThreadSafetyVC.m */; };
@@ -48,6 +49,8 @@
 		695E8CE628A37D0000A7914A /* NSOperationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationVC.m; sourceTree = "<group>"; };
 		695E8CEA28A3881400A7914A /* LinOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinOperation.h; sourceTree = "<group>"; };
 		695E8CEB28A3881400A7914A /* LinOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinOperation.m; sourceTree = "<group>"; };
+		695E8CED28A3982300A7914A /* NSOperationSerndInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationSerndInfoVC.h; sourceTree = "<group>"; };
+		695E8CEE28A3982300A7914A /* NSOperationSerndInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationSerndInfoVC.m; sourceTree = "<group>"; };
 		6973863B28A23B4100F4239C /* PthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadVC.h; sourceTree = "<group>"; };
 		6973863C28A23B4100F4239C /* PthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadVC.m; sourceTree = "<group>"; };
 		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				695E8CE628A37D0000A7914A /* NSOperationVC.m */,
 				695E8CEA28A3881400A7914A /* LinOperation.h */,
 				695E8CEB28A3881400A7914A /* LinOperation.m */,
+				695E8CED28A3982300A7914A /* NSOperationSerndInfoVC.h */,
+				695E8CEE28A3982300A7914A /* NSOperationSerndInfoVC.m */,
 			);
 			path = NSOperations;
 			sourceTree = "<group>";
@@ -155,19 +160,35 @@
 			path = GCDs;
 			sourceTree = "<group>";
 		};
-		6973863428A23A5800F4239C /* thread */ = {
+		695E8CF128A3A54300A7914A /* NSThreads */ = {
 			isa = PBXGroup;
 			children = (
-				695E8CE928A387F000A7914A /* GCDs */,
-				695E8CE828A387D000A7914A /* NSOperations */,
-				6973863B28A23B4100F4239C /* PthreadVC.h */,
-				6973863C28A23B4100F4239C /* PthreadVC.m */,
 				6973863E28A24AAB00F4239C /* NSThreadVC.h */,
 				6973863F28A24AAB00F4239C /* NSThreadVC.m */,
 				6973864528A26CB800F4239C /* ThreadSafetyVC.h */,
 				6973864628A26CB800F4239C /* ThreadSafetyVC.m */,
 				6973864828A279D200F4239C /* ThreadSendInfoVC.h */,
 				6973864928A279D200F4239C /* ThreadSendInfoVC.m */,
+			);
+			path = NSThreads;
+			sourceTree = "<group>";
+		};
+		695E8CF228A3A59800A7914A /* ImageDownLoad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageDownLoad;
+			sourceTree = "<group>";
+		};
+		6973863428A23A5800F4239C /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				695E8CF228A3A59800A7914A /* ImageDownLoad */,
+				695E8CF128A3A54300A7914A /* NSThreads */,
+				695E8CE928A387F000A7914A /* GCDs */,
+				695E8CE828A387D000A7914A /* NSOperations */,
+				6973863B28A23B4100F4239C /* PthreadVC.h */,
+				6973863C28A23B4100F4239C /* PthreadVC.m */,
 			);
 			path = thread;
 			sourceTree = "<group>";
@@ -249,6 +270,7 @@
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
+				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,

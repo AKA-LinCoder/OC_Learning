@@ -42,8 +42,17 @@
 }
 -(void) blockOperation
 {
-    //追加任务
+    
     NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"%@",[NSThread currentThread]);
+    }];
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"%@",[NSThread currentThread]);
+    }];
+    NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"%@",[NSThread currentThread]);
+    }];
+    NSBlockOperation *op4 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"%@",[NSThread currentThread]);
     }];
     //追加任务
@@ -51,13 +60,28 @@
     [op1 addExecutionBlock:^{
         NSLog(@"这是一条追加任务");
     }];
+    
+    //添加操作依赖，控制执行顺序，可以跨队列依赖
+    //注意点：不能循环依赖，不会奔溃，但是谁都不会执行
+    [op1 addDependency:op4];
+    [op4 addDependency:op3];
+    [op3 addDependency:op2];
 
+    
+    //操作监听,当任务3执行完毕后执行，但是不一定是任务3执行完后马上执行，因为可能存在并发操作
+    op3.completionBlock = ^{
+        //操作监听的所在线程并不一定是任务所在的线程
+        NSLog(@"任务3执行完毕%@",[NSThread currentThread]);
+    };
     
 //    [op1 start];
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
     [queue addOperation:op1];
+    [queue addOperation:op2];
+    [queue addOperation:op3];
+    [queue addOperation:op4];
     
     //简便方法
     [queue addOperationWithBlock:^{

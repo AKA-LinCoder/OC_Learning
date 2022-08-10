@@ -14,6 +14,7 @@
 #import "GCDSendInfoVC.h"
 #import "GCDGroupQueueVC.h"
 #import "NSOperationVC.h"
+#import "NSOperationSerndInfoVC.h"
 
 
 
@@ -38,7 +39,7 @@
     //2.获取当前线程
     NSThread *currentThread = [NSThread currentThread];
     NSLog(@"%@",currentThread);
-    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation"];
+    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载"];
     [self.view addSubview:self.tableView];
 }
 
@@ -100,6 +101,9 @@
         [self presentViewController:vc animated:YES completion:nil];
     }else if(indexPath.row ==7){
         NSOperationVC *vc = [[NSOperationVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row == 8){
+        NSOperationSerndInfoVC *vc = [[NSOperationSerndInfoVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
     
