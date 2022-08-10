@@ -21,10 +21,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self asyncConcurrent];
-//    [self asyncSerial];
-//    [self syncConcurrent];
-    [self barier];
+    //    [self asyncConcurrent];
+    //    [self asyncSerial];
+    //    [self syncConcurrent];
+//    [self barier];
+    [self moveFileByGCD];
 }
 //异步函数+并发队列
 -(void)asyncConcurrent
@@ -152,6 +153,7 @@
     NSLog(@"%s",__func__);
 }
 
+/// GCD栅栏函数
 -(void) barier
 {
     dispatch_queue_t queue = dispatch_queue_create("ds", DISPATCH_QUEUE_CONCURRENT);
@@ -170,4 +172,58 @@
     });
 }
 
+
+/// GCD快速迭代：开子线程和主线程一起执行任务，里面的执行顺序是并发的，顺序是不固定的
+-(void) aply
+{
+    
+    //for循环是普通迭代
+    /**快速迭代
+     第一个参数：遍历的次数
+     第二个参数：并发队列
+     第三个参数：index 索引
+     */
+    dispatch_apply(10, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t index) {
+        
+    });
+}
+///
+-(void) moveFile
+{
+    NSLog(@"%s",__func__);
+    //1.拿到文件路径
+    NSString *oldPath = @"/Users/lsaac/Desktop/Estim";
+    //2.获得目标文件路径
+    NSString *newPath = @"/Users/lsaac/Desktop/to";
+    //3.得到目录下所有文件
+    NSArray *subpaths = [[NSFileManager defaultManager] subpathsAtPath:oldPath];
+    //4.遍历所有文件，然后执行剪切操作
+    NSInteger count = subpaths.count;
+    for (NSInteger i = 0; i<count; i++) {
+        NSString *fullPath = [oldPath stringByAppendingPathComponent:subpaths[i]];
+        NSString *toPath = [newPath stringByAppendingPathComponent:subpaths[i]];
+        NSLog(@"%@",fullPath);
+        [[NSFileManager defaultManager] moveItemAtPath:fullPath toPath:toPath error:nil];
+    }
+}
+/// 使用快速迭代移动文件
+-(void) moveFileByGCD
+{
+    NSLog(@"%s",__func__);
+    //1.拿到文件路径
+    NSString *oldPath = @"/Users/lsaac/Desktop/Estim";
+    //2.获得目标文件路径
+    NSString *newPath = @"/Users/lsaac/Desktop/to";
+    //3.得到目录下所有文件
+    NSArray *subpaths = [[NSFileManager defaultManager] subpathsAtPath:oldPath];
+    //4.遍历所有文件，然后执行剪切操作
+    NSInteger count = subpaths.count;
+    dispatch_apply(count, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
+        NSString *fullPath = [oldPath stringByAppendingPathComponent:subpaths[i]];
+        NSString *toPath = [newPath stringByAppendingPathComponent:subpaths[i]];
+        NSLog(@"%@",fullPath);
+        [[NSFileManager defaultManager] moveItemAtPath:fullPath toPath:toPath error:nil];
+    });
+
+}
 @end
