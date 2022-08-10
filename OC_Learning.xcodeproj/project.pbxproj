@@ -17,6 +17,7 @@
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
+		695E8CEC28A3881400A7914A /* LinOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CEB28A3881400A7914A /* LinOperation.m */; };
 		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
 		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
 		6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864628A26CB800F4239C /* ThreadSafetyVC.m */; };
@@ -45,6 +46,8 @@
 		695E8CE428A3639A00A7914A /* Single.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Single.h; sourceTree = "<group>"; };
 		695E8CE528A37D0000A7914A /* NSOperationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationVC.h; sourceTree = "<group>"; };
 		695E8CE628A37D0000A7914A /* NSOperationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationVC.m; sourceTree = "<group>"; };
+		695E8CEA28A3881400A7914A /* LinOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinOperation.h; sourceTree = "<group>"; };
+		695E8CEB28A3881400A7914A /* LinOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinOperation.m; sourceTree = "<group>"; };
 		6973863B28A23B4100F4239C /* PthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadVC.h; sourceTree = "<group>"; };
 		6973863C28A23B4100F4239C /* PthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadVC.m; sourceTree = "<group>"; };
 		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
@@ -128,9 +131,35 @@
 			path = header;
 			sourceTree = "<group>";
 		};
+		695E8CE828A387D000A7914A /* NSOperations */ = {
+			isa = PBXGroup;
+			children = (
+				695E8CE528A37D0000A7914A /* NSOperationVC.h */,
+				695E8CE628A37D0000A7914A /* NSOperationVC.m */,
+				695E8CEA28A3881400A7914A /* LinOperation.h */,
+				695E8CEB28A3881400A7914A /* LinOperation.m */,
+			);
+			path = NSOperations;
+			sourceTree = "<group>";
+		};
+		695E8CE928A387F000A7914A /* GCDs */ = {
+			isa = PBXGroup;
+			children = (
+				6973864B28A289C800F4239C /* GCDVC.h */,
+				6973864C28A289C800F4239C /* GCDVC.m */,
+				6973864E28A29ADD00F4239C /* GCDSendInfoVC.h */,
+				6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */,
+				695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */,
+				695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */,
+			);
+			path = GCDs;
+			sourceTree = "<group>";
+		};
 		6973863428A23A5800F4239C /* thread */ = {
 			isa = PBXGroup;
 			children = (
+				695E8CE928A387F000A7914A /* GCDs */,
+				695E8CE828A387D000A7914A /* NSOperations */,
 				6973863B28A23B4100F4239C /* PthreadVC.h */,
 				6973863C28A23B4100F4239C /* PthreadVC.m */,
 				6973863E28A24AAB00F4239C /* NSThreadVC.h */,
@@ -139,14 +168,6 @@
 				6973864628A26CB800F4239C /* ThreadSafetyVC.m */,
 				6973864828A279D200F4239C /* ThreadSendInfoVC.h */,
 				6973864928A279D200F4239C /* ThreadSendInfoVC.m */,
-				6973864B28A289C800F4239C /* GCDVC.h */,
-				6973864C28A289C800F4239C /* GCDVC.m */,
-				6973864E28A29ADD00F4239C /* GCDSendInfoVC.h */,
-				6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */,
-				695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */,
-				695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */,
-				695E8CE528A37D0000A7914A /* NSOperationVC.h */,
-				695E8CE628A37D0000A7914A /* NSOperationVC.m */,
 			);
 			path = thread;
 			sourceTree = "<group>";
@@ -232,6 +253,7 @@
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
+				695E8CEC28A3881400A7914A /* LinOperation.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
 				695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */,
 			);

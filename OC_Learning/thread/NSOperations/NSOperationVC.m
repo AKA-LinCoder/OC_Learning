@@ -6,6 +6,7 @@
 //
 
 #import "NSOperationVC.h"
+#import "LinOperation.h"
 
 @interface NSOperationVC ()
 
@@ -64,9 +65,22 @@
     }];
     
 }
+//使用自定义Operation
 -(void) downLoad1
 {
+    //使用场景1，可以将大量的任务
     NSLog(@"%s",__func__);
+    LinOperation *op1 = [[LinOperation alloc] init];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:op1];
+    //将queue由并发队列变为串行队列，将最大并发数1(同一时间可以同时进行的任务为1，就代表所有任务都是串行执行)
+    //误区：串行执行任务不等于只开一条线程(线程同步)
+    //maxConcurrentOperationCount>1并发队列
+    //maxConcurrentOperationCount==1串行队列
+    //maxConcurrentOperationCount==0不会执行任务
+    //maxConcurrentOperationCount==-1 特殊意义，在大部分情况下-1表示最大值，表示不受限制
+    queue.maxConcurrentOperationCount = 1;
+    
 }
 
 @end
