@@ -79,20 +79,46 @@
     //1.UI不流畅->开子线程
     //2.图片被重复下载 ->先把之前已经下载的图片保存起来用字典
 
-    //先查看内存缓存中十分存在，不存在再下载
+    //先查看内存缓存中十分存在，不存在再查看磁盘缓存没有再下载
     UIImage *img = [self.images objectForKey:app.icon];
     if(img){
         cell.imageView.image = img;
         NSLog(@"使用旧图片");
     }else{
-        NSURL *url = [NSURL URLWithString:app.icon];
-        NSData *imageData = [NSData dataWithContentsOfURL:url];
-        UIImage *image = [UIImage imageWithData:imageData];
-        cell.imageView.image = image;
-        NSLog(@"下载新图片");
-        //把图片进行保存
-       [self.images setObject:image forKey:app.icon];
+        //没有下载过
+        //重新打开程序
+        //检查磁盘缓存
+        NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+        NSString *fileName = [app.icon lastPathComponent];
+        NSString *fullPath = [caches stringByAppendingPathComponent:fileName];
+        NSData *imageData = [NSData dataWithContentsOfFile:fullPath];
+        if(imageData){
+            UIImage *image = [UIImage imageWithData:imageData];
+            cell.imageView.image = image;
+            //把图片进行内存缓存
+           [self.images setObject:image forKey:app.icon];
+        }else{
+            NSURL *url = [NSURL URLWithString:app.icon];
+            NSData *imageData = [NSData dataWithContentsOfURL:url];
+            UIImage *image = [UIImage imageWithData:imageData];
+            cell.imageView.image = image;
+            NSLog(@"下载新图片");
+            //把图片进行内存缓存
+           [self.images setObject:image forKey:app.icon];
+            //把图片保存到Caches路径
+           
+            //写数据到磁盘
+            [imageData writeToFile:fullPath atomically:YES];
+        }
+       
     }
+    
+    ///内存缓存---->磁盘缓存
+    ///Document:会备份，不允许放缓存文件
+    ///tmp:临时路径,随时被删除
+    ///Library：
+    ///     Caches：保存缓存文件，使用这个文件夹
+    ///     Preferences:偏好设置，保存账号
   
     
  
