@@ -19,6 +19,10 @@
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
 		695E8CEC28A3881400A7914A /* LinOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CEB28A3881400A7914A /* LinOperation.m */; };
 		695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CEE28A3982300A7914A /* NSOperationSerndInfoVC.m */; };
+		695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CF428A3D33A00A7914A /* ImagedownLoadVC.m */; };
+		695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695E8CF528A3D33A00A7914A /* ImagedownLoadVC.xib */; };
+		695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CF928A3D63F00A7914A /* LinAPP.m */; };
+		695E8CFC28A3D7B500A7914A /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 695E8CFB28A3D7B500A7914A /* apps.plist */; };
 		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
 		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
 		6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864628A26CB800F4239C /* ThreadSafetyVC.m */; };
@@ -51,6 +55,12 @@
 		695E8CEB28A3881400A7914A /* LinOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinOperation.m; sourceTree = "<group>"; };
 		695E8CED28A3982300A7914A /* NSOperationSerndInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationSerndInfoVC.h; sourceTree = "<group>"; };
 		695E8CEE28A3982300A7914A /* NSOperationSerndInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationSerndInfoVC.m; sourceTree = "<group>"; };
+		695E8CF328A3D33A00A7914A /* ImagedownLoadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagedownLoadVC.h; sourceTree = "<group>"; };
+		695E8CF428A3D33A00A7914A /* ImagedownLoadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagedownLoadVC.m; sourceTree = "<group>"; };
+		695E8CF528A3D33A00A7914A /* ImagedownLoadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagedownLoadVC.xib; sourceTree = "<group>"; };
+		695E8CF828A3D63F00A7914A /* LinAPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinAPP.h; sourceTree = "<group>"; };
+		695E8CF928A3D63F00A7914A /* LinAPP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinAPP.m; sourceTree = "<group>"; };
+		695E8CFB28A3D7B500A7914A /* apps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps.plist; sourceTree = "<group>"; };
 		6973863B28A23B4100F4239C /* PthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadVC.h; sourceTree = "<group>"; };
 		6973863C28A23B4100F4239C /* PthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadVC.m; sourceTree = "<group>"; };
 		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
@@ -176,6 +186,12 @@
 		695E8CF228A3A59800A7914A /* ImageDownLoad */ = {
 			isa = PBXGroup;
 			children = (
+				695E8CFB28A3D7B500A7914A /* apps.plist */,
+				695E8CF328A3D33A00A7914A /* ImagedownLoadVC.h */,
+				695E8CF428A3D33A00A7914A /* ImagedownLoadVC.m */,
+				695E8CF528A3D33A00A7914A /* ImagedownLoadVC.xib */,
+				695E8CF828A3D63F00A7914A /* LinAPP.h */,
+				695E8CF928A3D63F00A7914A /* LinAPP.m */,
 			);
 			path = ImageDownLoad;
 			sourceTree = "<group>";
@@ -250,8 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
+				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
 				6934222F28918CD0007561A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,11 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
+				695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
