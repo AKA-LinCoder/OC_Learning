@@ -132,10 +132,19 @@
                     NSURL *url = [NSURL URLWithString:app.icon];
                     NSData *imageData = [NSData dataWithContentsOfURL:url];
                     
-                    //模拟网速慢
-                    [NSThread sleepForTimeInterval:2];
+//                    //模拟网速慢
+//                    [NSThread sleepForTimeInterval:2];
                     
                     UIImage *image = [UIImage imageWithData:imageData];
+                    
+                    //增加容错处理
+                    if(!image){
+                        //将操作移除操作字典，为了下一次到这里还能再次访问
+                        [self.operations removeObjectForKey:app.icon];
+                        return;
+                    }
+                    //把图片进行内存缓存
+                   [self.images setObject:image forKey:app.icon];
                     //线程间通信
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                         
@@ -144,8 +153,7 @@
                                     }];
                    
                     NSLog(@"下载新图片");
-                    //把图片进行内存缓存
-                   [self.images setObject:image forKey:app.icon];
+                 
                     //把图片保存到Caches路径
                    
                     //写数据到磁盘
