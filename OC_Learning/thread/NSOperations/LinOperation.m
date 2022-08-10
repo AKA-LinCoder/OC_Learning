@@ -12,7 +12,14 @@
 //1.有利于代码隐蔽
 //2.有利于代码复用
 - (void)main
+//这里面是一个任务
 {
     NSLog(@"LinOperation");
+    //苹果官方的建议
+    if(self.isCancelled) return;
+    NSLog(@"LinOperation2");
+    if(self.isCancelled) return;
 }
+
+
 @end

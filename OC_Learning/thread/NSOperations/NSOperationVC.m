@@ -80,6 +80,14 @@
     //maxConcurrentOperationCount==0不会执行任务
     //maxConcurrentOperationCount==-1 特殊意义，在大部分情况下-1表示最大值，表示不受限制
     queue.maxConcurrentOperationCount = 1;
+    //暂停任务,可以恢复，不能暂停当前正在执行的任务，当任务执行完毕后会暂停
+    [queue setSuspended:YES];
+//    queue.suspended = YES;
+    //恢复
+//    queue.suspended = NO;
+    [queue setSuspended:NO];
+    //取消任务,不可恢复，内部调用了cancel方法
+    [queue cancelAllOperations];
     
 }
 
