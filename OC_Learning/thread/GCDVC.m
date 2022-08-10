@@ -95,7 +95,7 @@
     //获取全局并发队列
     //第一个参数：优先级四个枚举
     //
-    dispatch_queue_t queue2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_queue_t queue2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 }
 //异步函数+主队列
 -(void)asyncMain
