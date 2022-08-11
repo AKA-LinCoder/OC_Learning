@@ -20,7 +20,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self task];
+    [self startt];
 }
 
 -(void) task
@@ -113,6 +113,20 @@
     //取消任务,不可恢复，内部调用了cancel方法
     [queue cancelAllOperations];
     
+}
+
+/// main方法和start方法关系
+ -(void) startt
+{
+    LinOperation *op1 = [[LinOperation alloc] init];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    //addOperation内部调用start方法，start方法调用main方法
+    [queue addOperation:op1];
+    
+    
+    NSThread *thread = [[NSThread alloc] init];
+    //通过alloc想要实现任务，需要继承NSThread，重写main方法
+    [thread start];
 }
 
 @end

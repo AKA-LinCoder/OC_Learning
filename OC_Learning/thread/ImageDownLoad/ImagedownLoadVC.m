@@ -53,7 +53,7 @@
         }
         _apps = arrM;
     }
-    return _apps; 　　　　　　　　　　　　　
+    return _apps;　　　　　　　　　
 }
 
 - (void)viewDidLoad {

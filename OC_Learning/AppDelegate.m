@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <SDWebImage/SDWebImage.h>
 @interface AppDelegate ()
 
 @end
@@ -36,5 +36,20 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
+/// 当内存警告时
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    //1.清空缓存
+    //clearDisk:清除过期(7天 "SDImageCacheConfig.h")缓存，计算当前缓存的大小，和设置的最大缓存数，如果超出会继续删除(按照文件创建的时间)
+    //cleanDisk: 全删
+    //以上已经找不到相关设置
+    [[SDWebImageManager sharedManager].imageCache clearWithCacheType:SDImageCacheTypeAll completion:^{
+        
+    }];
+    //2.取消当前所有操作
+    [[SDWebImageManager sharedManager] cancelAll];
+    
+    //3.最大并发数量
+}
 
 @end

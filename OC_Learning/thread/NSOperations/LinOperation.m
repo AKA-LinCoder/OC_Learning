@@ -21,5 +21,12 @@
     if(self.isCancelled) return;
 }
 
+- (void)start
+{
+    //main方法会自动调用start方法
+    NSLog(@"start");
+    [super start];
+    NSLog(@"end");
+}
 
 @end

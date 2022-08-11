@@ -30,6 +30,8 @@
 		6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864928A279D200F4239C /* ThreadSendInfoVC.m */; };
 		6973864D28A289C800F4239C /* GCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864C28A289C800F4239C /* GCDVC.m */; };
 		6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */; };
+		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
+		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,9 @@
 		6973864E28A29ADD00F4239C /* GCDSendInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSendInfoVC.h; sourceTree = "<group>"; };
 		6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSendInfoVC.m; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
+		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
+		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
+		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +104,6 @@
 				E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */,
 				67F3AD08DA232E89FE429F4B /* Pods-OC_Learning.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -224,6 +228,7 @@
 		6973863428A23A5800F4239C /* thread */ = {
 			isa = PBXGroup;
 			children = (
+				69E6FE2428A4E75A00896D4E /* SDWebImages */,
 				695E8CF228A3A59800A7914A /* ImageDownLoad */,
 				695E8CF128A3A54300A7914A /* NSThreads */,
 				695E8CE928A387F000A7914A /* GCDs */,
@@ -232,6 +237,16 @@
 				6973863C28A23B4100F4239C /* PthreadVC.m */,
 			);
 			path = thread;
+			sourceTree = "<group>";
+		};
+		69E6FE2428A4E75A00896D4E /* SDWebImages */ = {
+			isa = PBXGroup;
+			children = (
+				69E6FE2828A4E7AF00896D4E /* SDWebVC.h */,
+				69E6FE2928A4E7AF00896D4E /* SDWebVC.m */,
+				69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */,
+			);
+			path = SDWebImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
@@ -356,6 +372,7 @@
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
+				69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */,
 				695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
