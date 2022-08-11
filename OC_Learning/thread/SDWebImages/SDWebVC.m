@@ -37,6 +37,7 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage sd_imageWithGIFData:data];
     self.imageView.image = image;
+    NSLog(@"%@",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]);
 }
 
 /// 适用于简单获取一张图片
@@ -52,6 +53,7 @@
         } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
             NSLog(@"download2 OK");
             self.imageView.image = image;
+            NSLog(@"%@",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]);
         }];
         
 }
@@ -72,6 +74,7 @@
             NSLog(@"%@",[NSThread currentThread]);
             NSLog(@"download3 OK");
             self.imageView.image = image;
+            NSLog(@"%@",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]);
         }];
 }
 

@@ -49,7 +49,29 @@
     //2.取消当前所有操作
     [[SDWebImageManager sharedManager] cancelAll];
     
+    /**
+                SDWebImageManager
+        SDImageCache                   SDWebImageDownloader
+                        SDWebImageDwonloaderOpertion
+     */
+    
     //3.最大并发数量
+    //_maxConcurrentDownloads = 6; SDWebImageDownloaderConfig中
+    //
+    //4.缓存文件的保持名称如何处理
+    //对图片地址进行MD5加密,mac终端可以对文本进行md5加密，echo -n "要加密的文本" ｜md5
+    //5.该框架内部对内存警告的处理方法
+    //内部监听通知 #import "SDMemoryCache.h"
+    //6.队列中任务执行顺序
+    //SDWebImageDownloaderFIFOExecutionOrder；SDWebImageDownloaderConfig中
+    //7.该框架进行缓存处理的方式
+    //字典-->NSCache
+    //8.如果判断图片的类型
+    //将文件图片变为二进制数据，再匹配第一个字节(四位) #import "NSData+ImageContentType.h"
+    //9.如何下载图片的
+    //发送网络请求，IOS9之前 NSURLConnection iOS9之后 NSURLSession   #import "SDWebImageDownloaderOperation.h"
+    //10.请求超时时间
+    //15s SDWebImageDownloaderConfig中
 }
 
 @end
