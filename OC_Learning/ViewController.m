@@ -17,6 +17,7 @@
 #import "NSOperationSerndInfoVC.h"
 #import "ImagedownLoadVC.h"
 #import "SDWebVC.h"
+#import "NSCachesVC.h"
 
 
 
@@ -37,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages"];
+    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache"];
     [self.view addSubview:self.tableView];
 }
 
@@ -108,6 +109,9 @@
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==10){
         SDWebVC *vc = [[SDWebVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row==11){
+        NSCachesVC *vc = [[NSCachesVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
     

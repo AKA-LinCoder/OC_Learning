@@ -32,6 +32,8 @@
 		6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
+		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
+		69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE3328A5284300896D4E /* NSCachesVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,9 @@
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
 		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
+		69E6FE3128A5284300896D4E /* NSCachesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSCachesVC.h; sourceTree = "<group>"; };
+		69E6FE3228A5284300896D4E /* NSCachesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCachesVC.m; sourceTree = "<group>"; };
+		69E6FE3328A5284300896D4E /* NSCachesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSCachesVC.xib; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +233,7 @@
 		6973863428A23A5800F4239C /* thread */ = {
 			isa = PBXGroup;
 			children = (
+				69E6FE2D28A5280800896D4E /* NSCaches */,
 				69E6FE2428A4E75A00896D4E /* SDWebImages */,
 				695E8CF228A3A59800A7914A /* ImageDownLoad */,
 				695E8CF128A3A54300A7914A /* NSThreads */,
@@ -247,6 +253,16 @@
 				69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */,
 			);
 			path = SDWebImages;
+			sourceTree = "<group>";
+		};
+		69E6FE2D28A5280800896D4E /* NSCaches */ = {
+			isa = PBXGroup;
+			children = (
+				69E6FE3128A5284300896D4E /* NSCachesVC.h */,
+				69E6FE3228A5284300896D4E /* NSCachesVC.m */,
+				69E6FE3328A5284300896D4E /* NSCachesVC.xib */,
+			);
+			path = NSCaches;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
+				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
@@ -376,6 +393,7 @@
 				695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
+				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
