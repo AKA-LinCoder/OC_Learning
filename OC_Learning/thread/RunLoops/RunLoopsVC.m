@@ -8,7 +8,7 @@
 #import "RunLoopsVC.h"
 
 @interface RunLoopsVC ()
-
+@property(nonatomic,strong)dispatch_source_t timer;
 @end
 
 @implementation RunLoopsVC
@@ -26,7 +26,7 @@
     //创建子线程对应的runloop
     //currentRunLoop内部是懒加载的，所以如果不存在的话就会创建对应的runload
     [NSRunLoop currentRunLoop];
-    [self timer];
+    [self timerGCD];
     
     //这样是不会运行timer的，因为子线程默认没有runloop，必须手动创建
     [NSThread detachNewThreadSelector:@selector(timer2) toTarget:self withObject:nil];
@@ -61,5 +61,28 @@
     //runloop不会自动运行
     [runloop run];
 
+}
+-(void) timerGCD
+{
+    //1.创建一个GCD定时器
+    //不受runloop影响，绝对精准，NSlog中的是打印时间
+    //第一个参数：source类型 DISPATCH_SOURCE_TYPE_TIMER 表示是定时器
+    //第二个参数：描述信息，定时器用不到
+    //第三个参数：更详细的描述信息
+    //第四个参数：队列，决定GCD定时器的任务在哪个线程执行
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
+    //2.设置定时器
+    //第一个参数：定时器对象
+    //第二个参数：起始时间
+    //第三个参数：间隔时间 时间单位为纳秒
+    //第四个参数： 精准度，绝对精准 0
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(timer, ^{
+        NSLog(@"%@",[NSThread currentThread]);
+    });
+    //4.启动执行
+    dispatch_resume(timer);
+    //添加强引用避免被释放掉
+    self.timer = timer;
 }
 @end
