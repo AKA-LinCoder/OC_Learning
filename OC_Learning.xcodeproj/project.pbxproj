@@ -30,6 +30,8 @@
 		6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864928A279D200F4239C /* ThreadSendInfoVC.m */; };
 		6973864D28A289C800F4239C /* GCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864C28A289C800F4239C /* GCDVC.m */; };
 		6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */; };
+		69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */; };
+		69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
@@ -80,6 +82,9 @@
 		6973864C28A289C800F4239C /* GCDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDVC.m; sourceTree = "<group>"; };
 		6973864E28A29ADD00F4239C /* GCDSendInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSendInfoVC.h; sourceTree = "<group>"; };
 		6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSendInfoVC.m; sourceTree = "<group>"; };
+		69B3E6C428A5F21E0070AE3B /* RunLoopsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopsVC.h; sourceTree = "<group>"; };
+		69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopsVC.m; sourceTree = "<group>"; };
+		69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopsVC.xib; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
@@ -233,6 +238,7 @@
 		6973863428A23A5800F4239C /* thread */ = {
 			isa = PBXGroup;
 			children = (
+				69B3E6C328A5F1C50070AE3B /* RunLoops */,
 				69E6FE2D28A5280800896D4E /* NSCaches */,
 				69E6FE2428A4E75A00896D4E /* SDWebImages */,
 				695E8CF228A3A59800A7914A /* ImageDownLoad */,
@@ -243,6 +249,16 @@
 				6973863C28A23B4100F4239C /* PthreadVC.m */,
 			);
 			path = thread;
+			sourceTree = "<group>";
+		};
+		69B3E6C328A5F1C50070AE3B /* RunLoops */ = {
+			isa = PBXGroup;
+			children = (
+				69B3E6C428A5F21E0070AE3B /* RunLoopsVC.h */,
+				69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */,
+				69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */,
+			);
+			path = RunLoops;
 			sourceTree = "<group>";
 		};
 		69E6FE2428A4E75A00896D4E /* SDWebImages */ = {
@@ -326,6 +342,7 @@
 			files = (
 				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
+				69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
@@ -397,6 +414,7 @@
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
+				69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
 				695E8CEC28A3881400A7914A /* LinOperation.m in Sources */,

@@ -18,6 +18,7 @@
 #import "ImagedownLoadVC.h"
 #import "SDWebVC.h"
 #import "NSCachesVC.h"
+#import "RunLoopsVC.h"
 
 
 
@@ -38,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache"];
+    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop"];
     [self.view addSubview:self.tableView];
 }
 
@@ -112,6 +113,9 @@
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==11){
         NSCachesVC *vc = [[NSCachesVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row==12){
+        RunLoopsVC *vc = [[RunLoopsVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
     
