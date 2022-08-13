@@ -6,19 +6,9 @@
 //
 
 #import "ViewController.h"
-#import "PthreadVC.h"
-#import "NSThreadVC.h"
-#import "ThreadSafetyVC.h"
-#import "ThreadSendInfoVC.h"
-#import "GCDVC.h"
-#import "GCDSendInfoVC.h"
-#import "GCDGroupQueueVC.h"
-#import "NSOperationVC.h"
-#import "NSOperationSerndInfoVC.h"
-#import "ImagedownLoadVC.h"
-#import "SDWebVC.h"
-#import "NSCachesVC.h"
-#import "RunLoopsVC.h"
+#import "ThreadVC.h"
+#import "NetWorkVC.h"
+
 
 
 
@@ -39,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop"];
+    self.array = @[@"多线程",@"网络"];
     [self.view addSubview:self.tableView];
 }
 
@@ -78,44 +68,47 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row==0){
-        PthreadVC *vc = [[PthreadVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
        
     }else if(indexPath.row==1){
-        NSThreadVC *vc = [[NSThreadVC alloc] init];
+        NetWorkVC *vc = [[NetWorkVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==2){
-        ThreadSafetyVC *vc = [[ThreadSafetyVC alloc] init];
+        NetWorkVC *vc = [[NetWorkVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==3){
-        ThreadSendInfoVC *vc = [[ThreadSendInfoVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==4){
-        GCDVC *vc = [[GCDVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==5){
-        GCDSendInfoVC *vc = [[GCDSendInfoVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==6){
-        GCDGroupQueueVC *vc = [[GCDGroupQueueVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if(indexPath.row ==7){
-        NSOperationVC *vc = [[NSOperationVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row == 8){
-        NSOperationSerndInfoVC *vc = [[NSOperationSerndInfoVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==9){
-        ImagedownLoadVC *vc = [[ImagedownLoadVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==10){
-        SDWebVC *vc = [[SDWebVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==11){
-        NSCachesVC *vc = [[NSCachesVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==12){
-        RunLoopsVC *vc = [[RunLoopsVC alloc] init];
+        ThreadVC *vc = [[ThreadVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row==13){
+        ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
     

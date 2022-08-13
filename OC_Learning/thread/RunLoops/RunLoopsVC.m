@@ -95,8 +95,6 @@
 -(void) observer
 {
     
-    
-    
     //这个并不是监听
 //    [NSRunLoop currentRunLoop] addObserver:<#(nonnull NSObject *)#> forKeyPath:<#(nonnull NSString *)#> options:<#(NSKeyValueObservingOptions)#> context:<#(nullable void *)#>
     //创建监听者
