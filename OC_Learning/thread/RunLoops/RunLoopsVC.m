@@ -14,6 +14,7 @@
 @implementation RunLoopsVC
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"runloop%p",[NSRunLoop currentRunLoop]);
@@ -30,13 +31,19 @@
     
     //这样是不会运行timer的，因为子线程默认没有runloop，必须手动创建
     [NSThread detachNewThreadSelector:@selector(timer2) toTarget:self withObject:nil];
+    [self observer];
 }
+- (IBAction)btn:(id)sender {
+    NSLog(@"%s",__func__);
+}
+
 -(void) run
 {
+
     NSLog(@"run--%@",[NSRunLoop currentRunLoop].currentMode);
 }
 
--(void) timer
+-(void) timerr
 {
     //1.创建定时器,repeat是否重复
     NSTimer *timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(run) userInfo:nil repeats:YES];
@@ -84,5 +91,54 @@
     dispatch_resume(timer);
     //添加强引用避免被释放掉
     self.timer = timer;
+}
+-(void) observer
+{
+    
+    
+    
+    //这个并不是监听
+//    [NSRunLoop currentRunLoop] addObserver:<#(nonnull NSObject *)#> forKeyPath:<#(nonnull NSString *)#> options:<#(NSKeyValueObservingOptions)#> context:<#(nullable void *)#>
+    //创建监听者
+    /**
+     第一个参数：怎么分配存储空间
+     第二个参数：要监听的状态
+     第三个参数：运是否持续监听
+     第四个参数：优先级 总是传0
+     第五个参数：当状态改变时的回调
+     */
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity){
+            case  kCFRunLoopEntry:
+                NSLog(@"kCFRunLoopEntry");
+                break;
+            case kCFRunLoopBeforeTimers:
+                NSLog(@"kCFRunLoopBeforeTimers");
+                break;
+            case  kCFRunLoopBeforeSources:
+                NSLog(@"kCFRunLoopBeforeSources");
+                break;
+            case kCFRunLoopBeforeWaiting:
+                NSLog(@"kCFRunLoopBeforeWaiting");
+                break;
+            case  kCFRunLoopAfterWaiting:
+                NSLog(@"kCFRunLoopAfterWaiting");
+                break;
+            case kCFRunLoopExit:
+                NSLog(@"kCFRunLoopExit");
+                break;
+            default:
+                break;
+                
+        }
+    });
+    /*
+     第一个参数：要监听哪个runloop
+     第二个参数：观察者
+     第三个参数：运行模式
+     **/
+  
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    
 }
 @end
