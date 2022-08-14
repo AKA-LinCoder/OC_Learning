@@ -95,8 +95,14 @@
 }
 -(void)sendPost
 {
+    NSString *urlString = @"http://192.168.0.148:8080/haha/app/workBench/getList";
+    //中文转码
+    NSString *urlStr = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //ios9之后写法
+    NSString *urlStr2 = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     //1.确定请求路径
-    NSURL *url = [NSURL URLWithString:@"http://192.168.0.148:8080/haha/app/workBench/getList"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+   
     //2.创建请求对象
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url ];
     request.HTTPMethod = @"POST";//必须大写
