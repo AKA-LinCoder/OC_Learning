@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
-    [self delegate];
+    [self sendPost];
 }
 - (NSMutableData *)resultData
 {
@@ -106,14 +106,28 @@
     //2.创建请求对象
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url ];
     request.HTTPMethod = @"POST";//必须大写
+    
     //设置请求体信息
     request.HTTPBody = [@""dataUsingEncoding:NSUTF8StringEncoding];
     //设置请求头
-    [request setValue:@"ios10.1" forHTTPHeaderField:@"User-Agent"];
+    [request setValue:@"toasdasdasdasdasd" forHTTPHeaderField:@"token"];
     //发送网络请求
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
         NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         //解析data
+        /*
+         NSJSONReadingMutableContainers = (1UL << 0), 可变字典和数组
+         NSJSONReadingMutableLeaves = (1UL << 1),所有可变 不用
+         NSJSONReadingFragmentsAllowed = (1UL << 2), 既不是字典也不是数组
+
+         NSJSONReadingJSON5Allowed API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) = (1UL << 3),
+         NSJSONReadingTopLevelDictionaryAssumed API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) = (1UL << 4),
+
+         NSJSONReadingAllowFragments API_DEPRECATED_WITH_REPLACEMENT("NSJSONReadingFragmentsAllowed", macos(10.7, API_TO_BE_DEPRECATED), ios(5.0, API_TO_BE_DEPRECATED), watchos(2.0, API_TO_BE_DEPRECATED), tvos(9.0, API_TO_BE_DEPRECATED)) = NSJSONReadingFragmentsAllowed,
+         **/
+        //JSON->OC对象 反序列化
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSLog(@"dict:%@",dict);
     
     }];
 }

@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"原生请求",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"原生请求",@"使用NSURLConnection下载文件",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
   
 }
 
