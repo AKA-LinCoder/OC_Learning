@@ -93,6 +93,24 @@
     [connect cancel];
     
 }
+-(void)sendPost
+{
+    //1.确定请求路径
+    NSURL *url = [NSURL URLWithString:@"http://192.168.0.148:8080/haha/app/workBench/getList"];
+    //2.创建请求对象
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url ];
+    request.HTTPMethod = @"POST";//必须大写
+    //设置请求体信息
+    request.HTTPBody = [@""dataUsingEncoding:NSUTF8StringEncoding];
+    //设置请求头
+    [request setValue:@"ios10.1" forHTTPHeaderField:@"User-Agent"];
+    //发送网络请求
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        //解析data
+    
+    }];
+}
 #pragma mark -NSURLConnectionDataDelegate
 //1.当接受到服务器响应的时候调用
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
