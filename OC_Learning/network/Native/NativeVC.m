@@ -128,6 +128,24 @@
         //JSON->OC对象 反序列化
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSLog(@"dict:%@",dict);
+        //序列化
+        NSDictionary *dictM = @{
+            @"name":@"mike",
+            @"age":@3
+        };
+        NSArray *array = @[@"123",@"456"];
+        //如果能转返回1，不能转返回0
+        /*
+         最外层必须是字段或者数组
+         所有元素必须是NSString,NSNumber,NSArray,NSDictionary,NSNull
+         字典中的key必须是Stirng
+         NSumber不能无穷大
+         **/
+        BOOL isVaild = [NSJSONSerialization isValidJSONObject:array];
+        //并不是所有OC对象都能转为字符串。比如字符串
+        NSData *dataM = [NSJSONSerialization dataWithJSONObject:dictM options:NSJSONWritingPrettyPrinted error:nil];
+        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        
     
     }];
 }

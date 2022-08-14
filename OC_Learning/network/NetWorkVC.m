@@ -7,6 +7,7 @@
 
 #import "NetWorkVC.h"
 #import "NativeVC.h"
+#import "JSONDataShowVC.h"
 
 @interface NetWorkVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"原生请求",@"使用NSURLConnection下载文件",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"原生请求",@"JSON反序列化展示数据",@"使用NSURLConnection下载文件",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
   
 }
 
@@ -48,8 +49,8 @@
         [self presentViewController:vc animated:YES completion:nil];
        
     }else if(indexPath.row==1){
-        //        PthreadVC *vc = [[PthreadVC alloc] init];
-        //        [self presentViewController:vc animated:YES completion:nil];
+        JSONDataShowVC *vc = [[JSONDataShowVC alloc] init];
+                [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==2){
         //        PthreadVC *vc = [[PthreadVC alloc] init];
         //        [self presentViewController:vc animated:YES completion:nil];
