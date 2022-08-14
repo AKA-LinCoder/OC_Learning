@@ -6,6 +6,7 @@
 //
 
 #import "NetWorkVC.h"
+#import "NativeVC.h"
 
 @interface NetWorkVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -15,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"pthread",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"原生请求",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
   
 }
 
@@ -43,8 +44,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row==0){
-//        PthreadVC *vc = [[PthreadVC alloc] init];
-//        [self presentViewController:vc animated:YES completion:nil];
+        NativeVC *vc = [[NativeVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
        
     }else if(indexPath.row==1){
         //        PthreadVC *vc = [[PthreadVC alloc] init];

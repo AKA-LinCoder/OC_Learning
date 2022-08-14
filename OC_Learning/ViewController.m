@@ -9,12 +9,6 @@
 #import "ThreadVC.h"
 #import "NetWorkVC.h"
 
-
-
-
-
-
-
 #pragma  mark - controller
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
