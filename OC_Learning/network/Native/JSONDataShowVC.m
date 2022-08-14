@@ -7,6 +7,7 @@
 
 #import "JSONDataShowVC.h"
 #import "LinTimeMode.h"
+#import "MJExtension.h"
 
 @interface JSONDataShowVC ()
 @property(nonatomic,strong)NSMutableArray *dicts;
@@ -44,9 +45,18 @@
 
         NSLog(@"%@",dict);
 
-        LinTimeMode *mode = [LinTimeMode timeWithDict:dict];
-        [self.dicts addObject:mode];
-        NSLog(@"dicts:%@",self.dicts);
+//        LinTimeMode *mode = [LinTimeMode timeWithDict:dict];
+//        [self.dicts addObject:mode];
+//        NSLog(@"dicts:%@",self.dicts);
+        //替换
+        [LinTimeMode mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+            return @{
+                @"msg":@"message"
+            };
+        }];
+        
+        //字典转模型
+        [self.dicts addObject: [LinTimeMode mj_objectWithKeyValues:dict]];
 
         
         NSLog(@"count:%lu",(unsigned long)self.dicts.count);
@@ -79,7 +89,7 @@
 
     }
     LinTimeMode *mode = self.dicts[indexPath.row];
-    cell.textLabel.text = mode.mesage;
+    cell.textLabel.text = mode.msg;
     
     return cell;
 }

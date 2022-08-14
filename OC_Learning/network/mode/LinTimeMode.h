@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LinTimeMode : NSObject
 @property(nonatomic,strong) NSString *data;
 @property(nonatomic,strong) NSNumber *code;
-@property(nonatomic,strong) NSString *mesage;
+@property(nonatomic,strong) NSString *msg;
 
 
 
-+(instancetype)timeWithDict:(NSDictionary *)dict;
+//+(instancetype)timeWithDict:(NSDictionary *)dict;
 @end
 
 
