@@ -6,6 +6,8 @@
 //
 
 #import "UploadByConnectionVC.h"
+
+#import <MobileCoreServices/MobileCoreServices.h>
 #define Kboundary @"----WebKitFormBoundaryjv)UfA04ED44AhWx"
 #define KNewLine [@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]
 @interface UploadByConnectionVC ()
@@ -63,5 +65,34 @@
         NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     }];
 }
-
+-(void) getMIMEType
+{
+    NSURL *url = [NSURL fileURLWithPath:@""];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        NSLog(@"%@",response.MIMEType);
+    }];
+}
+-(void) getMIMEType2
+{
+    NSURL *url = [NSURL fileURLWithPath:@""];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        NSLog(@"%@",response.MIMEType);
+    }];
+}
+-(NSString *) mimeTypeForFileAtPath:(NSString *)path
+{
+    if (![[[NSFileManager alloc] init] fileExistsAtPath:path]) {
+        return nil;
+    }
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge  CFStringRef)[path pathExtension], NULL);
+    CFStringRef MIMEType = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassMIMEType);
+    CFRelease(UTI);
+    if (!MIMEType) {
+        //任意二进制数据类型
+        return  @"application/octet-stream";
+    }
+    return (__bridge  NSString *)(MIMEType);
+}
 @end
