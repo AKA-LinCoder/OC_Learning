@@ -6,7 +6,7 @@
 //
 
 #import "DownloadByOutPutVC.h"
-
+#import <SSZipArchive.h>
 @interface DownloadByOutPutVC ()<NSURLConnectionDataDelegate>
 @property(nonatomic,strong) NSMutableData *data;
 @property(nonatomic,strong) NSString *fullPath;
@@ -155,5 +155,24 @@
     self.stream = nil;
     NSLog(@"finished");
     NSLog(@"%@",self.fullPath);
+    /**
+     压缩文件的存放位置
+     要压缩那些文件
+     */
+    NSString *zipPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"123.zip"];
+    //压缩文件
+    [SSZipArchive createZipFileAtPath:zipPath withFilesAtPaths:@[self.fullPath] withPassword:@"1234"];
+    //压缩文件夹
+//    [SSZipArchive createZipFileAtPath:zipPath withContentsOfDirectory:@"要压缩的文件夹" withPassword:@"789"];
+    //解压
+    /**
+        要压缩的文件在哪里
+        文件要解压到什么地方
+     */
+    [SSZipArchive unzipFileAtPath:@"" toDestination:@"" progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {
+        NSLog(@"%zd----%zd",entryNumber,total);
+    } completionHandler:^(NSString * _Nonnull path, BOOL succeeded, NSError * _Nullable error) {
+        NSLog(@"%@",path);
+    }];
 }
 @end

@@ -8,4 +8,5 @@ target 'OC_Learning' do
   # Pods for OC_Learning
 	pod 'SDWebImage'
   pod 'MJExtension'
+  pod 'SSZipArchive'
 end
