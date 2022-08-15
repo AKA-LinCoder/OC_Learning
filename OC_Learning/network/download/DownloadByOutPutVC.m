@@ -99,13 +99,51 @@
 
 -(void) downLoad
 {
-    NSURL *url = [NSURL URLWithString:@"https://vd4.bdstatic.com/mda-mc9ef5ja85iv0chp/sc/cae_h264_nowatermark/1615343513/mda-mc9ef5ja85iv0chp.mp4?v_from_s=hkapp-haokan-hna&auth_key=1660533265-0-0-63527dcc58b9cdb7b1a221b55b338f9f&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=2664869369&vid=12087023396548225925&abtest=103525_1-103579_2-103890_2&klogid=2664869369"];
-    NSMutableURLRequest *request= [NSMutableURLRequest requestWithURL:url];
-    //断点下载
-    //设置请求头
-    NSString *range = [NSString stringWithFormat:@"bytes=%zd-",self.currentSize];
-    [request setValue:range forHTTPHeaderField:@"Range"];
-    self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSURL *url = [NSURL URLWithString:@"https://vd4.bdstatic.com/mda-mc9ef5ja85iv0chp/sc/cae_h264_nowatermark/1615343513/mda-mc9ef5ja85iv0chp.mp4?v_from_s=hkapp-haokan-hna&auth_key=1660533265-0-0-63527dcc58b9cdb7b1a221b55b338f9f&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=2664869369&vid=12087023396548225925&abtest=103525_1-103579_2-103890_2&klogid=2664869369"];
+        NSMutableURLRequest *request= [NSMutableURLRequest requestWithURL:url];
+        //断点下载
+        //设置请求头
+        NSString *range = [NSString stringWithFormat:@"bytes=%zd-",self.currentSize];
+        [request setValue:range forHTTPHeaderField:@"Range"];
+        //默认在主线程调用的
+        //该方法内部会讲connect对象作为一个source添加到当前的runloop中，指定运行模式为默认,且不会释放掉，只有请求完成才会结束
+        self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        //1.方法一：设置代理方法在哪个线程调用
+        //不能设置主队列，没有任何用
+        [self.connection setDelegateQueue:[[NSOperationQueue alloc] init]];
+        
+
+        
+        
+        //如果使用的是子线程，且connect是局部变量，则必须手动创建子线程的runloop，否则不会运行delegate方法
+        //创建子线程的runloop,并且开启runloop,且指定运行模式只能默认
+        [[NSRunLoop currentRunLoop] run];
+    });
+}
+-(void) downLoad2
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSURL *url = [NSURL URLWithString:@"https://vd4.bdstatic.com/mda-mc9ef5ja85iv0chp/sc/cae_h264_nowatermark/1615343513/mda-mc9ef5ja85iv0chp.mp4?v_from_s=hkapp-haokan-hna&auth_key=1660533265-0-0-63527dcc58b9cdb7b1a221b55b338f9f&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=2664869369&vid=12087023396548225925&abtest=103525_1-103579_2-103890_2&klogid=2664869369"];
+        NSMutableURLRequest *request= [NSMutableURLRequest requestWithURL:url];
+        //断点下载
+        //设置请求头
+        NSString *range = [NSString stringWithFormat:@"bytes=%zd-",self.currentSize];
+        [request setValue:range forHTTPHeaderField:@"Range"];
+
+        
+        //这种方式创建connection,如果指定NO,不会自动请求，需要自己手动开启
+        NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
+        
+        [conn setDelegateQueue:[[NSOperationQueue alloc]init] ];
+        //start方法会自动将connection加入runloop，并指定运行模式为默认，如果不存在也会内部创建runloop
+        [conn start];
+        
+        
+        //如果使用的是子线程，且connect是局部变量，则必须手动创建子线程的runloop，否则不会运行delegate方法
+        //创建子线程的runloop,并且开启runloop,且指定运行模式只能默认
+//        [[NSRunLoop currentRunLoop] run];
+    });
 }
 #pragma mark - delegate
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -132,7 +170,6 @@
     self.videoSize = response.expectedContentLength;
     //2.写数据到沙盒
     self.fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"123.mp4"];
-//    NSLog(@"%@",self.fullPath);
     /**
      第一个参数：文件路径
      第二个参数：YES追加
@@ -143,6 +180,7 @@
     self.stream = stream;
 
 }
+//错误时运行
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
   
