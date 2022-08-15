@@ -10,6 +10,7 @@
 #import "JSONDataShowVC.h"
 #import "XMLVC.h"
 #import "DownLoadLittleVC.h"
+#import "DownloadBigByConnectionVC.h"
 
 @interface NetWorkVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -19,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"原生请求",@"JSON反序列化展示数据",@"XML文件解析",@"小文件下载",@"使用NSURLConnection下载文件",@"",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"原生请求",@"JSON反序列化展示数据",@"XML文件解析",@"小文件下载",@"使用NSURLConnection下载大文件",@"",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
   
 }
 
@@ -60,8 +61,8 @@
         DownLoadLittleVC *vc = [[DownLoadLittleVC alloc] init];
                 [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==4){
-        //        PthreadVC *vc = [[PthreadVC alloc] init];
-        //        [self presentViewController:vc animated:YES completion:nil];
+        DownloadBigByConnectionVC *vc = [[DownloadBigByConnectionVC alloc] init];
+                [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==5){
         //        PthreadVC *vc = [[PthreadVC alloc] init];
         //        [self presentViewController:vc animated:YES completion:nil];

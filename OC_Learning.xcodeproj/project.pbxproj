@@ -29,6 +29,7 @@
 		6965ACD928A9D6E1000A8202 /* local.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6965ACD828A9D6E1000A8202 /* local.xml */; };
 		6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 6965ACDB28A9DCE1000A8202 /* NSDictionary+Log.m */; };
 		6965ACE028A9E875000A8202 /* DownLoadLittleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6965ACDF28A9E875000A8202 /* DownLoadLittleVC.m */; };
+		6965ACE328A9F6DB000A8202 /* DownloadBigByConnectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6965ACE228A9F6DB000A8202 /* DownloadBigByConnectionVC.m */; };
 		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
 		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
 		6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864628A26CB800F4239C /* ThreadSafetyVC.m */; };
@@ -88,6 +89,8 @@
 		6965ACDB28A9DCE1000A8202 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		6965ACDE28A9E875000A8202 /* DownLoadLittleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadLittleVC.h; sourceTree = "<group>"; };
 		6965ACDF28A9E875000A8202 /* DownLoadLittleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadLittleVC.m; sourceTree = "<group>"; };
+		6965ACE128A9F6DB000A8202 /* DownloadBigByConnectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadBigByConnectionVC.h; sourceTree = "<group>"; };
+		6965ACE228A9F6DB000A8202 /* DownloadBigByConnectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadBigByConnectionVC.m; sourceTree = "<group>"; };
 		6973863B28A23B4100F4239C /* PthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadVC.h; sourceTree = "<group>"; };
 		6973863C28A23B4100F4239C /* PthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadVC.m; sourceTree = "<group>"; };
 		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 			children = (
 				6965ACDE28A9E875000A8202 /* DownLoadLittleVC.h */,
 				6965ACDF28A9E875000A8202 /* DownLoadLittleVC.m */,
+				6965ACE128A9F6DB000A8202 /* DownloadBigByConnectionVC.h */,
+				6965ACE228A9F6DB000A8202 /* DownloadBigByConnectionVC.m */,
 			);
 			path = download;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 				695E8CEC28A3881400A7914A /* LinOperation.m in Sources */,
 				69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
+				6965ACE328A9F6DB000A8202 /* DownloadBigByConnectionVC.m in Sources */,
 				695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
