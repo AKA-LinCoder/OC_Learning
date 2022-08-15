@@ -24,6 +24,10 @@
 		695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695E8CF528A3D33A00A7914A /* ImagedownLoadVC.xib */; };
 		695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CF928A3D63F00A7914A /* LinAPP.m */; };
 		695E8CFC28A3D7B500A7914A /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 695E8CFB28A3D7B500A7914A /* apps.plist */; };
+		6965ACD528A9D515000A8202 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6965ACD428A9D515000A8202 /* libxml2.2.tbd */; };
+		6965ACD728A9D523000A8202 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6965ACD628A9D523000A8202 /* libxml2.tbd */; };
+		6965ACD928A9D6E1000A8202 /* local.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6965ACD828A9D6E1000A8202 /* local.xml */; };
+		6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 6965ACDB28A9DCE1000A8202 /* NSDictionary+Log.m */; };
 		6973863D28A23B4100F4239C /* PthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863C28A23B4100F4239C /* PthreadVC.m */; };
 		6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973863F28A24AAB00F4239C /* NSThreadVC.m */; };
 		6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864628A26CB800F4239C /* ThreadSafetyVC.m */; };
@@ -35,6 +39,7 @@
 		69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4028A8C66800466BC1 /* NativeVC.m */; };
 		69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */; };
 		69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4728A8FDE800466BC1 /* LinTimeMode.m */; };
+		69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4A28A9110E00466BC1 /* XMLVC.m */; };
 		69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E7F28A79B210025F49F /* RunLoopUseVC.m */; };
 		69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8728A7AAC20025F49F /* ThreadVC.m */; };
 		69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8B28A7B68E0025F49F /* NetWorkVC.m */; };
@@ -75,6 +80,11 @@
 		695E8CF828A3D63F00A7914A /* LinAPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinAPP.h; sourceTree = "<group>"; };
 		695E8CF928A3D63F00A7914A /* LinAPP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinAPP.m; sourceTree = "<group>"; };
 		695E8CFB28A3D7B500A7914A /* apps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps.plist; sourceTree = "<group>"; };
+		6965ACD428A9D515000A8202 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		6965ACD628A9D523000A8202 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		6965ACD828A9D6E1000A8202 /* local.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = local.xml; sourceTree = "<group>"; };
+		6965ACDA28A9DCE1000A8202 /* NSDictionary+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
+		6965ACDB28A9DCE1000A8202 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		6973863B28A23B4100F4239C /* PthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadVC.h; sourceTree = "<group>"; };
 		6973863C28A23B4100F4239C /* PthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadVC.m; sourceTree = "<group>"; };
 		6973863E28A24AAB00F4239C /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
@@ -97,6 +107,8 @@
 		69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONDataShowVC.m; sourceTree = "<group>"; };
 		69B57B4628A8FDE800466BC1 /* LinTimeMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTimeMode.h; sourceTree = "<group>"; };
 		69B57B4728A8FDE800466BC1 /* LinTimeMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinTimeMode.m; sourceTree = "<group>"; };
+		69B57B4928A9110E00466BC1 /* XMLVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLVC.h; sourceTree = "<group>"; };
+		69B57B4A28A9110E00466BC1 /* XMLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLVC.m; sourceTree = "<group>"; };
 		69C71E7E28A79B210025F49F /* RunLoopUseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopUseVC.h; sourceTree = "<group>"; };
 		69C71E7F28A79B210025F49F /* RunLoopUseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopUseVC.m; sourceTree = "<group>"; };
 		69C71E8628A7AAC20025F49F /* ThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadVC.h; sourceTree = "<group>"; };
@@ -119,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6965ACD728A9D523000A8202 /* libxml2.tbd in Frameworks */,
+				6965ACD528A9D515000A8202 /* libxml2.2.tbd in Frameworks */,
 				34FF010AE765F24DD3D455A2 /* Pods_OC_Learning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +152,8 @@
 		26721CD90E598617EF692A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6965ACD628A9D523000A8202 /* libxml2.tbd */,
+				6965ACD428A9D515000A8202 /* libxml2.2.tbd */,
 				797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */,
 			);
 			name = Frameworks;
@@ -287,10 +303,15 @@
 		69B57B3E28A8C64500466BC1 /* Native */ = {
 			isa = PBXGroup;
 			children = (
+				6965ACD828A9D6E1000A8202 /* local.xml */,
 				69B57B3F28A8C66800466BC1 /* NativeVC.h */,
 				69B57B4028A8C66800466BC1 /* NativeVC.m */,
 				69B57B4228A8E3D000466BC1 /* JSONDataShowVC.h */,
 				69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */,
+				69B57B4928A9110E00466BC1 /* XMLVC.h */,
+				69B57B4A28A9110E00466BC1 /* XMLVC.m */,
+				6965ACDA28A9DCE1000A8202 /* NSDictionary+Log.h */,
+				6965ACDB28A9DCE1000A8202 /* NSDictionary+Log.m */,
 			);
 			path = Native;
 			sourceTree = "<group>";
@@ -398,6 +419,7 @@
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
+				6965ACD928A9D6E1000A8202 /* local.xml in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
@@ -460,6 +482,7 @@
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
+				69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
 				69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */,
 				695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */,
@@ -470,6 +493,7 @@
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
+				6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
 				69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */,
 				69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */,
