@@ -101,8 +101,6 @@
 //    self.totalSize = response.expectedContentLength
     //文件总大小=当前请求数据大小+已经下载的大小
     self.totalSize = response.expectedContentLength+self.currentSize;
-    //获得文件全路径
-//    self.fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:response.suggestedFilename];
     if(self.currentSize==0){
         //创建一个空的文件夹
         [[NSFileManager defaultManager] createFileAtPath:self.fullPath contents:nil attributes:nil];
@@ -138,5 +136,12 @@
        
     }
    
+}
+
+- (void)dealloc
+{
+    //两种方法都可以
+//    [self.session finishTasksAndInvalidate];
+    [self.session invalidateAndCancel];
 }
 @end
