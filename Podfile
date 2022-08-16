@@ -9,4 +9,5 @@ target 'OC_Learning' do
 	pod 'SDWebImage'
   pod 'MJExtension'
   pod 'SSZipArchive'
+  pod 'AFNetworking', '~> 4.0'
 end

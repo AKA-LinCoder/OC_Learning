@@ -9,11 +9,19 @@
 #define Kboundary @"----WebKitFormBoundaryjv)UfA04ED44AhWx"
 #define KNewLine [@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]
 @interface UploadBySession ()<NSURLSessionDataDelegate>
-
+@property(nonatomic,strong)  NSURLSession *session;
 @end
 
 @implementation UploadBySession
-
+- (NSURLSession *)session
+{
+    if (!_session) {
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        config.allowsCellularAccess = YES;
+        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    }
+    return _session;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -52,11 +60,9 @@
     //设置请求体，这样设置没有用，会被忽略
 //    request.HTTPBody = [self getBodyData];
     NSLog(@"开始请求");
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    
-    [session dataTaskWithRequest:request];
+
     //创建上传task,使用下方方式设置请求体
-    NSURLSessionUploadTask *task = [session uploadTaskWithRequest:request fromData:[self getBodyData] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionUploadTask *task = [self.session uploadTaskWithRequest:request fromData:[self getBodyData] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     }];
     
