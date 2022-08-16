@@ -44,6 +44,7 @@
 		69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */; };
 		69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4728A8FDE800466BC1 /* LinTimeMode.m */; };
 		69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4A28A9110E00466BC1 /* XMLVC.m */; };
+		69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E8628AB208900F6E4C3 /* NSURLSessionVC.m */; };
 		69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E7F28A79B210025F49F /* RunLoopUseVC.m */; };
 		69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8728A7AAC20025F49F /* ThreadVC.m */; };
 		69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8B28A7B68E0025F49F /* NetWorkVC.m */; };
@@ -121,6 +122,8 @@
 		69B57B4728A8FDE800466BC1 /* LinTimeMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinTimeMode.m; sourceTree = "<group>"; };
 		69B57B4928A9110E00466BC1 /* XMLVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLVC.h; sourceTree = "<group>"; };
 		69B57B4A28A9110E00466BC1 /* XMLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLVC.m; sourceTree = "<group>"; };
+		69BE3E8528AB208900F6E4C3 /* NSURLSessionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLSessionVC.h; sourceTree = "<group>"; };
+		69BE3E8628AB208900F6E4C3 /* NSURLSessionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionVC.m; sourceTree = "<group>"; };
 		69C71E7E28A79B210025F49F /* RunLoopUseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopUseVC.h; sourceTree = "<group>"; };
 		69C71E7F28A79B210025F49F /* RunLoopUseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopUseVC.m; sourceTree = "<group>"; };
 		69C71E8628A7AAC20025F49F /* ThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadVC.h; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				69B57B4A28A9110E00466BC1 /* XMLVC.m */,
 				6965ACDA28A9DCE1000A8202 /* NSDictionary+Log.h */,
 				6965ACDB28A9DCE1000A8202 /* NSDictionary+Log.m */,
+				69BE3E8528AB208900F6E4C3 /* NSURLSessionVC.h */,
+				69BE3E8628AB208900F6E4C3 /* NSURLSessionVC.m */,
 			);
 			path = Native;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 				69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
 				695E8CEC28A3881400A7914A /* LinOperation.m in Sources */,
+				69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */,
 				69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
 				6965ACE328A9F6DB000A8202 /* DownloadBigByConnectionVC.m in Sources */,
