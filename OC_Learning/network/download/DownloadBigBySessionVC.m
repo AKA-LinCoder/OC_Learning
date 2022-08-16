@@ -12,6 +12,10 @@
 @property(nonatomic,strong) UIButton *beginBtn;
 @property(nonatomic,strong) UIButton *stopBtn;
 @property(nonatomic,strong) UIButton *deleteBtn;
+@property(nonatomic,strong) UIButton *reBeginBtn;
+@property(nonatomic,strong) NSURLSessionDownloadTask *downloadTask;
+@property(nonatomic,strong) NSData *reumeData;
+@property(nonatomic,strong) NSURLSession *session;
 @end
 
 @implementation DownloadBigBySessionVC
@@ -35,6 +39,18 @@
         [_beginBtn addTarget:self action:@selector(beginDownLoad) forControlEvents:UIControlEventTouchUpInside];
     }
     return _beginBtn;
+}
+
+- (UIButton *)reBeginBtn
+{
+    if(!_reBeginBtn){
+        _reBeginBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 180, 80, 40)];
+        [_reBeginBtn setTitle:@"恢复下载" forState:UIControlStateNormal];
+        [_reBeginBtn setTintColor:[UIColor whiteColor]];
+        _reBeginBtn.backgroundColor = [UIColor orangeColor];
+        [_reBeginBtn addTarget:self action:@selector(reBeginDownLoad) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _reBeginBtn;
 }
 
 - (UIButton *)stopBtn
@@ -69,9 +85,45 @@
     [self.view addSubview:self.progressView];
     [self.view addSubview:self.beginBtn];
     [self.view addSubview:self.deleteBtn];
+    [self.view addSubview:self.reBeginBtn];
     [self.view addSubview:self.stopBtn];
+    
+}
+
+-(void) beginDownLoad
+{
+    NSLog(@"开始任务");
     [self downloadByDelegate];
 }
+-(void) reBeginDownLoad
+{
+    NSLog(@"恢复任务");
+    if(self.reumeData){
+     self.downloadTask =    [self.session downloadTaskWithResumeData:self.reumeData];
+    }
+    [self.downloadTask resume];
+}
+//暂停是可以恢复的
+-(void) stopDownLoad
+{
+    NSLog(@"暂停任务");
+    [self.downloadTask suspend];
+    
+}
+
+-(void) deleteDownLoad
+{
+    NSLog(@"取消任务");
+    //取消是不能恢复的
+//    [self.downloadTask cancel];
+    //这个取消是可以恢复的
+    [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+        //恢复下载的数据！=文件下载的数据
+        //是文件上次下载数据的位置，时间等信息
+        self.reumeData = resumeData;
+    }];
+}
+
 //优点：不需要担心内存
 //缺点：无法监听进度
 -(void) download1
@@ -96,9 +148,10 @@
     NSURL *url = [NSURL URLWithString:@"https://vd4.bdstatic.com/mda-mc9ef5ja85iv0chp/sc/cae_h264_nowatermark/1615343513/mda-mc9ef5ja85iv0chp.mp4?v_from_s=hkapp-haokan-hna&auth_key=1660533265-0-0-63527dcc58b9cdb7b1a221b55b338f9f&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=2664869369&vid=12087023396548225925&abtest=103525_1-103579_2-103890_2&klogid=2664869369"];
     NSMutableURLRequest *request= [NSMutableURLRequest requestWithURL:url];
    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:request];
+    self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDownloadTask *downloadTask = [self.session downloadTaskWithRequest:request];
     [downloadTask resume];
+    self.downloadTask = downloadTask;
 }
 
 #pragma mark -NSURLSessionDownloadDelegate
@@ -120,7 +173,7 @@
 /// @param error 错误
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
-    
+    NSLog(@"下载完成");
 }
 
 /// 当恢复下载时调用
@@ -143,6 +196,7 @@
 {
     //获得下载进度
     self.progressView.progress = 1.0*totalBytesWritten/totalBytesExpectedToWrite;
+    NSLog(@"%f",1.0*totalBytesWritten/totalBytesExpectedToWrite);
 }
 
 @end
