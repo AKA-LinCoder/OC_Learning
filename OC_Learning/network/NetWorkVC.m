@@ -14,6 +14,7 @@
 #import "DownloadByOutPutVC.h"
 #import "UploadByConnectionVC.h"
 #import "NSURLSessionVC.h"
+#import "DownloadBigBySessionVC.h"
 
 @interface NetWorkVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -23,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"原生请求",@"JSON反序列化展示数据",@"XML文件解析",@"小文件下载",@"使用NSURLConnection下载大文件",@"通过输出流下载文件",@"使用NSURLConnection上传文件",@"使用NSURLSession网络请求",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"原生请求",@"JSON反序列化展示数据",@"XML文件解析",@"小文件下载",@"使用NSURLConnection下载大文件",@"通过输出流下载文件",@"使用NSURLConnection上传文件",@"使用NSURLSession网络请求",@"使用NSURLSession网络下载大文件",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
   
 }
 
@@ -76,8 +77,8 @@
         NSURLSessionVC *vc = [[NSURLSessionVC alloc] init];
                 [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row == 8){
-        //        PthreadVC *vc = [[PthreadVC alloc] init];
-        //        [self presentViewController:vc animated:YES completion:nil];
+        DownloadBigBySessionVC *vc = [[DownloadBigBySessionVC alloc] init];
+                [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==9){
         //        PthreadVC *vc = [[PthreadVC alloc] init];
         //        [self presentViewController:vc animated:YES completion:nil];
