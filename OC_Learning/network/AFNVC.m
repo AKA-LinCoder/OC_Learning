@@ -101,9 +101,13 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager POST:@"http://192.168.0.148:8080/haha/app/upload" parameters:@{@"valveId":@"25132"} headers:@{@"token":@"token"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {///处理要上传的文件数据
         //使用formData拼接数据
-        UIImage *image = [UIImage imageNamed:@"person"];
+        UIImage *image = [UIImage imageNamed:@"people"];
         NSData *data = UIImagePNGRepresentation(image);
         [formData appendPartWithFileData:data name:@"file" fileName:@"hahhah.png" mimeType:@"image/png"];
+        //更简单的方式
+//        [formData appendPartWithFileURL:[NSURL URLWithString:@""] name:@"file" error:nil];
+        
+        
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         NSLog(@"%f",1.0*uploadProgress.completedUnitCount/uploadProgress.totalUnitCount);
         dispatch_sync(dispatch_get_main_queue(), ^{

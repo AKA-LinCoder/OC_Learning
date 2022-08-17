@@ -100,6 +100,10 @@
     }else if (indexPath.row==13){
                 AFNVC *vc = [[AFNVC alloc] init];
                 [self presentViewController:vc animated:YES completion:nil];
+    }else if (indexPath.row==14){
+        
+    }else if (indexPath.row==15){
+        
     }
     
 }
