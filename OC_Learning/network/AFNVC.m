@@ -34,6 +34,10 @@
 -(void) get
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //处理https证书
+//    manager.securityPolicy.allowInvalidCertificates = YES;
+//    manager.securityPolicy.validatesDomainName = NO;
+    //-------
     [manager GET:@"" parameters:@{} headers:@{} progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -99,11 +103,18 @@
 -(void) upload2
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //告诉AFN能够接受text/html类型的数据
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    //如果使用的xml需要单独设置
+//    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    //如果返回既不是xml，又不是json
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:@"http://192.168.0.148:8080/haha/app/upload" parameters:@{@"valveId":@"25132"} headers:@{@"token":@"token"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {///处理要上传的文件数据
         //使用formData拼接数据
         UIImage *image = [UIImage imageNamed:@"people"];
         NSData *data = UIImagePNGRepresentation(image);
         [formData appendPartWithFileData:data name:@"file" fileName:@"hahhah.png" mimeType:@"image/png"];
+        //不同请求格式，有不同的处理方式
         //更简单的方式
 //        [formData appendPartWithFileURL:[NSURL URLWithString:@""] name:@"file" error:nil];
         

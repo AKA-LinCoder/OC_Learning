@@ -15,6 +15,13 @@
 		6934223128918CD2007561A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6934223028918CD2007561A1 /* Assets.xcassets */; };
 		6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6934223228918CD2007561A1 /* LaunchScreen.storyboard */; };
 		6934223728918CD2007561A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934223628918CD2007561A1 /* main.m */; };
+		694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114C128AC7BA700BE6792 /* NetworkStatusVC.m */; };
+		694114C528AC878D00BE6792 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114C428AC878D00BE6792 /* Reachability.m */; };
+		694114C828AC962800BE6792 /* EncryptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114C728AC962800BE6792 /* EncryptionVC.m */; };
+		694114CB28AC99DE00BE6792 /* YYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114C928AC99DE00BE6792 /* YYHttpTool.m */; };
+		694114D328AC9A2E00BE6792 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114CE28AC9A2E00BE6792 /* NSString+Hash.m */; };
+		694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114D128AC9A2E00BE6792 /* RSACryptor.m */; };
+		694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114D228AC9A2E00BE6792 /* EncryptionTools.m */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -76,6 +83,20 @@
 		6934223328918CD2007561A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6934223528918CD2007561A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6934223628918CD2007561A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		694114C028AC7BA700BE6792 /* NetworkStatusVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkStatusVC.h; sourceTree = "<group>"; };
+		694114C128AC7BA700BE6792 /* NetworkStatusVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusVC.m; sourceTree = "<group>"; };
+		694114C328AC878D00BE6792 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		694114C428AC878D00BE6792 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		694114C628AC962800BE6792 /* EncryptionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptionVC.h; sourceTree = "<group>"; };
+		694114C728AC962800BE6792 /* EncryptionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptionVC.m; sourceTree = "<group>"; };
+		694114C928AC99DE00BE6792 /* YYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHttpTool.m; sourceTree = "<group>"; };
+		694114CA28AC99DE00BE6792 /* YYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHttpTool.h; sourceTree = "<group>"; };
+		694114CD28AC9A2E00BE6792 /* EncryptionTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionTools.h; sourceTree = "<group>"; };
+		694114CE28AC9A2E00BE6792 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		694114CF28AC9A2E00BE6792 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		694114D028AC9A2E00BE6792 /* RSACryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSACryptor.h; sourceTree = "<group>"; };
+		694114D128AC9A2E00BE6792 /* RSACryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSACryptor.m; sourceTree = "<group>"; };
+		694114D228AC9A2E00BE6792 /* EncryptionTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionTools.m; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -236,6 +257,21 @@
 				69D61FEC289EAB8800123581 /* SportProtocol.h */,
 			);
 			path = OC_Learning;
+			sourceTree = "<group>";
+		};
+		694114CC28AC9A1400BE6792 /* encode_decode */ = {
+			isa = PBXGroup;
+			children = (
+				694114CD28AC9A2E00BE6792 /* EncryptionTools.h */,
+				694114D228AC9A2E00BE6792 /* EncryptionTools.m */,
+				694114CF28AC9A2E00BE6792 /* NSString+Hash.h */,
+				694114CE28AC9A2E00BE6792 /* NSString+Hash.m */,
+				694114D028AC9A2E00BE6792 /* RSACryptor.h */,
+				694114D128AC9A2E00BE6792 /* RSACryptor.m */,
+				694114C628AC962800BE6792 /* EncryptionVC.h */,
+				694114C728AC962800BE6792 /* EncryptionVC.m */,
+			);
+			path = encode_decode;
 			sourceTree = "<group>";
 		};
 		695E8CDF28A3595400A7914A /* instance */ = {
@@ -401,6 +437,9 @@
 		69C71E8928A7B6730025F49F /* network */ = {
 			isa = PBXGroup;
 			children = (
+				694114CC28AC9A1400BE6792 /* encode_decode */,
+				694114CA28AC99DE00BE6792 /* YYHttpTool.h */,
+				694114C928AC99DE00BE6792 /* YYHttpTool.m */,
 				69BE3E9328AB982F00F6E4C3 /* webview */,
 				6965ACDD28A9E83A000A8202 /* download */,
 				69B57B4528A8FDBC00466BC1 /* mode */,
@@ -409,6 +448,10 @@
 				69C71E8B28A7B68E0025F49F /* NetWorkVC.m */,
 				69BE3E9C28ABB1B600F6E4C3 /* AFNVC.h */,
 				69BE3E9D28ABB1B600F6E4C3 /* AFNVC.m */,
+				694114C028AC7BA700BE6792 /* NetworkStatusVC.h */,
+				694114C128AC7BA700BE6792 /* NetworkStatusVC.m */,
+				694114C328AC878D00BE6792 /* Reachability.h */,
+				694114C428AC878D00BE6792 /* Reachability.m */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -559,7 +602,9 @@
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
+				694114CB28AC99DE00BE6792 /* YYHttpTool.m in Sources */,
 				69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */,
+				694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
 				69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
@@ -572,16 +617,20 @@
 				69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
+				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,
+				694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */,
 				6965ACE728AA3C20000A8202 /* DownloadByOutPutVC.m in Sources */,
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */,
+				694114D328AC9A2E00BE6792 /* NSString+Hash.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
 				69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */,
 				6965ACED28AA3F65000A8202 /* UploadByConnectionVC.m in Sources */,
 				69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */,
+				694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
 				69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
@@ -593,6 +642,7 @@
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
 				6965ACE328A9F6DB000A8202 /* DownloadBigByConnectionVC.m in Sources */,
 				695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */,
+				694114C528AC878D00BE6792 /* Reachability.m in Sources */,
 				69BE3E9728ABA21F00F6E4C3 /* WebViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

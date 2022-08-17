@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.array = @[@"多线程",@"网络"];
+    self.array = @[@"多线程",@"网络",@"UI"];
     [self.view addSubview:self.tableView];
 }
 

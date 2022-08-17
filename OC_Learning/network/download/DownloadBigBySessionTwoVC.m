@@ -138,6 +138,24 @@
    
 }
 
+//如果是Https请求的话还需要设置以下操作
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler
+{
+    /*
+     NSURLSessionAuthChallengeUseCredential = 0, 使用该证书
+     NSURLSessionAuthChallengePerformDefaultHandling = 1, 默认使用，忽略证书
+     NSURLSessionAuthChallengeCancelAuthenticationChallenge = 2, 取消请求，忽略证书
+     NSURLSessionAuthChallengeRejectProtectionSpace = 3, 拒绝
+     */
+    //授权信息
+    if(![challenge.protectionSpace.authenticationMethod isEqualToString:@"NSURLAuthenticationMethodServerTrust"]){
+        return ;
+    }
+    NSURLCredential *credential = [[NSURLCredential alloc]
+                                   initWithTrust:challenge.protectionSpace.serverTrust];
+    completionHandler(0,credential);
+}
+
 - (void)dealloc
 {
     //两种方法都可以

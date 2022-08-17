@@ -20,6 +20,7 @@
 #import "WebViewVC.h"
 #import "LinWebView.h"
 #import "AFNVC.h"
+#import "NetworkStatusVC.h"
 
 @interface NetWorkVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -29,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"原生请求",@"JSON反序列化展示数据",@"XML文件解析",@"小文件下载",@"使用NSURLConnection下载大文件",@"通过输出流下载文件",@"使用NSURLConnection上传文件",@"使用NSURLSession网络请求",@"使用NSURLSession网络下载大文件01",@"使用NSURLSession网络下载大文件02",@"使用NSURLSession上传文件",@"webView",@"LinWebView",@"AFN",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"原生请求",@"JSON反序列化展示数据",@"XML文件解析",@"小文件下载",@"使用NSURLConnection下载大文件",@"通过输出流下载文件",@"使用NSURLConnection上传文件",@"使用NSURLSession网络请求",@"使用NSURLSession网络下载大文件01",@"使用NSURLSession网络下载大文件02",@"使用NSURLSession上传文件",@"webView",@"LinWebView",@"AFN",@"监听网络状态",@"RunLoop",@"RunLoop应用(线程常驻)"];
   
 }
 
@@ -101,7 +102,8 @@
                 AFNVC *vc = [[AFNVC alloc] init];
                 [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==14){
-        
+        NetworkStatusVC *vc = [[NetworkStatusVC alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==15){
         
     }
