@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "ThreadVC.h"
 #import "NetWorkVC.h"
+#import "runtimeVC.h"
 
 #pragma  mark - controller
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -23,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.array = @[@"多线程",@"网络",@"UI"];
+    self.array = @[@"多线程",@"网络",@"RunTime学习"];
     [self.view addSubview:self.tableView];
 }
 
@@ -69,7 +70,7 @@
         NetWorkVC *vc = [[NetWorkVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==2){
-        NetWorkVC *vc = [[NetWorkVC alloc] init];
+        runtimeVC *vc = [[runtimeVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==3){
         ThreadVC *vc = [[ThreadVC alloc] init];

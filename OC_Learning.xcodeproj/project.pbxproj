@@ -22,6 +22,10 @@
 		694114D328AC9A2E00BE6792 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114CE28AC9A2E00BE6792 /* NSString+Hash.m */; };
 		694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114D128AC9A2E00BE6792 /* RSACryptor.m */; };
 		694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114D228AC9A2E00BE6792 /* EncryptionTools.m */; };
+		69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E2B28ADCA7F00DF0939 /* runtimeVC.m */; };
+		69424E3028ADDA0400DF0939 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E2F28ADDA0400DF0939 /* Person.m */; };
+		69424E3328ADEF1700DF0939 /* RuntimeChangeFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3228ADEF1700DF0939 /* RuntimeChangeFunctionVC.m */; };
+		69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3528AE0A6F00DF0939 /* UIImage+image.m */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -97,6 +101,14 @@
 		694114D028AC9A2E00BE6792 /* RSACryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSACryptor.h; sourceTree = "<group>"; };
 		694114D128AC9A2E00BE6792 /* RSACryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSACryptor.m; sourceTree = "<group>"; };
 		694114D228AC9A2E00BE6792 /* EncryptionTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionTools.m; sourceTree = "<group>"; };
+		69424E2A28ADCA7F00DF0939 /* runtimeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runtimeVC.h; sourceTree = "<group>"; };
+		69424E2B28ADCA7F00DF0939 /* runtimeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runtimeVC.m; sourceTree = "<group>"; };
+		69424E2E28ADDA0400DF0939 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		69424E2F28ADDA0400DF0939 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		69424E3128ADEF1700DF0939 /* RuntimeChangeFunctionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeChangeFunctionVC.h; sourceTree = "<group>"; };
+		69424E3228ADEF1700DF0939 /* RuntimeChangeFunctionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeChangeFunctionVC.m; sourceTree = "<group>"; };
+		69424E3428AE0A6F00DF0939 /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
+		69424E3528AE0A6F00DF0939 /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -239,6 +251,7 @@
 		6934222328918CD0007561A1 /* OC_Learning */ = {
 			isa = PBXGroup;
 			children = (
+				69424E2D28ADCD2900DF0939 /* runtime */,
 				69C71E8928A7B6730025F49F /* network */,
 				695E8CE328A3637A00A7914A /* header */,
 				695E8CDF28A3595400A7914A /* instance */,
@@ -272,6 +285,21 @@
 				694114C728AC962800BE6792 /* EncryptionVC.m */,
 			);
 			path = encode_decode;
+			sourceTree = "<group>";
+		};
+		69424E2D28ADCD2900DF0939 /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				69424E2A28ADCA7F00DF0939 /* runtimeVC.h */,
+				69424E2B28ADCA7F00DF0939 /* runtimeVC.m */,
+				69424E2E28ADDA0400DF0939 /* Person.h */,
+				69424E2F28ADDA0400DF0939 /* Person.m */,
+				69424E3128ADEF1700DF0939 /* RuntimeChangeFunctionVC.h */,
+				69424E3228ADEF1700DF0939 /* RuntimeChangeFunctionVC.m */,
+				69424E3428AE0A6F00DF0939 /* UIImage+image.h */,
+				69424E3528AE0A6F00DF0939 /* UIImage+image.m */,
+			);
+			path = runtime;
 			sourceTree = "<group>";
 		};
 		695E8CDF28A3595400A7914A /* instance */ = {
@@ -600,6 +628,7 @@
 			files = (
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
+				69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				694114CB28AC99DE00BE6792 /* YYHttpTool.m in Sources */,
@@ -607,6 +636,7 @@
 				694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
 				69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */,
+				69424E3328ADEF1700DF0939 /* RuntimeChangeFunctionVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
 				69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */,
 				69BE3E9E28ABB1B600F6E4C3 /* AFNVC.m in Sources */,
@@ -639,9 +669,11 @@
 				69BE3E9B28ABAC9B00F6E4C3 /* LinWebView.m in Sources */,
 				69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */,
 				69BE3E9228AB862500F6E4C3 /* UploadBySession.m in Sources */,
+				69424E3028ADDA0400DF0939 /* Person.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
 				6965ACE328A9F6DB000A8202 /* DownloadBigByConnectionVC.m in Sources */,
 				695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */,
+				69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */,
 				694114C528AC878D00BE6792 /* Reachability.m in Sources */,
 				69BE3E9728ABA21F00F6E4C3 /* WebViewVC.m in Sources */,
 			);
@@ -790,6 +822,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4DVKAD4TK;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OC_Learning/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -819,6 +852,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4DVKAD4TK;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OC_Learning/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
