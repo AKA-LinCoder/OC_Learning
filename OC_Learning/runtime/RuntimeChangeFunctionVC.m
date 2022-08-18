@@ -6,6 +6,7 @@
 //
 
 #import "RuntimeChangeFunctionVC.h"
+#import "Person.h"
 
 @interface RuntimeChangeFunctionVC ()
 
@@ -31,6 +32,13 @@
     //在分类中，最好不要重写系统方法，一旦重写，会把系统方法给干掉
 //    UIImage *image = [UIImage lin_imageNamed:@"people"];
     UIImage *image = [UIImage imageNamed:@"people"];
+    
+    //Runtime动态添加方法：OC都是懒加载机制，只要一个方法实现了，就会马上添加到方法列表中，
+    //performSelector
+    Person *p = [Person new];
+    //执行方法，编译时不会坚持到底有没有这个方法，只有在真正执行的时候才会判断
+    [p performSelector:@selector(sleep)];
+    [p performSelector:@selector(pp:) withObject:@10];
 }
 
 
