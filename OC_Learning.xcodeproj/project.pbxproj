@@ -27,6 +27,10 @@
 		69424E3328ADEF1700DF0939 /* RuntimeChangeFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3228ADEF1700DF0939 /* RuntimeChangeFunctionVC.m */; };
 		69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3528AE0A6F00DF0939 /* UIImage+image.m */; };
 		69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3828AE1F5E00DF0939 /* NSObject+property.m */; };
+		69424E3C28AE230700DF0939 /* runtimeKVCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3B28AE230700DF0939 /* runtimeKVCVC.m */; };
+		69424E3E28AE2AB800DF0939 /* status.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69424E3D28AE2AB800DF0939 /* status.plist */; };
+		69424E4128AE2BED00DF0939 /* StatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E4028AE2BED00DF0939 /* StatusItem.m */; };
+		69424E4428AE2D6F00DF0939 /* NSDictionary+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E4328AE2D6F00DF0939 /* NSDictionary+Property.m */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -112,6 +116,13 @@
 		69424E3528AE0A6F00DF0939 /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
 		69424E3728AE1F5E00DF0939 /* NSObject+property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+property.h"; sourceTree = "<group>"; };
 		69424E3828AE1F5E00DF0939 /* NSObject+property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+property.m"; sourceTree = "<group>"; };
+		69424E3A28AE230700DF0939 /* runtimeKVCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runtimeKVCVC.h; sourceTree = "<group>"; };
+		69424E3B28AE230700DF0939 /* runtimeKVCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runtimeKVCVC.m; sourceTree = "<group>"; };
+		69424E3D28AE2AB800DF0939 /* status.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = status.plist; sourceTree = "<group>"; };
+		69424E3F28AE2BED00DF0939 /* StatusItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusItem.h; sourceTree = "<group>"; };
+		69424E4028AE2BED00DF0939 /* StatusItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusItem.m; sourceTree = "<group>"; };
+		69424E4228AE2D6F00DF0939 /* NSDictionary+Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Property.h"; sourceTree = "<group>"; };
+		69424E4328AE2D6F00DF0939 /* NSDictionary+Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Property.m"; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -293,6 +304,7 @@
 		69424E2D28ADCD2900DF0939 /* runtime */ = {
 			isa = PBXGroup;
 			children = (
+				69424E3D28AE2AB800DF0939 /* status.plist */,
 				69424E2A28ADCA7F00DF0939 /* runtimeVC.h */,
 				69424E2B28ADCA7F00DF0939 /* runtimeVC.m */,
 				69424E2E28ADDA0400DF0939 /* Person.h */,
@@ -303,6 +315,12 @@
 				69424E3528AE0A6F00DF0939 /* UIImage+image.m */,
 				69424E3728AE1F5E00DF0939 /* NSObject+property.h */,
 				69424E3828AE1F5E00DF0939 /* NSObject+property.m */,
+				69424E3A28AE230700DF0939 /* runtimeKVCVC.h */,
+				69424E3B28AE230700DF0939 /* runtimeKVCVC.m */,
+				69424E3F28AE2BED00DF0939 /* StatusItem.h */,
+				69424E4028AE2BED00DF0939 /* StatusItem.m */,
+				69424E4228AE2D6F00DF0939 /* NSDictionary+Property.h */,
+				69424E4328AE2D6F00DF0939 /* NSDictionary+Property.m */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -578,6 +596,7 @@
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
+				69424E3E28AE2AB800DF0939 /* status.plist in Resources */,
 				6934222F28918CD0007561A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,12 +658,14 @@
 				694114CB28AC99DE00BE6792 /* YYHttpTool.m in Sources */,
 				69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */,
 				694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */,
+				69424E4128AE2BED00DF0939 /* StatusItem.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
 				69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */,
 				69424E3328ADEF1700DF0939 /* RuntimeChangeFunctionVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
 				69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */,
 				69BE3E9E28ABB1B600F6E4C3 /* AFNVC.m in Sources */,
+				69424E3C28AE230700DF0939 /* runtimeKVCVC.m in Sources */,
 				6965ACE028A9E875000A8202 /* DownLoadLittleVC.m in Sources */,
 				695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */,
 				69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */,
@@ -666,6 +687,7 @@
 				69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */,
 				6965ACED28AA3F65000A8202 /* UploadByConnectionVC.m in Sources */,
 				69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */,
+				69424E4428AE2D6F00DF0939 /* NSDictionary+Property.m in Sources */,
 				694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
 				69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */,

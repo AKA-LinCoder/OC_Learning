@@ -9,6 +9,7 @@
 #import <objc/message.h>
 #import "Person.h"
 #import "RuntimeChangeFunctionVC.h"
+#import "runtimeKVCVC.h"
 
 @interface runtimeVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -18,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"runtime交换方法",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"runtime交换方法",@"runtimeKVC",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
     //id:谁发送消息
     //SEL：发送什么消息
     id objc = ((NSObject *(*)(id,SEL))(void *)objc_msgSend)([NSObject class],@selector(alloc));
@@ -89,8 +90,8 @@
         [self presentViewController:vc animated:YES completion:nil];
        
     }else if(indexPath.row==1){
-//        PthreadVC *vc = [[PthreadVC alloc] init];
-      //        [self presentViewController:vc animated:YES completion:nil];
+        runtimeKVCVC *vc = [[runtimeKVCVC alloc] init];
+              [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==2){
 //        PthreadVC *vc = [[PthreadVC alloc] init];
       //        [self presentViewController:vc animated:YES completion:nil];
