@@ -26,6 +26,7 @@
 		69424E3028ADDA0400DF0939 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E2F28ADDA0400DF0939 /* Person.m */; };
 		69424E3328ADEF1700DF0939 /* RuntimeChangeFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3228ADEF1700DF0939 /* RuntimeChangeFunctionVC.m */; };
 		69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3528AE0A6F00DF0939 /* UIImage+image.m */; };
+		69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E3828AE1F5E00DF0939 /* NSObject+property.m */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -109,6 +110,8 @@
 		69424E3228ADEF1700DF0939 /* RuntimeChangeFunctionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeChangeFunctionVC.m; sourceTree = "<group>"; };
 		69424E3428AE0A6F00DF0939 /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
 		69424E3528AE0A6F00DF0939 /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
+		69424E3728AE1F5E00DF0939 /* NSObject+property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+property.h"; sourceTree = "<group>"; };
+		69424E3828AE1F5E00DF0939 /* NSObject+property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+property.m"; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 				69424E3228ADEF1700DF0939 /* RuntimeChangeFunctionVC.m */,
 				69424E3428AE0A6F00DF0939 /* UIImage+image.h */,
 				69424E3528AE0A6F00DF0939 /* UIImage+image.m */,
+				69424E3728AE1F5E00DF0939 /* NSObject+property.h */,
+				69424E3828AE1F5E00DF0939 /* NSObject+property.m */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 				69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
 				69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */,
+				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
 				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,

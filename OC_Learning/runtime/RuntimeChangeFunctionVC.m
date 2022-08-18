@@ -7,6 +7,7 @@
 
 #import "RuntimeChangeFunctionVC.h"
 #import "Person.h"
+#import "NSObject+property.h"
 
 @interface RuntimeChangeFunctionVC ()
 
@@ -39,6 +40,16 @@
     //执行方法，编译时不会坚持到底有没有这个方法，只有在真正执行的时候才会判断
     [p performSelector:@selector(sleep)];
     [p performSelector:@selector(pp:) withObject:@10];
+    
+    //runtime一般都是针对系统的类
+    
+    //什么时候需要动态添加属性
+    //给系统的类添加属性的时候使用
+    //添加属性本质：让某一个属性与某个对象产生一个关联
+    //需求：让一个NSObject类保存一个字符串
+    NSObject *objct = [NSObject new];
+    objct.name = @"123";
+    
 }
 
 
