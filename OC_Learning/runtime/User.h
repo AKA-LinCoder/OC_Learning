@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger mbrank;
 
-@property (nonatomic, assign) NSInteger mbtype;
+//@property (nonatomic, assign) NSInteger mbtype;
 @end
 
 NS_ASSUME_NONNULL_END

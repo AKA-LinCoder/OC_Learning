@@ -25,6 +25,7 @@
     //字典转模型
     StatusItem *item = [StatusItem modelWithDice:dict];
 //    [NSTemporaryDirectory() stringByAppendingPathComponent:@"haha"];
+    
     NSLog(@"%@",item.user);
 }
 
