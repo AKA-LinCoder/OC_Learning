@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class User;
 NS_ASSUME_NONNULL_BEGIN
 //设计模型有哪些属性=>字典
 //KVC:模型中属性必须与字典Key一一对应
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger comments_count;
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) User *user;
 + (instancetype) itemWithDict:(NSDictionary *)dict;
 @end
 

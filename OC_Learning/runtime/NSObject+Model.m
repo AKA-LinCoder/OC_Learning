@@ -25,9 +25,26 @@
         Ivar ivar = ivarList[i];
         //获取成员变量名字
         NSString *ivarName = [NSString stringWithUTF8String:ivar_getName(ivar)];
+        NSString *ivalType = [NSString stringWithUTF8String:ivar_getTypeEncoding(ivar)];
+        NSLog(@"ivalType111:%@",ivalType);
+        ivalType = [ivalType stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        ivalType = [ivalType stringByReplacingOccurrencesOfString:@"@" withString:@""];
         NSString *key = [ivarName substringFromIndex:1];
         //去字典中查找对应的value
         id value =  dict[key];
+        
+        //二级转换,是字典且是自定义类型
+        if([value isKindOfClass:[NSDictionary class]] && !
+           [ivalType hasPrefix:@"NS"]){
+            //字典转模型 userDict => User模型
+            //转换成哪个模型
+            //获取成员变量类型
+            NSLog(@"ivalType:%@",ivalType);
+            //字符串 -》类
+            Class modelClass = NSClassFromString(ivalType);
+            NSLog(@"%@",modelClass);
+            value = [modelClass modelWithDice:value];
+        }
         if(value){
             [objc setValue:value forKey:key];
         }
