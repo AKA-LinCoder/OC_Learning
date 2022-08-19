@@ -7,6 +7,9 @@
 
 #import "runtimeKVCVC.h"
 #import "NSDictionary+Property.h"
+#import "StatusItem.h"
+#import "NSFileManager+Additions.h"
+#import "NSObject+Model.h"
 @interface runtimeKVCVC ()
 
 @end
@@ -18,8 +21,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
    NSDictionary *dict =  [NSDictionary dictionaryWithContentsOfFile:fullPath];
-    [dict createProperty];
+//    [dict createProperty];
     //字典转模型
+    StatusItem *item = [StatusItem modelWithDice:dict];
+//    [NSTemporaryDirectory() stringByAppendingPathComponent:@"haha"];
+    NSLog(@"%@", [NSTemporaryDirectory() stringByAppendingPathComponent:@"haha"]);
 }
 
 
