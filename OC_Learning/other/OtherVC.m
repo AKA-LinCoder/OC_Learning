@@ -8,6 +8,7 @@
 #import "OtherVC.h"
 #import "SuperClassAndClassVC.h"
 #import "ConstVC.h"
+#import "FatherAndSonVC.h"
 @interface OtherVC ()
 @property(nonatomic,strong)NSArray *array;
 @end
@@ -17,7 +18,7 @@ extern int apple;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"super,superClass,class",@"const",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
     NSLog(@"这是通过extern声明的apple%d",apple);
     
 }
@@ -53,8 +54,8 @@ extern int apple;
         ConstVC *vc = [[ConstVC alloc] init];
               [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==2){
-//        PthreadVC *vc = [[PthreadVC alloc] init];
-      //        [self presentViewController:vc animated:YES completion:nil];
+        FatherAndSonVC *vc = [[FatherAndSonVC alloc] init];
+              [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==3){
 //        PthreadVC *vc = [[PthreadVC alloc] init];
       //        [self presentViewController:vc animated:YES completion:nil];
