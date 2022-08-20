@@ -7,6 +7,7 @@
 
 #import "ConstVC.h"
 #define lin @"dasd"
+#import "GlobalConst.h"
 //常用字符串，常见基本变量 定义宏
 
 /*
@@ -35,8 +36,9 @@
  
  
  */
+//规范：全局变量不能定义在自己的类中，自己创建一个全局文件
 //不想修改谁就修饰谁
-NSString * const name = @"123";
+//NSString * const name = @"name";
 int apple = 1900;
 static NSString * const age = @"890"; //static 让age只能在当前文件使用
 @interface ConstVC ()
@@ -63,6 +65,7 @@ static NSString * const age = @"890"; //static 让age只能在当前文件使用
     self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"%@",name);
 
+    [[NSUserDefaults standardUserDefaults] setValue:@"123" forKey:name];
     [self mike];
 }
 
