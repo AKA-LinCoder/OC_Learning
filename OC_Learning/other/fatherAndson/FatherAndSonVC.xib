@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FatherAndSonVC">
             <connections>
+                <outlet property="contentView" destination="mc3-Q7-rKc" id="19C-fk-cQZ"/>
+                <outlet property="titleContainView" destination="YZ7-a2-7m2" id="dj5-kJ-yCZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,35 +21,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZ7-a2-7m2">
-                    <rect key="frame" x="0.0" y="44" width="414" height="31"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="14"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-bQ-kyN">
-                            <rect key="frame" x="0.0" y="0.0" width="138" height="31"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="14"/>
                             <color key="backgroundColor" systemColor="systemGreenColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="社会">
+                            <buttonConfiguration key="configuration" style="plain" title="">
                                 <backgroundConfiguration key="background"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="clickSoiety:" destination="-1" eventType="touchUpInside" id="iZW-xu-fOE"/>
+                                <action selector="showChildView:" destination="-1" eventType="touchUpInside" id="eoT-lE-zu9"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2st-oW-xoF">
-                            <rect key="frame" x="138" y="0.0" width="138" height="31"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2st-oW-xoF">
+                            <rect key="frame" x="138" y="0.0" width="138" height="14"/>
                             <color key="backgroundColor" systemColor="systemGrayColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="头条"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
                             <connections>
-                                <action selector="clickTop:" destination="-1" eventType="touchUpInside" id="dCC-nZ-NR1"/>
+                                <action selector="showChildView:" destination="-1" eventType="touchUpInside" id="y57-RJ-GbK"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZO-zh-6mo">
-                            <rect key="frame" x="276" y="0.0" width="138" height="31"/>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZO-zh-6mo">
+                            <rect key="frame" x="276" y="0.0" width="138" height="14"/>
                             <color key="backgroundColor" red="1" green="0.30621421064369503" blue="0.19861772754212836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="热点"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
                             <connections>
-                                <action selector="clickHot:" destination="-1" eventType="touchUpInside" id="zim-fe-DrH"/>
+                                <action selector="showChildView:" destination="-1" eventType="touchUpInside" id="ETw-UC-01P"/>
                             </connections>
                         </button>
                     </subviews>
@@ -66,13 +68,21 @@
                         <constraint firstItem="2st-oW-xoF" firstAttribute="leading" secondItem="jK4-bQ-kyN" secondAttribute="trailing" id="tbM-eX-sZM"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mc3-Q7-rKc">
+                    <rect key="frame" x="0.0" y="58" width="414" height="804"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="mc3-Q7-rKc" secondAttribute="bottom" id="3xk-kf-6Ng"/>
+                <constraint firstItem="mc3-Q7-rKc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="CIl-rD-cwy"/>
                 <constraint firstItem="YZ7-a2-7m2" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Gob-OC-bvO"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="mc3-Q7-rKc" secondAttribute="trailing" id="HHH-qt-qLr"/>
                 <constraint firstItem="YZ7-a2-7m2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OF2-fN-0bf"/>
                 <constraint firstItem="YZ7-a2-7m2" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="S9x-0g-49O"/>
+                <constraint firstItem="mc3-Q7-rKc" firstAttribute="top" secondItem="YZ7-a2-7m2" secondAttribute="bottom" id="Zgd-8E-H8A"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
         </view>
@@ -86,6 +96,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

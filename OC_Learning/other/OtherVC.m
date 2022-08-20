@@ -48,14 +48,18 @@ extern int apple;
 {
     if(indexPath.row==0){
         SuperClassAndClassVC *vc = [[SuperClassAndClassVC alloc] init];
-        [self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
        
     }else if(indexPath.row==1){
         ConstVC *vc = [[ConstVC alloc] init];
-              [self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==2){
+       
         FatherAndSonVC *vc = [[FatherAndSonVC alloc] init];
-              [self presentViewController:vc animated:YES completion:nil];
+//        vc.modalPresentationStyle =
+//        vc.modalPresentationStyle = [UIModalPresentationStyle.UIMoad UIModalPresentationFullScreen];
+//        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==3){
 //        PthreadVC *vc = [[PthreadVC alloc] init];
       //        [self presentViewController:vc animated:YES completion:nil];

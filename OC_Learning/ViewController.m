@@ -76,7 +76,8 @@
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==3){
         OtherVC *vc = [[OtherVC alloc] init];
-        [self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+//        [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==4){
         ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
