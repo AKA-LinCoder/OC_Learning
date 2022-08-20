@@ -17,6 +17,10 @@
 		6914761E28B07AA5001F5BB6 /* TopVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6914761C28B07AA5001F5BB6 /* TopVC.xib */; };
 		6914762228B07AB5001F5BB6 /* SocietyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914762028B07AB5001F5BB6 /* SocietyVC.m */; };
 		6914762328B07AB5001F5BB6 /* SocietyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6914762128B07AB5001F5BB6 /* SocietyVC.xib */; };
+		6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914762628B0C14B001F5BB6 /* WangyiVC.m */; };
+		6914762928B0C14B001F5BB6 /* WangyiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6914762728B0C14B001F5BB6 /* WangyiVC.xib */; };
+		6914766628B0DA3B001F5BB6 /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914766528B0DA3A001F5BB6 /* VideoVC.m */; };
+		6914766928B0DE45001F5BB6 /* StarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914766828B0DE45001F5BB6 /* StarVC.m */; };
 		6934222628918CD0007561A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934222528918CD0007561A1 /* AppDelegate.m */; };
 		6934222928918CD0007561A1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934222828918CD0007561A1 /* SceneDelegate.m */; };
 		6934222C28918CD0007561A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934222B28918CD0007561A1 /* ViewController.m */; };
@@ -110,6 +114,13 @@
 		6914761F28B07AB5001F5BB6 /* SocietyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocietyVC.h; sourceTree = "<group>"; };
 		6914762028B07AB5001F5BB6 /* SocietyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocietyVC.m; sourceTree = "<group>"; };
 		6914762128B07AB5001F5BB6 /* SocietyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocietyVC.xib; sourceTree = "<group>"; };
+		6914762528B0C14B001F5BB6 /* WangyiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WangyiVC.h; sourceTree = "<group>"; };
+		6914762628B0C14B001F5BB6 /* WangyiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WangyiVC.m; sourceTree = "<group>"; };
+		6914762728B0C14B001F5BB6 /* WangyiVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WangyiVC.xib; sourceTree = "<group>"; };
+		6914766428B0DA3A001F5BB6 /* VideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		6914766528B0DA3A001F5BB6 /* VideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
+		6914766728B0DE45001F5BB6 /* StarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarVC.h; sourceTree = "<group>"; };
+		6914766828B0DE45001F5BB6 /* StarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarVC.m; sourceTree = "<group>"; };
 		6934222128918CD0007561A1 /* OC_Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OC_Learning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6934222428918CD0007561A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6934222528918CD0007561A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -328,6 +339,28 @@
 				6914761728B07A96001F5BB6 /* HotVC.xib */,
 			);
 			path = hot;
+			sourceTree = "<group>";
+		};
+		6914762428B0C0D7001F5BB6 /* wangyi */ = {
+			isa = PBXGroup;
+			children = (
+				6914766328B0D99F001F5BB6 /* children */,
+				6914762528B0C14B001F5BB6 /* WangyiVC.h */,
+				6914762628B0C14B001F5BB6 /* WangyiVC.m */,
+				6914762728B0C14B001F5BB6 /* WangyiVC.xib */,
+			);
+			path = wangyi;
+			sourceTree = "<group>";
+		};
+		6914766328B0D99F001F5BB6 /* children */ = {
+			isa = PBXGroup;
+			children = (
+				6914766428B0DA3A001F5BB6 /* VideoVC.h */,
+				6914766528B0DA3A001F5BB6 /* VideoVC.m */,
+				6914766728B0DE45001F5BB6 /* StarVC.h */,
+				6914766828B0DE45001F5BB6 /* StarVC.m */,
+			);
+			path = children;
 			sourceTree = "<group>";
 		};
 		6934221828918CD0007561A1 = {
@@ -651,6 +684,7 @@
 		69EA7A9E28AF2F33006A6B4B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				6914762428B0C0D7001F5BB6 /* wangyi */,
 				6914760628B07663001F5BB6 /* fatherAndson */,
 				69BFB8FF28AF74A2001A9BB1 /* Const */,
 				69EA7AA628AF3158006A6B4B /* SuperClassAndClass */,
@@ -735,6 +769,7 @@
 				69BE3E9828ABA21F00F6E4C3 /* WebViewVC.xib in Resources */,
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
+				6914762928B0C14B001F5BB6 /* WangyiVC.xib in Resources */,
 				69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
 				6914762328B07AB5001F5BB6 /* SocietyVC.xib in Resources */,
@@ -799,6 +834,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
+				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
 				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
@@ -829,6 +865,7 @@
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
 				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,
 				694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */,
+				6914766628B0DA3B001F5BB6 /* VideoVC.m in Sources */,
 				6965ACE728AA3C20000A8202 /* DownloadByOutPutVC.m in Sources */,
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
@@ -838,6 +875,7 @@
 				694114D328AC9A2E00BE6792 /* NSString+Hash.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
 				6914762228B07AB5001F5BB6 /* SocietyVC.m in Sources */,
+				6914766928B0DE45001F5BB6 /* StarVC.m in Sources */,
 				6914761828B07A96001F5BB6 /* HotVC.m in Sources */,
 				69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */,
 				6965ACED28AA3F65000A8202 /* UploadByConnectionVC.m in Sources */,
