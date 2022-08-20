@@ -71,6 +71,7 @@
 		69BE3E9B28ABAC9B00F6E4C3 /* LinWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E9A28ABAC9B00F6E4C3 /* LinWebView.m */; };
 		69BE3E9E28ABB1B600F6E4C3 /* AFNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E9D28ABB1B600F6E4C3 /* AFNVC.m */; };
 		69BFB8FE28AF6273001A9BB1 /* SubPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BFB8FD28AF6273001A9BB1 /* SubPerson.m */; };
+		69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BFB90128AF74C4001A9BB1 /* ConstVC.m */; };
 		69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E7F28A79B210025F49F /* RunLoopUseVC.m */; };
 		69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8728A7AAC20025F49F /* ThreadVC.m */; };
 		69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8B28A7B68E0025F49F /* NetWorkVC.m */; };
@@ -203,6 +204,8 @@
 		69BE3E9D28ABB1B600F6E4C3 /* AFNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNVC.m; sourceTree = "<group>"; };
 		69BFB8FC28AF6273001A9BB1 /* SubPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubPerson.h; sourceTree = "<group>"; };
 		69BFB8FD28AF6273001A9BB1 /* SubPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubPerson.m; sourceTree = "<group>"; };
+		69BFB90028AF74C4001A9BB1 /* ConstVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstVC.h; sourceTree = "<group>"; };
+		69BFB90128AF74C4001A9BB1 /* ConstVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstVC.m; sourceTree = "<group>"; };
 		69C71E7E28A79B210025F49F /* RunLoopUseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopUseVC.h; sourceTree = "<group>"; };
 		69C71E7F28A79B210025F49F /* RunLoopUseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopUseVC.m; sourceTree = "<group>"; };
 		69C71E8628A7AAC20025F49F /* ThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadVC.h; sourceTree = "<group>"; };
@@ -526,6 +529,15 @@
 			path = webview;
 			sourceTree = "<group>";
 		};
+		69BFB8FF28AF74A2001A9BB1 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				69BFB90028AF74C4001A9BB1 /* ConstVC.h */,
+				69BFB90128AF74C4001A9BB1 /* ConstVC.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
 		69C71E8928A7B6730025F49F /* network */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +583,7 @@
 		69EA7A9E28AF2F33006A6B4B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				69BFB8FF28AF74A2001A9BB1 /* Const */,
 				69EA7AA628AF3158006A6B4B /* SuperClassAndClass */,
 				69EA7AA328AF2FEA006A6B4B /* OtherVC.h */,
 				69EA7AA428AF2FEA006A6B4B /* OtherVC.m */,
@@ -714,6 +727,7 @@
 			files = (
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
+				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
 				69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
