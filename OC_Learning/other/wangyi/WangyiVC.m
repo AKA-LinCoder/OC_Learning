@@ -12,21 +12,30 @@
 #import "VideoVC.h"
 #import "StarVC.h"
 
-@interface WangyiVC ()
+@interface WangyiVC ()<UIScrollViewDelegate>
 @property(nonatomic,strong) UIScrollView *contentScrollView;
 @property(nonatomic,strong) UIScrollView *titleScrollView;
 @property(nonatomic,strong) SocietyVC *societyVC;
 @property(nonatomic,strong) TopVC *topVC;
 @property(nonatomic,strong) HotVC *hotVC;
 @property(nonatomic,strong) UIButton *selectedButton;
+@property(nonatomic,strong) NSMutableArray *titleButtons;
 @end
 
 @implementation WangyiVC
-
+- (NSMutableArray *)titleButtons
+{
+    if(_titleButtons==nil){
+        _titleButtons = [NSMutableArray array];
+    }
+    return _titleButtons;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"网易新闻";
+    //iOS7以后导航控制器中scrollView顶部会额外添加64的滚动区域
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //1.添加标题滚动视图
     [self setTitleScrollView];
     //2.添加内容滚动视图
@@ -45,6 +54,7 @@
     CGFloat y = self.navigationController.navigationBarHidden?64:104;
     titleScrollView.frame = CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, 44);
     titleScrollView.backgroundColor = [UIColor orangeColor];
+    titleScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [self.view addSubview:titleScrollView];
     self.titleScrollView = titleScrollView;
 }
@@ -56,8 +66,14 @@
     CGFloat y = CGRectGetMaxY(self.titleScrollView.frame);
     contentScrollView.backgroundColor = [UIColor systemBlueColor];
     contentScrollView.frame = CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, self.view.bounds.size.height-y);
+    contentScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    contentScrollView.pagingEnabled = YES;
+    contentScrollView.bounces = NO;
     [self.view addSubview:contentScrollView];
     self.contentScrollView = contentScrollView;
+    //设置代理，监听什么时候滚动完成
+    self.contentScrollView.delegate = self;
+    
 }
 
 #pragma mark-添加所有子控制器
@@ -99,6 +115,8 @@
         titleButton.tag = i;
         //监听按钮点击
         [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+        //把标题按钮保存到数组中
+        [self.titleButtons addObject:titleButton];
         if(i==0){
             [self titleClick:titleButton];
         }
@@ -107,8 +125,10 @@
     //设置标题滚动范围
     self.titleScrollView.contentSize = CGSizeMake(count *btnW, 0);
     self.titleScrollView.showsHorizontalScrollIndicator = NO;
+    
     //设置内容滚动范围
     self.contentScrollView.contentSize = CGSizeMake(count *[UIScreen mainScreen].bounds.size.width, 0);
+    self.contentScrollView.showsHorizontalScrollIndicator = NO;
 }
 
 #pragma  mark-选中标题
@@ -125,13 +145,39 @@
     NSInteger i = button.tag;
     //1.标题颜色切换
     [self selButton:button];
-    UIViewController *vc = self.childViewControllers[i];
-    CGFloat x = i * [UIScreen mainScreen].bounds.size.width;
-    vc.view.frame = CGRectMake(x, 0, [UIScreen mainScreen].bounds.size.width, self.contentScrollView.bounds.size.height);
-    [self.contentScrollView addSubview:vc.view];
+    [self setupOneViewController:i];
     //3.内容滚动视图到响应位置
+    CGFloat x = i * [UIScreen mainScreen].bounds.size.width;
     self.contentScrollView.contentOffset = CGPointMake(x, 0);
     
     //2.对应子控制view添加
+}
+#pragma mark-添加一个子控制器的view
+-(void) setupOneViewController:(NSInteger) i
+{
+    
+    UIViewController *vc = self.childViewControllers[i];
+    if(vc.view.superview||vc.viewIfLoaded){
+        //如果加载了就不必加载
+        return;
+    }
+    CGFloat x = i * [UIScreen mainScreen].bounds.size.width;
+    vc.view.frame = CGRectMake(x, 0, [UIScreen mainScreen].bounds.size.width, self.contentScrollView.bounds.size.height);
+    [self.contentScrollView addSubview:vc.view];
+}
+#pragma mark-UIScrollViewDelegate
+//滚动完成
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    /*
+     1/选中标题
+     2.把对应子控制器的view添加上去
+     */
+    //获取当前角标
+    NSInteger i  = scrollView.contentOffset.x/[UIScreen mainScreen].bounds.size.width;
+    //可能取出其他视图
+    UIButton *titleBtn = self.titleButtons[i];
+    [self selButton:titleBtn];
+    [self setupOneViewController:i];
 }
 @end
