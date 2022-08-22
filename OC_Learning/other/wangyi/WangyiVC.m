@@ -45,6 +45,8 @@
     //4.添加所有标题
     [self setupAllTitle];
     //5.处理标题点击
+    //6.处理内容滚动视图滚动
+    //7.将选中标题居中
 }
 #pragma mark-添加标题滚动视图
 -(void) setTitleScrollView
@@ -64,7 +66,7 @@
     //创建scrollview
     UIScrollView *contentScrollView = [[UIScrollView alloc] init];
     CGFloat y = CGRectGetMaxY(self.titleScrollView.frame);
-    contentScrollView.backgroundColor = [UIColor systemBlueColor];
+//    contentScrollView.backgroundColor = [UIColor whiteColor];
     contentScrollView.frame = CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, self.view.bounds.size.height-y);
     contentScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     contentScrollView.pagingEnabled = YES;
@@ -137,6 +139,27 @@
     [self.selectedButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     self.selectedButton = button;
+    //标题居中
+    [self setTitleCenter:button];
+}
+
+#pragma mark-选中标题居中
+-(void) setTitleCenter:(UIButton *)button
+{
+    //选中按钮的中心点x-屏幕宽度的一半就可以居中
+    CGFloat offetX = button.center.x - [UIScreen mainScreen].bounds.size.width*0.5;
+    NSLog(@"%f",offetX);
+    //左边不移
+    if(offetX<0){
+        offetX=0;
+    }
+    //最后一个，最大偏移量
+    CGFloat maxOffsetX = self.titleScrollView.contentSize.width-[UIScreen mainScreen].bounds.size.width;
+    if(offetX>maxOffsetX){
+        offetX=maxOffsetX;
+    }
+    [self.titleScrollView setContentOffset:CGPointMake(offetX, 0) animated:YES];
+    
 }
 
 #pragma mark-标题点击
@@ -157,7 +180,7 @@
 {
     
     UIViewController *vc = self.childViewControllers[i];
-    if(vc.view.superview||vc.viewIfLoaded){
+    if(vc.view.superview){
         //如果加载了就不必加载
         return;
     }
