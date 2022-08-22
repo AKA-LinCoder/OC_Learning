@@ -9,7 +9,7 @@
 #import "SuperClassAndClassVC.h"
 #import "ConstVC.h"
 #import "FatherAndSonVC.h"
-#import "WangyiVC.h"
+#import "ExtensionWangyiVC.h"
 @interface OtherVC ()
 @property(nonatomic,strong)NSArray *array;
 @end
@@ -60,7 +60,7 @@ extern int apple;
         FatherAndSonVC *vc = [[FatherAndSonVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==3){
-        WangyiVC *vc = [[WangyiVC alloc] init];
+        ExtensionWangyiVC *vc = [[ExtensionWangyiVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==4){
 //        GCDVC *vc = [[GCDVC alloc] init];

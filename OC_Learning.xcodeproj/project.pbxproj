@@ -96,6 +96,7 @@
 		69EA7A9A28AF1E85006A6B4B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EA7A9928AF1E85006A6B4B /* User.m */; };
 		69EA7AA228AF2FA0006A6B4B /* SuperClassAndClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EA7AA128AF2FA0006A6B4B /* SuperClassAndClassVC.m */; };
 		69EA7AA528AF2FEA006A6B4B /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EA7AA428AF2FEA006A6B4B /* OtherVC.m */; };
+		69F6F6DD28B32A8800675D4C /* ExtensionWangyiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6DC28B32A8800675D4C /* ExtensionWangyiVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -261,6 +262,8 @@
 		69EA7AA128AF2FA0006A6B4B /* SuperClassAndClassVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperClassAndClassVC.m; sourceTree = "<group>"; };
 		69EA7AA328AF2FEA006A6B4B /* OtherVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherVC.h; sourceTree = "<group>"; };
 		69EA7AA428AF2FEA006A6B4B /* OtherVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherVC.m; sourceTree = "<group>"; };
+		69F6F6DB28B32A8800675D4C /* ExtensionWangyiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionWangyiVC.h; sourceTree = "<group>"; };
+		69F6F6DC28B32A8800675D4C /* ExtensionWangyiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionWangyiVC.m; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -348,6 +351,8 @@
 				6914762528B0C14B001F5BB6 /* WangyiVC.h */,
 				6914762628B0C14B001F5BB6 /* WangyiVC.m */,
 				6914762728B0C14B001F5BB6 /* WangyiVC.xib */,
+				69F6F6DB28B32A8800675D4C /* ExtensionWangyiVC.h */,
+				69F6F6DC28B32A8800675D4C /* ExtensionWangyiVC.m */,
 			);
 			path = wangyi;
 			sourceTree = "<group>";
@@ -866,6 +871,7 @@
 				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,
 				694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */,
 				6914766628B0DA3B001F5BB6 /* VideoVC.m in Sources */,
+				69F6F6DD28B32A8800675D4C /* ExtensionWangyiVC.m in Sources */,
 				6965ACE728AA3C20000A8202 /* DownloadByOutPutVC.m in Sources */,
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,

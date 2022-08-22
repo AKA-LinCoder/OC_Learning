@@ -15,11 +15,9 @@
 @interface WangyiVC ()<UIScrollViewDelegate>
 @property(nonatomic,strong) UIScrollView *contentScrollView;
 @property(nonatomic,strong) UIScrollView *titleScrollView;
-@property(nonatomic,strong) SocietyVC *societyVC;
-@property(nonatomic,strong) TopVC *topVC;
-@property(nonatomic,strong) HotVC *hotVC;
 @property(nonatomic,strong) UIButton *selectedButton;
 @property(nonatomic,strong) NSMutableArray *titleButtons;
+@property(nonatomic,assign) BOOL isInitialize;
 @end
 
 @implementation WangyiVC
@@ -41,13 +39,24 @@
     //2.添加内容滚动视图
     [self setContentScrollView];
     //3.添加所有子控制器
-    [self setupAllChildController];
-    //4.添加所有标题
-    [self setupAllTitle];
+//    [self setupAllChildController];
+   
     //5.处理标题点击
     //6.处理内容滚动视图滚动
     //7.将选中标题居中
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (_isInitialize == NO) {
+        //4.添加所有标题
+        [self setupAllTitle];
+        _isInitialize = YES;
+    }
+   
+}
+
 #pragma mark-添加标题滚动视图
 -(void) setTitleScrollView
 {
@@ -79,25 +88,25 @@
 }
 
 #pragma mark-添加所有子控制器
--(void) setupAllChildController
-{
-    SocietyVC *societyVC = [[SocietyVC alloc] init];
-    societyVC.title = @"社会";
-
-    [self addChildViewController:societyVC];
-    HotVC *hotVC = [[HotVC alloc]init];
-    hotVC.title = @"热门";
-    [self addChildViewController:hotVC];
-    TopVC *topVC = [[TopVC alloc ]init];
-    topVC.title = @"热点";
-    [self addChildViewController:topVC];
-    VideoVC *videoVC = [[VideoVC alloc] init];
-    videoVC.title = @"视频";
-    [self addChildViewController:videoVC];
-    StarVC *startVC = [[StarVC alloc] init];
-    startVC.title = @"明星";
-    [self addChildViewController:startVC];
-}
+//-(void) setupAllChildController
+//{
+//    SocietyVC *societyVC = [[SocietyVC alloc] init];
+//    societyVC.title = @"社会";
+//
+//    [self addChildViewController:societyVC];
+//    HotVC *hotVC = [[HotVC alloc]init];
+//    hotVC.title = @"热门";
+//    [self addChildViewController:hotVC];
+//    TopVC *topVC = [[TopVC alloc ]init];
+//    topVC.title = @"热点";
+//    [self addChildViewController:topVC];
+//    VideoVC *videoVC = [[VideoVC alloc] init];
+//    videoVC.title = @"视频";
+//    [self addChildViewController:videoVC];
+//    StarVC *startVC = [[StarVC alloc] init];
+//    startVC.title = @"明星";
+//    [self addChildViewController:startVC];
+//}
 #pragma mark-添加所有标题
 -(void) setupAllTitle
 {
@@ -163,7 +172,7 @@
     NSInteger count = self.titleButtons.count;
     //获取右边按钮
     UIButton *rightBtn;
-    if (rightI>count) {
+    if (rightI<count) {
         rightBtn = self.titleButtons[rightI];
     }
     
@@ -174,6 +183,11 @@
     //缩放按钮
     leftBtn.transform = CGAffineTransformMakeScale(scaleL*0.3+1, scaleL*0.3+1);
     rightBtn.transform = CGAffineTransformMakeScale(scaleR*0.3+1, scaleR*0.3+1);
+    //颜色渐变
+    UIColor *rightColor = [UIColor colorWithRed:scaleR green:0 blue:0 alpha:1];
+    UIColor *leftColor = [UIColor colorWithRed:scaleL green:0 blue:0 alpha:1];
+    [rightBtn setTitleColor:rightColor forState:UIControlStateNormal];
+    [leftBtn setTitleColor:leftColor forState:UIControlStateNormal];
     
 }
 
