@@ -102,6 +102,10 @@
 		69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6E628B35E4000675D4C /* SizeAndCenterVC.m */; };
 		69F6F6EC28B366DF00675D4C /* NoticeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6EA28B366DF00675D4C /* NoticeVC.m */; };
 		69F6F6ED28B366DF00675D4C /* NoticeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6EB28B366DF00675D4C /* NoticeVC.xib */; };
+		69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6F028B3745E00675D4C /* EnumVC.m */; };
+		69F6F6F328B3745E00675D4C /* EnumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6F128B3745E00675D4C /* EnumVC.xib */; };
+		69F6F6F828B3778C00675D4C /* AssignAndWeakVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6F628B3778C00675D4C /* AssignAndWeakVC.m */; };
+		69F6F6F928B3778C00675D4C /* AssignAndWeakVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6F728B3778C00675D4C /* AssignAndWeakVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -277,6 +281,12 @@
 		69F6F6E928B366DF00675D4C /* NoticeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeVC.h; sourceTree = "<group>"; };
 		69F6F6EA28B366DF00675D4C /* NoticeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeVC.m; sourceTree = "<group>"; };
 		69F6F6EB28B366DF00675D4C /* NoticeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeVC.xib; sourceTree = "<group>"; };
+		69F6F6EF28B3745E00675D4C /* EnumVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumVC.h; sourceTree = "<group>"; };
+		69F6F6F028B3745E00675D4C /* EnumVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumVC.m; sourceTree = "<group>"; };
+		69F6F6F128B3745E00675D4C /* EnumVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnumVC.xib; sourceTree = "<group>"; };
+		69F6F6F528B3778C00675D4C /* AssignAndWeakVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssignAndWeakVC.h; sourceTree = "<group>"; };
+		69F6F6F628B3778C00675D4C /* AssignAndWeakVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssignAndWeakVC.m; sourceTree = "<group>"; };
+		69F6F6F728B3778C00675D4C /* AssignAndWeakVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignAndWeakVC.xib; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -702,6 +712,8 @@
 		69EA7A9E28AF2F33006A6B4B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				69F6F6F428B3776B00675D4C /* assign和weak */,
+				69F6F6EE28B3744200675D4C /* 枚举中的位运算 */,
 				69F6F6E828B3666B00675D4C /* 通知补充 */,
 				69F6F6E428B35E2700675D4C /* Size和center */,
 				69F6F6DE28B32D9100675D4C /* UIScrollView自动布局 */,
@@ -753,6 +765,26 @@
 				69F6F6EB28B366DF00675D4C /* NoticeVC.xib */,
 			);
 			path = "通知补充";
+			sourceTree = "<group>";
+		};
+		69F6F6EE28B3744200675D4C /* 枚举中的位运算 */ = {
+			isa = PBXGroup;
+			children = (
+				69F6F6EF28B3745E00675D4C /* EnumVC.h */,
+				69F6F6F028B3745E00675D4C /* EnumVC.m */,
+				69F6F6F128B3745E00675D4C /* EnumVC.xib */,
+			);
+			path = "枚举中的位运算";
+			sourceTree = "<group>";
+		};
+		69F6F6F428B3776B00675D4C /* assign和weak */ = {
+			isa = PBXGroup;
+			children = (
+				69F6F6F528B3778C00675D4C /* AssignAndWeakVC.h */,
+				69F6F6F628B3778C00675D4C /* AssignAndWeakVC.m */,
+				69F6F6F728B3778C00675D4C /* AssignAndWeakVC.xib */,
+			);
+			path = "assign和weak";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -814,6 +846,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F6F6F928B3778C00675D4C /* AssignAndWeakVC.xib in Resources */,
 				6914761E28B07AA5001F5BB6 /* TopVC.xib in Resources */,
 				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
 				69BE3E9828ABA21F00F6E4C3 /* WebViewVC.xib in Resources */,
@@ -827,6 +860,7 @@
 				6914761928B07A96001F5BB6 /* HotVC.xib in Resources */,
 				69F6F6ED28B366DF00675D4C /* NoticeVC.xib in Resources */,
 				6965ACD928A9D6E1000A8202 /* local.xml in Resources */,
+				69F6F6F328B3745E00675D4C /* EnumVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
@@ -885,6 +919,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F6F6F828B3778C00675D4C /* AssignAndWeakVC.m in Sources */,
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
@@ -912,6 +947,7 @@
 				69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */,
 				6914761D28B07AA5001F5BB6 /* TopVC.m in Sources */,
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
+				69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */,
 				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
 				69EA7A9728AF180E006A6B4B /* NSObject+Model.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
