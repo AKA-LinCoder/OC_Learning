@@ -100,6 +100,8 @@
 		69F6F6E228B32E8400675D4C /* ScrollviewAutoLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6E028B32E8400675D4C /* ScrollviewAutoLayoutVC.m */; };
 		69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6E128B32E8400675D4C /* ScrollviewAutoLayoutVC.xib */; };
 		69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6E628B35E4000675D4C /* SizeAndCenterVC.m */; };
+		69F6F6EC28B366DF00675D4C /* NoticeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6EA28B366DF00675D4C /* NoticeVC.m */; };
+		69F6F6ED28B366DF00675D4C /* NoticeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6EB28B366DF00675D4C /* NoticeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -272,6 +274,9 @@
 		69F6F6E128B32E8400675D4C /* ScrollviewAutoLayoutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollviewAutoLayoutVC.xib; sourceTree = "<group>"; };
 		69F6F6E528B35E4000675D4C /* SizeAndCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeAndCenterVC.h; sourceTree = "<group>"; };
 		69F6F6E628B35E4000675D4C /* SizeAndCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SizeAndCenterVC.m; sourceTree = "<group>"; };
+		69F6F6E928B366DF00675D4C /* NoticeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeVC.h; sourceTree = "<group>"; };
+		69F6F6EA28B366DF00675D4C /* NoticeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeVC.m; sourceTree = "<group>"; };
+		69F6F6EB28B366DF00675D4C /* NoticeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeVC.xib; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -697,6 +702,7 @@
 		69EA7A9E28AF2F33006A6B4B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				69F6F6E828B3666B00675D4C /* 通知补充 */,
 				69F6F6E428B35E2700675D4C /* Size和center */,
 				69F6F6DE28B32D9100675D4C /* UIScrollView自动布局 */,
 				6914762428B0C0D7001F5BB6 /* wangyi */,
@@ -737,6 +743,16 @@
 				69F6F6E628B35E4000675D4C /* SizeAndCenterVC.m */,
 			);
 			path = "Size和center";
+			sourceTree = "<group>";
+		};
+		69F6F6E828B3666B00675D4C /* 通知补充 */ = {
+			isa = PBXGroup;
+			children = (
+				69F6F6E928B366DF00675D4C /* NoticeVC.h */,
+				69F6F6EA28B366DF00675D4C /* NoticeVC.m */,
+				69F6F6EB28B366DF00675D4C /* NoticeVC.xib */,
+			);
+			path = "通知补充";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -809,6 +825,7 @@
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
 				6914762328B07AB5001F5BB6 /* SocietyVC.xib in Resources */,
 				6914761928B07A96001F5BB6 /* HotVC.xib in Resources */,
+				69F6F6ED28B366DF00675D4C /* NoticeVC.xib in Resources */,
 				6965ACD928A9D6E1000A8202 /* local.xml in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
@@ -932,6 +949,7 @@
 				69424E3028ADDA0400DF0939 /* Person.m in Sources */,
 				69EA7AA528AF2FEA006A6B4B /* OtherVC.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
+				69F6F6EC28B366DF00675D4C /* NoticeVC.m in Sources */,
 				6965ACE328A9F6DB000A8202 /* DownloadBigByConnectionVC.m in Sources */,
 				69EA7AA228AF2FA0006A6B4B /* SuperClassAndClassVC.m in Sources */,
 				695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */,
