@@ -136,11 +136,45 @@
 #pragma  mark-选中标题
 -(void)selButton:(UIButton *)button
 {
+    _selectedButton.transform = CGAffineTransformIdentity;
     [self.selectedButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    self.selectedButton = button;
+
     //标题居中
     [self setTitleCenter:button];
+    //字体缩放,改形变
+    button.transform = CGAffineTransformMakeScale(1.3, 1.3);
+    self.selectedButton = button;
+}
+#pragma mark- 字体缩放
+-(void) setupTitleScale:(UIButton *)button
+{
+    
+  
+}
+#pragma mark-只要一滚动就需要自提渐变
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //字体缩放：1.缩放比例 2.缩放哪两个按钮
+    NSInteger leftI = scrollView.contentOffset.x/[UIScreen mainScreen].bounds.size.width;
+    NSInteger rightI = leftI+1;
+    //获取左边按钮
+    UIButton *leftBtn = self.titleButtons[leftI];
+    NSInteger count = self.titleButtons.count;
+    //获取右边按钮
+    UIButton *rightBtn;
+    if (rightI>count) {
+        rightBtn = self.titleButtons[rightI];
+    }
+    
+    CGFloat scaleR = scrollView.contentOffset.x/[UIScreen mainScreen].bounds.size.width;
+    scaleR -=leftI;
+    CGFloat scaleL = 1-scaleR;
+    
+    //缩放按钮
+    leftBtn.transform = CGAffineTransformMakeScale(scaleL*0.3+1, scaleL*0.3+1);
+    rightBtn.transform = CGAffineTransformMakeScale(scaleR*0.3+1, scaleR*0.3+1);
+    
 }
 
 #pragma mark-选中标题居中
