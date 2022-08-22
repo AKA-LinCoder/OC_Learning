@@ -15,6 +15,7 @@
 #import "NoticeVC.h"
 #import "EnumVC.h"
 #import "AssignAndWeakVC.h"
+#import "FrameAndBoundsVC.h"
 @interface OtherVC ()
 @property(nonatomic,strong)NSArray *array;
 @end
@@ -25,7 +26,7 @@ extern int apple;
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"这是本view2的宽度%f",self.view.bounds.size.width);
-    self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"网易新闻",@"UIScrollview自动布局",@"Size和center",@"通知补充",@"枚举的位运算",@"weak以及assign",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"网易新闻",@"UIScrollview自动布局",@"Size和center",@"通知补充",@"枚举的位运算",@"weak以及assign",@"frame和bounds",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
     NSLog(@"这是通过extern声明的apple%d",apple);
     
 }
@@ -87,8 +88,8 @@ extern int apple;
         [self.navigationController pushViewController:vc animated:YES];
                
     }else if (indexPath.row==9){
-        //        PthreadVC *vc = [[PthreadVC alloc] init];
-        //        [self presentViewController:vc animated:YES completion:nil];
+        FrameAndBoundsVC *vc = [[FrameAndBoundsVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
                
     }else if (indexPath.row==10){
         //        PthreadVC *vc = [[PthreadVC alloc] init];

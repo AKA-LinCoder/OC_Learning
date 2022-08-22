@@ -106,6 +106,7 @@
 		69F6F6F328B3745E00675D4C /* EnumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6F128B3745E00675D4C /* EnumVC.xib */; };
 		69F6F6F828B3778C00675D4C /* AssignAndWeakVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6F628B3778C00675D4C /* AssignAndWeakVC.m */; };
 		69F6F6F928B3778C00675D4C /* AssignAndWeakVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6F728B3778C00675D4C /* AssignAndWeakVC.xib */; };
+		69F6F6FD28B37AB700675D4C /* FrameAndBoundsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6FC28B37AB700675D4C /* FrameAndBoundsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -287,6 +288,8 @@
 		69F6F6F528B3778C00675D4C /* AssignAndWeakVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssignAndWeakVC.h; sourceTree = "<group>"; };
 		69F6F6F628B3778C00675D4C /* AssignAndWeakVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssignAndWeakVC.m; sourceTree = "<group>"; };
 		69F6F6F728B3778C00675D4C /* AssignAndWeakVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignAndWeakVC.xib; sourceTree = "<group>"; };
+		69F6F6FB28B37AB700675D4C /* FrameAndBoundsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameAndBoundsVC.h; sourceTree = "<group>"; };
+		69F6F6FC28B37AB700675D4C /* FrameAndBoundsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameAndBoundsVC.m; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -712,6 +715,7 @@
 		69EA7A9E28AF2F33006A6B4B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				69F6F6FA28B37A9F00675D4C /* frame和bounds */,
 				69F6F6F428B3776B00675D4C /* assign和weak */,
 				69F6F6EE28B3744200675D4C /* 枚举中的位运算 */,
 				69F6F6E828B3666B00675D4C /* 通知补充 */,
@@ -785,6 +789,15 @@
 				69F6F6F728B3778C00675D4C /* AssignAndWeakVC.xib */,
 			);
 			path = "assign和weak";
+			sourceTree = "<group>";
+		};
+		69F6F6FA28B37A9F00675D4C /* frame和bounds */ = {
+			isa = PBXGroup;
+			children = (
+				69F6F6FB28B37AB700675D4C /* FrameAndBoundsVC.h */,
+				69F6F6FC28B37AB700675D4C /* FrameAndBoundsVC.m */,
+			);
+			path = "frame和bounds";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -982,6 +995,7 @@
 				69BE3E9B28ABAC9B00F6E4C3 /* LinWebView.m in Sources */,
 				69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */,
 				69BE3E9228AB862500F6E4C3 /* UploadBySession.m in Sources */,
+				69F6F6FD28B37AB700675D4C /* FrameAndBoundsVC.m in Sources */,
 				69424E3028ADDA0400DF0939 /* Person.m in Sources */,
 				69EA7AA528AF2FEA006A6B4B /* OtherVC.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
