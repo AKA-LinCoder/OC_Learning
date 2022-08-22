@@ -97,6 +97,9 @@
 		69EA7AA228AF2FA0006A6B4B /* SuperClassAndClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EA7AA128AF2FA0006A6B4B /* SuperClassAndClassVC.m */; };
 		69EA7AA528AF2FEA006A6B4B /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EA7AA428AF2FEA006A6B4B /* OtherVC.m */; };
 		69F6F6DD28B32A8800675D4C /* ExtensionWangyiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6DC28B32A8800675D4C /* ExtensionWangyiVC.m */; };
+		69F6F6E228B32E8400675D4C /* ScrollviewAutoLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6E028B32E8400675D4C /* ScrollviewAutoLayoutVC.m */; };
+		69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F6F6E128B32E8400675D4C /* ScrollviewAutoLayoutVC.xib */; };
+		69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6F6E628B35E4000675D4C /* SizeAndCenterVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,6 +267,11 @@
 		69EA7AA428AF2FEA006A6B4B /* OtherVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherVC.m; sourceTree = "<group>"; };
 		69F6F6DB28B32A8800675D4C /* ExtensionWangyiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionWangyiVC.h; sourceTree = "<group>"; };
 		69F6F6DC28B32A8800675D4C /* ExtensionWangyiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionWangyiVC.m; sourceTree = "<group>"; };
+		69F6F6DF28B32E8400675D4C /* ScrollviewAutoLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollviewAutoLayoutVC.h; sourceTree = "<group>"; };
+		69F6F6E028B32E8400675D4C /* ScrollviewAutoLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollviewAutoLayoutVC.m; sourceTree = "<group>"; };
+		69F6F6E128B32E8400675D4C /* ScrollviewAutoLayoutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollviewAutoLayoutVC.xib; sourceTree = "<group>"; };
+		69F6F6E528B35E4000675D4C /* SizeAndCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeAndCenterVC.h; sourceTree = "<group>"; };
+		69F6F6E628B35E4000675D4C /* SizeAndCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SizeAndCenterVC.m; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -689,6 +697,8 @@
 		69EA7A9E28AF2F33006A6B4B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				69F6F6E428B35E2700675D4C /* Size和center */,
+				69F6F6DE28B32D9100675D4C /* UIScrollView自动布局 */,
 				6914762428B0C0D7001F5BB6 /* wangyi */,
 				6914760628B07663001F5BB6 /* fatherAndson */,
 				69BFB8FF28AF74A2001A9BB1 /* Const */,
@@ -708,6 +718,25 @@
 				69BFB8FD28AF6273001A9BB1 /* SubPerson.m */,
 			);
 			path = SuperClassAndClass;
+			sourceTree = "<group>";
+		};
+		69F6F6DE28B32D9100675D4C /* UIScrollView自动布局 */ = {
+			isa = PBXGroup;
+			children = (
+				69F6F6DF28B32E8400675D4C /* ScrollviewAutoLayoutVC.h */,
+				69F6F6E028B32E8400675D4C /* ScrollviewAutoLayoutVC.m */,
+				69F6F6E128B32E8400675D4C /* ScrollviewAutoLayoutVC.xib */,
+			);
+			path = "UIScrollView自动布局";
+			sourceTree = "<group>";
+		};
+		69F6F6E428B35E2700675D4C /* Size和center */ = {
+			isa = PBXGroup;
+			children = (
+				69F6F6E528B35E4000675D4C /* SizeAndCenterVC.h */,
+				69F6F6E628B35E4000675D4C /* SizeAndCenterVC.m */,
+			);
+			path = "Size和center";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -774,6 +803,7 @@
 				69BE3E9828ABA21F00F6E4C3 /* WebViewVC.xib in Resources */,
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
+				69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */,
 				6914762928B0C14B001F5BB6 /* WangyiVC.xib in Resources */,
 				69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
@@ -842,6 +872,7 @@
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
+				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
 				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
 				69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
@@ -887,6 +918,7 @@
 				6965ACED28AA3F65000A8202 /* UploadByConnectionVC.m in Sources */,
 				69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */,
 				69424E4428AE2D6F00DF0939 /* NSDictionary+Property.m in Sources */,
+				69F6F6E228B32E8400675D4C /* ScrollviewAutoLayoutVC.m in Sources */,
 				694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
 				6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */,

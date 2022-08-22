@@ -10,6 +10,8 @@
 #import "ConstVC.h"
 #import "FatherAndSonVC.h"
 #import "ExtensionWangyiVC.h"
+#import "ScrollviewAutoLayoutVC.h"
+#import "SizeAndCenterVC.h"
 @interface OtherVC ()
 @property(nonatomic,strong)NSArray *array;
 @end
@@ -20,7 +22,7 @@ extern int apple;
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"这是本view2的宽度%f",self.view.bounds.size.width);
-    self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"网易新闻",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"网易新闻",@"UIScrollview自动布局",@"Size和center",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
     NSLog(@"这是通过extern声明的apple%d",apple);
     
 }
@@ -63,11 +65,11 @@ extern int apple;
         ExtensionWangyiVC *vc = [[ExtensionWangyiVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==4){
-//        GCDVC *vc = [[GCDVC alloc] init];
-//        [self presentViewController:vc animated:YES completion:nil];
+        ScrollviewAutoLayoutVC *vc = [[ScrollviewAutoLayoutVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==5){
-        //        PthreadVC *vc = [[PthreadVC alloc] init];
-        //        [self presentViewController:vc animated:YES completion:nil];
+        SizeAndCenterVC *vc = [[SizeAndCenterVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
                
     }else if (indexPath.row==6){
         //        PthreadVC *vc = [[PthreadVC alloc] init];
