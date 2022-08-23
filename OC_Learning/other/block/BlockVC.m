@@ -9,7 +9,7 @@
 #import "BlockTableVC.h"
 //BlockType:类型别名
 typedef  void(^BlockType)();
-@interface BlockVC ()
+@interface BlockVC ()<BlockTableVCDelegate>
 //block怎么声明，就如果定义属性
 @property(nonatomic,strong) void(^block1)();
 @property(nonatomic,strong) BlockType block123;
@@ -51,11 +51,11 @@ typedef  void(^BlockType)();
 - (IBAction)blockSaveCode:(id)sender {
     
     _block1();
-}
-- (IBAction)goTableView:(id)sender {
     BlockTableVC *vc = [[BlockTableVC alloc] init];
+    vc.delegate = self;
 [self.navigationController pushViewController:vc animated:YES];
 }
+
 - (IBAction)SendData:(id)sender {
     /*
      顺传：给需要传值的对象，直接定义属性就能传值
@@ -63,4 +63,9 @@ typedef  void(^BlockType)();
      */
 }
 
+#pragma mark -BlockTableVCDelegate
+- (void)BlockTableVC:(BlockTableVC *)vc sendValue:(NSString *)something
+{
+    NSLog(@"这是获取到的值%@",something);
+}
 @end

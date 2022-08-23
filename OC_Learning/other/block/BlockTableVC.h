@@ -6,11 +6,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BlockTableVC;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BlockTableVC : UITableViewController
+@protocol BlockTableVCDelegate <NSObject>
 
+@optional
+-(void)BlockTableVC:(BlockTableVC *) vc sendValue:(NSString *)something;
+
+@end
+//设计方式：xiang
+
+@interface BlockTableVC : UITableViewController
+@property(nonatomic,weak) id delegate;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -36,15 +36,6 @@
                         <action selector="SendData:" destination="-1" eventType="touchUpInside" id="GVV-X5-7RL"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqE-XW-Oek">
-                    <rect key="frame" x="11" y="127" width="86" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="tableview"/>
-                    <connections>
-                        <action selector="goTableView:" destination="-1" eventType="touchUpInside" id="4Wh-SJ-Odk"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

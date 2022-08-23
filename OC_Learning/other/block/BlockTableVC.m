@@ -7,6 +7,9 @@
 
 #import "BlockTableVC.h"
 #import "CellItem.h"
+
+
+
 @interface BlockTableVC ()
 @property(nonatomic,strong)NSArray<CellItem *> *array;
 @end
@@ -53,6 +56,11 @@
 {
     //把要做的事情(代码)保存到模型
     _array[indexPath.row].block();
+    if ([_delegate respondsToSelector:@selector(BlockTableVC:sendValue:)]) {
+        [_delegate BlockTableVC:self sendValue:@"这是反方向的值"];
+    }
+    
+    
 }
 
 
