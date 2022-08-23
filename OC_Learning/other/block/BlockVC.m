@@ -2,13 +2,17 @@
 //  BlockVC.m
 //  OC_Learning
 //
-//  Created by lsaac on 2022/8/22.
+//  Created by lsaac on 2022/8/23.
 //
 
 #import "BlockVC.h"
-
+#import "BlockTableVC.h"
+//BlockType:类型别名
+typedef  void(^BlockType)();
 @interface BlockVC ()
-
+//block怎么声明，就如果定义属性
+@property(nonatomic,strong) void(^block1)();
+@property(nonatomic,strong) BlockType block123;
 @end
 /*
  block声明，定义，作用，类型，调用
@@ -24,28 +28,39 @@
  */
 @implementation BlockVC
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     void(^block)();
     
     //定义
-    void(^block1)() = ^(){};
+    void(^block1)() = ^(){
+        NSLog(@"this is a block");
+    };
+    
+    _block1 = block1;
     
     int(^block3)() = ^int{
         return 3;
     };
-    block();
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//1.在一个方法中定义，在另一个方法中调用
+//2.在一个类中定义，在另一个类中调用
+- (IBAction)blockSaveCode:(id)sender {
+    
+    _block1();
 }
-*/
+- (IBAction)goTableView:(id)sender {
+    BlockTableVC *vc = [[BlockTableVC alloc] init];
+[self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)SendData:(id)sender {
+    /*
+     顺传：给需要传值的对象，直接定义属性就能传值
+     逆传：用代理,block
+     */
+}
 
 @end

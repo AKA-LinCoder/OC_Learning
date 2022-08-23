@@ -1,5 +1,5 @@
 //
-//  BlockVC.h
+//  BlockTableVC.h
 //  OC_Learning
 //
 //  Created by lsaac on 2022/8/23.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BlockVC : UIViewController
+@interface BlockTableVC : UITableViewController
 
 @end
 
