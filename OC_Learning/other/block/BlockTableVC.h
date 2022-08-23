@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 //设计方式：xiang
 
 @interface BlockTableVC : UITableViewController
-@property(nonatomic,weak) id delegate;
+@property(nonatomic,weak) id<BlockTableVCDelegate> delegate;
+@property(nonatomic,strong) void(^block)(NSString *value);
 @end
 
 NS_ASSUME_NONNULL_END

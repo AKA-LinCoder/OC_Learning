@@ -60,6 +60,10 @@
         [_delegate BlockTableVC:self sendValue:@"这是反方向的值"];
     }
     
+    if (_block) {
+        _block(@"哈哈哈哈");
+    }
+    
     
 }
 

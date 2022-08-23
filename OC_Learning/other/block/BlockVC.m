@@ -53,6 +53,9 @@ typedef  void(^BlockType)();
     _block1();
     BlockTableVC *vc = [[BlockTableVC alloc] init];
     vc.delegate = self;
+    vc.block = ^(NSString *value){
+        NSLog(@"这是父视图接受到的数据%@",value);
+    };
 [self.navigationController pushViewController:vc animated:YES];
 }
 
