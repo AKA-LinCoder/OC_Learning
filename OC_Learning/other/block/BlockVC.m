@@ -87,9 +87,14 @@ typedef  void(^BlockType)();
             M RC给成员变量赋值，一定要使用set方法，不能直接访问下划线成员属性赋值
      ARC:只要一个对象没有被强指针修饰就会被销毁，默认局部变量对象都是强指针
      */
-    
+    ///内存管理
+    ///总结：只要block没有引用外部局部变量，block就放还在全局区
     //MRC
     //只要block引用了外部局部变量，block就放在栈里（因为MRC没有强引用的概念，都可以算是基本数据类型）；只要block没有引用外部局部变量，block就放还在全局区；block只能使用copy，不能使用retain，使用retain，block还是在栈里，代码块一过就销毁，可能导致坏的访问；使用copy就会放在堆里；
+    //ARC
+    //只要block引用了外部局部变量，block就放在堆里
+    //block使用strong，最好不要使用copy
+    //大部分时间使用copy是没有意义的，使用copy的set方法和使用strong的set方法不一样，以string为例，他使用copy的set方法会进行一系列的判断，判断是否需要分配内存之类，但实际上不需要这些步骤
     int a = 3;
     int(^block3)() = ^int{
         NSLog(@"%d",a);
