@@ -45,6 +45,15 @@
                         <action selector="arcAndmrc:" destination="-1" eventType="touchUpInside" id="y75-dP-b7c"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeD-c3-rFH">
+                    <rect key="frame" x="155" y="369" width="117" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="block循环引用"/>
+                    <connections>
+                        <action selector="blockCircularReference:" destination="-1" eventType="touchUpInside" id="2DC-hh-CDU"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -11,6 +11,8 @@
 
 
 @interface BlockTableVC ()
+@property(nonatomic,strong) void(^block1)();
+@property(nonatomic,strong) void(^block2)();
 @property(nonatomic,strong)NSArray<CellItem *> *array;
 @end
 
@@ -31,6 +33,30 @@
         NSLog(@"我要开始发邮件");
     };
     self.array = @[item,item2,item3];
+    //1.会造成循环引用
+//    _block1 = ^{
+//        NSLog(@"%@",self);
+//    };
+    //解决循环引用
+    __weak typeof(self) weakSelf = self;
+    _block1 = ^{
+        NSLog(@"%@",weakSelf);
+    };
+    //2.在block中使用延迟操作也可能会导致延迟操作无法执行
+//    _block2 = ^{
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            NSLog(@"%@",weakSelf);
+//        });
+//    };
+    //解决延迟方法无法执行的问题，创建强指针引用
+  
+    _block2 = ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"hahahha%@",strongSelf);
+        });
+    };
+    _block2();
     
 }
 
@@ -63,10 +89,16 @@
     if (_block) {
         _block(@"哈哈哈哈");
     }
+    //返回上一页，并销毁当前对象
+    [self.navigationController popViewControllerAnimated:YES];
     
     
 }
 
+- (void)dealloc
+{
+    NSLog(@"销毁了");
+}
 
 
 @end

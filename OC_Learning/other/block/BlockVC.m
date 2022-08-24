@@ -102,4 +102,16 @@ typedef  void(^BlockType)();
     };
     NSLog(@"%@",block3);
 }
+
+/// block的循环引用
+/// @param sender <#sender description#>
+- (IBAction)blockCircularReference:(id)sender {
+    /*
+     循环引用：我引用你，你引用我，就会造成循环引用，双方都不会被销毁，导致内存泄漏
+     block造成循环引用：block会对里面所有强指针变量全部强引用
+     */
+    BlockTableVC *vc = [[BlockTableVC alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

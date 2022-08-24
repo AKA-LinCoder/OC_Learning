@@ -28,7 +28,6 @@ extern int apple;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"网易新闻",@"UIScrollview自动布局",@"Size和center",@"通知补充",@"枚举的位运算",@"weak以及assign",@"frame和bounds",@"自定义实现scrollview",@"block",@"RunLoop",@"RunLoop应用(线程常驻)"];
-    NSLog(@"这是通过extern声明的apple%d",apple);
     
 }
 
