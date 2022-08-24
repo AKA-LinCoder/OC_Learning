@@ -114,4 +114,22 @@ typedef  void(^BlockType)();
     
     [self.navigationController pushViewController:vc animated:YES];
 }
+int c = 1;
+/// block变量传递
+/// @param sender <#sender description#>
+- (IBAction)dataPass:(id)sender {
+    int a = 6;
+    static int b = 10;
+    //如果是局部变量，block是值传递，在定义block时值是多少就是多少，无论后面怎么更改
+    //如果是静态变量或者全局变量,__block修饰的变量，block时指针传递，后续修改值会影响
+    _block1 = ^{
+        NSLog(@"%d",a);
+        NSLog(@"%d",b);
+        NSLog(@"%d",c);
+    };
+    a= 7;
+    b = 22;
+    c = 77;
+    _block1();
+}
 @end
