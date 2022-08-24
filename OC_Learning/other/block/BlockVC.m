@@ -7,6 +7,7 @@
 
 #import "BlockVC.h"
 #import "BlockTableVC.h"
+#import "CacultorManager.h"
 //BlockType:类型别名
 typedef  void(^BlockType)();
 @interface BlockVC ()<BlockTableVCDelegate>
@@ -131,5 +132,28 @@ int c = 1;
     b = 22;
     c = 77;
     _block1();
+}
+
+/// block当参数使用
+/// @param sender <#sender description#>
+- (IBAction)blockUSEOne:(id)sender {
+    //怎么区分参数是block，就看有没有^，只要有^,就是把block当参数
+    //把block当做参数，并不是马上调用block，什么时候调用，由方法内部决定
+    //时候什么需要把block当参数使用，做的事情由外部决定，但是时候时候用由内部决定
+    /*
+     封装计算器，提供一个计算方法，怎么计算又外部决定，什么时候调用由内部决定
+     */
+    CacultorManager *manager = [[CacultorManager alloc] init];
+    [manager cacultor:^(NSInteger result){
+        result += 5;
+        return result;
+    }];
+    NSLog(@"result:%ld",(long)manager.result);
+    
+}
+
+/// block当返回值使用
+/// @param sender <#sender description#>
+- (IBAction)blockUSETwo:(id)sender {
 }
 @end

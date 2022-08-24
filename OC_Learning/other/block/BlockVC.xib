@@ -63,6 +63,24 @@
                         <action selector="dataPass:" destination="-1" eventType="touchUpInside" id="CQC-Me-DbN"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPb-yE-sAI">
+                    <rect key="frame" x="142" y="511" width="131" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="block：参数使用"/>
+                    <connections>
+                        <action selector="blockUSEOne:" destination="-1" eventType="touchUpInside" id="Qmi-hC-6m7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-Tk-QtQ">
+                    <rect key="frame" x="149" y="614" width="117" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="block当返回值"/>
+                    <connections>
+                        <action selector="blockUSETwo:" destination="-1" eventType="touchUpInside" id="oPA-5d-ZR0"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
