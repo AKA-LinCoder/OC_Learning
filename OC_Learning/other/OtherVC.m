@@ -18,6 +18,7 @@
 #import "FrameAndBoundsVC.h"
 #import "SelfScrollViewVC.h"
 #import "BlockVC.h"
+#import "CollectionViewVC.h"
 @interface OtherVC ()
 @property(nonatomic,strong)NSArray *array;
 @end
@@ -27,7 +28,7 @@ extern int apple;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"网易新闻",@"UIScrollview自动布局",@"Size和center",@"通知补充",@"枚举的位运算",@"weak以及assign",@"frame和bounds",@"自定义实现scrollview",@"block",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"super,superClass,class",@"const",@"父子控制器",@"网易新闻",@"UIScrollview自动布局",@"Size和center",@"通知补充",@"枚举的位运算",@"weak以及assign",@"frame和bounds",@"自定义实现scrollview",@"block",@"UIcollectionView",];
     
 }
 
@@ -100,9 +101,8 @@ extern int apple;
         [self.navigationController pushViewController:vc animated:YES];
                
     }else if (indexPath.row==12){
-        //        PthreadVC *vc = [[PthreadVC alloc] init];
-        //        [self presentViewController:vc animated:YES completion:nil];
-               
+        CollectionViewVC *vc = [[CollectionViewVC alloc] init];
+[self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==13){
 //        RunLoopUseVC *vc= [[RunLoopUseVC alloc] init];
 //        [self presentViewController:vc animated:true completion:nil];

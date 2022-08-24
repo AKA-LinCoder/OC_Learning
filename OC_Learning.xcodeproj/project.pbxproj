@@ -46,6 +46,10 @@
 		69424E4428AE2D6F00DF0939 /* NSDictionary+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E4328AE2D6F00DF0939 /* NSDictionary+Property.m */; };
 		69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E5028AE534000DF0939 /* NSFileManager+Additions.m */; };
 		6959200628B5C4EC0066AA46 /* CacultorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959200528B5C4EC0066AA46 /* CacultorManager.m */; };
+		6959200B28B5F2000066AA46 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959200928B5F2000066AA46 /* CollectionViewVC.m */; };
+		6959200C28B5F2000066AA46 /* CollectionViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959200A28B5F2000066AA46 /* CollectionViewVC.xib */; };
+		6959201328B5F8540066AA46 /* PhtotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959201128B5F8540066AA46 /* PhtotCell.m */; };
+		6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959201228B5F8540066AA46 /* PhtotCell.xib */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -185,6 +189,12 @@
 		69424E5028AE534000DF0939 /* NSFileManager+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Additions.m"; sourceTree = "<group>"; };
 		6959200428B5C4EC0066AA46 /* CacultorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacultorManager.h; sourceTree = "<group>"; };
 		6959200528B5C4EC0066AA46 /* CacultorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacultorManager.m; sourceTree = "<group>"; };
+		6959200828B5F2000066AA46 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
+		6959200928B5F2000066AA46 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
+		6959200A28B5F2000066AA46 /* CollectionViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewVC.xib; sourceTree = "<group>"; };
+		6959201028B5F8540066AA46 /* PhtotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhtotCell.h; sourceTree = "<group>"; };
+		6959201128B5F8540066AA46 /* PhtotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhtotCell.m; sourceTree = "<group>"; };
+		6959201228B5F8540066AA46 /* PhtotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhtotCell.xib; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -518,6 +528,19 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		6959200728B5F1D70066AA46 /* uicollectionview */ = {
+			isa = PBXGroup;
+			children = (
+				6959200828B5F2000066AA46 /* CollectionViewVC.h */,
+				6959200928B5F2000066AA46 /* CollectionViewVC.m */,
+				6959200A28B5F2000066AA46 /* CollectionViewVC.xib */,
+				6959201028B5F8540066AA46 /* PhtotCell.h */,
+				6959201128B5F8540066AA46 /* PhtotCell.m */,
+				6959201228B5F8540066AA46 /* PhtotCell.xib */,
+			);
+			path = uicollectionview;
+			sourceTree = "<group>";
+		};
 		695E8CDF28A3595400A7914A /* instance */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,6 +755,7 @@
 		69EA7A9E28AF2F33006A6B4B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				6959200728B5F1D70066AA46 /* uicollectionview */,
 				69F6F70228B3906700675D4C /* block */,
 				69F6F6FE28B38A5200675D4C /* scrollview底层实现 */,
 				69F6F6FA28B37A9F00675D4C /* frame和bounds */,
@@ -919,10 +943,12 @@
 				69F6F6ED28B366DF00675D4C /* NoticeVC.xib in Resources */,
 				6965ACD928A9D6E1000A8202 /* local.xml in Resources */,
 				69F6F6F328B3745E00675D4C /* EnumVC.xib in Resources */,
+				6959200C28B5F2000066AA46 /* CollectionViewVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
+				6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */,
 				69424E3E28AE2AB800DF0939 /* status.plist in Resources */,
 				6934222F28918CD0007561A1 /* Main.storyboard in Resources */,
 			);
@@ -992,6 +1018,7 @@
 				694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */,
 				69424E4128AE2BED00DF0939 /* StatusItem.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
+				6959201328B5F8540066AA46 /* PhtotCell.m in Sources */,
 				69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */,
 				69424E3328ADEF1700DF0939 /* RuntimeChangeFunctionVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
@@ -1018,6 +1045,7 @@
 				6914766628B0DA3B001F5BB6 /* VideoVC.m in Sources */,
 				69F6F6DD28B32A8800675D4C /* ExtensionWangyiVC.m in Sources */,
 				6965ACE728AA3C20000A8202 /* DownloadByOutPutVC.m in Sources */,
+				6959200B28B5F2000066AA46 /* CollectionViewVC.m in Sources */,
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
