@@ -155,5 +155,20 @@ int c = 1;
 /// block当返回值使用
 /// @param sender <#sender description#>
 - (IBAction)blockUSETwo:(id)sender {
+    self.test();
+    /*
+     封装计算器，提供一个加号方法
+     */
+    CacultorManager *manager = [[CacultorManager alloc] init];
+    [[manager add:5] add:5];
+    manager.plus(5).plus(10);
+    NSLog(@"result:%ld",(long)manager.result);
+}
+
+-(void(^)(void))test
+{
+    return ^{
+        NSLog(@"block作为返回");
+    };
 }
 @end

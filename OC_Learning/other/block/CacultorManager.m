@@ -14,4 +14,18 @@
         _result = block(_result);
     }
 }
+
+- (CacultorManager *)add:(int)value
+{
+    _result += value;
+    NSLog(@"当前总数是%ld",_result);
+    return self;
+}
+- (CacultorManager * _Nonnull (^)(int))plus
+{
+    return ^(int value){
+        _result += value;
+        return self;
+    };
+}
 @end
