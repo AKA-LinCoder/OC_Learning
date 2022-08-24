@@ -36,6 +36,15 @@
                         <action selector="SendData:" destination="-1" eventType="touchUpInside" id="GVV-X5-7RL"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaL-hR-iWy">
+                    <rect key="frame" x="149" y="293" width="117" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="block内存管理"/>
+                    <connections>
+                        <action selector="arcAndmrc:" destination="-1" eventType="touchUpInside" id="y75-dP-b7c"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
