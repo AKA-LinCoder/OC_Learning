@@ -14,17 +14,17 @@
 
 /// 计算cell布局，条件：cell的位置是固定不变的
 /// 什么时候调用：collectionView第一次布局，collectionView刷新也会调用
-- (void)prepareLayout
-{
-    [super prepareLayout];
-//    NSLog(@"%s",__func__);
-}
+//- (void)prepareLayout
+//{
+//    [super prepareLayout];
+////    NSLog(@"%s",__func__);
+//}
 
 /// 计算滚动范围
-- (CGSize)collectionViewContentSize
-{
-    return [super collectionViewContentSize];
-}
+//- (CGSize)collectionViewContentSize
+//{
+//    return [super collectionViewContentSize];
+//}
 
 /*
  UICollectionViewLayoutAttributes:确定cell尺寸
@@ -47,7 +47,7 @@
 //    int i = 0;
     for (UICollectionViewLayoutAttributes *attr in arr) {
         //计算中心点距离 ,绝对值
-        CGFloat delta =  fabs((attr.center.x-self.collectionView.contentOffset.x)-self.collectionView.bounds.size.width *0.5) ;
+        CGFloat delta =  fabs((attr.center.x-self.collectionView.contentOffset.x)-self.collectionView.bounds.size.width *0.5);
         //计算比例
         CGFloat scale = 1 -  delta/(self.collectionView.bounds.size.width *0.5)*0.25;
         attr.transform = CGAffineTransformMakeScale(scale, scale);
@@ -60,7 +60,6 @@
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
     return YES;
-//   21
 }
 
 /// 确定最终偏移量
@@ -76,9 +75,9 @@
     //最终偏移量
     CGPoint point =  [super targetContentOffsetForProposedContentOffset:proposedContentOffset withScrollingVelocity:velocity];
     //手指偏移量
-    CGPoint handle = self.collectionView.contentOffset;
-    NSLog(@"最终偏移量%@",NSStringFromCGPoint(point));
-    NSLog(@"手指偏移量%@",NSStringFromCGPoint(handle));
+//    CGPoint handle = self.collectionView.contentOffset;
+//    NSLog(@"最终偏移量%@",NSStringFromCGPoint(point));
+//    NSLog(@"手指偏移量%@",NSStringFromCGPoint(handle));
     
     /*
      确定最终偏移量
@@ -96,7 +95,7 @@
     NSArray *arr = [super layoutAttributesForElementsInRect:targetRect];
     for (UICollectionViewLayoutAttributes *attr in arr) {
         //获取距离中心点距离
-        CGFloat delta =  fabs((attr.center.x-self.collectionView.contentOffset.x)-self.collectionView.bounds.size.width *0.5) ;
+        CGFloat delta =  (attr.center.x-point.x)-self.collectionView.bounds.size.width *0.5 ;
         if (fabs(delta)<fabs(minDelta)) {
             minDelta = delta;
         }
@@ -106,7 +105,6 @@
     {
         point.x = 0;
     }
-    NSLog(@"%f",point.x);
     return point;
 }
 
