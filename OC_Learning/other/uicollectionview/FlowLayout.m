@@ -37,14 +37,20 @@
 /// @param rect 尺寸
 - (NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
-    NSArray *arr =  [super layoutAttributesForElementsInRect:rect];
-    int i = 0;
+    //设置cell尺寸
+    //1.获取当前显示区域 self.collectionView.bounds
+    //2.拿到当前显示cell的布局
+    //3.越靠近中心点，距离越小， cell显示越大
+    //4.求cell与中心点距离
+    NSArray *arr =  [super layoutAttributesForElementsInRect:self.collectionView.bounds];
+   
+//    int i = 0;
     for (UICollectionViewLayoutAttributes *attr in arr) {
-        
-        if(i==0){
-            attr.transform = CGAffineTransformMakeScale(0.5, 0.5);
-        }
-        i++;
+        //计算中心点距离 ,绝对值
+        CGFloat delta =  fabs((attr.center.x-self.collectionView.contentOffset.x)-self.collectionView.bounds.size.width *0.5) ;
+        //计算比例
+        CGFloat scale = 1 -  delta/(self.collectionView.bounds.size.width *0.5)*0.25;
+        attr.transform = CGAffineTransformMakeScale(scale, scale);
     }
     return arr;
 }
@@ -54,7 +60,7 @@
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
     return YES;
-    return [super shouldInvalidateLayoutForBoundsChange:newBounds];
+//   21
 }
 
 /// 确定最终偏移量
