@@ -11,6 +11,7 @@
 @interface LocationVC ()<CLLocationManagerDelegate>
 @property(nonatomic,strong)NSArray *array;
 @property(nonatomic,strong)CLLocationManager *manager;
+@property(nonatomic,strong)CLLocation *lastLocation;
 @end
 
 @implementation LocationVC
@@ -91,21 +92,21 @@
     //标准定位：标准定位服务(gps/wifi/蓝牙/基站),内部由苹果自己决定
     //优点：定位精确度高
     //缺点：程序关闭就没法获取位置，而且耗电
-//    [self.manager startUpdatingLocation];
+    [self.manager startUpdatingLocation];
     //显著位置变化的服务(基站进行定位，一定得有电话模块)
     //优点：当app被完全关闭时，也可以接受到位置通知，并让app进行到后台处理
     //缺点：定位精度低
 //    [self.manager startMonitoringSignificantLocationChanges];//适合长时间监控
     //请求一次位置，从定位精度低开始找，在有效时间返回定位到的信息返回
     //不能与startUpdatingLocation同时调用，必须实现代理失败
-    [self.manager requestLocation];
+//    [self.manager requestLocation];
     
-    [MyLocationManager startLocation:^(CLLocation * _Nonnull location) {
-        //定位成功
-        NSLog(@"location::%@",location);
-    } failure:^(CLAuthorizationStatus status, NSError * _Nonnull error) {
-        //定位失败
-    }];
+//    [MyLocationManager startLocation:^(CLLocation * _Nonnull location) {
+//        //定位成功
+//        NSLog(@"location::%@",location);
+//    } failure:^(CLAuthorizationStatus status, NSError * _Nonnull error) {
+//        //定位失败
+//    }];
     
 }
 
@@ -188,10 +189,49 @@
 #pragma  mark-CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-    NSLog(@"位置%@",locations);
+    CLLocation *newLocation = locations.lastObject;
+    /*
+     coordinate 经纬度
+     altitude 海拔
+     hAccuracy:如果整个数字是负数，就代表位置数据无效
+     vAccuracy：如果整个数字是负数，就代表海拔数据无效
+     course：航向
+     speed：速度
+     distanceFromLocation 计算两个经纬度坐标之前的物理指向距离
+     */
+    //
+//    NSLog(@"位置%@",locations.lastObject);
+    if(!newLocation){
+        return;
+    }
+    //获取当前的行走航向
+    NSArray<NSString *> *angleStrs = @[@"北偏东",@"东偏南",@"南偏西",@"西偏北"];
+    int index = (int)newLocation.course  /90;
+    NSString *angleStr = angleStrs[index];
+    //行走的偏移量
+    int angle = (int)newLocation.course %90;
+    
+    if ((int) angle == 0) {
+        angleStr = [NSString stringWithFormat:@"正%@",[angleStr substringToIndex:1]];
+    }
+    
+    
+    //移动了多少距离
+    if(!self.lastLocation){
+        self.lastLocation = newLocation;
+    }
+    CLLocationDistance distance =  [newLocation distanceFromLocation:self.lastLocation];
+    self.lastLocation = newLocation;
+    if ((int) angle != 0) {
+        NSLog(@"%@ %d方向，移动了%f米",angleStr,angle,distance);
+    }else{
+        NSLog(@"%@方向，移动了%f米",angleStr,distance);
+    }
+  
+    
     //获取用户当前所在的城市，切换到对应城市
     //如果想要定位一次，那么可以在定位到之后，停止定位
-    [self.manager stopUpdatingLocation];
+//    [self.manager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
