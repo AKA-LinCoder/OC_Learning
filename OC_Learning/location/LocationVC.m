@@ -8,6 +8,7 @@
 #import "LocationVC.h"
 #import "CoreLocation/CoreLocation.h"
 #import "MyLocationManager.h"
+#import "CompassVC.h"
 @interface LocationVC ()<CLLocationManagerDelegate>
 @property(nonatomic,strong)NSArray *array;
 @property(nonatomic,strong)CLLocationManager *manager;
@@ -19,7 +20,6 @@
 - (CLLocationManager *)manager
 {
     if(!_manager){
-        NSLog(@"manager!!");
         _manager = [[CLLocationManager alloc] init];
         //请求的事前台定位授权,默认只能在APP在前台运行时获取信息，如果想在后台运行时也获取定位信息。必须勾选后台模式
 //        if (@available(iOS 8.0,*)){
@@ -88,7 +88,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"d",@"const",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",];
+    self.array = @[@"指南针",@"const",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",];
     //标准定位：标准定位服务(gps/wifi/蓝牙/基站),内部由苹果自己决定
     //优点：定位精确度高
     //缺点：程序关闭就没法获取位置，而且耗电
@@ -132,8 +132,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row==0){
-//        SuperClassAndClassVC *vc = [[SuperClassAndClassVC alloc] init];
-//        [self.navigationController pushViewController:vc animated:YES];
+        CompassVC *vc = [[CompassVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
        
     }else if(indexPath.row==1){
 //        ConstVC *vc = [[ConstVC alloc] init];
@@ -231,7 +231,7 @@
     
     //获取用户当前所在的城市，切换到对应城市
     //如果想要定位一次，那么可以在定位到之后，停止定位
-//    [self.manager stopUpdatingLocation];
+    [self.manager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
