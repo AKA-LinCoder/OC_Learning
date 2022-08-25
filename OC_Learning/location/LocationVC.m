@@ -9,6 +9,7 @@
 #import "CoreLocation/CoreLocation.h"
 #import "MyLocationManager.h"
 #import "CompassVC.h"
+#import "AreaMonitoringVC.h"
 @interface LocationVC ()<CLLocationManagerDelegate>
 @property(nonatomic,strong)NSArray *array;
 @property(nonatomic,strong)CLLocationManager *manager;
@@ -88,7 +89,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"指南针",@"const",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",];
+    self.array = @[@"指南针",@"区域监听",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",];
     //标准定位：标准定位服务(gps/wifi/蓝牙/基站),内部由苹果自己决定
     //优点：定位精确度高
     //缺点：程序关闭就没法获取位置，而且耗电
@@ -136,8 +137,8 @@
         [self.navigationController pushViewController:vc animated:YES];
        
     }else if(indexPath.row==1){
-//        ConstVC *vc = [[ConstVC alloc] init];
-//        [self.navigationController pushViewController:vc animated:YES];
+        AreaMonitoringVC *vc = [[AreaMonitoringVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==2){
        
 //        FatherAndSonVC *vc = [[FatherAndSonVC alloc] init];
