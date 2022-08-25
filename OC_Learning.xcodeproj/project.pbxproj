@@ -50,6 +50,7 @@
 		6959200C28B5F2000066AA46 /* CollectionViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959200A28B5F2000066AA46 /* CollectionViewVC.xib */; };
 		6959201328B5F8540066AA46 /* PhtotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959201128B5F8540066AA46 /* PhtotCell.m */; };
 		6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959201228B5F8540066AA46 /* PhtotCell.xib */; };
+		6959201728B621B90066AA46 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959201628B621B90066AA46 /* FlowLayout.m */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -195,6 +196,8 @@
 		6959201028B5F8540066AA46 /* PhtotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhtotCell.h; sourceTree = "<group>"; };
 		6959201128B5F8540066AA46 /* PhtotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhtotCell.m; sourceTree = "<group>"; };
 		6959201228B5F8540066AA46 /* PhtotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhtotCell.xib; sourceTree = "<group>"; };
+		6959201528B621B90066AA46 /* FlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
+		6959201628B621B90066AA46 /* FlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -537,6 +540,8 @@
 				6959201028B5F8540066AA46 /* PhtotCell.h */,
 				6959201128B5F8540066AA46 /* PhtotCell.m */,
 				6959201228B5F8540066AA46 /* PhtotCell.xib */,
+				6959201528B621B90066AA46 /* FlowLayout.h */,
+				6959201628B621B90066AA46 /* FlowLayout.m */,
 			);
 			path = uicollectionview;
 			sourceTree = "<group>";
@@ -1064,6 +1069,7 @@
 				69F6F6E228B32E8400675D4C /* ScrollviewAutoLayoutVC.m in Sources */,
 				694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
+				6959201728B621B90066AA46 /* FlowLayout.m in Sources */,
 				6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */,
 				69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,

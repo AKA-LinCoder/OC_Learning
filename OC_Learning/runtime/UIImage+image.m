@@ -33,9 +33,9 @@
 {
     UIImage *image = [UIImage lin_imageNamed:name];
     if (image) {
-        NSLog(@"加载成功");
+        NSLog(@"图片加载成功");
     }else{
-        NSLog(@"加载失败");
+        NSLog(@"图片加载失败");
     }
     return  image;
 }
