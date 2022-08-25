@@ -69,6 +69,8 @@
 /// @param velocity <#velocity description#>
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
 {
+    
+    CGFloat collectionW = self.collectionView.bounds.size.width;
     //拖动比较快时：最终偏移量 ！=手指偏移量
     //拖动比较慢时，相等
     //最终偏移量
@@ -77,6 +79,34 @@
     CGPoint handle = self.collectionView.contentOffset;
     NSLog(@"最终偏移量%@",NSStringFromCGPoint(point));
     NSLog(@"手指偏移量%@",NSStringFromCGPoint(handle));
+    
+    /*
+     确定最终偏移量
+     距离中心点距离越近，最终cell就展示到中心点
+     0.最终偏移量
+     1.获取最终显示的区域
+     2.获取最终显示的cell
+     
+     */
+    //最终显示区域
+    CGRect targetRect = CGRectMake(point.x, 0, collectionW, MAXFLOAT);
+    //记录最小距离
+    CGFloat minDelta = MAXFLOAT;
+    //获取最终显示的cell
+    NSArray *arr = [super layoutAttributesForElementsInRect:targetRect];
+    for (UICollectionViewLayoutAttributes *attr in arr) {
+        //获取距离中心点距离
+        CGFloat delta =  fabs((attr.center.x-self.collectionView.contentOffset.x)-self.collectionView.bounds.size.width *0.5) ;
+        if (fabs(delta)<fabs(minDelta)) {
+            minDelta = delta;
+        }
+    }
+    point.x +=minDelta;
+    if(point.x<0)
+    {
+        point.x = 0;
+    }
+    NSLog(@"%f",point.x);
     return point;
 }
 
