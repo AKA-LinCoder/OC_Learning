@@ -10,6 +10,7 @@
 #import "NetWorkVC.h"
 #import "runtimeVC.h"
 #import "OtherVC.h"
+#import "LocationVC.h"
 
 
 #pragma  mark - controller
@@ -26,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.array = @[@"多线程",@"网络",@"RunTime学习",@"其他"];
+    self.array = @[@"多线程",@"网络",@"RunTime学习",@"其他",@"地图"];
     [self.view addSubview:self.tableView];
 }
 
@@ -79,8 +80,8 @@
         [self.navigationController pushViewController:vc animated:YES];
 //        [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==4){
-        ThreadVC *vc = [[ThreadVC alloc] init];
-        [self presentViewController:vc animated:YES completion:nil];
+        LocationVC *vc = [[LocationVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==5){
         ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];

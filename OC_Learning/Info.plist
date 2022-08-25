@@ -26,5 +26,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>din</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>请求后台定位</string>
 </dict>
 </plist>

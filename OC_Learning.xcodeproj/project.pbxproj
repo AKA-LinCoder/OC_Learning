@@ -74,6 +74,8 @@
 		6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864928A279D200F4239C /* ThreadSendInfoVC.m */; };
 		6973864D28A289C800F4239C /* GCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864C28A289C800F4239C /* GCDVC.m */; };
 		6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */; };
+		6978332928B726F500116C7A /* LocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6978332828B726F500116C7A /* LocationVC.m */; };
+		6978332C28B746D800116C7A /* MyLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6978332B28B746D800116C7A /* MyLocationManager.m */; };
 		69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */; };
 		69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */; };
 		69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4028A8C66800466BC1 /* NativeVC.m */; };
@@ -241,6 +243,10 @@
 		6973864C28A289C800F4239C /* GCDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDVC.m; sourceTree = "<group>"; };
 		6973864E28A29ADD00F4239C /* GCDSendInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSendInfoVC.h; sourceTree = "<group>"; };
 		6973864F28A29ADD00F4239C /* GCDSendInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSendInfoVC.m; sourceTree = "<group>"; };
+		6978332728B726F500116C7A /* LocationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationVC.h; sourceTree = "<group>"; };
+		6978332828B726F500116C7A /* LocationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationVC.m; sourceTree = "<group>"; };
+		6978332A28B746D800116C7A /* MyLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLocationManager.h; sourceTree = "<group>"; };
+		6978332B28B746D800116C7A /* MyLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationManager.m; sourceTree = "<group>"; };
 		69B3E6C428A5F21E0070AE3B /* RunLoopsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopsVC.h; sourceTree = "<group>"; };
 		69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopsVC.m; sourceTree = "<group>"; };
 		69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopsVC.xib; sourceTree = "<group>"; };
@@ -446,6 +452,7 @@
 		6934222328918CD0007561A1 /* OC_Learning */ = {
 			isa = PBXGroup;
 			children = (
+				6978332328B7261700116C7A /* location */,
 				69EA7A9E28AF2F33006A6B4B /* other */,
 				69424E4528AE472F00DF0939 /* AVFoundation */,
 				69424E2D28ADCD2900DF0939 /* runtime */,
@@ -653,6 +660,17 @@
 				69C71E8728A7AAC20025F49F /* ThreadVC.m */,
 			);
 			path = thread;
+			sourceTree = "<group>";
+		};
+		6978332328B7261700116C7A /* location */ = {
+			isa = PBXGroup;
+			children = (
+				6978332728B726F500116C7A /* LocationVC.h */,
+				6978332828B726F500116C7A /* LocationVC.m */,
+				6978332A28B746D800116C7A /* MyLocationManager.h */,
+				6978332B28B746D800116C7A /* MyLocationManager.m */,
+			);
+			path = location;
 			sourceTree = "<group>";
 		};
 		69B3E6C328A5F1C50070AE3B /* RunLoops */ = {
@@ -1052,10 +1070,12 @@
 				6965ACE728AA3C20000A8202 /* DownloadByOutPutVC.m in Sources */,
 				6959200B28B5F2000066AA46 /* CollectionViewVC.m in Sources */,
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
+				6978332C28B746D800116C7A /* MyLocationManager.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */,
+				6978332928B726F500116C7A /* LocationVC.m in Sources */,
 				694114D328AC9A2E00BE6792 /* NSString+Hash.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
 				6914762228B07AB5001F5BB6 /* SocietyVC.m in Sources */,
