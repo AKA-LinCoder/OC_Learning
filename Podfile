@@ -10,4 +10,5 @@ target 'OC_Learning' do
   pod 'MJExtension'
   pod 'SSZipArchive'
   pod 'AFNetworking', '~> 4.0'
+  pod 'INTULocationManager'
 end
