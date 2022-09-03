@@ -22,7 +22,7 @@
 
 @implementation AppDelegate
 
-
+///应用程序启动完毕时调用
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //设置提醒图标
     UIApplication *app =  [UIApplication sharedApplication];
@@ -49,6 +49,24 @@
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
     return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+}
+
+////当app失去焦点时调用
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    
+}
+///进入后台时调用
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    
+}
+///进行前台
+
+///app获取焦点，焦点：能否交互
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    
 }
 
 

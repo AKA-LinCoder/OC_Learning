@@ -19,5 +19,17 @@ int main(int argc, char * argv[]) {
     }
     //内部启动runloop(其实就是死循环)
     //UIApplicationMain这个方法是有一个返回值的，但是永远不会返回，因为一旦返回就代表方法执行完毕，程序就死了，保持程序持续执行
+    
+    //第三个参数：设置应用程序对象的名称UIApplication或者是他的子类，如果是nil,默认是UIApplication
+    //第四个参数：
+    //创建UIApplication对象，并设置他的代理
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
+
+/*
+ 1.执行main函数
+ 2.执行UIApplcationMain
+ 3.开启事件循环（主运行循环，死循环：保障应用程序不退出
+ 4.加载info.plist文件（判断info里面有没有Main,如果有就会去加载Main.sb）
+ 5.应用程序启动完毕（通知代理应用程序启动完毕）
+ */
