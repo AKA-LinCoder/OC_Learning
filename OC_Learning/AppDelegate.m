@@ -5,6 +5,13 @@
 //  Created by lsaac on 2022/7/27.
 //
 
+/*
+ 一个IOS程序启动后创建的第一个对象就是UIApplication对象
+ UIApplication:
+    设置应用程序右上角红色提醒
+    设置
+ 
+ */
 #import "AppDelegate.h"
 #import <SDWebImage/SDWebImage.h>
 @interface AppDelegate ()

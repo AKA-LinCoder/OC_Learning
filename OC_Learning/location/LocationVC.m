@@ -91,7 +91,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"指南针",@"区域监听",@"地理编码与反编码",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",];
+    self.array = @[@"指南针",@"区域监听",@"地理编码与反编码",@"INTUL第三方框架",@"",@"",@"",@"",@"",@"",@"",@"",@"",];
     //标准定位：标准定位服务(gps/wifi/蓝牙/基站),内部由苹果自己决定
     //优点：定位精确度高
     //缺点：程序关闭就没法获取位置，而且耗电
@@ -146,8 +146,8 @@
         GeocodingVC *vc = [[GeocodingVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==3){
-//        ExtensionWangyiVC *vc = [[ExtensionWangyiVC alloc] init];
-//        [self.navigationController pushViewController:vc animated:YES];
+        INTULVC *vc = [[INTULVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==4){
 //        ScrollviewAutoLayoutVC *vc = [[ScrollviewAutoLayoutVC alloc] init];
 //        [self.navigationController pushViewController:vc animated:YES];

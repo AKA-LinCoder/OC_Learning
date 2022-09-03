@@ -11,6 +11,7 @@
 #import "runtimeVC.h"
 #import "OtherVC.h"
 #import "LocationVC.h"
+#import "UIVC.h"
 
 
 #pragma  mark - controller
@@ -27,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.array = @[@"多线程",@"网络",@"RunTime学习",@"其他",@"地图"];
+    self.array = @[@"多线程",@"网络",@"RunTime学习",@"其他",@"地图",@"UI"];
     [self.view addSubview:self.tableView];
 }
 
@@ -83,7 +84,7 @@
         LocationVC *vc = [[LocationVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==5){
-        ThreadVC *vc = [[ThreadVC alloc] init];
+        UIVC *vc = [[UIVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }else if (indexPath.row==6){
         ThreadVC *vc = [[ThreadVC alloc] init];

@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  OC_Learning
+//
+//  Created by lsaac on 2022/9/3.
+//
+#ifdef __OBJC__
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+///光添加文件不行，还得在项目设置中设置加载相关文件：搜prefix->在App Clang Lanugane中 将Precomple选为YES，并在下面文件中拖入路径
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#ifdef DEBUGG
+#define LinLog(...) NSLog(__VA_ARGS__)
+#else
+#define LinLog(...)
+#endif 
+#endif /* PrefixHeader_pch */
+#endif 

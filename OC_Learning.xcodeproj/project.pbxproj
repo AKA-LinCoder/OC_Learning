@@ -28,6 +28,8 @@
 		6934223128918CD2007561A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6934223028918CD2007561A1 /* Assets.xcassets */; };
 		6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6934223228918CD2007561A1 /* LaunchScreen.storyboard */; };
 		6934223728918CD2007561A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934223628918CD2007561A1 /* main.m */; };
+		693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D1D9C28C2EA6400E3EF3C /* UIVC.m */; };
+		693D1DA128C3045D00E3EF3C /* lsaac.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D1DA028C3045D00E3EF3C /* lsaac.m */; };
 		694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114C128AC7BA700BE6792 /* NetworkStatusVC.m */; };
 		694114C528AC878D00BE6792 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114C428AC878D00BE6792 /* Reachability.m */; };
 		694114C828AC962800BE6792 /* EncryptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 694114C728AC962800BE6792 /* EncryptionVC.m */; };
@@ -104,6 +106,7 @@
 		69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8B28A7B68E0025F49F /* NetWorkVC.m */; };
 		69D9A56328B86476004812B7 /* INTULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56128B86476004812B7 /* INTULVC.m */; };
 		69D9A56428B86476004812B7 /* INTULVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D9A56228B86476004812B7 /* INTULVC.xib */; };
+		69D9A56828B87202004812B7 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56728B87202004812B7 /* LocationTool.m */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
@@ -165,6 +168,11 @@
 		6934223328918CD2007561A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6934223528918CD2007561A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6934223628918CD2007561A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		693D1D9B28C2EA6400E3EF3C /* UIVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIVC.h; sourceTree = "<group>"; };
+		693D1D9C28C2EA6400E3EF3C /* UIVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIVC.m; sourceTree = "<group>"; };
+		693D1D9E28C2F8C800E3EF3C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		693D1D9F28C3045D00E3EF3C /* lsaac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lsaac.h; sourceTree = "<group>"; };
+		693D1DA028C3045D00E3EF3C /* lsaac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lsaac.m; sourceTree = "<group>"; };
 		694114C028AC7BA700BE6792 /* NetworkStatusVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkStatusVC.h; sourceTree = "<group>"; };
 		694114C128AC7BA700BE6792 /* NetworkStatusVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusVC.m; sourceTree = "<group>"; };
 		694114C328AC878D00BE6792 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -305,6 +313,8 @@
 		69D9A56028B86476004812B7 /* INTULVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INTULVC.h; sourceTree = "<group>"; };
 		69D9A56128B86476004812B7 /* INTULVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INTULVC.m; sourceTree = "<group>"; };
 		69D9A56228B86476004812B7 /* INTULVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = INTULVC.xib; sourceTree = "<group>"; };
+		69D9A56628B87202004812B7 /* LocationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
+		69D9A56728B87202004812B7 /* LocationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTool.m; sourceTree = "<group>"; };
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
 		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
@@ -472,6 +482,7 @@
 		6934222328918CD0007561A1 /* OC_Learning */ = {
 			isa = PBXGroup;
 			children = (
+				693D1D9A28C2EA3700E3EF3C /* ui */,
 				6978332328B7261700116C7A /* location */,
 				69EA7A9E28AF2F33006A6B4B /* other */,
 				69424E4528AE472F00DF0939 /* AVFoundation */,
@@ -496,6 +507,18 @@
 				6914760428B074E8001F5BB6 /* GlobalConst.m */,
 			);
 			path = OC_Learning;
+			sourceTree = "<group>";
+		};
+		693D1D9A28C2EA3700E3EF3C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				693D1D9B28C2EA6400E3EF3C /* UIVC.h */,
+				693D1D9C28C2EA6400E3EF3C /* UIVC.m */,
+				693D1D9E28C2F8C800E3EF3C /* PrefixHeader.pch */,
+				693D1D9F28C3045D00E3EF3C /* lsaac.h */,
+				693D1DA028C3045D00E3EF3C /* lsaac.m */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 		694114CC28AC9A1400BE6792 /* encode_decode */ = {
@@ -685,6 +708,7 @@
 		6978332328B7261700116C7A /* location */ = {
 			isa = PBXGroup;
 			children = (
+				69D9A56528B871E6004812B7 /* 工具封装 */,
 				69D9A55F28B8645D004812B7 /* INTUL第三方框架 */,
 				6978333C28B78E4100116C7A /* 地理编码与反编码 */,
 				6978333628B7879F00116C7A /* 区域监听 */,
@@ -817,6 +841,15 @@
 				69D9A56228B86476004812B7 /* INTULVC.xib */,
 			);
 			path = "INTUL第三方框架";
+			sourceTree = "<group>";
+		};
+		69D9A56528B871E6004812B7 /* 工具封装 */ = {
+			isa = PBXGroup;
+			children = (
+				69D9A56628B87202004812B7 /* LocationTool.h */,
+				69D9A56728B87202004812B7 /* LocationTool.m */,
+			);
+			path = "工具封装";
 			sourceTree = "<group>";
 		};
 		69E6FE2428A4E75A00896D4E /* SDWebImages */ = {
@@ -1098,6 +1131,7 @@
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
+				693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
 				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
 				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
@@ -1126,6 +1160,7 @@
 				6978333A28B787CD00116C7A /* AreaMonitoringVC.m in Sources */,
 				6959200628B5C4EC0066AA46 /* CacultorManager.m in Sources */,
 				69D9A56328B86476004812B7 /* INTULVC.m in Sources */,
+				693D1DA128C3045D00E3EF3C /* lsaac.m in Sources */,
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
 				69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */,
 				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
@@ -1142,6 +1177,7 @@
 				6959200B28B5F2000066AA46 /* CollectionViewVC.m in Sources */,
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
 				6978332C28B746D800116C7A /* MyLocationManager.m in Sources */,
+				69D9A56828B87202004812B7 /* LocationTool.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
@@ -1331,6 +1367,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4DVKAD4TK;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OC_Learning/ui/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OC_Learning/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1361,6 +1399,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4DVKAD4TK;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OC_Learning/ui/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OC_Learning/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
