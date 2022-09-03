@@ -23,6 +23,10 @@
     [self.window setWindowScene:windowScene];
     [self.window setBackgroundColor:[UIColor whiteColor]];
     
+    //通过xib加载控制器的view,
+    //initWithNibName如果制定了特定的名称的xob，会去加载指定的xib，如果是nil，会先判断有没有和当前控制器相同名称的xib如果有就加载（LinViewController.xib），如果没有，会自动加载和他名称相同，并去掉controller的(LinView.xib)
+    //init底层会自动调用initWithNibName
+    UIViewController *xxx = [[UIViewController alloc] initWithNibName:nil bundle:nil];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     nav.title = @"Lin";
