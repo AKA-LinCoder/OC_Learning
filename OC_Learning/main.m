@@ -33,3 +33,10 @@ int main(int argc, char * argv[]) {
  4.加载info.plist文件（判断info里面有没有Main,如果有就会去加载Main.sb）
  5.应用程序启动完毕（通知代理应用程序启动完毕）
  */
+
+/*
+ 如果有Main,他就会加载Main.sb
+ 先创建一个窗口
+ 把main。sb箭头指向的控制器，设为窗口的根控制器
+ 显示窗口（把窗口的根控制器的View，添加到窗口）
+ */
