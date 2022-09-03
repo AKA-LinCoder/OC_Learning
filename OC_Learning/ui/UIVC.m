@@ -29,10 +29,26 @@
 //    lsaac *three = [[lsaac alloc] init];
 //    NSLog(@"one--%p,two--%p,three--%p",one,two,three);
     NSLog(@"%@",NSHomeDirectory());
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"] options:@{} completionHandler:^(BOOL success) {
+            
+    }];
     LinLog(@"dsa");
    
     
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+//    UIStatusBarStyle *style = [[UIstatusBarStyle alloc] init];
+    return UIStatusBarStyleLightContent;
+}
+
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 
 #pragma mark - Table view data source
 

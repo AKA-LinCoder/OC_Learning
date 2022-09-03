@@ -9,7 +9,9 @@
  一个IOS程序启动后创建的第一个对象就是UIApplication对象
  UIApplication:
     设置应用程序右上角红色提醒
-    设置
+    设置联网的状态
+    设置状态栏,IOS 13 statusBarManager
+    打开网页
  
  */
 #import "AppDelegate.h"
@@ -22,6 +24,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //设置提醒图标
+    UIApplication *app =  [UIApplication sharedApplication];
+    //1.注册用户通知
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+    [app registerUserNotificationSettings:settings];
+    app.applicationIconBadgeNumber = 10;
+    //设置联网状态
+    app.networkActivityIndicatorVisible = YES;
+    //设置状态栏
+    app.statusBarHidden = YES;
+    [app openURL:[NSURL URLWithString:@"tel://10086"] options:nil completionHandler:^(BOOL success) {
+        
+    }];
+    
     return YES;
 }
 
