@@ -58,6 +58,7 @@
 		695AF3D628C446E30084D982 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3D528C446E30084D982 /* foods.plist */; };
 		695AF3DB28C471AA0084D982 /* SelfPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695AF3D928C471AA0084D982 /* SelfPickerVC.m */; };
 		695AF3DC28C471AA0084D982 /* SelfPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3DA28C471AA0084D982 /* SelfPickerVC.xib */; };
+		695AF3E028C475520084D982 /* FlagTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 695AF3DF28C475520084D982 /* FlagTextF.m */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -95,6 +96,11 @@
 		69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */; };
 		69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4728A8FDE800466BC1 /* LinTimeMode.m */; };
 		69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4A28A9110E00466BC1 /* XMLVC.m */; };
+		69B9D0CC28C4887600919086 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69B9D0CB28C4887600919086 /* flags.plist */; };
+		69B9D0CE28C488F500919086 /* guoqi in Resources */ = {isa = PBXBuildFile; fileRef = 69B9D0CD28C488F500919086 /* guoqi */; };
+		69B9D0D128C4893300919086 /* FlagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9D0D028C4893300919086 /* FlagItem.m */; };
+		69B9D0D428C48C9300919086 /* FlagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9D0D328C48C9300919086 /* FlagView.m */; };
+		69B9D0D828C49D4100919086 /* FlagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B9D0D728C49D4100919086 /* FlagView.xib */; };
 		69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E8628AB208900F6E4C3 /* NSURLSessionVC.m */; };
 		69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E8928AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m */; };
 		69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E8C28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m */; };
@@ -228,6 +234,8 @@
 		695AF3D828C471AA0084D982 /* SelfPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfPickerVC.h; sourceTree = "<group>"; };
 		695AF3D928C471AA0084D982 /* SelfPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfPickerVC.m; sourceTree = "<group>"; };
 		695AF3DA28C471AA0084D982 /* SelfPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfPickerVC.xib; sourceTree = "<group>"; };
+		695AF3DE28C475520084D982 /* FlagTextF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlagTextF.h; sourceTree = "<group>"; };
+		695AF3DF28C475520084D982 /* FlagTextF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlagTextF.m; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -295,6 +303,13 @@
 		69B57B4728A8FDE800466BC1 /* LinTimeMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinTimeMode.m; sourceTree = "<group>"; };
 		69B57B4928A9110E00466BC1 /* XMLVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLVC.h; sourceTree = "<group>"; };
 		69B57B4A28A9110E00466BC1 /* XMLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLVC.m; sourceTree = "<group>"; };
+		69B9D0CB28C4887600919086 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
+		69B9D0CD28C488F500919086 /* guoqi */ = {isa = PBXFileReference; lastKnownFileType = folder; path = guoqi; sourceTree = "<group>"; };
+		69B9D0CF28C4893300919086 /* FlagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlagItem.h; sourceTree = "<group>"; };
+		69B9D0D028C4893300919086 /* FlagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlagItem.m; sourceTree = "<group>"; };
+		69B9D0D228C48C9300919086 /* FlagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlagView.h; sourceTree = "<group>"; };
+		69B9D0D328C48C9300919086 /* FlagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlagView.m; sourceTree = "<group>"; };
+		69B9D0D728C49D4100919086 /* FlagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlagView.xib; sourceTree = "<group>"; };
 		69BE3E8528AB208900F6E4C3 /* NSURLSessionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLSessionVC.h; sourceTree = "<group>"; };
 		69BE3E8628AB208900F6E4C3 /* NSURLSessionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionVC.m; sourceTree = "<group>"; };
 		69BE3E8828AB2FFA00F6E4C3 /* DownloadBigBySessionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadBigBySessionVC.h; sourceTree = "<group>"; };
@@ -616,11 +631,28 @@
 		695AF3D728C4718D0084D982 /* SelfPicker */ = {
 			isa = PBXGroup;
 			children = (
+				695AF3DD28C475380084D982 /* FlagTextF */,
 				695AF3D828C471AA0084D982 /* SelfPickerVC.h */,
 				695AF3D928C471AA0084D982 /* SelfPickerVC.m */,
 				695AF3DA28C471AA0084D982 /* SelfPickerVC.xib */,
 			);
 			path = SelfPicker;
+			sourceTree = "<group>";
+		};
+		695AF3DD28C475380084D982 /* FlagTextF */ = {
+			isa = PBXGroup;
+			children = (
+				69B9D0CD28C488F500919086 /* guoqi */,
+				69B9D0CB28C4887600919086 /* flags.plist */,
+				695AF3DE28C475520084D982 /* FlagTextF.h */,
+				695AF3DF28C475520084D982 /* FlagTextF.m */,
+				69B9D0CF28C4893300919086 /* FlagItem.h */,
+				69B9D0D028C4893300919086 /* FlagItem.m */,
+				69B9D0D228C48C9300919086 /* FlagView.h */,
+				69B9D0D728C49D4100919086 /* FlagView.xib */,
+				69B9D0D328C48C9300919086 /* FlagView.m */,
+			);
+			path = FlagTextF;
 			sourceTree = "<group>";
 		};
 		695E8CDF28A3595400A7914A /* instance */ = {
@@ -1074,11 +1106,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B9D0CE28C488F500919086 /* guoqi in Resources */,
 				69F6F6F928B3778C00675D4C /* AssignAndWeakVC.xib in Resources */,
 				6914761E28B07AA5001F5BB6 /* TopVC.xib in Resources */,
 				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
 				69BE3E9828ABA21F00F6E4C3 /* WebViewVC.xib in Resources */,
 				69FC5D0628B4D0CB005DF2E5 /* BlockVC.xib in Resources */,
+				69B9D0D828C49D4100919086 /* FlagView.xib in Resources */,
 				695AF3D428C440C70084D982 /* PickerVC.xib in Resources */,
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
@@ -1092,6 +1126,7 @@
 				69D9A56428B86476004812B7 /* INTULVC.xib in Resources */,
 				6914761928B07A96001F5BB6 /* HotVC.xib in Resources */,
 				6978333B28B787CD00116C7A /* AreaMonitoringVC.xib in Resources */,
+				69B9D0CC28C4887600919086 /* flags.plist in Resources */,
 				69F6F6ED28B366DF00675D4C /* NoticeVC.xib in Resources */,
 				6965ACD928A9D6E1000A8202 /* local.xml in Resources */,
 				69F6F6F328B3745E00675D4C /* EnumVC.xib in Resources */,
@@ -1161,6 +1196,7 @@
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
+				69B9D0D128C4893300919086 /* FlagItem.m in Sources */,
 				693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
 				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
@@ -1200,6 +1236,7 @@
 				695AF3D328C440C70084D982 /* PickerVC.m in Sources */,
 				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,
 				694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */,
+				695AF3E028C475520084D982 /* FlagTextF.m in Sources */,
 				69F6F70128B38A7300675D4C /* SelfScrollViewVC.m in Sources */,
 				6914766628B0DA3B001F5BB6 /* VideoVC.m in Sources */,
 				69F6F6DD28B32A8800675D4C /* ExtensionWangyiVC.m in Sources */,
@@ -1237,6 +1274,7 @@
 				69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */,
 				69BE3E9B28ABAC9B00F6E4C3 /* LinWebView.m in Sources */,
 				69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */,
+				69B9D0D428C48C9300919086 /* FlagView.m in Sources */,
 				69BE3E9228AB862500F6E4C3 /* UploadBySession.m in Sources */,
 				69F6F6FD28B37AB700675D4C /* FrameAndBoundsVC.m in Sources */,
 				69424E3028ADDA0400DF0939 /* Person.m in Sources */,

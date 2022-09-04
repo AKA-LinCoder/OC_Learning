@@ -6,9 +6,9 @@
 //
 
 #import "SelfPickerVC.h"
-
+#import "FlagTextF.h"
 @interface SelfPickerVC ()<UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *countryTextF;
+@property (weak, nonatomic) IBOutlet FlagTextF *countryTextF;
 @property (weak, nonatomic) IBOutlet UITextField *birthDayTextF;
 @property (weak, nonatomic) IBOutlet UITextField *cityTextF;
 
@@ -27,7 +27,7 @@
 //是否运行编辑
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    return NO;
+    return YES;
 }
 
 //开始编辑时调用
