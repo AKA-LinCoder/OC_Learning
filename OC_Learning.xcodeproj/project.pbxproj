@@ -56,6 +56,8 @@
 		695AF3D328C440C70084D982 /* PickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695AF3D128C440C70084D982 /* PickerVC.m */; };
 		695AF3D428C440C70084D982 /* PickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3D228C440C70084D982 /* PickerVC.xib */; };
 		695AF3D628C446E30084D982 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3D528C446E30084D982 /* foods.plist */; };
+		695AF3DB28C471AA0084D982 /* SelfPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695AF3D928C471AA0084D982 /* SelfPickerVC.m */; };
+		695AF3DC28C471AA0084D982 /* SelfPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3DA28C471AA0084D982 /* SelfPickerVC.xib */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -223,6 +225,9 @@
 		695AF3D128C440C70084D982 /* PickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerVC.m; sourceTree = "<group>"; };
 		695AF3D228C440C70084D982 /* PickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerVC.xib; sourceTree = "<group>"; };
 		695AF3D528C446E30084D982 /* foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foods.plist; sourceTree = "<group>"; };
+		695AF3D828C471AA0084D982 /* SelfPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfPickerVC.h; sourceTree = "<group>"; };
+		695AF3D928C471AA0084D982 /* SelfPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfPickerVC.m; sourceTree = "<group>"; };
+		695AF3DA28C471AA0084D982 /* SelfPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfPickerVC.xib; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -519,6 +524,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				695AF3D728C4718D0084D982 /* SelfPicker */,
 				695AF3D528C446E30084D982 /* foods.plist */,
 				693D1D9B28C2EA6400E3EF3C /* UIVC.h */,
 				693D1D9C28C2EA6400E3EF3C /* UIVC.m */,
@@ -605,6 +611,16 @@
 				6959201628B621B90066AA46 /* FlowLayout.m */,
 			);
 			path = uicollectionview;
+			sourceTree = "<group>";
+		};
+		695AF3D728C4718D0084D982 /* SelfPicker */ = {
+			isa = PBXGroup;
+			children = (
+				695AF3D828C471AA0084D982 /* SelfPickerVC.h */,
+				695AF3D928C471AA0084D982 /* SelfPickerVC.m */,
+				695AF3DA28C471AA0084D982 /* SelfPickerVC.xib */,
+			);
+			path = SelfPicker;
 			sourceTree = "<group>";
 		};
 		695E8CDF28A3595400A7914A /* instance */ = {
@@ -1086,6 +1102,7 @@
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
 				6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */,
+				695AF3DC28C471AA0084D982 /* SelfPickerVC.xib in Resources */,
 				69424E3E28AE2AB800DF0939 /* status.plist in Resources */,
 				6934222F28918CD0007561A1 /* Main.storyboard in Resources */,
 			);
@@ -1203,6 +1220,7 @@
 				6914766928B0DE45001F5BB6 /* StarVC.m in Sources */,
 				6914761828B07A96001F5BB6 /* HotVC.m in Sources */,
 				69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */,
+				695AF3DB28C471AA0084D982 /* SelfPickerVC.m in Sources */,
 				6965ACED28AA3F65000A8202 /* UploadByConnectionVC.m in Sources */,
 				69FC5D0C28B4E6F6005DF2E5 /* CellItem.m in Sources */,
 				69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */,

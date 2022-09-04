@@ -8,6 +8,7 @@
 #import "UIVC.h"
 #import "lsaac.h"
 #import "PickerVC.h"
+#import "SelfPickerVC.h"
 
 @interface UIVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -22,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"picker",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"picker",@"自定义Picker",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
     lsaac *one = [lsaac sharedLsaac];
     lsaac *two = [lsaac sharedLsaac];
     NSLog(@"one--%p,two--%p",one,two);
@@ -114,7 +115,9 @@
 
        
     }else if(indexPath.row==1){
-        
+        SelfPickerVC *vc = [[SelfPickerVC alloc] init];
+//        vc.view.backgroundColor = [UIColor redColor];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==2){
         
     }else if (indexPath.row==3){
