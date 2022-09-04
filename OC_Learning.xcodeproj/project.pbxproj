@@ -55,6 +55,7 @@
 		6959201728B621B90066AA46 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959201628B621B90066AA46 /* FlowLayout.m */; };
 		695AF3D328C440C70084D982 /* PickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695AF3D128C440C70084D982 /* PickerVC.m */; };
 		695AF3D428C440C70084D982 /* PickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3D228C440C70084D982 /* PickerVC.xib */; };
+		695AF3D628C446E30084D982 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3D528C446E30084D982 /* foods.plist */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -221,6 +222,7 @@
 		695AF3D028C440C70084D982 /* PickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerVC.h; sourceTree = "<group>"; };
 		695AF3D128C440C70084D982 /* PickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerVC.m; sourceTree = "<group>"; };
 		695AF3D228C440C70084D982 /* PickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerVC.xib; sourceTree = "<group>"; };
+		695AF3D528C446E30084D982 /* foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foods.plist; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				695AF3D528C446E30084D982 /* foods.plist */,
 				693D1D9B28C2EA6400E3EF3C /* UIVC.h */,
 				693D1D9C28C2EA6400E3EF3C /* UIVC.m */,
 				693D1D9E28C2F8C800E3EF3C /* PrefixHeader.pch */,
@@ -1065,6 +1068,7 @@
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
 				69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */,
 				6914762928B0C14B001F5BB6 /* WangyiVC.xib in Resources */,
+				695AF3D628C446E30084D982 /* foods.plist in Resources */,
 				69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */,
 				6978334128B78E8100116C7A /* GeocodingVC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
