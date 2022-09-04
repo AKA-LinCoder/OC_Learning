@@ -53,6 +53,8 @@
 		6959201328B5F8540066AA46 /* PhtotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959201128B5F8540066AA46 /* PhtotCell.m */; };
 		6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959201228B5F8540066AA46 /* PhtotCell.xib */; };
 		6959201728B621B90066AA46 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959201628B621B90066AA46 /* FlowLayout.m */; };
+		695AF3D328C440C70084D982 /* PickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695AF3D128C440C70084D982 /* PickerVC.m */; };
+		695AF3D428C440C70084D982 /* PickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695AF3D228C440C70084D982 /* PickerVC.xib */; };
 		695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */; };
 		695E8CE228A3597600A7914A /* LinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE128A3597600A7914A /* LinTool.m */; };
 		695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E8CE628A37D0000A7914A /* NSOperationVC.m */; };
@@ -216,6 +218,9 @@
 		6959201228B5F8540066AA46 /* PhtotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhtotCell.xib; sourceTree = "<group>"; };
 		6959201528B621B90066AA46 /* FlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
 		6959201628B621B90066AA46 /* FlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
+		695AF3D028C440C70084D982 /* PickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerVC.h; sourceTree = "<group>"; };
+		695AF3D128C440C70084D982 /* PickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerVC.m; sourceTree = "<group>"; };
+		695AF3D228C440C70084D982 /* PickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerVC.xib; sourceTree = "<group>"; };
 		695E8CDC28A34BB900A7914A /* GCDGroupQueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroupQueueVC.h; sourceTree = "<group>"; };
 		695E8CDD28A34BB900A7914A /* GCDGroupQueueVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroupQueueVC.m; sourceTree = "<group>"; };
 		695E8CE028A3597600A7914A /* LinTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTool.h; sourceTree = "<group>"; };
@@ -517,6 +522,9 @@
 				693D1D9E28C2F8C800E3EF3C /* PrefixHeader.pch */,
 				693D1D9F28C3045D00E3EF3C /* lsaac.h */,
 				693D1DA028C3045D00E3EF3C /* lsaac.m */,
+				695AF3D028C440C70084D982 /* PickerVC.h */,
+				695AF3D128C440C70084D982 /* PickerVC.m */,
+				695AF3D228C440C70084D982 /* PickerVC.xib */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -1052,6 +1060,7 @@
 				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
 				69BE3E9828ABA21F00F6E4C3 /* WebViewVC.xib in Resources */,
 				69FC5D0628B4D0CB005DF2E5 /* BlockVC.xib in Resources */,
+				695AF3D428C440C70084D982 /* PickerVC.xib in Resources */,
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
 				69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */,
@@ -1167,6 +1176,7 @@
 				69EA7A9728AF180E006A6B4B /* NSObject+Model.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
+				695AF3D328C440C70084D982 /* PickerVC.m in Sources */,
 				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,
 				694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */,
 				69F6F70128B38A7300675D4C /* SelfScrollViewVC.m in Sources */,

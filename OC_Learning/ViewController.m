@@ -85,7 +85,8 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==5){
         UIVC *vc = [[UIVC alloc] init];
-        [self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    
     }else if (indexPath.row==6){
         ThreadVC *vc = [[ThreadVC alloc] init];
         [self presentViewController:vc animated:YES completion:nil];

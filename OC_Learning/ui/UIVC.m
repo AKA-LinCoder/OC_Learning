@@ -7,6 +7,7 @@
 
 #import "UIVC.h"
 #import "lsaac.h"
+#import "PickerVC.h"
 
 @interface UIVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -21,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"ingo",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
+    self.array = @[@"picker",@"NSThread",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
     lsaac *one = [lsaac sharedLsaac];
     lsaac *two = [lsaac sharedLsaac];
     NSLog(@"one--%p,two--%p",one,two);
@@ -29,15 +30,15 @@
 //    lsaac *three = [[lsaac alloc] init];
 //    NSLog(@"one--%p,two--%p,three--%p",one,two,three);
     NSLog(@"%@",NSHomeDirectory());
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"] options:@{} completionHandler:^(BOOL success) {
-            
-    }];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"] options:@{} completionHandler:^(BOOL success) {
+//            
+//    }];
     LinLog(@"dsa");
     //
-    self.view.alpha = 0;
+//    self.view.alpha = 0;
     //如果一个view的alpha为0，那么它是不能接受点击事件的
     //默认控制器颜色是透明的
-    self.view.backgroundColor = [UIColor clearColor];
+//    self.view.backgroundColor = [UIColor clearColor];
    
     
 }
@@ -62,14 +63,14 @@
 /*
  view方法是懒加载的,不能在当前控制器设置view颜色是什么，最终都是由外部调用时决定的
  */
-- (UIView *)view
-{
-    if(self.view==nil){
-        [self loadView];
-        [self viewDidLoad];
-    }
-    return self.view;
-}
+//- (UIView *)view
+//{
+//    if(self.view==nil){
+//        [self loadView];
+//        [self viewDidLoad];
+//    }
+//    return self.view;
+//}
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
@@ -108,8 +109,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row==0){
-//        PthreadVC *vc = [[PthreadVC alloc] init];
-//        [self presentViewController:vc animated:YES completion:nil];
+        PickerVC *vc = [[PickerVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+
        
     }else if(indexPath.row==1){
         
