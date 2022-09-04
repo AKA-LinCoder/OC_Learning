@@ -101,6 +101,7 @@
 		69B9D0D128C4893300919086 /* FlagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9D0D028C4893300919086 /* FlagItem.m */; };
 		69B9D0D428C48C9300919086 /* FlagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9D0D328C48C9300919086 /* FlagView.m */; };
 		69B9D0D828C49D4100919086 /* FlagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B9D0D728C49D4100919086 /* FlagView.xib */; };
+		69B9D0DC28C4A42100919086 /* DateTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9D0DB28C4A42100919086 /* DateTextF.m */; };
 		69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E8628AB208900F6E4C3 /* NSURLSessionVC.m */; };
 		69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E8928AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m */; };
 		69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3E8C28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m */; };
@@ -310,6 +311,8 @@
 		69B9D0D228C48C9300919086 /* FlagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlagView.h; sourceTree = "<group>"; };
 		69B9D0D328C48C9300919086 /* FlagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlagView.m; sourceTree = "<group>"; };
 		69B9D0D728C49D4100919086 /* FlagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlagView.xib; sourceTree = "<group>"; };
+		69B9D0DA28C4A42100919086 /* DateTextF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTextF.h; sourceTree = "<group>"; };
+		69B9D0DB28C4A42100919086 /* DateTextF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTextF.m; sourceTree = "<group>"; };
 		69BE3E8528AB208900F6E4C3 /* NSURLSessionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLSessionVC.h; sourceTree = "<group>"; };
 		69BE3E8628AB208900F6E4C3 /* NSURLSessionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionVC.m; sourceTree = "<group>"; };
 		69BE3E8828AB2FFA00F6E4C3 /* DownloadBigBySessionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadBigBySessionVC.h; sourceTree = "<group>"; };
@@ -631,6 +634,7 @@
 		695AF3D728C4718D0084D982 /* SelfPicker */ = {
 			isa = PBXGroup;
 			children = (
+				69B9D0D928C4A40000919086 /* DateTextF */,
 				695AF3DD28C475380084D982 /* FlagTextF */,
 				695AF3D828C471AA0084D982 /* SelfPickerVC.h */,
 				695AF3D928C471AA0084D982 /* SelfPickerVC.m */,
@@ -847,6 +851,15 @@
 				69B57B4728A8FDE800466BC1 /* LinTimeMode.m */,
 			);
 			path = mode;
+			sourceTree = "<group>";
+		};
+		69B9D0D928C4A40000919086 /* DateTextF */ = {
+			isa = PBXGroup;
+			children = (
+				69B9D0DA28C4A42100919086 /* DateTextF.h */,
+				69B9D0DB28C4A42100919086 /* DateTextF.m */,
+			);
+			path = DateTextF;
 			sourceTree = "<group>";
 		};
 		69BE3E9328AB982F00F6E4C3 /* webview */ = {
@@ -1289,6 +1302,7 @@
 				694114C528AC878D00BE6792 /* Reachability.m in Sources */,
 				69BFB8FE28AF6273001A9BB1 /* SubPerson.m in Sources */,
 				69FC5D0928B4D599005DF2E5 /* BlockTableVC.m in Sources */,
+				69B9D0DC28C4A42100919086 /* DateTextF.m in Sources */,
 				69BE3E9728ABA21F00F6E4C3 /* WebViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
