@@ -27,7 +27,7 @@
     //子控件赋值
     self.name.text = item.name;
 //    self.icon.image = [UIImage imageNamed:@"people"];
-    self.icon.image = [UIImage imageNamed:item.icon];
+    self.icon.image = item.icon;
 }
 
 
