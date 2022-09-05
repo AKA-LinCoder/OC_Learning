@@ -52,6 +52,7 @@
         //判断账号密码是否正确
         if([self.userNameTextField.text isEqualToString:@"123"]&&[self.passwordTextField.text isEqualToString:@"123"]){
             AddressBookListVC *vc = [[AddressBookListVC alloc] init];
+            vc.userName = self.userNameTextField.text;
             [self.navigationController pushViewController:vc animated:YES];
         }else{
             
@@ -62,6 +63,13 @@
     
    
 }
+//使用segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //目标控制器
+//    segue.destinationViewController;
+}
+
 - (IBAction)AutoLogin:(id)sender {
     if(self.autoLogin.on == YES){
         [self.keepPass setOn:YES animated:YES];

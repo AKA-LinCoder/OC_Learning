@@ -16,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@的通讯录",self.userName];
     
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"注销" menu:nil];
     self.navigationItem.leftBarButtonItem = left;
