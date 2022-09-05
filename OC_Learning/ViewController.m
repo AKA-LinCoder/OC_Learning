@@ -24,14 +24,51 @@
 - (IBAction)myBUtton:(id)sender {
     
 }
+//当控制器加载完毕时调用
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSLog(@"%s",__func__);
     self.array = @[@"多线程",@"网络",@"RunTime学习",@"其他",@"地图",@"UI"];
     [self.view addSubview:self.tableView];
 }
+//当控制器的view即将显示时调用
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"%s",__func__);
+}
+//当控制器的view显示完毕时调用
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__func__);
+}
+//当控制器的view将要布局子控件的时候调用
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    NSLog(@"%s",__func__);
+}
 
+//当控制器的view布局子控件完毕的时候调用
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    NSLog(@"%s",__func__);
+}
+//当控制器的view即将消失时调用
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"%s",__func__);
+}
+//当控制器的view消失完毕时调用
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"%s",__func__);
+}
 
 - (UITableView *)tableView{
     if(!_tableView){

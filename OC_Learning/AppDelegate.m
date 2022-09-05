@@ -34,9 +34,9 @@
     app.networkActivityIndicatorVisible = YES;
     //设置状态栏
     app.statusBarHidden = YES;
-    [app openURL:[NSURL URLWithString:@"tel://10086"] options:nil completionHandler:^(BOOL success) {
-        
-    }];
+//    [app openURL:[NSURL URLWithString:@"tel://10086"] options:nil completionHandler:^(BOOL success) {
+//        
+//    }];
     
     return YES;
 }

@@ -34,12 +34,12 @@
     NSLog(@"%@",self.window);
     //显示窗口
     [self.window makeKeyAndVisible];
-    NSLog(@"%@",self.window);
-    self.window.windowLevel = UIWindowLevelNormal;
-    //通过sb加载控制器
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vcc = [sb instantiateInitialViewController];
-    self.window.rootViewController = vcc;
+//    NSLog(@"%@",self.window);
+//    self.window.windowLevel = UIWindowLevelNormal;
+//    //通过sb加载控制器
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *vcc = [sb instantiateInitialViewController];
+//    self.window.rootViewController = vcc;
     
     //UItextField想要弹出键盘，必须添加到view上
     /*
