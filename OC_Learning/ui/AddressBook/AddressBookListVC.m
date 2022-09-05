@@ -17,11 +17,36 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"注销" menu:nil];
+    self.navigationItem.leftBarButtonItem = left;
+    left.target = self;
+    left.action = @selector(logout);
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"添加" menu:nil];
+    self.navigationItem.rightBarButtonItem = right;
+    right.target = self;
+    right.action =@selector(add);
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+}
+-(void)logout
+{
+    NSLog(@"%s",__func__);
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确定要退出么" message:nil preferredStyle:UIAlertControllerStyleActionSheet ] ;
+    UIAlertAction* actionDefault = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+       }];
+       
+       
+       UIAlertAction* actionCancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+       }];
+       [alertController addAction:actionDefault];
+       [alertController addAction:actionCancel];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+-(void)add
+{
+    NSLog(@"%s",__func__);
 }
 
 #pragma mark - Table view data source

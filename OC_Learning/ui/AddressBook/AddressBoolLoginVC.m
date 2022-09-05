@@ -28,6 +28,8 @@
 //    self.passwordTextField.delegate = self;
     [self.userNameTextField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
     [self.passwordTextField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
+    //手动判断账号密码是否有值
+    [self textChange];
 }
 
 -(void) textChange
