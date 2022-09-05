@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DateTextF : UITextField
-
+-(void) initWithText;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,6 +10,7 @@
 #import "FlagView.h"
 @interface FlagTextF()<UIPickerViewDelegate,UIPickerViewDataSource>
 @property(nonatomic,strong)NSArray<FlagItem *> *dataArray;
+@property(nonatomic,strong) UIPickerView *picker;
 @end
 
 
@@ -52,8 +53,15 @@
     UIPickerView *pick = [[UIPickerView alloc]init];
     pick.delegate = self;
     pick.dataSource = self;
+    self.picker = pick;
     //修改文本框弹出键盘类型
     self.inputView = pick;
+}
+
+//选中0-0
+-(void) initWithText
+{
+    [self pickerView:self.picker didSelectRow:0 inComponent:0];
 }
 
 //实现协议

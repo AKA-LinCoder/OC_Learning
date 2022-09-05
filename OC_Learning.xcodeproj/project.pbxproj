@@ -116,6 +116,9 @@
 		69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E7F28A79B210025F49F /* RunLoopUseVC.m */; };
 		69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8728A7AAC20025F49F /* ThreadVC.m */; };
 		69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8B28A7B68E0025F49F /* NetWorkVC.m */; };
+		69D2CA5028C593DE000708E3 /* ProvinceTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */; };
+		69D2CA5228C595EE000708E3 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA5128C595EE000708E3 /* provinces.plist */; };
+		69D2CA5528C59642000708E3 /* ProvinceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA5328C59642000708E3 /* ProvinceItem.m */; };
 		69D9A56328B86476004812B7 /* INTULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56128B86476004812B7 /* INTULVC.m */; };
 		69D9A56428B86476004812B7 /* INTULVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D9A56228B86476004812B7 /* INTULVC.xib */; };
 		69D9A56828B87202004812B7 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56728B87202004812B7 /* LocationTool.m */; };
@@ -339,6 +342,11 @@
 		69C71E8728A7AAC20025F49F /* ThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadVC.m; sourceTree = "<group>"; };
 		69C71E8A28A7B68E0025F49F /* NetWorkVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkVC.h; sourceTree = "<group>"; };
 		69C71E8B28A7B68E0025F49F /* NetWorkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkVC.m; sourceTree = "<group>"; };
+		69D2CA4E28C593DE000708E3 /* ProvinceTextF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvinceTextF.h; sourceTree = "<group>"; };
+		69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvinceTextF.m; sourceTree = "<group>"; };
+		69D2CA5128C595EE000708E3 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces.plist; sourceTree = "<group>"; };
+		69D2CA5328C59642000708E3 /* ProvinceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceItem.m; sourceTree = "<group>"; };
+		69D2CA5428C59642000708E3 /* ProvinceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceItem.h; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 		69D9A56028B86476004812B7 /* INTULVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INTULVC.h; sourceTree = "<group>"; };
 		69D9A56128B86476004812B7 /* INTULVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INTULVC.m; sourceTree = "<group>"; };
@@ -634,6 +642,7 @@
 		695AF3D728C4718D0084D982 /* SelfPicker */ = {
 			isa = PBXGroup;
 			children = (
+				69D2CA4D28C593BB000708E3 /* ProvinceTextF */,
 				69B9D0D928C4A40000919086 /* DateTextF */,
 				695AF3DD28C475380084D982 /* FlagTextF */,
 				695AF3D828C471AA0084D982 /* SelfPickerVC.h */,
@@ -905,6 +914,18 @@
 			path = network;
 			sourceTree = "<group>";
 		};
+		69D2CA4D28C593BB000708E3 /* ProvinceTextF */ = {
+			isa = PBXGroup;
+			children = (
+				69D2CA5428C59642000708E3 /* ProvinceItem.h */,
+				69D2CA5328C59642000708E3 /* ProvinceItem.m */,
+				69D2CA5128C595EE000708E3 /* provinces.plist */,
+				69D2CA4E28C593DE000708E3 /* ProvinceTextF.h */,
+				69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */,
+			);
+			path = ProvinceTextF;
+			sourceTree = "<group>";
+		};
 		69D9A55F28B8645D004812B7 /* INTUL第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1141,6 +1162,7 @@
 				6978333B28B787CD00116C7A /* AreaMonitoringVC.xib in Resources */,
 				69B9D0CC28C4887600919086 /* flags.plist in Resources */,
 				69F6F6ED28B366DF00675D4C /* NoticeVC.xib in Resources */,
+				69D2CA5228C595EE000708E3 /* provinces.plist in Resources */,
 				6965ACD928A9D6E1000A8202 /* local.xml in Resources */,
 				69F6F6F328B3745E00675D4C /* EnumVC.xib in Resources */,
 				6959200C28B5F2000066AA46 /* CollectionViewVC.xib in Resources */,
@@ -1221,6 +1243,7 @@
 				69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */,
 				694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */,
 				69424E4128AE2BED00DF0939 /* StatusItem.m in Sources */,
+				69D2CA5528C59642000708E3 /* ProvinceItem.m in Sources */,
 				6973865028A29ADD00F4239C /* GCDSendInfoVC.m in Sources */,
 				6959201328B5F8540066AA46 /* PhtotCell.m in Sources */,
 				69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */,
@@ -1296,6 +1319,7 @@
 				69F6F6EC28B366DF00675D4C /* NoticeVC.m in Sources */,
 				6965ACE328A9F6DB000A8202 /* DownloadBigByConnectionVC.m in Sources */,
 				69EA7AA228AF2FA0006A6B4B /* SuperClassAndClassVC.m in Sources */,
+				69D2CA5028C593DE000708E3 /* ProvinceTextF.m in Sources */,
 				695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */,
 				69EA7A9A28AF1E85006A6B4B /* User.m in Sources */,
 				69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */,

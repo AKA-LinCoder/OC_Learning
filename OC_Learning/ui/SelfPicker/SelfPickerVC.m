@@ -7,6 +7,8 @@
 
 #import "SelfPickerVC.h"
 #import "FlagTextF.h"
+#import "DateTextF.h"
+#import "ProvinceTextF.h"
 @interface SelfPickerVC ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet FlagTextF *countryTextF;
 @property (weak, nonatomic) IBOutlet UITextField *birthDayTextF;
@@ -33,7 +35,23 @@
 //开始编辑时调用
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    
+    //让当前编辑的文本选中第一个
+    if ([textField isKindOfClass:[FlagTextF class]]) {
+        FlagTextF *field = (FlagTextF *)textField;
+        [field initWithText];
+    }else if ([textField isKindOfClass:[DateTextF class]]){
+        DateTextF *field = (DateTextF *)textField;
+        [field initWithText];
+    }else if ([textField isKindOfClass:[ProvinceTextF class]]){
+        ProvinceTextF *field = (ProvinceTextF *)textField;
+        [field initWithText];
+    }else{
+        
+    }
+    //另一种实现
+    /*
+     创建一个新的分类，分类里面定义initWithText，并不需要实现，因为OC运行时会去寻找真正的方法，这里定义只是为了编译时不报错
+     */
 }
 //是否运行结束编译
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField

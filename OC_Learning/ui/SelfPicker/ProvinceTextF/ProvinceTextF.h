@@ -1,15 +1,15 @@
 //
-//  FlagTextF.h
+//  ProvinceTextF.h
 //  OC_Learning
 //
-//  Created by lsaac on 2022/9/4.
+//  Created by lsaac on 2022/9/5.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FlagTextF : UITextField
+@interface ProvinceTextF : UITextField
 -(void) initWithText;
 @end
 

@@ -7,6 +7,11 @@
 
 #import "DateTextF.h"
 
+@interface DateTextF()
+@property(nonatomic,strong)UIDatePicker *picker;
+
+@end
+
 @implementation DateTextF
 
 - (void)awakeFromNib
@@ -33,8 +38,13 @@
     [picker addTarget:self action:@selector(dateChange:) forControlEvents:UIControlEventValueChanged];
     //日期键盘
     self.inputView = picker;
+    self.picker = picker;
 }
 
+-(void) initWithText
+{
+    [self dateChange:self.picker];
+}
 -(void) dateChange:(UIDatePicker *)picker
 {
     //当前的日期给文本框赋值
