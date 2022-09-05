@@ -11,4 +11,5 @@ target 'OC_Learning' do
   pod 'SSZipArchive'
   pod 'AFNetworking', '~> 4.0'
   pod 'INTULocationManager'
+  pod 'MBProgressHUD', '~> 1.2.0'
 end

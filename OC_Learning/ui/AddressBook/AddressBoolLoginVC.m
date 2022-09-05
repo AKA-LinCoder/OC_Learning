@@ -7,6 +7,7 @@
 
 #import "AddressBoolLoginVC.h"
 #import "AddressBookListVC.h"
+#import "MBProgressHUD.h"
 
 @interface AddressBoolLoginVC ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
@@ -44,8 +45,22 @@
     }
 }
 - (IBAction)loginButtonClick:(id)sender {
-    AddressBookListVC *vc = [[AddressBookListVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.label.text = @"登录中";
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //判断账号密码是否正确
+        if([self.userNameTextField.text isEqualToString:@"123"]&&[self.passwordTextField.text isEqualToString:@"123"]){
+            AddressBookListVC *vc = [[AddressBookListVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            
+        }
+        [hud hideAnimated:YES];
+    });
+    
+    
+   
 }
 - (IBAction)AutoLogin:(id)sender {
     if(self.autoLogin.on == YES){
