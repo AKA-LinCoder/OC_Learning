@@ -9,6 +9,7 @@
 #import "AddressBookUserItem.h"
 
 
+
 @interface AddressBookAddVC ()
 @property (weak, nonatomic) IBOutlet UITextField *account;
 @property (weak, nonatomic) IBOutlet UITextField *tel;
@@ -31,6 +32,12 @@
 - (IBAction)addUser:(id)sender {
     AddressBookUserItem *item =  [AddressBookUserItem itemWithName:self.account.text phone:self.tel.text];
     self.listVC.userItem = item;
+    //判断代理有没有实现协议方法
+    if([self.delegate respondsToSelector:@selector(addContactVC:userItem:)]){
+        [self.delegate addContactVC:self userItem:item];
+    }
+    
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void) textChange
