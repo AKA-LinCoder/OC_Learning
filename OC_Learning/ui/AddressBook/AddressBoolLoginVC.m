@@ -63,11 +63,27 @@
     
    
 }
-//使用segue
+/*
+ 页面跳转
+ [self performSegueWithIdentifier:@"123" sender:nil];
+ 底层实现
+ 到SB中有没有给定标识的segue
+ 根据指定标识，创建UIStoryboardSegue对象，把当前控制器设为源控制器，
+ 再去创建目标控制器 ，给目标控制器赋值
+ 调用当前控制器的prepareForSegue，告诉用户，当前的线已经准备好了
+ 调用[segue perfom];
+    底层调用
+ segue.sourceViewController.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>
+ */
+
+
+//使用segue准备跳转前调用
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     //目标控制器
 //    segue.destinationViewController;
+   
 }
 
 - (IBAction)AutoLogin:(id)sender {

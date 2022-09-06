@@ -6,6 +6,7 @@
 //
 
 #import "AddressBookListVC.h"
+#import "AddressBookAddVC.h"
 
 @interface AddressBookListVC ()
 
@@ -30,6 +31,13 @@
     
     
 }
+
+- (void)setUserItem:(AddressBookUserItem *)userItem
+{
+    NSLog(@"这是获取到的数据%@",userItem);
+}
+
+
 -(void)logout
 {
     NSLog(@"%s",__func__);
@@ -48,6 +56,9 @@
 -(void)add
 {
     NSLog(@"%s",__func__);
+    AddressBookAddVC *vc = [[AddressBookAddVC alloc] init];
+    vc.listVC = self;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table view data source

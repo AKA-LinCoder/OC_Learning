@@ -90,6 +90,7 @@
 		6978333B28B787CD00116C7A /* AreaMonitoringVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6978333928B787CD00116C7A /* AreaMonitoringVC.xib */; };
 		6978334028B78E8100116C7A /* GeocodingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6978333E28B78E8100116C7A /* GeocodingVC.m */; };
 		6978334128B78E8100116C7A /* GeocodingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6978333F28B78E8100116C7A /* GeocodingVC.xib */; };
+		69B2335728C6EBE5005A06BE /* AddressBookUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2335628C6EBE5005A06BE /* AddressBookUserItem.m */; };
 		69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */; };
 		69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */; };
 		69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4028A8C66800466BC1 /* NativeVC.m */; };
@@ -122,6 +123,8 @@
 		69D2CA5A28C5D172000708E3 /* AddressBoolLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA5828C5D172000708E3 /* AddressBoolLoginVC.m */; };
 		69D2CA5B28C5D172000708E3 /* AddressBoolLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA5928C5D172000708E3 /* AddressBoolLoginVC.xib */; };
 		69D2CA5E28C5E090000708E3 /* AddressBookListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA5D28C5E090000708E3 /* AddressBookListVC.m */; };
+		69D2CA6228C5FA02000708E3 /* AddressBookAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA6028C5FA02000708E3 /* AddressBookAddVC.m */; };
+		69D2CA6328C5FA02000708E3 /* AddressBookAddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA6128C5FA02000708E3 /* AddressBookAddVC.xib */; };
 		69D9A56328B86476004812B7 /* INTULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56128B86476004812B7 /* INTULVC.m */; };
 		69D9A56428B86476004812B7 /* INTULVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D9A56228B86476004812B7 /* INTULVC.xib */; };
 		69D9A56828B87202004812B7 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56728B87202004812B7 /* LocationTool.m */; };
@@ -299,6 +302,8 @@
 		6978333D28B78E8100116C7A /* GeocodingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeocodingVC.h; sourceTree = "<group>"; };
 		6978333E28B78E8100116C7A /* GeocodingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeocodingVC.m; sourceTree = "<group>"; };
 		6978333F28B78E8100116C7A /* GeocodingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeocodingVC.xib; sourceTree = "<group>"; };
+		69B2335528C6EBE5005A06BE /* AddressBookUserItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookUserItem.h; sourceTree = "<group>"; };
+		69B2335628C6EBE5005A06BE /* AddressBookUserItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookUserItem.m; sourceTree = "<group>"; };
 		69B3E6C428A5F21E0070AE3B /* RunLoopsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopsVC.h; sourceTree = "<group>"; };
 		69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopsVC.m; sourceTree = "<group>"; };
 		69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopsVC.xib; sourceTree = "<group>"; };
@@ -355,6 +360,9 @@
 		69D2CA5928C5D172000708E3 /* AddressBoolLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressBoolLoginVC.xib; sourceTree = "<group>"; };
 		69D2CA5C28C5E090000708E3 /* AddressBookListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookListVC.h; sourceTree = "<group>"; };
 		69D2CA5D28C5E090000708E3 /* AddressBookListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookListVC.m; sourceTree = "<group>"; };
+		69D2CA5F28C5FA02000708E3 /* AddressBookAddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookAddVC.h; sourceTree = "<group>"; };
+		69D2CA6028C5FA02000708E3 /* AddressBookAddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookAddVC.m; sourceTree = "<group>"; };
+		69D2CA6128C5FA02000708E3 /* AddressBookAddVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressBookAddVC.xib; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 		69D9A56028B86476004812B7 /* INTULVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INTULVC.h; sourceTree = "<group>"; };
 		69D9A56128B86476004812B7 /* INTULVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INTULVC.m; sourceTree = "<group>"; };
@@ -943,6 +951,11 @@
 				69D2CA5928C5D172000708E3 /* AddressBoolLoginVC.xib */,
 				69D2CA5C28C5E090000708E3 /* AddressBookListVC.h */,
 				69D2CA5D28C5E090000708E3 /* AddressBookListVC.m */,
+				69D2CA5F28C5FA02000708E3 /* AddressBookAddVC.h */,
+				69D2CA6028C5FA02000708E3 /* AddressBookAddVC.m */,
+				69D2CA6128C5FA02000708E3 /* AddressBookAddVC.xib */,
+				69B2335528C6EBE5005A06BE /* AddressBookUserItem.h */,
+				69B2335628C6EBE5005A06BE /* AddressBookUserItem.m */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -1172,6 +1185,7 @@
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
 				69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */,
+				69D2CA6328C5FA02000708E3 /* AddressBookAddVC.xib in Resources */,
 				69D2CA5B28C5D172000708E3 /* AddressBoolLoginVC.xib in Resources */,
 				6914762928B0C14B001F5BB6 /* WangyiVC.xib in Resources */,
 				695AF3D628C446E30084D982 /* foods.plist in Resources */,
@@ -1273,6 +1287,7 @@
 				69424E3328ADEF1700DF0939 /* RuntimeChangeFunctionVC.m in Sources */,
 				6934222928918CD0007561A1 /* SceneDelegate.m in Sources */,
 				69FC5D0528B4D0CB005DF2E5 /* BlockVC.m in Sources */,
+				69D2CA6228C5FA02000708E3 /* AddressBookAddVC.m in Sources */,
 				69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */,
 				69BE3E9E28ABB1B600F6E4C3 /* AFNVC.m in Sources */,
 				69424E3C28AE230700DF0939 /* runtimeKVCVC.m in Sources */,
@@ -1284,6 +1299,7 @@
 				6914761D28B07AA5001F5BB6 /* TopVC.m in Sources */,
 				6978333A28B787CD00116C7A /* AreaMonitoringVC.m in Sources */,
 				6959200628B5C4EC0066AA46 /* CacultorManager.m in Sources */,
+				69B2335728C6EBE5005A06BE /* AddressBookUserItem.m in Sources */,
 				69D9A56328B86476004812B7 /* INTULVC.m in Sources */,
 				693D1DA128C3045D00E3EF3C /* lsaac.m in Sources */,
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
