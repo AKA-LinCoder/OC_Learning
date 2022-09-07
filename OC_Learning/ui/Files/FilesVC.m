@@ -6,6 +6,7 @@
 //
 
 #import "FilesVC.h"
+#import "Person.h"
 
 @interface FilesVC ()
 
@@ -16,6 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    //在plist中不能保存自定义的类型
+}
+//通过归档存储自定义对象
+- (IBAction)saveGuiDang:(id)sender {
+    Person *people = [Person new];
+    people.name = @"林";
+    //获取沙盒目录
+    NSString *tempPath = NSTemporaryDirectory();
+    NSString *filePath = [tempPath stringByAppendingPathComponent:@"Person.data"];
+    if (@available(iOS 12.0,*)){
+        NSData *data =  [NSKeyedArchiver archivedDataWithRootObject:people requiringSecureCoding:NO error:nil];
+        [data writeToFile:filePath atomically:YES];
+    }else{
+        [NSKeyedArchiver archiveRootObject:people toFile:filePath];
+    }
+    NSLog(@"%@",filePath);
+   
 }
 
 - (IBAction)saveToPilst:(id)sender {
@@ -39,6 +57,25 @@
 //    [defaults objectForKey:@"my"];
     BOOL my =  [defaults boolForKey:@"my"];
     NSLog(@"%ld",my);
+    
+    NSString *tempPath = NSTemporaryDirectory();
+    NSString *guidangPath = [tempPath stringByAppendingPathComponent:@"Person.data"];
+    
+    
+    //读取归档
+//    if (@available(iOS 12.0,*)){
+    if (@available(iOS 12.0,*)){
+        NSError *error;
+        NSData *data = [NSData dataWithContentsOfFile:guidangPath];
+        Person *p =  [NSKeyedUnarchiver unarchivedObjectOfClass:[Person class] fromData:data error:&error];
+        NSLog(@"error:%@",error);
+        NSLog(@"%@",p.name);
+    }else{
+        Person *p =  [NSKeyedUnarchiver unarchiveObjectWithFile:guidangPath];
+        NSLog(@"%@",p.name);
+    }
+   
+
 }
 - (IBAction)saveUserDefault:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

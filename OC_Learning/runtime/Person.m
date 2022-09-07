@@ -17,6 +17,26 @@
 {
     NSLog(@"run l %ld",(long)m);
 }
+//ios12后解档使用
++ (BOOL)supportsSecureCoding
+{
+    return YES;
+}
+//告诉要保存当前对象的那些属性
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.name forKey:@"name"];
+}
+//解读数据使用,告诉要解析文件中的哪些属性
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super init]) {
+       self.name =  [coder decodeObjectForKey:@"name"];
+    }
+    return self;
+}
+
+
 -(void)test
 {
     {

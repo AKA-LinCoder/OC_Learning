@@ -45,6 +45,15 @@
                         <action selector="saveUserDefault:" destination="-1" eventType="touchUpInside" id="lSi-Tl-eJZ"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlI-C7-L3Q">
+                    <rect key="frame" x="138" y="466" width="139" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="归档存自定义对象"/>
+                    <connections>
+                        <action selector="saveGuiDang:" destination="-1" eventType="touchUpInside" id="tl7-7S-NdT"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="45f-GS-Ebg"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
