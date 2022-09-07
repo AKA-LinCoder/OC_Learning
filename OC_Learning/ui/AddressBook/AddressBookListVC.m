@@ -9,11 +9,17 @@
 #import "AddressBookAddVC.h"
 
 @interface AddressBookListVC ()<AddressBookAddVCDelegate>
-
+@property(nonatomic,strong)NSMutableArray<AddressBookUserItem *> *dataArray;
 @end
 
 @implementation AddressBookListVC
-
+- (NSMutableArray *)dataArray
+{
+    if(_dataArray == nil){
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -66,16 +72,31 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.dataArray.count;
 }
-///通过代理进行逆传值
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = self.dataArray[indexPath.row].name;
+    cell.detailTextLabel.text = self.dataArray[indexPath.row].phone;
+    return cell;
+}
+
+/// 通过代理进行逆传值
 - (void)addContactVC:(AddressBookAddVC *)addContactVC userItem:(AddressBookUserItem *)userItem
 {
+    [self.dataArray addObject:userItem];
+    //刷新表格
+    [self.tableView reloadData];
     NSLog(@"这是传递过来的item%@",userItem.name);
 }
 

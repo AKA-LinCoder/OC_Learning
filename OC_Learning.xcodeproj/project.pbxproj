@@ -117,6 +117,8 @@
 		69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E7F28A79B210025F49F /* RunLoopUseVC.m */; };
 		69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8728A7AAC20025F49F /* ThreadVC.m */; };
 		69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8B28A7B68E0025F49F /* NetWorkVC.m */; };
+		69C8E3D428C838E4007CE55B /* FilesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8E3D328C838E4007CE55B /* FilesVC.m */; };
+		69C8E3D628C8393C007CE55B /* FilesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C8E3D528C8393C007CE55B /* FilesVC.xib */; };
 		69D2CA5028C593DE000708E3 /* ProvinceTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */; };
 		69D2CA5228C595EE000708E3 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA5128C595EE000708E3 /* provinces.plist */; };
 		69D2CA5528C59642000708E3 /* ProvinceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA5328C59642000708E3 /* ProvinceItem.m */; };
@@ -350,6 +352,9 @@
 		69C71E8728A7AAC20025F49F /* ThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadVC.m; sourceTree = "<group>"; };
 		69C71E8A28A7B68E0025F49F /* NetWorkVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkVC.h; sourceTree = "<group>"; };
 		69C71E8B28A7B68E0025F49F /* NetWorkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkVC.m; sourceTree = "<group>"; };
+		69C8E3D228C838E4007CE55B /* FilesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilesVC.h; sourceTree = "<group>"; };
+		69C8E3D328C838E4007CE55B /* FilesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesVC.m; sourceTree = "<group>"; };
+		69C8E3D528C8393C007CE55B /* FilesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilesVC.xib; sourceTree = "<group>"; };
 		69D2CA4E28C593DE000708E3 /* ProvinceTextF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvinceTextF.h; sourceTree = "<group>"; };
 		69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvinceTextF.m; sourceTree = "<group>"; };
 		69D2CA5128C595EE000708E3 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces.plist; sourceTree = "<group>"; };
@@ -566,6 +571,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				69C8E3D128C838CB007CE55B /* Files */,
 				69D2CA5628C5D14C000708E3 /* AddressBook */,
 				695AF3D728C4718D0084D982 /* SelfPicker */,
 				695AF3D528C446E30084D982 /* foods.plist */,
@@ -931,6 +937,16 @@
 			path = network;
 			sourceTree = "<group>";
 		};
+		69C8E3D128C838CB007CE55B /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				69C8E3D228C838E4007CE55B /* FilesVC.h */,
+				69C8E3D328C838E4007CE55B /* FilesVC.m */,
+				69C8E3D528C8393C007CE55B /* FilesVC.xib */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		69D2CA4D28C593BB000708E3 /* ProvinceTextF */ = {
 			isa = PBXGroup;
 			children = (
@@ -1204,6 +1220,7 @@
 				6959200C28B5F2000066AA46 /* CollectionViewVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6978333528B7840F00116C7A /* CompassVC.xib in Resources */,
+				69C8E3D628C8393C007CE55B /* FilesVC.xib in Resources */,
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
@@ -1323,6 +1340,7 @@
 				69D9A56828B87202004812B7 /* LocationTool.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
+				69C8E3D428C838E4007CE55B /* FilesVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */,
 				6978332928B726F500116C7A /* LocationVC.m in Sources */,
