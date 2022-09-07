@@ -27,7 +27,17 @@
 {
     [coder encodeObject:self.name forKey:@"name"];
 }
-//解读数据使用,告诉要解析文件中的哪些属性
+//解读文件时使用,告诉要解析文件中的哪些属性
+/*
+ 假如一个UIView是通过sb创建的，也会调用，因为SB是个文件
+ awakeFromNib 当XIB加载完毕时调用
+ initWithCoder 一开始加载
+ initWithCoder先调用awakeFromNib后调用
+ 
+ 
+ 为什么没有[super initWithCoder]
+ 当只有遵守了NSCoding协议之后，才有[super initWithCoder]，NSObject没有遵守
+ */
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     if (self = [super init]) {
