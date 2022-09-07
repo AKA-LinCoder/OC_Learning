@@ -25,6 +25,21 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"欢迎来到通讯录";
     [self.loginBtn setEnabled: NO];
+    //从沙盒取出保存的设置
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    self.keepPass.on = [defaults boolForKey:@"keepPass"];
+    self.autoLogin.on = [defaults boolForKey:@"autoLogin"];
+    if(self.keepPass.on){
+        self.userNameTextField.text = [defaults objectForKey:@"account"];
+        self.passwordTextField.text = [defaults objectForKey:@"password"];
+        if(self.autoLogin.on){
+            //要自动登录
+            [self loginButtonClick:self.loginBtn];
+        }
+    }
+    
+    
 //    self.userNameTextField.delegate = self;
 //    self.passwordTextField.delegate = self;
     [self.userNameTextField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
@@ -35,6 +50,8 @@
 
 -(void) textChange
 {
+
+    
     [self.loginBtn setEnabled:self.userNameTextField.text.length && self.passwordTextField.text.length];
 }
 - (IBAction)KeepPassword:(id)sender {
@@ -51,6 +68,18 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //判断账号密码是否正确
         if([self.userNameTextField.text isEqualToString:@"123"]&&[self.passwordTextField.text isEqualToString:@"123"]){
+            //存储账号密码
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:self.userNameTextField.text forKey:@"account"];
+            [defaults setObject:self.passwordTextField.text forKey:@"password"];
+            [defaults setBool:self.autoLogin.on forKey:@"autoLogin"];
+            [defaults setBool:self.keepPass.on forKey:@"keepPass"];
+            //立马写入
+            [defaults synchronize];
+            
+            
+            
+            
             AddressBookListVC *vc = [[AddressBookListVC alloc] init];
             vc.userName = self.userNameTextField.text;
             [self.navigationController pushViewController:vc animated:YES];

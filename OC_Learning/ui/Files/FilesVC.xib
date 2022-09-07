@@ -36,6 +36,15 @@
                         <action selector="readFiles:" destination="-1" eventType="touchUpInside" id="Ojc-pr-XRd"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVn-X1-rOc">
+                    <rect key="frame" x="157" y="379" width="103" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="USerDefault"/>
+                    <connections>
+                        <action selector="saveUserDefault:" destination="-1" eventType="touchUpInside" id="lSi-Tl-eJZ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="45f-GS-Ebg"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

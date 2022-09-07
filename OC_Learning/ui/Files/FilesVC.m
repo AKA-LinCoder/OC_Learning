@@ -34,6 +34,18 @@
    NSString *filePath =  [path stringByAppendingPathComponent:@"data.plist"];
    NSArray *data =   [NSArray arrayWithContentsOfFile:filePath];
     NSLog(@"%@",data);
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [defaults objectForKey:@"my"];
+    BOOL my =  [defaults boolForKey:@"my"];
+    NSLog(@"%ld",my);
+}
+- (IBAction)saveUserDefault:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"my"];
+    //立马写入到文件当中
+    [defaults synchronize];
+    //会默认放到Preferences
 }
 
 @end
