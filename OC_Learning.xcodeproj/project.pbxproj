@@ -47,6 +47,8 @@
 		69424E4128AE2BED00DF0939 /* StatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E4028AE2BED00DF0939 /* StatusItem.m */; };
 		69424E4428AE2D6F00DF0939 /* NSDictionary+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E4328AE2D6F00DF0939 /* NSDictionary+Property.m */; };
 		69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 69424E5028AE534000DF0939 /* NSFileManager+Additions.m */; };
+		6951B34B28C8D179002E06B3 /* SelfPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B34928C8D179002E06B3 /* SelfPageVC.m */; };
+		6951B34C28C8D179002E06B3 /* SelfPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6951B34A28C8D179002E06B3 /* SelfPageVC.xib */; };
 		6959200628B5C4EC0066AA46 /* CacultorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959200528B5C4EC0066AA46 /* CacultorManager.m */; };
 		6959200B28B5F2000066AA46 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959200928B5F2000066AA46 /* CollectionViewVC.m */; };
 		6959200C28B5F2000066AA46 /* CollectionViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959200A28B5F2000066AA46 /* CollectionViewVC.xib */; };
@@ -229,6 +231,9 @@
 		69424E4328AE2D6F00DF0939 /* NSDictionary+Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Property.m"; sourceTree = "<group>"; };
 		69424E4F28AE534000DF0939 /* NSFileManager+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Additions.h"; sourceTree = "<group>"; };
 		69424E5028AE534000DF0939 /* NSFileManager+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Additions.m"; sourceTree = "<group>"; };
+		6951B34828C8D179002E06B3 /* SelfPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfPageVC.h; sourceTree = "<group>"; };
+		6951B34928C8D179002E06B3 /* SelfPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfPageVC.m; sourceTree = "<group>"; };
+		6951B34A28C8D179002E06B3 /* SelfPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfPageVC.xib; sourceTree = "<group>"; };
 		6959200428B5C4EC0066AA46 /* CacultorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacultorManager.h; sourceTree = "<group>"; };
 		6959200528B5C4EC0066AA46 /* CacultorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacultorManager.m; sourceTree = "<group>"; };
 		6959200828B5F2000066AA46 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
@@ -571,6 +576,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				6951B34728C8D15E002E06B3 /* SelfPage */,
 				69C8E3D128C838CB007CE55B /* Files */,
 				69D2CA5628C5D14C000708E3 /* AddressBook */,
 				695AF3D728C4718D0084D982 /* SelfPicker */,
@@ -645,6 +651,16 @@
 				69424E5028AE534000DF0939 /* NSFileManager+Additions.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		6951B34728C8D15E002E06B3 /* SelfPage */ = {
+			isa = PBXGroup;
+			children = (
+				6951B34828C8D179002E06B3 /* SelfPageVC.h */,
+				6951B34928C8D179002E06B3 /* SelfPageVC.m */,
+				6951B34A28C8D179002E06B3 /* SelfPageVC.xib */,
+			);
+			path = SelfPage;
 			sourceTree = "<group>";
 		};
 		6959200728B5F1D70066AA46 /* uicollectionview */ = {
@@ -1201,6 +1217,7 @@
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
 				69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */,
+				6951B34C28C8D179002E06B3 /* SelfPageVC.xib in Resources */,
 				69D2CA6328C5FA02000708E3 /* AddressBookAddVC.xib in Resources */,
 				69D2CA5B28C5D172000708E3 /* AddressBoolLoginVC.xib in Resources */,
 				6914762928B0C14B001F5BB6 /* WangyiVC.xib in Resources */,
@@ -1289,6 +1306,7 @@
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
 				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
 				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
+				6951B34B28C8D179002E06B3 /* SelfPageVC.m in Sources */,
 				69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				69D2CA5A28C5D172000708E3 /* AddressBoolLoginVC.m in Sources */,
