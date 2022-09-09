@@ -140,6 +140,8 @@
 		69D9A56328B86476004812B7 /* INTULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56128B86476004812B7 /* INTULVC.m */; };
 		69D9A56428B86476004812B7 /* INTULVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D9A56228B86476004812B7 /* INTULVC.xib */; };
 		69D9A56828B87202004812B7 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56728B87202004812B7 /* LocationTool.m */; };
+		69DE749628CB7EE700B78DA8 /* redView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE749528CB7EE700B78DA8 /* redView.m */; };
+		69DE749928CB7F1000B78DA8 /* greenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE749828CB7F1000B78DA8 /* greenView.m */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
@@ -401,6 +403,10 @@
 		69D9A56228B86476004812B7 /* INTULVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = INTULVC.xib; sourceTree = "<group>"; };
 		69D9A56628B87202004812B7 /* LocationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
 		69D9A56728B87202004812B7 /* LocationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTool.m; sourceTree = "<group>"; };
+		69DE749428CB7EE700B78DA8 /* redView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = redView.h; sourceTree = "<group>"; };
+		69DE749528CB7EE700B78DA8 /* redView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redView.m; sourceTree = "<group>"; };
+		69DE749728CB7F1000B78DA8 /* greenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = greenView.h; sourceTree = "<group>"; };
+		69DE749828CB7F1000B78DA8 /* greenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = greenView.m; sourceTree = "<group>"; };
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
 		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
@@ -930,6 +936,10 @@
 				69B49EB128CB1A660006DD34 /* DragVC.m */,
 				69B49EB328CB1F760006DD34 /* moveView.h */,
 				69B49EB428CB1F760006DD34 /* moveView.m */,
+				69DE749428CB7EE700B78DA8 /* redView.h */,
+				69DE749528CB7EE700B78DA8 /* redView.m */,
+				69DE749728CB7F1000B78DA8 /* greenView.h */,
+				69DE749828CB7F1000B78DA8 /* greenView.m */,
 			);
 			path = "UIView拖拽";
 			sourceTree = "<group>";
@@ -1421,8 +1431,10 @@
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
 				6978332C28B746D800116C7A /* MyLocationManager.m in Sources */,
 				69D9A56828B87202004812B7 /* LocationTool.m in Sources */,
+				69DE749928CB7F1000B78DA8 /* greenView.m in Sources */,
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
+				69DE749628CB7EE700B78DA8 /* redView.m in Sources */,
 				69C8E3D428C838E4007CE55B /* FilesVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */,
