@@ -102,6 +102,7 @@
 		69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49EAB28CB14F30006DD34 /* TransformVC.m */; };
 		69B49EAE28CB14F30006DD34 /* TransformVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B49EAC28CB14F30006DD34 /* TransformVC.xib */; };
 		69B49EB228CB1A660006DD34 /* DragVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49EB128CB1A660006DD34 /* DragVC.m */; };
+		69B49EB528CB1F760006DD34 /* moveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49EB428CB1F760006DD34 /* moveView.m */; };
 		69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4028A8C66800466BC1 /* NativeVC.m */; };
 		69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */; };
 		69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4728A8FDE800466BC1 /* LinTimeMode.m */; };
@@ -333,6 +334,8 @@
 		69B49EAC28CB14F30006DD34 /* TransformVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformVC.xib; sourceTree = "<group>"; };
 		69B49EB028CB1A660006DD34 /* DragVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragVC.h; sourceTree = "<group>"; };
 		69B49EB128CB1A660006DD34 /* DragVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragVC.m; sourceTree = "<group>"; };
+		69B49EB328CB1F760006DD34 /* moveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = moveView.h; sourceTree = "<group>"; };
+		69B49EB428CB1F760006DD34 /* moveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moveView.m; sourceTree = "<group>"; };
 		69B57B3F28A8C66800466BC1 /* NativeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeVC.h; sourceTree = "<group>"; };
 		69B57B4028A8C66800466BC1 /* NativeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeVC.m; sourceTree = "<group>"; };
 		69B57B4228A8E3D000466BC1 /* JSONDataShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONDataShowVC.h; sourceTree = "<group>"; };
@@ -925,6 +928,8 @@
 			children = (
 				69B49EB028CB1A660006DD34 /* DragVC.h */,
 				69B49EB128CB1A660006DD34 /* DragVC.m */,
+				69B49EB328CB1F760006DD34 /* moveView.h */,
+				69B49EB428CB1F760006DD34 /* moveView.m */,
 			);
 			path = "UIView拖拽";
 			sourceTree = "<group>";
@@ -1399,6 +1404,7 @@
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
 				69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */,
 				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
+				69B49EB528CB1F760006DD34 /* moveView.m in Sources */,
 				69EA7A9728AF180E006A6B4B /* NSObject+Model.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
