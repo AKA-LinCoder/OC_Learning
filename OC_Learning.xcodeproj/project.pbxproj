@@ -95,6 +95,7 @@
 		69B2335728C6EBE5005A06BE /* AddressBookUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2335628C6EBE5005A06BE /* AddressBookUserItem.m */; };
 		69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */; };
 		69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */; };
+		69B49E9F28CADAE60006DD34 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49E9E28CADAE60006DD34 /* UIImage+Image.m */; };
 		69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4028A8C66800466BC1 /* NativeVC.m */; };
 		69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */; };
 		69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4728A8FDE800466BC1 /* LinTimeMode.m */; };
@@ -314,6 +315,8 @@
 		69B3E6C428A5F21E0070AE3B /* RunLoopsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopsVC.h; sourceTree = "<group>"; };
 		69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopsVC.m; sourceTree = "<group>"; };
 		69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopsVC.xib; sourceTree = "<group>"; };
+		69B49E9D28CADAE60006DD34 /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		69B49E9E28CADAE60006DD34 /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		69B57B3F28A8C66800466BC1 /* NativeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeVC.h; sourceTree = "<group>"; };
 		69B57B4028A8C66800466BC1 /* NativeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeVC.m; sourceTree = "<group>"; };
 		69B57B4228A8E3D000466BC1 /* JSONDataShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONDataShowVC.h; sourceTree = "<group>"; };
@@ -659,6 +662,8 @@
 				6951B34828C8D179002E06B3 /* SelfPageVC.h */,
 				6951B34928C8D179002E06B3 /* SelfPageVC.m */,
 				6951B34A28C8D179002E06B3 /* SelfPageVC.xib */,
+				69B49E9D28CADAE60006DD34 /* UIImage+Image.h */,
+				69B49E9E28CADAE60006DD34 /* UIImage+Image.m */,
 			);
 			path = SelfPage;
 			sourceTree = "<group>";
@@ -1390,6 +1395,7 @@
 				69BE3E9228AB862500F6E4C3 /* UploadBySession.m in Sources */,
 				69F6F6FD28B37AB700675D4C /* FrameAndBoundsVC.m in Sources */,
 				69424E3028ADDA0400DF0939 /* Person.m in Sources */,
+				69B49E9F28CADAE60006DD34 /* UIImage+Image.m in Sources */,
 				69EA7AA528AF2FEA006A6B4B /* OtherVC.m in Sources */,
 				6973864028A24AAB00F4239C /* NSThreadVC.m in Sources */,
 				69F6F6EC28B366DF00675D4C /* NoticeVC.m in Sources */,

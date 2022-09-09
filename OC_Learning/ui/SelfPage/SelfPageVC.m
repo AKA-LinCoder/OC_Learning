@@ -6,6 +6,7 @@
 //
 
 #import "SelfPageVC.h"
+#import "UIImage+Image.h"
 //#define imageHeight 200;
 @interface SelfPageVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -62,7 +63,7 @@
     //让导航条隐藏
 //    [self.navigationController.navigationBar setHidden:YES];
     //设置导航条透明度,之前没有效果，但是现在有效果
-    self.navigationController.navigationBar.alpha = 0.5;
+//    self.navigationController.navigationBar.alpha = 0;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"haha" menu:nil];
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init] ];
     //导航条设置背景
@@ -76,6 +77,12 @@
 
 //    self.tableView.tableHeaderView = imageView;
 //    self.tableView.autoresizingMask = NO;
+    
+    UILabel *title = [[UILabel alloc] init];
+    title.text = @"lin";
+    [title sizeToFit];
+    title.textColor = [UIColor colorWithWhite:0 alpha:0];
+    self.navigationItem.titleView = title;
     
 }
 //监听滚动
@@ -101,6 +108,23 @@
     rect3.origin.y = h+30;
     rect3.size.height = [UIScreen mainScreen].bounds.size.height-(h+30);
     self.tableView.frame = rect3;
+    //根据透明度来生成图片
+    //找最大值
+    CGFloat alpha = self.offet*1 / 109.0;
+    if(alpha>=1){
+        alpha = 0.99;
+    }
+    //修改导航条背景图片/或者透明度
+//    self.navigationController.navigationBar.alpha = alpha;
+    //把颜色生成图片
+    UIColor *alphaColor = [UIColor colorWithWhite:1 alpha:alpha];
+    UIImage *alphaImage = [UIImage imageWithColor:alphaColor];
+    [self.navigationController.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
+    //设置标题
+    UILabel *title = (UILabel *)self.navigationItem.titleView;
+   
+    title.textColor = [UIColor colorWithWhite:0 alpha:alpha];
+  
 }
 
 
