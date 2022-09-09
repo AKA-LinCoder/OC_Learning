@@ -96,6 +96,12 @@
 		69B3E6C728A5F21E0070AE3B /* RunLoopsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B3E6C528A5F21E0070AE3B /* RunLoopsVC.m */; };
 		69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */; };
 		69B49E9F28CADAE60006DD34 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49E9E28CADAE60006DD34 /* UIImage+Image.m */; };
+		69B49EA228CAEBBA0006DD34 /* template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B49EA128CAEBBA0006DD34 /* template.storyboard */; };
+		69B49EA528CAECD90006DD34 /* TemplateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49EA428CAECD90006DD34 /* TemplateVC.m */; };
+		69B49EA828CAFA540006DD34 /* ModalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49EA728CAFA540006DD34 /* ModalVC.m */; };
+		69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49EAB28CB14F30006DD34 /* TransformVC.m */; };
+		69B49EAE28CB14F30006DD34 /* TransformVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B49EAC28CB14F30006DD34 /* TransformVC.xib */; };
+		69B49EB228CB1A660006DD34 /* DragVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B49EB128CB1A660006DD34 /* DragVC.m */; };
 		69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4028A8C66800466BC1 /* NativeVC.m */; };
 		69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4328A8E3D000466BC1 /* JSONDataShowVC.m */; };
 		69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4728A8FDE800466BC1 /* LinTimeMode.m */; };
@@ -317,6 +323,16 @@
 		69B3E6C628A5F21E0070AE3B /* RunLoopsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopsVC.xib; sourceTree = "<group>"; };
 		69B49E9D28CADAE60006DD34 /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		69B49E9E28CADAE60006DD34 /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		69B49EA128CAEBBA0006DD34 /* template.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = template.storyboard; sourceTree = "<group>"; };
+		69B49EA328CAECD90006DD34 /* TemplateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemplateVC.h; sourceTree = "<group>"; };
+		69B49EA428CAECD90006DD34 /* TemplateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemplateVC.m; sourceTree = "<group>"; };
+		69B49EA628CAFA540006DD34 /* ModalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalVC.h; sourceTree = "<group>"; };
+		69B49EA728CAFA540006DD34 /* ModalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalVC.m; sourceTree = "<group>"; };
+		69B49EAA28CB14F30006DD34 /* TransformVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformVC.h; sourceTree = "<group>"; };
+		69B49EAB28CB14F30006DD34 /* TransformVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformVC.m; sourceTree = "<group>"; };
+		69B49EAC28CB14F30006DD34 /* TransformVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformVC.xib; sourceTree = "<group>"; };
+		69B49EB028CB1A660006DD34 /* DragVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragVC.h; sourceTree = "<group>"; };
+		69B49EB128CB1A660006DD34 /* DragVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragVC.m; sourceTree = "<group>"; };
 		69B57B3F28A8C66800466BC1 /* NativeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeVC.h; sourceTree = "<group>"; };
 		69B57B4028A8C66800466BC1 /* NativeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeVC.m; sourceTree = "<group>"; };
 		69B57B4228A8E3D000466BC1 /* JSONDataShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONDataShowVC.h; sourceTree = "<group>"; };
@@ -579,6 +595,9 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				69B49EAF28CB1A470006DD34 /* UIView拖拽 */,
+				69B49EA928CB14D40006DD34 /* transform */,
+				69B49EA028CAEBA40006DD34 /* template */,
 				6951B34728C8D15E002E06B3 /* SelfPage */,
 				69C8E3D128C838CB007CE55B /* Files */,
 				69D2CA5628C5D14C000708E3 /* AddressBook */,
@@ -592,6 +611,8 @@
 				695AF3D028C440C70084D982 /* PickerVC.h */,
 				695AF3D128C440C70084D982 /* PickerVC.m */,
 				695AF3D228C440C70084D982 /* PickerVC.xib */,
+				69B49EA628CAFA540006DD34 /* ModalVC.h */,
+				69B49EA728CAFA540006DD34 /* ModalVC.m */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -877,6 +898,35 @@
 				69C71E7F28A79B210025F49F /* RunLoopUseVC.m */,
 			);
 			path = RunLoops;
+			sourceTree = "<group>";
+		};
+		69B49EA028CAEBA40006DD34 /* template */ = {
+			isa = PBXGroup;
+			children = (
+				69B49EA128CAEBBA0006DD34 /* template.storyboard */,
+				69B49EA328CAECD90006DD34 /* TemplateVC.h */,
+				69B49EA428CAECD90006DD34 /* TemplateVC.m */,
+			);
+			path = template;
+			sourceTree = "<group>";
+		};
+		69B49EA928CB14D40006DD34 /* transform */ = {
+			isa = PBXGroup;
+			children = (
+				69B49EAA28CB14F30006DD34 /* TransformVC.h */,
+				69B49EAB28CB14F30006DD34 /* TransformVC.m */,
+				69B49EAC28CB14F30006DD34 /* TransformVC.xib */,
+			);
+			path = transform;
+			sourceTree = "<group>";
+		};
+		69B49EAF28CB1A470006DD34 /* UIView拖拽 */ = {
+			isa = PBXGroup;
+			children = (
+				69B49EB028CB1A660006DD34 /* DragVC.h */,
+				69B49EB128CB1A660006DD34 /* DragVC.m */,
+			);
+			path = "UIView拖拽";
 			sourceTree = "<group>";
 		};
 		69B57B3E28A8C64500466BC1 /* Native */ = {
@@ -1243,12 +1293,14 @@
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6978333528B7840F00116C7A /* CompassVC.xib in Resources */,
 				69C8E3D628C8393C007CE55B /* FilesVC.xib in Resources */,
+				69B49EAE28CB14F30006DD34 /* TransformVC.xib in Resources */,
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
 				6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */,
 				695AF3DC28C471AA0084D982 /* SelfPickerVC.xib in Resources */,
 				69424E3E28AE2AB800DF0939 /* status.plist in Resources */,
+				69B49EA228CAEBBA0006DD34 /* template.storyboard in Resources */,
 				6934222F28918CD0007561A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1308,9 +1360,11 @@
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				69B9D0D128C4893300919086 /* FlagItem.m in Sources */,
 				693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */,
+				69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
 				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
 				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
+				69B49EB228CB1A660006DD34 /* DragVC.m in Sources */,
 				6951B34B28C8D179002E06B3 /* SelfPageVC.m in Sources */,
 				69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
@@ -1380,6 +1434,7 @@
 				69B57B4428A8E3D000466BC1 /* JSONDataShowVC.m in Sources */,
 				69424E4428AE2D6F00DF0939 /* NSDictionary+Property.m in Sources */,
 				69F6F6E228B32E8400675D4C /* ScrollviewAutoLayoutVC.m in Sources */,
+				69B49EA828CAFA540006DD34 /* ModalVC.m in Sources */,
 				694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
 				6978333428B7840F00116C7A /* CompassVC.m in Sources */,
@@ -1387,6 +1442,7 @@
 				6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */,
 				69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
+				69B49EA528CAECD90006DD34 /* TemplateVC.m in Sources */,
 				695E8CEC28A3881400A7914A /* LinOperation.m in Sources */,
 				69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */,
 				69BE3E9B28ABAC9B00F6E4C3 /* LinWebView.m in Sources */,

@@ -12,9 +12,14 @@
 #import "AddressBoolLoginVC.h"
 #import "FilesVC.h"
 #import "SelfPageVC.h"
+#import "TemplateVC.h"
+#import "ModalVC.h"
+#import "TransformVC.h"
+#import "DragVC.h"
 
 @interface UIVC ()
 @property(nonatomic,strong)NSArray *array;
+@property(nonatomic,strong)ModalVC *modalVC;
 @end
 /*
  LaunchScreen底层实现：把sb的内容生成图片；
@@ -31,7 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = @[@"picker",@"自定义Picker",@"通讯录",@"文件存储",@"个人主页"];
+    self.array = @[@"picker",@"自定义Picker",@"通讯录",@"文件存储",
+                   @"个人主页",@"通用模板",@"手动modal",@"启动超级变换形态",@"拖拽事件"];
     lsaac *one = [lsaac sharedLsaac];
     lsaac *two = [lsaac sharedLsaac];
     NSLog(@"one--%p,two--%p",one,two);
@@ -136,13 +142,43 @@
         SelfPageVC *vc = [[SelfPageVC alloc] init];
          [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==5){
-       
+        TemplateVC *vc =  [[UIStoryboard storyboardWithName:@"template" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TemplateVC"];
+//        TemplateVC *vc = [[TemplateVC alloc] init];
+         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==6){
-       
-    }else if(indexPath.row ==7){
+        //当在modal时，会吧窗口上面的view给移除，然后要modal控制器的view，给添加到窗口上
         
+        
+        
+        //vc会被销毁
+        //当应该控制器被销毁，那么它view的业务逻辑是没有办法处理的，需要一个强指针引用
+        ModalVC *vc = [ModalVC new];
+        //强应用，使view上业务可以继续
+        self.modalVC = vc;
+        CGRect rect = vc.view.frame;
+        rect.origin.y = [UIScreen mainScreen].bounds.size.height;
+        vc.view.frame = rect;
+        //强指针引用，view不会销毁，控制器被销毁，view不一定会被销毁
+        [[UIApplication sharedApplication].keyWindow addSubview:vc.view];
+        [UIView animateWithDuration:0.5 animations:^{
+            vc.view.frame = self.view.frame;
+        }completion:^(BOOL finished) {
+            [self.view removeFromSuperview];
+        }];
+        
+        
+//        self.presentedViewController会强引用vc，所以view上业务还可以继续
+        
+//        [self presentViewController:vc animated:YES
+//            completion:^{
+//                
+//        }];
+    }else if(indexPath.row ==7){
+        TransformVC *vc = [[TransformVC alloc] init];
+         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 8){
-       
+        DragVC *vc = [[DragVC alloc] init];
+         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==9){
         
     }else if (indexPath.row==10){

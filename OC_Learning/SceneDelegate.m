@@ -49,6 +49,11 @@
         把窗口的根控制器的view添加到窗口上（self.window addSubView:rootViewController.view）
         
      */
+    
+    
+    /*
+     nav和tabbar的区别，nav切换会将之前的移除，但是tabbar里面的一直存在
+     */
 }
 
 
