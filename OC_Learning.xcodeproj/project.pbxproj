@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		34FF010AE765F24DD3D455A2 /* Pods_OC_Learning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */; };
+		6912DE5928CC6AEC005502C4 /* hittest02VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE5728CC6AEC005502C4 /* hittest02VC.m */; };
+		6912DE5A28CC6AEC005502C4 /* hittest02VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6912DE5828CC6AEC005502C4 /* hittest02VC.xib */; };
+		6912DE5D28CC6D6E005502C4 /* addBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE5C28CC6D6E005502C4 /* addBtn.m */; };
 		6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760428B074E8001F5BB6 /* GlobalConst.m */; };
 		6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760E28B07764001F5BB6 /* FatherAndSonVC.m */; };
 		6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6914760F28B07764001F5BB6 /* FatherAndSonVC.xib */; };
@@ -142,6 +145,9 @@
 		69D9A56828B87202004812B7 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56728B87202004812B7 /* LocationTool.m */; };
 		69DE749628CB7EE700B78DA8 /* redView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE749528CB7EE700B78DA8 /* redView.m */; };
 		69DE749928CB7F1000B78DA8 /* greenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE749828CB7F1000B78DA8 /* greenView.m */; };
+		69DE749E28CB878300B78DA8 /* HitTest01VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE749C28CB878300B78DA8 /* HitTest01VC.m */; };
+		69DE749F28CB878300B78DA8 /* HitTest01VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DE749D28CB878300B78DA8 /* HitTest01VC.xib */; };
+		69DE74A228CB87F900B78DA8 /* blueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE74A128CB87F900B78DA8 /* blueView.m */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
@@ -170,6 +176,11 @@
 
 /* Begin PBXFileReference section */
 		67F3AD08DA232E89FE429F4B /* Pods-OC_Learning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.release.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.release.xcconfig"; sourceTree = "<group>"; };
+		6912DE5628CC6AEC005502C4 /* hittest02VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hittest02VC.h; sourceTree = "<group>"; };
+		6912DE5728CC6AEC005502C4 /* hittest02VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hittest02VC.m; sourceTree = "<group>"; };
+		6912DE5828CC6AEC005502C4 /* hittest02VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hittest02VC.xib; sourceTree = "<group>"; };
+		6912DE5B28CC6D6E005502C4 /* addBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addBtn.h; sourceTree = "<group>"; };
+		6912DE5C28CC6D6E005502C4 /* addBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addBtn.m; sourceTree = "<group>"; };
 		6914760328B074E8001F5BB6 /* GlobalConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConst.h; sourceTree = "<group>"; };
 		6914760428B074E8001F5BB6 /* GlobalConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConst.m; sourceTree = "<group>"; };
 		6914760D28B07764001F5BB6 /* FatherAndSonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FatherAndSonVC.h; sourceTree = "<group>"; };
@@ -407,6 +418,11 @@
 		69DE749528CB7EE700B78DA8 /* redView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redView.m; sourceTree = "<group>"; };
 		69DE749728CB7F1000B78DA8 /* greenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = greenView.h; sourceTree = "<group>"; };
 		69DE749828CB7F1000B78DA8 /* greenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = greenView.m; sourceTree = "<group>"; };
+		69DE749B28CB878300B78DA8 /* HitTest01VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTest01VC.h; sourceTree = "<group>"; };
+		69DE749C28CB878300B78DA8 /* HitTest01VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTest01VC.m; sourceTree = "<group>"; };
+		69DE749D28CB878300B78DA8 /* HitTest01VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HitTest01VC.xib; sourceTree = "<group>"; };
+		69DE74A028CB87F900B78DA8 /* blueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueView.h; sourceTree = "<group>"; };
+		69DE74A128CB87F900B78DA8 /* blueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blueView.m; sourceTree = "<group>"; };
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
 		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
@@ -483,6 +499,18 @@
 				797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6912DE5528CC6ACE005502C4 /* hittest02 */ = {
+			isa = PBXGroup;
+			children = (
+				6912DE5628CC6AEC005502C4 /* hittest02VC.h */,
+				6912DE5728CC6AEC005502C4 /* hittest02VC.m */,
+				6912DE5828CC6AEC005502C4 /* hittest02VC.xib */,
+				6912DE5B28CC6D6E005502C4 /* addBtn.h */,
+				6912DE5C28CC6D6E005502C4 /* addBtn.m */,
+			);
+			path = hittest02;
 			sourceTree = "<group>";
 		};
 		6914760628B07663001F5BB6 /* fatherAndson */ = {
@@ -604,6 +632,8 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				6912DE5528CC6ACE005502C4 /* hittest02 */,
+				69DE749A28CB876600B78DA8 /* hittest01 */,
 				69B49EAF28CB1A470006DD34 /* UIView拖拽 */,
 				69B49EA928CB14D40006DD34 /* transform */,
 				69B49EA028CAEBA40006DD34 /* template */,
@@ -1081,6 +1111,18 @@
 			path = "工具封装";
 			sourceTree = "<group>";
 		};
+		69DE749A28CB876600B78DA8 /* hittest01 */ = {
+			isa = PBXGroup;
+			children = (
+				69DE749B28CB878300B78DA8 /* HitTest01VC.h */,
+				69DE749C28CB878300B78DA8 /* HitTest01VC.m */,
+				69DE749D28CB878300B78DA8 /* HitTest01VC.xib */,
+				69DE74A028CB87F900B78DA8 /* blueView.h */,
+				69DE74A128CB87F900B78DA8 /* blueView.m */,
+			);
+			path = hittest01;
+			sourceTree = "<group>";
+		};
 		69E6FE2428A4E75A00896D4E /* SDWebImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -1277,6 +1319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69B9D0CE28C488F500919086 /* guoqi in Resources */,
+				69DE749F28CB878300B78DA8 /* HitTest01VC.xib in Resources */,
 				69F6F6F928B3778C00675D4C /* AssignAndWeakVC.xib in Resources */,
 				6914761E28B07AA5001F5BB6 /* TopVC.xib in Resources */,
 				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
@@ -1294,6 +1337,7 @@
 				695AF3D628C446E30084D982 /* foods.plist in Resources */,
 				69B3E6C828A5F21E0070AE3B /* RunLoopsVC.xib in Resources */,
 				6978334128B78E8100116C7A /* GeocodingVC.xib in Resources */,
+				6912DE5A28CC6AEC005502C4 /* hittest02VC.xib in Resources */,
 				695E8CF728A3D33A00A7914A /* ImagedownLoadVC.xib in Resources */,
 				6914762328B07AB5001F5BB6 /* SocietyVC.xib in Resources */,
 				69D9A56428B86476004812B7 /* INTULVC.xib in Resources */,
@@ -1373,11 +1417,13 @@
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
+				69DE74A228CB87F900B78DA8 /* blueView.m in Sources */,
 				69B9D0D128C4893300919086 /* FlagItem.m in Sources */,
 				693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */,
 				69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
 				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
+				6912DE5928CC6AEC005502C4 /* hittest02VC.m in Sources */,
 				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
 				69B49EB228CB1A660006DD34 /* DragVC.m in Sources */,
 				6951B34B28C8D179002E06B3 /* SelfPageVC.m in Sources */,
@@ -1404,6 +1450,7 @@
 				695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */,
 				69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
+				69DE749E28CB878300B78DA8 /* HitTest01VC.m in Sources */,
 				69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */,
 				6914761D28B07AA5001F5BB6 /* TopVC.m in Sources */,
 				6978333A28B787CD00116C7A /* AreaMonitoringVC.m in Sources */,
@@ -1467,6 +1514,7 @@
 				69B57B4128A8C66800466BC1 /* NativeVC.m in Sources */,
 				69B9D0D428C48C9300919086 /* FlagView.m in Sources */,
 				69BE3E9228AB862500F6E4C3 /* UploadBySession.m in Sources */,
+				6912DE5D28CC6D6E005502C4 /* addBtn.m in Sources */,
 				69F6F6FD28B37AB700675D4C /* FrameAndBoundsVC.m in Sources */,
 				69424E3028ADDA0400DF0939 /* Person.m in Sources */,
 				69B49E9F28CADAE60006DD34 /* UIImage+Image.m in Sources */,
