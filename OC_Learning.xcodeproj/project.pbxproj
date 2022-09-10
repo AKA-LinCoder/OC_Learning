@@ -15,6 +15,8 @@
 		6912DE6328CC7781005502C4 /* tapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6912DE6128CC7781005502C4 /* tapVC.xib */; };
 		6912DE6828CC82F4005502C4 /* DrawerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE6628CC82F4005502C4 /* DrawerVC.m */; };
 		6912DE6928CC82F4005502C4 /* DrawerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6912DE6728CC82F4005502C4 /* DrawerVC.xib */; };
+		6912DE6C28CC9742005502C4 /* MyDrawerVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE6B28CC9742005502C4 /* MyDrawerVCViewController.m */; };
+		6912DE6F28CC9769005502C4 /* MainTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE6E28CC9769005502C4 /* MainTabVC.m */; };
 		6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760428B074E8001F5BB6 /* GlobalConst.m */; };
 		6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760E28B07764001F5BB6 /* FatherAndSonVC.m */; };
 		6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6914760F28B07764001F5BB6 /* FatherAndSonVC.xib */; };
@@ -191,6 +193,10 @@
 		6912DE6528CC82F4005502C4 /* DrawerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawerVC.h; sourceTree = "<group>"; };
 		6912DE6628CC82F4005502C4 /* DrawerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawerVC.m; sourceTree = "<group>"; };
 		6912DE6728CC82F4005502C4 /* DrawerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerVC.xib; sourceTree = "<group>"; };
+		6912DE6A28CC9742005502C4 /* MyDrawerVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDrawerVCViewController.h; sourceTree = "<group>"; };
+		6912DE6B28CC9742005502C4 /* MyDrawerVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDrawerVCViewController.m; sourceTree = "<group>"; };
+		6912DE6D28CC9769005502C4 /* MainTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabVC.h; sourceTree = "<group>"; };
+		6912DE6E28CC9769005502C4 /* MainTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabVC.m; sourceTree = "<group>"; };
 		6914760328B074E8001F5BB6 /* GlobalConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConst.h; sourceTree = "<group>"; };
 		6914760428B074E8001F5BB6 /* GlobalConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConst.m; sourceTree = "<group>"; };
 		6914760D28B07764001F5BB6 /* FatherAndSonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FatherAndSonVC.h; sourceTree = "<group>"; };
@@ -539,6 +545,10 @@
 				6912DE6528CC82F4005502C4 /* DrawerVC.h */,
 				6912DE6628CC82F4005502C4 /* DrawerVC.m */,
 				6912DE6728CC82F4005502C4 /* DrawerVC.xib */,
+				6912DE6A28CC9742005502C4 /* MyDrawerVCViewController.h */,
+				6912DE6B28CC9742005502C4 /* MyDrawerVCViewController.m */,
+				6912DE6D28CC9769005502C4 /* MainTabVC.h */,
+				6912DE6E28CC9769005502C4 /* MainTabVC.m */,
 			);
 			path = "抽屉效果";
 			sourceTree = "<group>";
@@ -1495,12 +1505,14 @@
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
 				69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */,
 				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
+				6912DE6C28CC9742005502C4 /* MyDrawerVCViewController.m in Sources */,
 				6912DE6228CC7781005502C4 /* tapVC.m in Sources */,
 				69B49EB528CB1F760006DD34 /* moveView.m in Sources */,
 				69EA7A9728AF180E006A6B4B /* NSObject+Model.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
 				695AF3D328C440C70084D982 /* PickerVC.m in Sources */,
+				6912DE6F28CC9769005502C4 /* MainTabVC.m in Sources */,
 				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,
 				694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */,
 				695AF3E028C475520084D982 /* FlagTextF.m in Sources */,

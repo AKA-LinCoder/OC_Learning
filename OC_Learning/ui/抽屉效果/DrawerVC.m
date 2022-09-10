@@ -8,9 +8,7 @@
 #import "DrawerVC.h"
 
 @interface DrawerVC ()
-@property(nonatomic,weak)UIView *leftView;
-@property(nonatomic,weak)UIView *mainView;
-@property(nonatomic,weak)UIView *rightView;
+
 @end
 
 @implementation DrawerVC
@@ -49,9 +47,9 @@
     //中间UI
     UIView *mainView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     mainView.backgroundColor = [UIColor redColor];
-    self.leftView = leftView;
-    self.rightView = rightView;
-    self.mainView = mainView;
+    _leftView = leftView;
+    _rightView = rightView;
+    _mainView = mainView;
     [self.view addSubview:leftView];
     [self.view addSubview:rightView];
     [self.view addSubview:mainView];

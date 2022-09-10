@@ -20,6 +20,7 @@
 #import "hittest02VC.h"
 #import "tapVC.h"
 #import "DrawerVC.h"
+#import "MyDrawerVCViewController.h"
 
 @interface UIVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -193,7 +194,8 @@
         tapVC *vc = [[tapVC alloc] init];
          [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==12){
-        DrawerVC *vc = [[DrawerVC alloc] init];
+//        DrawerVC *vc = [[DrawerVC alloc] init];
+        MyDrawerVCViewController *vc = [[MyDrawerVCViewController alloc] init];
          [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==13){
         
