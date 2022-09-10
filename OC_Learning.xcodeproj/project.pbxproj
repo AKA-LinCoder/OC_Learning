@@ -13,6 +13,8 @@
 		6912DE5D28CC6D6E005502C4 /* addBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE5C28CC6D6E005502C4 /* addBtn.m */; };
 		6912DE6228CC7781005502C4 /* tapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE6028CC7781005502C4 /* tapVC.m */; };
 		6912DE6328CC7781005502C4 /* tapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6912DE6128CC7781005502C4 /* tapVC.xib */; };
+		6912DE6828CC82F4005502C4 /* DrawerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE6628CC82F4005502C4 /* DrawerVC.m */; };
+		6912DE6928CC82F4005502C4 /* DrawerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6912DE6728CC82F4005502C4 /* DrawerVC.xib */; };
 		6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760428B074E8001F5BB6 /* GlobalConst.m */; };
 		6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760E28B07764001F5BB6 /* FatherAndSonVC.m */; };
 		6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6914760F28B07764001F5BB6 /* FatherAndSonVC.xib */; };
@@ -186,6 +188,9 @@
 		6912DE5F28CC7781005502C4 /* tapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tapVC.h; sourceTree = "<group>"; };
 		6912DE6028CC7781005502C4 /* tapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tapVC.m; sourceTree = "<group>"; };
 		6912DE6128CC7781005502C4 /* tapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tapVC.xib; sourceTree = "<group>"; };
+		6912DE6528CC82F4005502C4 /* DrawerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawerVC.h; sourceTree = "<group>"; };
+		6912DE6628CC82F4005502C4 /* DrawerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawerVC.m; sourceTree = "<group>"; };
+		6912DE6728CC82F4005502C4 /* DrawerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerVC.xib; sourceTree = "<group>"; };
 		6914760328B074E8001F5BB6 /* GlobalConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConst.h; sourceTree = "<group>"; };
 		6914760428B074E8001F5BB6 /* GlobalConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConst.m; sourceTree = "<group>"; };
 		6914760D28B07764001F5BB6 /* FatherAndSonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FatherAndSonVC.h; sourceTree = "<group>"; };
@@ -528,6 +533,16 @@
 			path = "手势识别";
 			sourceTree = "<group>";
 		};
+		6912DE6428CC82A6005502C4 /* 抽屉效果 */ = {
+			isa = PBXGroup;
+			children = (
+				6912DE6528CC82F4005502C4 /* DrawerVC.h */,
+				6912DE6628CC82F4005502C4 /* DrawerVC.m */,
+				6912DE6728CC82F4005502C4 /* DrawerVC.xib */,
+			);
+			path = "抽屉效果";
+			sourceTree = "<group>";
+		};
 		6914760628B07663001F5BB6 /* fatherAndson */ = {
 			isa = PBXGroup;
 			children = (
@@ -647,6 +662,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				6912DE6428CC82A6005502C4 /* 抽屉效果 */,
 				6912DE5E28CC775F005502C4 /* 手势识别 */,
 				6912DE5528CC6ACE005502C4 /* hittest02 */,
 				69DE749A28CB876600B78DA8 /* hittest01 */,
@@ -1337,6 +1353,7 @@
 				69B9D0CE28C488F500919086 /* guoqi in Resources */,
 				69DE749F28CB878300B78DA8 /* HitTest01VC.xib in Resources */,
 				69F6F6F928B3778C00675D4C /* AssignAndWeakVC.xib in Resources */,
+				6912DE6928CC82F4005502C4 /* DrawerVC.xib in Resources */,
 				6914761E28B07AA5001F5BB6 /* TopVC.xib in Resources */,
 				69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */,
 				69BE3E9828ABA21F00F6E4C3 /* WebViewVC.xib in Resources */,
@@ -1520,6 +1537,7 @@
 				69B49EA828CAFA540006DD34 /* ModalVC.m in Sources */,
 				694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
+				6912DE6828CC82F4005502C4 /* DrawerVC.m in Sources */,
 				6978333428B7840F00116C7A /* CompassVC.m in Sources */,
 				6959201728B621B90066AA46 /* FlowLayout.m in Sources */,
 				6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */,
