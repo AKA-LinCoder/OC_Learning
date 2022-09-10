@@ -11,6 +11,8 @@
 		6912DE5928CC6AEC005502C4 /* hittest02VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE5728CC6AEC005502C4 /* hittest02VC.m */; };
 		6912DE5A28CC6AEC005502C4 /* hittest02VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6912DE5828CC6AEC005502C4 /* hittest02VC.xib */; };
 		6912DE5D28CC6D6E005502C4 /* addBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE5C28CC6D6E005502C4 /* addBtn.m */; };
+		6912DE6228CC7781005502C4 /* tapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6912DE6028CC7781005502C4 /* tapVC.m */; };
+		6912DE6328CC7781005502C4 /* tapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6912DE6128CC7781005502C4 /* tapVC.xib */; };
 		6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760428B074E8001F5BB6 /* GlobalConst.m */; };
 		6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6914760E28B07764001F5BB6 /* FatherAndSonVC.m */; };
 		6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6914760F28B07764001F5BB6 /* FatherAndSonVC.xib */; };
@@ -181,6 +183,9 @@
 		6912DE5828CC6AEC005502C4 /* hittest02VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hittest02VC.xib; sourceTree = "<group>"; };
 		6912DE5B28CC6D6E005502C4 /* addBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addBtn.h; sourceTree = "<group>"; };
 		6912DE5C28CC6D6E005502C4 /* addBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addBtn.m; sourceTree = "<group>"; };
+		6912DE5F28CC7781005502C4 /* tapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tapVC.h; sourceTree = "<group>"; };
+		6912DE6028CC7781005502C4 /* tapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tapVC.m; sourceTree = "<group>"; };
+		6912DE6128CC7781005502C4 /* tapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tapVC.xib; sourceTree = "<group>"; };
 		6914760328B074E8001F5BB6 /* GlobalConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConst.h; sourceTree = "<group>"; };
 		6914760428B074E8001F5BB6 /* GlobalConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConst.m; sourceTree = "<group>"; };
 		6914760D28B07764001F5BB6 /* FatherAndSonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FatherAndSonVC.h; sourceTree = "<group>"; };
@@ -513,6 +518,16 @@
 			path = hittest02;
 			sourceTree = "<group>";
 		};
+		6912DE5E28CC775F005502C4 /* 手势识别 */ = {
+			isa = PBXGroup;
+			children = (
+				6912DE5F28CC7781005502C4 /* tapVC.h */,
+				6912DE6028CC7781005502C4 /* tapVC.m */,
+				6912DE6128CC7781005502C4 /* tapVC.xib */,
+			);
+			path = "手势识别";
+			sourceTree = "<group>";
+		};
 		6914760628B07663001F5BB6 /* fatherAndson */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +647,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				6912DE5E28CC775F005502C4 /* 手势识别 */,
 				6912DE5528CC6ACE005502C4 /* hittest02 */,
 				69DE749A28CB876600B78DA8 /* hittest01 */,
 				69B49EAF28CB1A470006DD34 /* UIView拖拽 */,
@@ -1330,6 +1346,7 @@
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
 				69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */,
+				6912DE6328CC7781005502C4 /* tapVC.xib in Resources */,
 				6951B34C28C8D179002E06B3 /* SelfPageVC.xib in Resources */,
 				69D2CA6328C5FA02000708E3 /* AddressBookAddVC.xib in Resources */,
 				69D2CA5B28C5D172000708E3 /* AddressBoolLoginVC.xib in Resources */,
@@ -1461,6 +1478,7 @@
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
 				69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */,
 				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
+				6912DE6228CC7781005502C4 /* tapVC.m in Sources */,
 				69B49EB528CB1F760006DD34 /* moveView.m in Sources */,
 				69EA7A9728AF180E006A6B4B /* NSObject+Model.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,

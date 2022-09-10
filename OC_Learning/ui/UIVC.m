@@ -18,6 +18,7 @@
 #import "DragVC.h"
 #import "HitTest01VC.h"
 #import "hittest02VC.h"
+#import "tapVC.h"
 
 @interface UIVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -39,7 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.array = @[@"picker",@"自定义Picker",@"通讯录",@"文件存储",
-                   @"个人主页",@"通用模板",@"手动modal",@"启动超级变换形态",@"拖拽事件",@"hittest01",@"hittest02"];
+                   @"个人主页",@"通用模板",@"手动modal",@"启动超级变换形态",@"拖拽事件",@"hittest01",@"hittest02",@"手势识别"];
     lsaac *one = [lsaac sharedLsaac];
     lsaac *two = [lsaac sharedLsaac];
     NSLog(@"one--%p,two--%p",one,two);
@@ -188,7 +189,8 @@
         hittest02VC *vc = [[hittest02VC alloc] init];
          [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==11){
-       
+        tapVC *vc = [[tapVC alloc] init];
+         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==12){
        
     }else if (indexPath.row==13){
