@@ -156,6 +156,7 @@
 		69DE74A228CB87F900B78DA8 /* blueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE74A128CB87F900B78DA8 /* blueView.m */; };
 		69DF0E9028CDB38500520043 /* Quartz2DVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E8F28CDB38500520043 /* Quartz2DVC.m */; };
 		69DF0E9328CDB69A00520043 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E9228CDB69A00520043 /* DrawView.m */; };
+		69DF0E9628CDD28700520043 /* processView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E9528CDD28700520043 /* processView.m */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
@@ -445,6 +446,8 @@
 		69DF0E8F28CDB38500520043 /* Quartz2DVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quartz2DVC.m; sourceTree = "<group>"; };
 		69DF0E9128CDB69A00520043 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		69DF0E9228CDB69A00520043 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		69DF0E9428CDD28700520043 /* processView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = processView.h; sourceTree = "<group>"; };
+		69DF0E9528CDD28700520043 /* processView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = processView.m; sourceTree = "<group>"; };
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
 		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
@@ -1179,6 +1182,8 @@
 				69DF0E8E28CDB38500520043 /* Quartz2DVC.h */,
 				69DF0E9128CDB69A00520043 /* DrawView.h */,
 				69DF0E9228CDB69A00520043 /* DrawView.m */,
+				69DF0E9428CDD28700520043 /* processView.h */,
+				69DF0E9528CDD28700520043 /* processView.m */,
 			);
 			path = quartz2D;
 			sourceTree = "<group>";
@@ -1515,6 +1520,7 @@
 				69DE749E28CB878300B78DA8 /* HitTest01VC.m in Sources */,
 				69C71E8028A79B210025F49F /* RunLoopUseVC.m in Sources */,
 				6914761D28B07AA5001F5BB6 /* TopVC.m in Sources */,
+				69DF0E9628CDD28700520043 /* processView.m in Sources */,
 				6978333A28B787CD00116C7A /* AreaMonitoringVC.m in Sources */,
 				6959200628B5C4EC0066AA46 /* CacultorManager.m in Sources */,
 				69B2335728C6EBE5005A06BE /* AddressBookUserItem.m in Sources */,
