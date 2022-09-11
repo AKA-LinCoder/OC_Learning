@@ -11,6 +11,51 @@
 
 - (void)drawRect:(CGRect)rect
 {
+    UIImage *image = [UIImage imageNamed:@"people"];
+    //绘制原始图片大小
+//    [image drawAtPoint:CGPointZero];
+    //把绘制的图片填充到给定的view中
+//    [image drawInRect:rect];
+    //裁剪(超过裁剪区域的不会显示)，裁剪一定要在绘制之前进行设置
+    UIRectClip(CGRectMake(0, 0, 50, 50));
+    
+    
+    //平铺 图片小会有很多
+    [image drawAsPatternInRect:rect];
+    
+    
+    //快速绘制矩形
+//    UIRectClip(CGRectMake(0, 0, 50, 50));
+    
+}
+//不通过UIlable绘制文字
+-(void) drawString:(CGRect)rect
+{
+    //
+    NSString *str = @"林冠宇";
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    //字体颜色
+    dict[NSFontAttributeName] = [UIFont systemFontOfSize:40];
+    //文字颜色
+    dict[NSForegroundColorAttributeName] = [UIColor redColor];
+    //描边
+    dict[NSStrokeWidthAttributeName] = @2;
+    dict[ NSStrokeColorAttributeName] = [UIColor greenColor];
+    //设置阴影
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor orangeColor];
+    //设置阴影偏移量
+    shadow.shadowOffset = CGSizeMake(10, 10);
+    shadow.shadowBlurRadius = 3;
+    dict[NSShadowAttributeName] = shadow;
+    //不会自动换行
+//    [str drawAtPoint:CGPointZero withAttributes:dict];
+    //会自动换行
+    [str drawInRect:rect withAttributes:dict];
+}
+
+-(void) drawPie2:(CGRect)rect
+{
     CGPoint center = CGPointMake(rect.size.width*0.5,rect.size.height*0.5 );
     CGFloat radius = rect.size.width*0.5-10;
     CGFloat startA = 0;
@@ -28,6 +73,7 @@
         [path fill];
     }
 }
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
