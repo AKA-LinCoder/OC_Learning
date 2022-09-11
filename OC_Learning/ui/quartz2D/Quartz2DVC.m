@@ -9,6 +9,7 @@
 #import "DrawView.h"
 #import "processView.h"
 #import "pieView.h"
+#import "SelfImageView.h"
 /*
  图形上下文：是一个CGContextRef类型的数据
  图形上下文的作用：保存绘图信息，绘图状态；决定绘制的输出目标(PDF,Bitmap或者显示器的窗口上)
@@ -69,6 +70,11 @@
     [self.view addSubview:self.selfProcessView];
     [self.view addSubview:self.sliderView];
     [self.view addSubview:self.selfpie];
+    
+    SelfImageView *imageView = [[UIImageView alloc] init];
+    imageView.frame = CGRectMake(0, 0, 300, 300);
+    imageView.image = [UIImage imageNamed:@"people"];
+    [self.view addSubview:imageView];
 }
 
 -(void) valueChanged:(UISlider *)slider

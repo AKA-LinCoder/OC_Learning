@@ -158,6 +158,7 @@
 		69DF0E9328CDB69A00520043 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E9228CDB69A00520043 /* DrawView.m */; };
 		69DF0E9628CDD28700520043 /* processView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E9528CDD28700520043 /* processView.m */; };
 		69DF0E9928CE03B700520043 /* pieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E9828CE03B700520043 /* pieView.m */; };
+		69DF0E9C28CE124200520043 /* SelfImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E9B28CE124200520043 /* SelfImageView.m */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
@@ -451,6 +452,8 @@
 		69DF0E9528CDD28700520043 /* processView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = processView.m; sourceTree = "<group>"; };
 		69DF0E9728CE03B700520043 /* pieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pieView.h; sourceTree = "<group>"; };
 		69DF0E9828CE03B700520043 /* pieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pieView.m; sourceTree = "<group>"; };
+		69DF0E9A28CE124200520043 /* SelfImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfImageView.h; sourceTree = "<group>"; };
+		69DF0E9B28CE124200520043 /* SelfImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfImageView.m; sourceTree = "<group>"; };
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
 		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
@@ -1189,6 +1192,8 @@
 				69DF0E9528CDD28700520043 /* processView.m */,
 				69DF0E9728CE03B700520043 /* pieView.h */,
 				69DF0E9828CE03B700520043 /* pieView.m */,
+				69DF0E9A28CE124200520043 /* SelfImageView.h */,
+				69DF0E9B28CE124200520043 /* SelfImageView.m */,
 			);
 			path = quartz2D;
 			sourceTree = "<group>";
@@ -1535,6 +1540,7 @@
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
 				69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */,
 				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
+				69DF0E9C28CE124200520043 /* SelfImageView.m in Sources */,
 				6912DE6C28CC9742005502C4 /* MyDrawerVCViewController.m in Sources */,
 				6912DE6228CC7781005502C4 /* tapVC.m in Sources */,
 				69B49EB528CB1F760006DD34 /* moveView.m in Sources */,
