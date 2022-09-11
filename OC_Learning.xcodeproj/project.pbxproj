@@ -154,6 +154,8 @@
 		69DE749E28CB878300B78DA8 /* HitTest01VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE749C28CB878300B78DA8 /* HitTest01VC.m */; };
 		69DE749F28CB878300B78DA8 /* HitTest01VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DE749D28CB878300B78DA8 /* HitTest01VC.xib */; };
 		69DE74A228CB87F900B78DA8 /* blueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE74A128CB87F900B78DA8 /* blueView.m */; };
+		69DF0E9028CDB38500520043 /* Quartz2DVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E8F28CDB38500520043 /* Quartz2DVC.m */; };
+		69DF0E9328CDB69A00520043 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0E9228CDB69A00520043 /* DrawView.m */; };
 		69E6FE2B28A4E7AF00896D4E /* SDWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE2928A4E7AF00896D4E /* SDWebVC.m */; };
 		69E6FE2C28A4E7AF00896D4E /* SDWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */; };
 		69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6FE3228A5284300896D4E /* NSCachesVC.m */; };
@@ -439,6 +441,10 @@
 		69DE749D28CB878300B78DA8 /* HitTest01VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HitTest01VC.xib; sourceTree = "<group>"; };
 		69DE74A028CB87F900B78DA8 /* blueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueView.h; sourceTree = "<group>"; };
 		69DE74A128CB87F900B78DA8 /* blueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blueView.m; sourceTree = "<group>"; };
+		69DF0E8E28CDB38500520043 /* Quartz2DVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quartz2DVC.h; sourceTree = "<group>"; };
+		69DF0E8F28CDB38500520043 /* Quartz2DVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quartz2DVC.m; sourceTree = "<group>"; };
+		69DF0E9128CDB69A00520043 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		69DF0E9228CDB69A00520043 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		69E6FE2828A4E7AF00896D4E /* SDWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebVC.h; sourceTree = "<group>"; };
 		69E6FE2928A4E7AF00896D4E /* SDWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebVC.m; sourceTree = "<group>"; };
 		69E6FE2A28A4E7AF00896D4E /* SDWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWebVC.xib; sourceTree = "<group>"; };
@@ -672,6 +678,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				69DF0E8D28CDB35C00520043 /* quartz2D */,
 				6912DE6428CC82A6005502C4 /* 抽屉效果 */,
 				6912DE5E28CC775F005502C4 /* 手势识别 */,
 				6912DE5528CC6ACE005502C4 /* hittest02 */,
@@ -1165,6 +1172,17 @@
 			path = hittest01;
 			sourceTree = "<group>";
 		};
+		69DF0E8D28CDB35C00520043 /* quartz2D */ = {
+			isa = PBXGroup;
+			children = (
+				69DF0E8F28CDB38500520043 /* Quartz2DVC.m */,
+				69DF0E8E28CDB38500520043 /* Quartz2DVC.h */,
+				69DF0E9128CDB69A00520043 /* DrawView.h */,
+				69DF0E9228CDB69A00520043 /* DrawView.m */,
+			);
+			path = quartz2D;
+			sourceTree = "<group>";
+		};
 		69E6FE2428A4E75A00896D4E /* SDWebImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -1510,6 +1528,7 @@
 				69B49EB528CB1F760006DD34 /* moveView.m in Sources */,
 				69EA7A9728AF180E006A6B4B /* NSObject+Model.m in Sources */,
 				6973864728A26CB800F4239C /* ThreadSafetyVC.m in Sources */,
+				69DF0E9028CDB38500520043 /* Quartz2DVC.m in Sources */,
 				69E6FE3428A5284300896D4E /* NSCachesVC.m in Sources */,
 				695AF3D328C440C70084D982 /* PickerVC.m in Sources */,
 				6912DE6F28CC9769005502C4 /* MainTabVC.m in Sources */,
@@ -1555,6 +1574,7 @@
 				6914761028B07764001F5BB6 /* FatherAndSonVC.m in Sources */,
 				69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */,
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
+				69DF0E9328CDB69A00520043 /* DrawView.m in Sources */,
 				69B49EA528CAECD90006DD34 /* TemplateVC.m in Sources */,
 				695E8CEC28A3881400A7914A /* LinOperation.m in Sources */,
 				69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */,
