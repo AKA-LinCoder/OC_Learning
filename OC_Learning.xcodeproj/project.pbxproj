@@ -117,6 +117,8 @@
 		69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4728A8FDE800466BC1 /* LinTimeMode.m */; };
 		69B57B4B28A9110E00466BC1 /* XMLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B57B4A28A9110E00466BC1 /* XMLVC.m */; };
 		69B62FDC28CF1715007C0433 /* WipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B62FDB28CF1715007C0433 /* WipeVC.m */; };
+		69B62FDF28CF1C92007C0433 /* unlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B62FDE28CF1C92007C0433 /* unlockVC.m */; };
+		69B62FE228CF21CC007C0433 /* clockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B62FE128CF21CC007C0433 /* clockView.m */; };
 		69B9D0CC28C4887600919086 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69B9D0CB28C4887600919086 /* flags.plist */; };
 		69B9D0CE28C488F500919086 /* guoqi in Resources */ = {isa = PBXBuildFile; fileRef = 69B9D0CD28C488F500919086 /* guoqi */; };
 		69B9D0D128C4893300919086 /* FlagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9D0D028C4893300919086 /* FlagItem.m */; };
@@ -386,6 +388,10 @@
 		69B57B4A28A9110E00466BC1 /* XMLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLVC.m; sourceTree = "<group>"; };
 		69B62FDA28CF1715007C0433 /* WipeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WipeVC.h; sourceTree = "<group>"; };
 		69B62FDB28CF1715007C0433 /* WipeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WipeVC.m; sourceTree = "<group>"; };
+		69B62FDD28CF1C92007C0433 /* unlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unlockVC.h; sourceTree = "<group>"; };
+		69B62FDE28CF1C92007C0433 /* unlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unlockVC.m; sourceTree = "<group>"; };
+		69B62FE028CF21CC007C0433 /* clockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clockView.h; sourceTree = "<group>"; };
+		69B62FE128CF21CC007C0433 /* clockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = clockView.m; sourceTree = "<group>"; };
 		69B9D0CB28C4887600919086 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
 		69B9D0CD28C488F500919086 /* guoqi */ = {isa = PBXFileReference; lastKnownFileType = folder; path = guoqi; sourceTree = "<group>"; };
 		69B9D0CF28C4893300919086 /* FlagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlagItem.h; sourceTree = "<group>"; };
@@ -1153,6 +1159,10 @@
 				69D19B1F28CEDD2E00630427 /* screenshootVC.m */,
 				69B62FDA28CF1715007C0433 /* WipeVC.h */,
 				69B62FDB28CF1715007C0433 /* WipeVC.m */,
+				69B62FDD28CF1C92007C0433 /* unlockVC.h */,
+				69B62FDE28CF1C92007C0433 /* unlockVC.m */,
+				69B62FE028CF21CC007C0433 /* clockView.h */,
+				69B62FE128CF21CC007C0433 /* clockView.m */,
 			);
 			path = photos;
 			sourceTree = "<group>";
@@ -1529,6 +1539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69D19B1A28CEC17D00630427 /* watermarkVC.m in Sources */,
+				69B62FDF28CF1C92007C0433 /* unlockVC.m in Sources */,
 				69F6F6F828B3778C00675D4C /* AssignAndWeakVC.m in Sources */,
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
@@ -1580,6 +1591,7 @@
 				69D9A56328B86476004812B7 /* INTULVC.m in Sources */,
 				693D1DA128C3045D00E3EF3C /* lsaac.m in Sources */,
 				69424E5128AE534000DF0939 /* NSFileManager+Additions.m in Sources */,
+				69B62FE228CF21CC007C0433 /* clockView.m in Sources */,
 				69F6F6F228B3745E00675D4C /* EnumVC.m in Sources */,
 				69424E3928AE1F5E00DF0939 /* NSObject+property.m in Sources */,
 				69DF0E9C28CE124200520043 /* SelfImageView.m in Sources */,
