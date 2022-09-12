@@ -29,7 +29,7 @@
     {
         _passwordView = [[clockView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
         _passwordView.center = self.view.center;
-//        _passwordView.backgroundColor = [UIColor clearColor];
+        _passwordView.backgroundColor = [UIColor clearColor];
     }
     return _passwordView;
 }

@@ -35,6 +35,7 @@
     for (int i = 0; i<9; i++) {
         //创建按钮
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.tag = i;
         //设置按钮图片
         [btn setImage:[UIImage imageNamed:@"gesture_node_normal"] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@"gesture_node_selected"] forState:UIControlStateSelected];
@@ -53,27 +54,36 @@
     if (btn && btn.isSelected == NO) {
         [btn setSelected:YES];
         [self.selectBtnArray addObject:btn];
-       
+
     }
-    
+
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     //当前的手指所在的点在不在按钮上，如果在，让按钮成为选中状态
-    self.curP =  [self getCurremtPoint:touches];
-    UIButton *btn = [self selectBtn:self.curP];
+    CGPoint curP =  [self getCurremtPoint:touches];
+    self.curP = curP;
+    UIButton *btn = [self selectBtn:curP];
     if (btn && btn.isSelected == NO) {
         [btn setSelected:YES];
         [self.selectBtnArray addObject:btn];
-        
-        
     }
     [self setNeedsDisplay];
 }
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
+    NSMutableString *str = [NSMutableString string];
+    //取消所有选中按钮
+    for (UIButton *btn in self.selectBtnArray) {
+        btn.selected = NO;
+        [str appendFormat:@"%ld",btn.tag];
+    }
+    //清空路径
+    [self.selectBtnArray removeAllObjects];
+    [self setNeedsDisplay];
+    //查看当前选中按钮顺序
+
 }
 
 
@@ -96,13 +106,13 @@
         //添加一根线到手指所在点
 
         [path addLineToPoint:self.curP];
-        
-        
+
+
         //设置路径状态
         [[UIColor blueColor]set];
         [path setLineWidth:10];
         [path setLineJoinStyle:kCGLineJoinRound];
-        
+
         [path stroke];
     }
 }
