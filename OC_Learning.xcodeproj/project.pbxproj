@@ -139,6 +139,7 @@
 		69C8E3D428C838E4007CE55B /* FilesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8E3D328C838E4007CE55B /* FilesVC.m */; };
 		69C8E3D628C8393C007CE55B /* FilesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C8E3D528C8393C007CE55B /* FilesVC.xib */; };
 		69D19B1728CEBB8C00630427 /* PhotosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D19B1628CEBB8C00630427 /* PhotosVC.m */; };
+		69D19B1A28CEC17D00630427 /* watermarkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D19B1928CEC17D00630427 /* watermarkVC.m */; };
 		69D2CA5028C593DE000708E3 /* ProvinceTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */; };
 		69D2CA5228C595EE000708E3 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA5128C595EE000708E3 /* provinces.plist */; };
 		69D2CA5528C59642000708E3 /* ProvinceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA5328C59642000708E3 /* ProvinceItem.m */; };
@@ -420,6 +421,8 @@
 		69C8E3D528C8393C007CE55B /* FilesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilesVC.xib; sourceTree = "<group>"; };
 		69D19B1528CEBB8C00630427 /* PhotosVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosVC.h; sourceTree = "<group>"; };
 		69D19B1628CEBB8C00630427 /* PhotosVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosVC.m; sourceTree = "<group>"; };
+		69D19B1828CEC17D00630427 /* watermarkVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = watermarkVC.h; sourceTree = "<group>"; };
+		69D19B1928CEC17D00630427 /* watermarkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = watermarkVC.m; sourceTree = "<group>"; };
 		69D2CA4E28C593DE000708E3 /* ProvinceTextF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvinceTextF.h; sourceTree = "<group>"; };
 		69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvinceTextF.m; sourceTree = "<group>"; };
 		69D2CA5128C595EE000708E3 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces.plist; sourceTree = "<group>"; };
@@ -1133,6 +1136,8 @@
 			children = (
 				69D19B1528CEBB8C00630427 /* PhotosVC.h */,
 				69D19B1628CEBB8C00630427 /* PhotosVC.m */,
+				69D19B1828CEC17D00630427 /* watermarkVC.h */,
+				69D19B1928CEC17D00630427 /* watermarkVC.m */,
 			);
 			path = photos;
 			sourceTree = "<group>";
@@ -1508,6 +1513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D19B1A28CEC17D00630427 /* watermarkVC.m in Sources */,
 				69F6F6F828B3778C00675D4C /* AssignAndWeakVC.m in Sources */,
 				695E8CF628A3D33A00A7914A /* ImagedownLoadVC.m in Sources */,
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
