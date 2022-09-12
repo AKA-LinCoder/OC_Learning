@@ -7,6 +7,7 @@
 
 #import "PhotosVC.h"
 #import "watermarkVC.h"
+#import "screenshootVC.h"
 
 @interface PhotosVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -28,7 +29,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
-    self.dataArray = @[@"图片添加水印"];
+    self.dataArray = @[@"图片添加水印",@"截屏"];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -57,6 +58,10 @@
 {
     if (indexPath.row == 0) {
         watermarkVC *vc = [watermarkVC new];
+        vc.navigationItem.title = self.dataArray[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row == 1){
+        screenshootVC *vc = [screenshootVC new];
         vc.navigationItem.title = self.dataArray[indexPath.row];
         [self.navigationController pushViewController:vc animated:YES];
     }

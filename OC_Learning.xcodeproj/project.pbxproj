@@ -141,6 +141,7 @@
 		69D19B1728CEBB8C00630427 /* PhotosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D19B1628CEBB8C00630427 /* PhotosVC.m */; };
 		69D19B1A28CEC17D00630427 /* watermarkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D19B1928CEC17D00630427 /* watermarkVC.m */; };
 		69D19B1D28CEDAEE00630427 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D19B1C28CEDAEE00630427 /* UIImage+image.m */; };
+		69D19B2028CEDD2E00630427 /* screenshootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D19B1F28CEDD2E00630427 /* screenshootVC.m */; };
 		69D2CA5028C593DE000708E3 /* ProvinceTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */; };
 		69D2CA5228C595EE000708E3 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA5128C595EE000708E3 /* provinces.plist */; };
 		69D2CA5528C59642000708E3 /* ProvinceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA5328C59642000708E3 /* ProvinceItem.m */; };
@@ -426,6 +427,8 @@
 		69D19B1928CEC17D00630427 /* watermarkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = watermarkVC.m; sourceTree = "<group>"; };
 		69D19B1B28CEDAEE00630427 /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
 		69D19B1C28CEDAEE00630427 /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
+		69D19B1E28CEDD2E00630427 /* screenshootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = screenshootVC.h; sourceTree = "<group>"; };
+		69D19B1F28CEDD2E00630427 /* screenshootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = screenshootVC.m; sourceTree = "<group>"; };
 		69D2CA4E28C593DE000708E3 /* ProvinceTextF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvinceTextF.h; sourceTree = "<group>"; };
 		69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvinceTextF.m; sourceTree = "<group>"; };
 		69D2CA5128C595EE000708E3 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces.plist; sourceTree = "<group>"; };
@@ -1143,6 +1146,8 @@
 				69D19B1928CEC17D00630427 /* watermarkVC.m */,
 				69D19B1B28CEDAEE00630427 /* UIImage+image.h */,
 				69D19B1C28CEDAEE00630427 /* UIImage+image.m */,
+				69D19B1E28CEDD2E00630427 /* screenshootVC.h */,
+				69D19B1F28CEDD2E00630427 /* screenshootVC.m */,
 			);
 			path = photos;
 			sourceTree = "<group>";
@@ -1529,6 +1534,7 @@
 				69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
 				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
+				69D19B2028CEDD2E00630427 /* screenshootVC.m in Sources */,
 				6912DE5928CC6AEC005502C4 /* hittest02VC.m in Sources */,
 				69BFB90228AF74C4001A9BB1 /* ConstVC.m in Sources */,
 				69B49EB228CB1A660006DD34 /* DragVC.m in Sources */,
