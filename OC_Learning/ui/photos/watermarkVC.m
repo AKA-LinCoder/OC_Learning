@@ -38,10 +38,33 @@
     //关闭上下文
     UIGraphicsEndImageContext();
     
-    self.imageView.image = newImage;
+//    self.imageView.image = newImage;
+    self.imageView.image = [self cropPhoto];
     [self.view addSubview:self.imageView];
 }
 
+
+/// 裁剪图片
+-(UIImage *)cropPhoto
+{
+    UIImage *image = [UIImage imageNamed:@"people"];
+    //开启图片上下文
+    
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
+   
+    
+    //设置裁剪区域
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    //把圆形路径设置为裁剪区域
+    [path addClip];
+    //将图片添加到上下文中
+    [image drawAtPoint:CGPointZero];
+    //从当前上下文中生成新的图片
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    //关闭图片上下文
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 
 @end
