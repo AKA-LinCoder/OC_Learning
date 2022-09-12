@@ -1,0 +1,6 @@
+framework module Pods_OC_Learning {
+  umbrella header "Pods-OC_Learning-umbrella.h"
+
+  export *
+  module * { export * }
+}

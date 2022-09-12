@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-OC_Learning/Pods-OC_Learning-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework

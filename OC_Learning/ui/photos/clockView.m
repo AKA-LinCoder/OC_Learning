@@ -7,7 +7,20 @@
 
 #import "clockView.h"
 
+@interface clockView()
+@property(nonatomic,strong)NSMutableArray *selectBtnArray;
+@property(nonatomic,assign)CGPoint curP;
+@end
+
 @implementation clockView
+
+- (NSMutableArray *)selectBtnArray
+{
+    if (_selectBtnArray==nil) {
+        _selectBtnArray = [NSMutableArray array];
+    }
+    return _selectBtnArray;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -21,12 +34,97 @@
 {
     for (int i = 0; i<9; i++) {
         //创建按钮
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         //设置按钮图片
         [btn setImage:[UIImage imageNamed:@"gesture_node_normal"] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@"gesture_node_selected"] forState:UIControlStateSelected];
+        //避免按钮拦截touchesBegan
+        btn.userInteractionEnabled = NO;
         [self addSubview:btn];
     }
+}
+
+//按钮会拦截点击
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    //当前的手指所在的点在不在按钮上，如果在，让按钮成为选中状态
+    CGPoint curP =  [self getCurremtPoint:touches];
+    UIButton *btn = [self selectBtn:curP];
+    if (btn && btn.isSelected == NO) {
+        [btn setSelected:YES];
+        [self.selectBtnArray addObject:btn];
+       
+    }
+    
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    //当前的手指所在的点在不在按钮上，如果在，让按钮成为选中状态
+    self.curP =  [self getCurremtPoint:touches];
+    UIButton *btn = [self selectBtn:self.curP];
+    if (btn && btn.isSelected == NO) {
+        [btn setSelected:YES];
+        [self.selectBtnArray addObject:btn];
+        
+        
+    }
+    [self setNeedsDisplay];
+}
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
+
+- (void)drawRect:(CGRect)rect
+{
+    if(self.selectBtnArray.count){
+        UIBezierPath *path = [UIBezierPath bezierPath];
+        //取出所有保存了的按钮
+        for (int i = 0; i<self.selectBtnArray.count; i++) {
+            //取出每一个按钮
+            UIButton *btn = self.selectBtnArray[i];
+            if(i==0){
+                //设置为路径起点
+                [path moveToPoint:btn.center];
+            }else{
+                //添加一根线到按钮中心
+                [path addLineToPoint:btn.center];
+            }
+        }
+        //添加一根线到手指所在点
+
+        [path addLineToPoint:self.curP];
+        
+        
+        //设置路径状态
+        [[UIColor blueColor]set];
+        [path setLineWidth:10];
+        [path setLineJoinStyle:kCGLineJoinRound];
+        
+        [path stroke];
+    }
+}
+
+
+//获取当前手指所在的点
+-(CGPoint)getCurremtPoint:(NSSet *)touches{
+    UITouch *touch = [touches anyObject];
+    return [touch locationInView:self];
+}
+
+//给定一个点判断在不在按钮上
+-(UIButton *)selectBtn:(CGPoint )curP
+{
+    //判断点在不在按钮上
+    for (UIButton *btn in self.subviews) {
+        if(CGRectContainsPoint(btn.frame, curP)){
+            //让当前按钮选择
+            return btn;
+        }
+    }
+    return nil;
 }
 
 
