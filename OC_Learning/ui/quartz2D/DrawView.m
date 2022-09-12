@@ -20,6 +20,14 @@
 //    [self drawRectangle];
     [self drawCircul:rect];
 
+    /*
+     当同时要画不同样式的东西时，可以使用上下文栈，用于保存当前上下文的状态，在下次使用时再取出
+     
+     //保存上下文状态
+     CGContextSaveGState(UIGraphicsGetCurrentContext());
+     //恢复上下文状态(取出上下文栈中最上面的那个状态)
+     CGContextRestoreGState(UIGraphicsGetCurrentContext());
+     */
     
     
 }
@@ -95,6 +103,15 @@
     //画圆角矩形,当radius为宽度的一半时就是圆
     UIBezierPath *path1 = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(50, 50, 40, 40) cornerRadius:20];
     [[UIColor blueColor] set];
+    
+    //平移
+    CGContextTranslateCTM(context, 10, 20);
+    //旋转
+    CGContextRotateCTM(context, M_PI_4);
+    //缩放
+    CGContextScaleCTM(context, 1.5, 1.5);
+    
+    
     //把路径添加到上下文
     CGContextAddPath(context, path1.CGPath);
     //渲染

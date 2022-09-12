@@ -138,6 +138,7 @@
 		69C71E8C28A7B68E0025F49F /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C71E8B28A7B68E0025F49F /* NetWorkVC.m */; };
 		69C8E3D428C838E4007CE55B /* FilesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8E3D328C838E4007CE55B /* FilesVC.m */; };
 		69C8E3D628C8393C007CE55B /* FilesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C8E3D528C8393C007CE55B /* FilesVC.xib */; };
+		69D19B1728CEBB8C00630427 /* PhotosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D19B1628CEBB8C00630427 /* PhotosVC.m */; };
 		69D2CA5028C593DE000708E3 /* ProvinceTextF.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */; };
 		69D2CA5228C595EE000708E3 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA5128C595EE000708E3 /* provinces.plist */; };
 		69D2CA5528C59642000708E3 /* ProvinceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA5328C59642000708E3 /* ProvinceItem.m */; };
@@ -417,6 +418,8 @@
 		69C8E3D228C838E4007CE55B /* FilesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilesVC.h; sourceTree = "<group>"; };
 		69C8E3D328C838E4007CE55B /* FilesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesVC.m; sourceTree = "<group>"; };
 		69C8E3D528C8393C007CE55B /* FilesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilesVC.xib; sourceTree = "<group>"; };
+		69D19B1528CEBB8C00630427 /* PhotosVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosVC.h; sourceTree = "<group>"; };
+		69D19B1628CEBB8C00630427 /* PhotosVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosVC.m; sourceTree = "<group>"; };
 		69D2CA4E28C593DE000708E3 /* ProvinceTextF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvinceTextF.h; sourceTree = "<group>"; };
 		69D2CA4F28C593DE000708E3 /* ProvinceTextF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvinceTextF.m; sourceTree = "<group>"; };
 		69D2CA5128C595EE000708E3 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces.plist; sourceTree = "<group>"; };
@@ -690,6 +693,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				69D19B1428CEBB7700630427 /* photos */,
 				69DF0E8D28CDB35C00520043 /* quartz2D */,
 				6912DE6428CC82A6005502C4 /* 抽屉效果 */,
 				6912DE5E28CC775F005502C4 /* 手势识别 */,
@@ -1122,6 +1126,15 @@
 				69C8E3D528C8393C007CE55B /* FilesVC.xib */,
 			);
 			path = Files;
+			sourceTree = "<group>";
+		};
+		69D19B1428CEBB7700630427 /* photos */ = {
+			isa = PBXGroup;
+			children = (
+				69D19B1528CEBB8C00630427 /* PhotosVC.h */,
+				69D19B1628CEBB8C00630427 /* PhotosVC.m */,
+			);
+			path = photos;
 			sourceTree = "<group>";
 		};
 		69D2CA4D28C593BB000708E3 /* ProvinceTextF */ = {
@@ -1624,6 +1637,7 @@
 				69FC5D0928B4D599005DF2E5 /* BlockTableVC.m in Sources */,
 				69B9D0DC28C4A42100919086 /* DateTextF.m in Sources */,
 				69BE3E9728ABA21F00F6E4C3 /* WebViewVC.m in Sources */,
+				69D19B1728CEBB8C00630427 /* PhotosVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
