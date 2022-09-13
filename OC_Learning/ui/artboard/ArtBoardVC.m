@@ -208,7 +208,28 @@
 /// 保存到相册
 -(void)saveToPhotoAlbum
 {
+    //开启上下文
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, 0);
+    //获取上下文
+    CGContextRef context = UIGraphicsGetCurrentContext();
     
+    //把画板上的内容渲染到上下文中
+    [self.canvas.layer renderInContext:context];
+    
+    
+    //从上下文获取图片
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    //关闭上下文
+    UIGraphicsEndImageContext();
+    //把图片保存到系统相册中
+    UIImageWriteToSavedPhotosAlbum(newImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
+//保存完毕时调用
+  - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    NSLog(@"%s",__func__);
+}
+
+
 
 @end

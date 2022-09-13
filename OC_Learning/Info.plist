@@ -28,6 +28,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>din</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>相册使用</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>相册使用</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>请求后台定位</string>
 </dict>
