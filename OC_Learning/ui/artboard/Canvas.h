@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Canvas : UIView
 -(void) clean;
 -(void) reback;
+-(void)setLineColor:(UIColor *)color;
+-(void)setLineWidth:(CGFloat )width;
+-(void)eraser;
 @end
 
 NS_ASSUME_NONNULL_END

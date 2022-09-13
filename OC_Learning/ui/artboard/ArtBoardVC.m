@@ -34,7 +34,7 @@
         _slider = [[UISlider alloc] init];
         _slider.minimumValue = 1;
         _slider.maximumValue = 10;
-        [_slider addTarget:self action:@selector(handleSlider) forControlEvents:UIControlEventValueChanged];
+        [_slider addTarget:self action:@selector(setLineWidth:) forControlEvents:UIControlEventValueChanged];
     }
     return _slider;
 }
@@ -44,6 +44,8 @@
         _yellowBtn = [[UIButton alloc] init];
         _yellowBtn.backgroundColor = [UIColor yellowColor];
         _yellowBtn.layer.borderWidth = 1;
+        _yellowBtn.tag = 0;
+        [_yellowBtn addTarget:self action:@selector(setLineColor:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _yellowBtn;
 }
@@ -53,6 +55,8 @@
         _blueBtn = [[UIButton alloc] init];
         _blueBtn.backgroundColor = [UIColor blueColor];
         _blueBtn.layer.borderWidth = 1;
+        _blueBtn.tag = 1;
+        [_blueBtn addTarget:self action:@selector(setLineColor:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _blueBtn;
 }
@@ -63,6 +67,8 @@
         _orangeBtn = [[UIButton alloc] init];
         _orangeBtn.backgroundColor = [UIColor orangeColor];
         _orangeBtn.layer.borderWidth = 1;
+        _orangeBtn.tag = 2;
+        [_orangeBtn addTarget:self action:@selector(setLineColor:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _orangeBtn;
 }
@@ -124,10 +130,6 @@
     
 }
 
--(void)handleSlider
-{
-    
-}
 
 
 -(void)setupToolBarUI
@@ -172,8 +174,30 @@
 /// 橡皮擦
 -(void)eraser
 {
-    
+    [self.canvas eraser];
 }
+
+-(void) setLineWidth:(UISlider *)slider
+{
+    [self.canvas setLineWidth:slider.value];
+}
+
+-(void) setLineColor:(UIButton *)button
+{
+    UIColor *color = [UIColor blackColor];
+    if(button.tag==0){
+        color = [UIColor yellowColor];
+    }else if (button.tag == 1){
+        color = [UIColor blueColor];
+    }else if (button.tag == 2){
+        color = [UIColor orangeColor];
+    }else{
+        
+    }
+    [self.canvas setLineColor:color];
+}
+
+
 /// 从相册选中照片
 -(void)selectFromPhotoAlbum
 {
