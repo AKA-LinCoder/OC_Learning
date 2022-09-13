@@ -10,6 +10,7 @@
 #import "screenshootVC.h"
 #import "WipeVC.h"
 #import "unlockVC.h"
+#import "ArtBoardVC.h"
 
 @interface PhotosVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -31,7 +32,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
-    self.dataArray = @[@"图片添加水印",@"截屏",@"图片擦出",@"手势解锁"];
+    self.dataArray = @[@"图片添加水印",@"截屏",@"图片擦出",@"手势解锁",@"画板"];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -72,6 +73,10 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if(indexPath.row == 3){
         unlockVC *vc = [unlockVC new];
+        vc.navigationItem.title = self.dataArray[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row == 4){
+        ArtBoardVC *vc = [ArtBoardVC new];
         vc.navigationItem.title = self.dataArray[indexPath.row];
         [self.navigationController pushViewController:vc animated:YES];
     }
