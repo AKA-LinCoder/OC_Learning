@@ -8,7 +8,7 @@
 #import "ArtBoardVC.h"
 #import "Canvas.h"
 
-@interface ArtBoardVC ()<UIToolbarDelegate>
+@interface ArtBoardVC ()<UIToolbarDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property(nonatomic,strong)UIToolbar *toolbar;
 //@property(nonatomic,strong)UIView *bottomView;
 @property(nonatomic,strong)UIView *mainView;
@@ -201,7 +201,13 @@
 /// 从相册选中照片
 -(void)selectFromPhotoAlbum
 {
-    
+    //弹出系统相册
+    UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
+    pickerVC.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    pickerVC.delegate = self;
+    [self presentViewController:pickerVC animated:YES completion:^{
+            
+    }];
 }
 
 
@@ -230,6 +236,17 @@
     NSLog(@"%s",__func__);
 }
 
+#pragma mark- UINavigationControllerDelegate,UIImagePickerControllerDelegate
+//当选择某一个照片时调用
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    NSData *data =  UIImageJPEGRepresentation(image, 1);
+}
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)editingInfo
+{
+    
+}
 
 @end
