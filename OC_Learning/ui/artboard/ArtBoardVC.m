@@ -6,6 +6,7 @@
 //
 
 #import "ArtBoardVC.h"
+#import "Canvas.h"
 
 @interface ArtBoardVC ()<UIToolbarDelegate>
 @property(nonatomic,strong)UIToolbar *toolbar;
@@ -15,10 +16,19 @@
 @property(nonatomic,strong)UIButton *blueBtn;
 @property(nonatomic,strong)UIButton *orangeBtn;
 @property(nonatomic,strong)UISlider *slider;
+@property(nonatomic,strong) Canvas *canvas;
 @end
 
 @implementation ArtBoardVC
-
+- (Canvas *)canvas
+{
+    if(_canvas==nil){
+        _canvas = [[Canvas alloc] init];
+        _canvas.frame = self.view.frame;
+        _canvas.backgroundColor = [UIColor whiteColor];
+    }
+    return _canvas;
+}
 - (UISlider *)slider{
     if (_slider==nil) {
         _slider = [[UISlider alloc] init];
@@ -104,12 +114,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:self.canvas];
     self.view.backgroundColor = [UIColor whiteColor];
    
 //    [self.view addSubview:self.mainView];
 //    [self.view addSubview:self.bottomView];
     [self setupToolBarUI];
     [self setupLayout];
+    
 }
 
 -(void)handleSlider
@@ -148,13 +160,13 @@
 
 -(void)cleanBoard
 {
-    
+    [self.canvas clean];
 }
 
 /// 撤销
 -(void)reback
 {
-    
+    [self.canvas reback];
 }
 
 /// 橡皮擦

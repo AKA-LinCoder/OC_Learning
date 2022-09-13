@@ -154,6 +154,7 @@
 		69D2CA6228C5FA02000708E3 /* AddressBookAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D2CA6028C5FA02000708E3 /* AddressBookAddVC.m */; };
 		69D2CA6328C5FA02000708E3 /* AddressBookAddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D2CA6128C5FA02000708E3 /* AddressBookAddVC.xib */; };
 		69D5005528D0161F0031A9ED /* ArtBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5005428D0161F0031A9ED /* ArtBoardVC.m */; };
+		69D5005828D0511E0031A9ED /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5005728D0511E0031A9ED /* Canvas.m */; };
 		69D9A56328B86476004812B7 /* INTULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56128B86476004812B7 /* INTULVC.m */; };
 		69D9A56428B86476004812B7 /* INTULVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D9A56228B86476004812B7 /* INTULVC.xib */; };
 		69D9A56828B87202004812B7 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56728B87202004812B7 /* LocationTool.m */; };
@@ -454,6 +455,8 @@
 		69D2CA6128C5FA02000708E3 /* AddressBookAddVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressBookAddVC.xib; sourceTree = "<group>"; };
 		69D5005328D0161F0031A9ED /* ArtBoardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtBoardVC.h; sourceTree = "<group>"; };
 		69D5005428D0161F0031A9ED /* ArtBoardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtBoardVC.m; sourceTree = "<group>"; };
+		69D5005628D0511E0031A9ED /* Canvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
+		69D5005728D0511E0031A9ED /* Canvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Canvas.m; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 		69D9A56028B86476004812B7 /* INTULVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INTULVC.h; sourceTree = "<group>"; };
 		69D9A56128B86476004812B7 /* INTULVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INTULVC.m; sourceTree = "<group>"; };
@@ -1205,6 +1208,8 @@
 			children = (
 				69D5005328D0161F0031A9ED /* ArtBoardVC.h */,
 				69D5005428D0161F0031A9ED /* ArtBoardVC.m */,
+				69D5005628D0511E0031A9ED /* Canvas.h */,
+				69D5005728D0511E0031A9ED /* Canvas.m */,
 			);
 			path = artboard;
 			sourceTree = "<group>";
@@ -1592,6 +1597,7 @@
 				69424E3C28AE230700DF0939 /* runtimeKVCVC.m in Sources */,
 				6965ACE028A9E875000A8202 /* DownLoadLittleVC.m in Sources */,
 				695E8CFA28A3D63F00A7914A /* LinAPP.m in Sources */,
+				69D5005828D0511E0031A9ED /* Canvas.m in Sources */,
 				69B57B4828A8FDE800466BC1 /* LinTimeMode.m in Sources */,
 				6973864A28A279D200F4239C /* ThreadSendInfoVC.m in Sources */,
 				69DE749E28CB878300B78DA8 /* HitTest01VC.m in Sources */,
