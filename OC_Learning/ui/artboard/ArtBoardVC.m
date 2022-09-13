@@ -7,8 +7,10 @@
 
 #import "ArtBoardVC.h"
 #import "Canvas.h"
+#import "HandleImageView.h"
 
-@interface ArtBoardVC ()<UIToolbarDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+
+@interface ArtBoardVC ()<UIToolbarDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,handleImageViewDelegate>
 @property(nonatomic,strong)UIToolbar *toolbar;
 //@property(nonatomic,strong)UIView *bottomView;
 @property(nonatomic,strong)UIView *mainView;
@@ -241,11 +243,78 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    NSData *data =  UIImageJPEGRepresentation(image, 1);
+//    NSData *data =  UIImageJPEGRepresentation(image, 1);
+    
+    //不能直接给图片然后赋值，应该先展示图片，等确定操作后再实现
+    
+    HandleImageView *handleV = [[HandleImageView alloc] init];
+    handleV.frame = self.canvas.frame;
+    handleV.image = image;
+    handleV.delegate = self;
+    handleV.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:handleV];
+    
+//    //不能直接使用imageV
+//    UIImageView *imageV = [[UIImageView alloc] initWithFrame:self.canvas.frame];
+//    imageV.image = image;
+//    [self.view addSubview:imageV];
+//    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pann:)];
+//    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchh:)];
+//    UILongPressGestureRecognizer *longer=[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longerr:)];
+//    imageV.userInteractionEnabled = YES;
+//    [imageV addGestureRecognizer:pan];
+//    [imageV addGestureRecognizer:pinch];
+//    [imageV addGestureRecognizer:longer];
+    
+//    self.canvas.image = image;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)editingInfo
+-(void) pann:(UIPanGestureRecognizer *)pan
 {
+    CGPoint transP = [pan translationInView:pan.view];
+    pan.view.transform = CGAffineTransformTranslate(pan.view.transform, transP.x
+                                                    , transP.y);
+    //复位
+    [pan setTranslation:CGPointZero inView:pan.view];
+}
+-(void) pinchh:(UIPinchGestureRecognizer *)pinch
+{
+
+    pinch.view.transform = CGAffineTransformScale(pinch.view.transform, pinch.scale, pinch.scale);
+    //复位
+    [pinch setScale:1];
+}
+
+-(void) longerr:(UILongPressGestureRecognizer *)longer
+{
+
+    if(longer.state == UIGestureRecognizerStateBegan){
+        //先让图片闪一下，把图片绘制到画板上
+        [UIView animateWithDuration:0.5 animations:^{
+                    longer.view.alpha = 0;
+        }completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.5 animations:^{
+                longer.view.alpha = 1;
+            } completion:^(BOOL finished) {
+                //把图片绘制到画板中
+                UIGraphicsBeginImageContextWithOptions(longer.view.bounds.size, NO, 0);
+                CGContextRef context = UIGraphicsGetCurrentContext();
+                [longer.view.layer renderInContext:context];
+                UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                self.canvas.image = newImage;
+                //移除原图
+                [longer.view removeFromSuperview];
+            }];
+        }];
+    }
+}
+
+
+-(void)handleImageView:(HandleImageView *)handleImageView newImage:(UIImage *)newImage {
+    
+    self.canvas.image = newImage;
     
 }
 

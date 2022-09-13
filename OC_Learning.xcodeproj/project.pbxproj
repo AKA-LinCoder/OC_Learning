@@ -156,6 +156,7 @@
 		69D5005528D0161F0031A9ED /* ArtBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5005428D0161F0031A9ED /* ArtBoardVC.m */; };
 		69D5005828D0511E0031A9ED /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5005728D0511E0031A9ED /* Canvas.m */; };
 		69D5005B28D05CF80031A9ED /* MyBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5005A28D05CF80031A9ED /* MyBezierPath.m */; };
+		69D5005E28D0864E0031A9ED /* HandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5005D28D0864E0031A9ED /* HandleImageView.m */; };
 		69D9A56328B86476004812B7 /* INTULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56128B86476004812B7 /* INTULVC.m */; };
 		69D9A56428B86476004812B7 /* INTULVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D9A56228B86476004812B7 /* INTULVC.xib */; };
 		69D9A56828B87202004812B7 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9A56728B87202004812B7 /* LocationTool.m */; };
@@ -460,6 +461,8 @@
 		69D5005728D0511E0031A9ED /* Canvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Canvas.m; sourceTree = "<group>"; };
 		69D5005928D05CF80031A9ED /* MyBezierPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBezierPath.h; sourceTree = "<group>"; };
 		69D5005A28D05CF80031A9ED /* MyBezierPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBezierPath.m; sourceTree = "<group>"; };
+		69D5005C28D0864E0031A9ED /* HandleImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandleImageView.h; sourceTree = "<group>"; };
+		69D5005D28D0864E0031A9ED /* HandleImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandleImageView.m; sourceTree = "<group>"; };
 		69D61FEC289EAB8800123581 /* SportProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportProtocol.h; sourceTree = "<group>"; };
 		69D9A56028B86476004812B7 /* INTULVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INTULVC.h; sourceTree = "<group>"; };
 		69D9A56128B86476004812B7 /* INTULVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INTULVC.m; sourceTree = "<group>"; };
@@ -1215,6 +1218,8 @@
 				69D5005728D0511E0031A9ED /* Canvas.m */,
 				69D5005928D05CF80031A9ED /* MyBezierPath.h */,
 				69D5005A28D05CF80031A9ED /* MyBezierPath.m */,
+				69D5005C28D0864E0031A9ED /* HandleImageView.h */,
+				69D5005D28D0864E0031A9ED /* HandleImageView.m */,
 			);
 			path = artboard;
 			sourceTree = "<group>";
@@ -1635,6 +1640,7 @@
 				695AF3E028C475520084D982 /* FlagTextF.m in Sources */,
 				69F6F70128B38A7300675D4C /* SelfScrollViewVC.m in Sources */,
 				6914766628B0DA3B001F5BB6 /* VideoVC.m in Sources */,
+				69D5005E28D0864E0031A9ED /* HandleImageView.m in Sources */,
 				69F6F6DD28B32A8800675D4C /* ExtensionWangyiVC.m in Sources */,
 				6978334028B78E8100116C7A /* GeocodingVC.m in Sources */,
 				6965ACE728AA3C20000A8202 /* DownloadByOutPutVC.m in Sources */,

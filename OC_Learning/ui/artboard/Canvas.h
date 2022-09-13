@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setLineColor:(UIColor *)color;
 -(void)setLineWidth:(CGFloat )width;
 -(void)eraser;
+@property(nonatomic,strong)UIImage *image;
 @end
 
 NS_ASSUME_NONNULL_END

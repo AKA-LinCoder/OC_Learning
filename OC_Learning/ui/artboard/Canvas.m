@@ -16,7 +16,7 @@
 //当前颜色
 @property(nonatomic,assign)  CGFloat stokeWidth ;
 //保存当前绘制的所有路径
-@property(nonatomic,strong) NSMutableArray<MyBezierPath *> * allPathArray;
+@property(nonatomic,strong) NSMutableArray * allPathArray;
 @end
 
 
@@ -82,9 +82,16 @@
 {
     //绘制保存的所有路径
     for (MyBezierPath *path in self.allPathArray) {
-        [path.color set];
-        [path stroke];
-        
+        //判断取出来的类型
+        if([path isKindOfClass:[UIImage class]]){
+            UIImage *image = (UIImage *)path;
+            [image drawInRect:rect];
+        }else if([path isKindOfClass:[MyBezierPath class]]){
+            [path.color set];
+            [path stroke];
+            
+        }
+       
     }
     
 }
@@ -104,4 +111,14 @@
     self.stokeColor = [UIColor whiteColor];
     self.stokeWidth = 10;
 }
+
+- (void)setImage:(UIImage *)image
+{
+    _image = image;
+    //添加图片到数组中
+    [self.allPathArray addObject:image];
+    //重绘
+    [self setNeedsDisplay];
+}
+
 @end
