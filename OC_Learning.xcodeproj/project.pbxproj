@@ -736,6 +736,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CE305CE928D316BD00B15F5A /* turntable(转盘) */,
 				CE305CE528D3030100B15F5A /* CoreAnimation */,
 				CE305CDF28D2F71100B15F5A /* clock */,
 				CE305CD928D2B1AA00B15F5A /* CaLayer */,
@@ -1453,6 +1454,13 @@
 				CE305CE728D3031C00B15F5A /* CoreAnimationVC.m */,
 			);
 			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		CE305CE928D316BD00B15F5A /* turntable(转盘) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "turntable(转盘)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

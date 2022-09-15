@@ -8,7 +8,7 @@
 #import "CoreAnimationVC.h"
 
 #define angle2Rad(angle)((angle) / 180.0 * M_PI)
-@interface CoreAnimationVC ()
+@interface CoreAnimationVC ()<CAAnimationDelegate>
 @property(nonatomic,strong) UIView *redView;
 @property(nonatomic,strong) UIImageView *imageV;
 @end
@@ -39,6 +39,18 @@
     /*
      CoreAnimation是直接作用在CALayer上的，并非UIView
      */
+    
+    /*
+     CoreAnimation和UIView
+     1.核心动画只作用在layer
+     2.核心动画看到的都是假象，它并没有实际去修改UIView的真实位置
+     
+     什么时候使用核心动画
+     1.当不需要与用户交互
+     2.当要根据路径做动画时
+     3.做转场动画时
+     */
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -64,6 +76,7 @@
     basicB.repeatCount = MAXFLOAT;
     //设置动画执行时长
     basicB.duration = 0.5;
+    basicB.delegate = self;
     //自动翻转：怎么样去，怎么样回来
     basicB.autoreverses = YES;
     
@@ -96,6 +109,16 @@
     anim.startProgress = 0;
     anim.endProgress = 1;
     [self.imageV.layer addAnimation:anim forKey:nil];
+    
+    //通过UIView进行转场
+//    [UIView transitionWithView:self.imageV duration:0.5 options:(UIViewAnimationOptions)UIViewAnimationTransitionCurlUp animations:^{
+//            self.imageV.image = [UIImage imageNamed:@"小孩"];
+//        } completion:^(BOOL finished) {
+//            
+//        }];
+    
+    
+    
 }
 
 //图片沿路径走
@@ -126,4 +149,13 @@
     [self.redView.layer addAnimation:key1 forKey:nil];
 }
 
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    
+}
 @end
