@@ -70,6 +70,27 @@
     [self.imageV.layer addAnimation:basicB forKey:@"basicB"];
     [self iconshake];
     
+    [self iconPath];
+    [self changeImageByAnimation];
+  
+}
+//转场动画
+-(void) changeImageByAnimation
+{
+    //转场动画和转场代码必须在一个方法中
+    self.imageV.image = [UIImage imageNamed:@"小孩"];
+    //添加转场动画
+    CATransition *anim = [CATransition animation];
+    anim.type = @"pageCurl";
+    //0是右下角
+    anim.startProgress = 0;
+    anim.endProgress = 1;
+    [self.imageV.layer addAnimation:anim forKey:nil];
+}
+
+//图片沿路径走
+-(void) iconPath
+{
     CAKeyframeAnimation *key2 = [CAKeyframeAnimation animation];
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(100, 100)];
@@ -79,11 +100,8 @@
     key2.path = path.CGPath;
     key2.duration = 2;
     [self.redView.layer addAnimation:key2 forKey:nil];
-  
-    
-    
-    
 }
+
 //图片抖动
 -(void) iconshake
 {
