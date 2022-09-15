@@ -195,6 +195,8 @@
 		69FC5D0628B4D0CB005DF2E5 /* BlockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FC5D0428B4D0CB005DF2E5 /* BlockVC.xib */; };
 		69FC5D0928B4D599005DF2E5 /* BlockTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FC5D0828B4D599005DF2E5 /* BlockTableVC.m */; };
 		69FC5D0C28B4E6F6005DF2E5 /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FC5D0B28B4E6F6005DF2E5 /* CellItem.m */; };
+		CE305CDD28D2B1CF00B15F5A /* CALayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CDB28D2B1CF00B15F5A /* CALayerVC.m */; };
+		CE305CDE28D2B1CF00B15F5A /* CALayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CDC28D2B1CF00B15F5A /* CALayerVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -532,6 +534,9 @@
 		69FC5D0A28B4E6F6005DF2E5 /* CellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellItem.h; sourceTree = "<group>"; };
 		69FC5D0B28B4E6F6005DF2E5 /* CellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellItem.m; sourceTree = "<group>"; };
 		797F5A7ABB2AC5161FA5D729 /* Pods_OC_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE305CDA28D2B1CF00B15F5A /* CALayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALayerVC.h; sourceTree = "<group>"; };
+		CE305CDB28D2B1CF00B15F5A /* CALayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerVC.m; sourceTree = "<group>"; };
+		CE305CDC28D2B1CF00B15F5A /* CALayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALayerVC.xib; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -723,6 +728,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CE305CD928D2B1AA00B15F5A /* CaLayer */,
 				69D5005128D015E20031A9ED /* artboard */,
 				69D19B1428CEBB7700630427 /* photos */,
 				69DF0E8D28CDB35C00520043 /* quartz2D */,
@@ -1410,6 +1416,16 @@
 			path = block;
 			sourceTree = "<group>";
 		};
+		CE305CD928D2B1AA00B15F5A /* CaLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CE305CDA28D2B1CF00B15F5A /* CALayerVC.h */,
+				CE305CDB28D2B1CF00B15F5A /* CALayerVC.m */,
+				CE305CDC28D2B1CF00B15F5A /* CALayerVC.xib */,
+			);
+			path = CaLayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1509,6 +1525,7 @@
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
+				CE305CDE28D2B1CF00B15F5A /* CALayerVC.xib in Resources */,
 				6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */,
 				695AF3DC28C471AA0084D982 /* SelfPickerVC.xib in Resources */,
 				69424E3E28AE2AB800DF0939 /* status.plist in Resources */,
@@ -1586,6 +1603,7 @@
 				6951B34B28C8D179002E06B3 /* SelfPageVC.m in Sources */,
 				69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
+				CE305CDD28D2B1CF00B15F5A /* CALayerVC.m in Sources */,
 				69D2CA5A28C5D172000708E3 /* AddressBoolLoginVC.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				69DF0E9F28CE15C800520043 /* SnowView.m in Sources */,
@@ -1766,7 +1784,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1826,7 +1844,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

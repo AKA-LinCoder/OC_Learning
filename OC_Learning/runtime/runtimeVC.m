@@ -22,13 +22,13 @@
     self.array = @[@"runtime交换方法",@"runtimeKVC",@"线程安全",@"NSThread线程间通信",@"GCD",@"GCD线程间通信",@"GCD队列组",@"NSOperation",@"NSOperation线程通信",@"多图下载",@"SDWebImages",@"NSCache",@"RunLoop",@"RunLoop应用(线程常驻)"];
     //id:谁发送消息
     //SEL：发送什么消息
-    id objc = ((NSObject *(*)(id,SEL))(void *)objc_msgSend)([NSObject class],@selector(alloc));
-    //Xcode6之后不推荐使用runtime
-    //build_setting ->搜objc_msg -> no
-    id objc3 = [NSObject alloc];
-    id objc2 = objc_msgSend([NSObject class], @selector(alloc));
-    objc2 = [objc2 init];
-    objc2 = objc_msgSend(objc2, @selector(init));
+//    id objc = ((NSObject *(*)(id,SEL))(void *)objc_msgSend)([NSObject class],@selector(alloc));
+//    //Xcode6之后不推荐使用runtime
+//    //build_setting ->搜objc_msg -> no
+//    id objc3 = [NSObject alloc];
+//    id objc2 = objc_msgSend([NSObject class], @selector(alloc));
+//    objc2 = [objc2 init];
+//    objc2 = objc_msgSend(objc2, @selector(init));
     
     //1.分配内存
     Person *people = [Person alloc];
@@ -38,13 +38,13 @@
     //转为runtime
     //[Person class] == objc_getClass("Person")
     //@selector(alloc) == sel_registerName("alloc")
-    Person *people2 = objc_msgSend(objc_getClass("Person"), sel_registerName("alloc"));
-    people2 = objc_msgSend(people2, sel_registerName("init"));
-    objc_msgSend(people2, sel_registerName("eat"));
+//    Person *people2 = objc_msgSend(objc_getClass("Person"), sel_registerName("alloc"));
+//    people2 = objc_msgSend(people2, sel_registerName("init"));
+//    objc_msgSend(people2, sel_registerName("eat"));
     
     
     //后面可以跟很多个参数
-    objc_msgSend(people2, @selector(run:),20);
+//    objc_msgSend(people2, @selector(run:),20);
     //方法调用流程
     //怎么去调用eat方法，，对象方法保存在类对象的方法列表中，类方法保存在元类的方法列表中，方法的实现没有保存在类中，而是保存在方法区
     //内存5大区：1.栈 2.堆 3.静态区 4.常量区 5.方法区
