@@ -7,6 +7,7 @@
 
 #import "CoreAnimationVC.h"
 
+#define angle2Rad(angle)((angle) / 180.0 * M_PI)
 @interface CoreAnimationVC ()
 @property(nonatomic,strong) UIView *redView;
 @property(nonatomic,strong) UIImageView *imageV;
@@ -67,8 +68,34 @@
     basicB.autoreverses = YES;
     //添加动画
     [self.imageV.layer addAnimation:basicB forKey:@"basicB"];
+    [self iconshake];
+    
+    CAKeyframeAnimation *key2 = [CAKeyframeAnimation animation];
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(100, 100)];
+    [path addLineToPoint:CGPointMake(10, 40)];
+    [path addLineToPoint:CGPointMake(130, 440)];
+    key2.keyPath = @"position.x";
+    key2.path = path.CGPath;
+    key2.duration = 2;
+    [self.redView.layer addAnimation:key2 forKey:nil];
+  
+    
+    
     
 }
-
+//图片抖动
+-(void) iconshake
+{
+    //帧动画
+    //创建动画对象
+    CAKeyframeAnimation *key1 = [CAKeyframeAnimation animation];
+    key1.keyPath = @"transform.rotation";
+    key1.values = @[@angle2Rad(-5),@angle2Rad(5)];
+    key1.repeatCount = MAXFLOAT;
+    key1.duration = 0.5;
+    key1.autoreverses = YES;
+    [self.redView.layer addAnimation:key1 forKey:nil];
+}
 
 @end
