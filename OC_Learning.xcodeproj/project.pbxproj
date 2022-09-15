@@ -197,6 +197,8 @@
 		69FC5D0C28B4E6F6005DF2E5 /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FC5D0B28B4E6F6005DF2E5 /* CellItem.m */; };
 		CE305CDD28D2B1CF00B15F5A /* CALayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CDB28D2B1CF00B15F5A /* CALayerVC.m */; };
 		CE305CDE28D2B1CF00B15F5A /* CALayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CDC28D2B1CF00B15F5A /* CALayerVC.xib */; };
+		CE305CE328D2F72300B15F5A /* ClockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CE128D2F72300B15F5A /* ClockVC.m */; };
+		CE305CE428D2F72300B15F5A /* ClockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CE228D2F72300B15F5A /* ClockVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -537,6 +539,9 @@
 		CE305CDA28D2B1CF00B15F5A /* CALayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALayerVC.h; sourceTree = "<group>"; };
 		CE305CDB28D2B1CF00B15F5A /* CALayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerVC.m; sourceTree = "<group>"; };
 		CE305CDC28D2B1CF00B15F5A /* CALayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALayerVC.xib; sourceTree = "<group>"; };
+		CE305CE028D2F72300B15F5A /* ClockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockVC.h; sourceTree = "<group>"; };
+		CE305CE128D2F72300B15F5A /* ClockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockVC.m; sourceTree = "<group>"; };
+		CE305CE228D2F72300B15F5A /* ClockVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockVC.xib; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -728,6 +733,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CE305CDF28D2F71100B15F5A /* clock */,
 				CE305CD928D2B1AA00B15F5A /* CaLayer */,
 				69D5005128D015E20031A9ED /* artboard */,
 				69D19B1428CEBB7700630427 /* photos */,
@@ -1426,6 +1432,16 @@
 			path = CaLayer;
 			sourceTree = "<group>";
 		};
+		CE305CDF28D2F71100B15F5A /* clock */ = {
+			isa = PBXGroup;
+			children = (
+				CE305CE028D2F72300B15F5A /* ClockVC.h */,
+				CE305CE128D2F72300B15F5A /* ClockVC.m */,
+				CE305CE228D2F72300B15F5A /* ClockVC.xib */,
+			);
+			path = clock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1494,6 +1510,7 @@
 				69BE3E9828ABA21F00F6E4C3 /* WebViewVC.xib in Resources */,
 				69FC5D0628B4D0CB005DF2E5 /* BlockVC.xib in Resources */,
 				69B9D0D828C49D4100919086 /* FlagView.xib in Resources */,
+				CE305CE428D2F72300B15F5A /* ClockVC.xib in Resources */,
 				695AF3D428C440C70084D982 /* PickerVC.xib in Resources */,
 				69E6FE3528A5284300896D4E /* NSCachesVC.xib in Resources */,
 				6914761128B07764001F5BB6 /* FatherAndSonVC.xib in Resources */,
@@ -1656,6 +1673,7 @@
 				694114C828AC962800BE6792 /* EncryptionVC.m in Sources */,
 				694114D528AC9A2E00BE6792 /* EncryptionTools.m in Sources */,
 				695AF3E028C475520084D982 /* FlagTextF.m in Sources */,
+				CE305CE328D2F72300B15F5A /* ClockVC.m in Sources */,
 				69F6F70128B38A7300675D4C /* SelfScrollViewVC.m in Sources */,
 				6914766628B0DA3B001F5BB6 /* VideoVC.m in Sources */,
 				69D5005E28D0864E0031A9ED /* HandleImageView.m in Sources */,
