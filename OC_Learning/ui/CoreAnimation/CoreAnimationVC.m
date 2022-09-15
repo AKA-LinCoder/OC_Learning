@@ -9,9 +9,18 @@
 
 @interface CoreAnimationVC ()
 @property(nonatomic,strong) UIView *redView;
+@property(nonatomic,strong) UIImageView *imageV;
 @end
 
 @implementation CoreAnimationVC
+- (UIImageView *)imageV
+{
+    if(_imageV == nil){
+        _imageV = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+        _imageV.image = [UIImage imageNamed:@"heart"];
+    }
+    return _imageV;
+}
 - (UIView *)redView
 {
     if (_redView==nil) {
@@ -25,6 +34,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.redView];
+    [self.view addSubview:self.imageV];
     /*
      CoreAnimation是直接作用在CALayer上的，并非UIView
      */
@@ -43,6 +53,21 @@
     basicA.fillMode = kCAFillModeForwards;
     //添加动画
     [self.redView.layer addAnimation:basicA forKey:@"basicA"];
+    
+    //创建对象
+    CABasicAnimation *basicB = [CABasicAnimation animation];
+    //设置对象属性
+    basicB.keyPath = @"transform.scale";
+    basicB.toValue = @0;
+    //重复
+    basicB.repeatCount = MAXFLOAT;
+    //设置动画执行时长
+    basicB.duration = 0.5;
+    //自动翻转：怎么样去，怎么样回来
+    basicB.autoreverses = YES;
+    //添加动画
+    [self.imageV.layer addAnimation:basicB forKey:@"basicB"];
+    
 }
 
 
