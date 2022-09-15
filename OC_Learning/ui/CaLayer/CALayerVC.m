@@ -19,6 +19,27 @@
     [super viewDidLoad];
     //UIView之所以能显示在屏幕上，完全是因为它内部的CALayer
     
+    
+    //手动创建layer
+    CALayer *layer = [[CALayer alloc] init];
+//    CALayer *layer = [CALayer layer];
+    layer.backgroundColor = [[UIColor redColor] CGColor];
+    layer.frame = CGRectMake(0, 0, 100, 100);
+    [self.view.layer addSublayer:layer];
+    layer.contents = (id)[UIImage imageNamed:@"people"].CGImage;
+    
+    
+    /*
+     CALayer是定义在QuartzCore框架中（可在手机电脑使用）
+     CGImageRef,CGColorRef两种数据类型是定义在CoreGraphics框架中（可在手机电脑使用）
+     UIColor，UIImage是定义在UIKit框架中（可在手机使用）
+     所以layer为了保证可移植性，得使用CG那些东西
+     */
+    
+    /*
+     对比CALayer（性能高）,UIView，UIview因为继承了UIResponder可以处理事件，所以当需要和用户进行交互时得选择UIView,只显示的话，两者皆可；为避免需求变更，尽量使用uiview
+     */
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
