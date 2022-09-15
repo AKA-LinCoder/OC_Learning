@@ -10,6 +10,7 @@
 @interface CALayerVC ()
 @property (weak, nonatomic) IBOutlet UIView *redView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property(weak,nonatomic) CALayer *layer;
 
 @end
 
@@ -24,9 +25,19 @@
     CALayer *layer = [[CALayer alloc] init];
 //    CALayer *layer = [CALayer layer];
     layer.backgroundColor = [[UIColor redColor] CGColor];
-    layer.frame = CGRectMake(0, 0, 100, 100);
+    layer.frame = CGRectMake(300, 300, 100, 100);
     [self.view.layer addSublayer:layer];
     layer.contents = (id)[UIImage imageNamed:@"people"].CGImage;
+    
+    
+    
+    CALayer *oneLayer = [CALayer layer];
+    oneLayer.bounds = CGRectMake(0, 0, 100, 100);
+    oneLayer.backgroundColor = [[UIColor orangeColor] CGColor];
+    self.layer = oneLayer;
+    //默认anchorPoint为（0.5，0.5）,所以会只显示了1/4
+//
+    [self.view.layer addSublayer:oneLayer];
     
     
     /*
@@ -40,12 +51,24 @@
      对比CALayer（性能高）,UIView，UIview因为继承了UIResponder可以处理事件，所以当需要和用户进行交互时得选择UIView,只显示的话，两者皆可；为避免需求变更，尽量使用uiview
      */
     
+    /*
+     position和anchorPoint
+     position:用来设置CALayer在父层中的位置，以父层的左上角为原点
+     anchorPotion：定位点，锚点；决定CALayer身上哪个点会在positio
+ 属性所指的位置，以自己的左上角为原点， x,y取值范围都是0-1，默认都是0.5     */
+    
+    
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 [self imageViewLayer];
-
+    self.layer.position = self.view.center;
+    self.layer.anchorPoint = CGPointMake(0, 0);
+    //position和anchorPoint始终重合
+    //UIViewde center和position是一个东西
+ 
 }
 
 -(void)imageViewLayer
