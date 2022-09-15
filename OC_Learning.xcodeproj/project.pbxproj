@@ -199,6 +199,7 @@
 		CE305CDE28D2B1CF00B15F5A /* CALayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CDC28D2B1CF00B15F5A /* CALayerVC.xib */; };
 		CE305CE328D2F72300B15F5A /* ClockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CE128D2F72300B15F5A /* ClockVC.m */; };
 		CE305CE428D2F72300B15F5A /* ClockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CE228D2F72300B15F5A /* ClockVC.xib */; };
+		CE305CE828D3031C00B15F5A /* CoreAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CE728D3031C00B15F5A /* CoreAnimationVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -542,6 +543,8 @@
 		CE305CE028D2F72300B15F5A /* ClockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockVC.h; sourceTree = "<group>"; };
 		CE305CE128D2F72300B15F5A /* ClockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockVC.m; sourceTree = "<group>"; };
 		CE305CE228D2F72300B15F5A /* ClockVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockVC.xib; sourceTree = "<group>"; };
+		CE305CE628D3031C00B15F5A /* CoreAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimationVC.h; sourceTree = "<group>"; };
+		CE305CE728D3031C00B15F5A /* CoreAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationVC.m; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -733,6 +736,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CE305CE528D3030100B15F5A /* CoreAnimation */,
 				CE305CDF28D2F71100B15F5A /* clock */,
 				CE305CD928D2B1AA00B15F5A /* CaLayer */,
 				69D5005128D015E20031A9ED /* artboard */,
@@ -1442,6 +1446,15 @@
 			path = clock;
 			sourceTree = "<group>";
 		};
+		CE305CE528D3030100B15F5A /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				CE305CE628D3031C00B15F5A /* CoreAnimationVC.h */,
+				CE305CE728D3031C00B15F5A /* CoreAnimationVC.m */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1734,6 +1747,7 @@
 				69EA7AA228AF2FA0006A6B4B /* SuperClassAndClassVC.m in Sources */,
 				69D2CA5028C593DE000708E3 /* ProvinceTextF.m in Sources */,
 				695E8CE728A37D0000A7914A /* NSOperationVC.m in Sources */,
+				CE305CE828D3031C00B15F5A /* CoreAnimationVC.m in Sources */,
 				69EA7A9A28AF1E85006A6B4B /* User.m in Sources */,
 				69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */,
 				694114C528AC878D00BE6792 /* Reachability.m in Sources */,
