@@ -48,12 +48,12 @@
     //设置属性值
     basicA.keyPath = @"position.x";
     basicA.toValue = @300;
-    //动画完成时，会自动删除动画
-    basicA.removedOnCompletion = NO;
-    //默认是最后，因为动画默认经过了 A->B->A
-    basicA.fillMode = kCAFillModeForwards;
-    //添加动画
-    [self.redView.layer addAnimation:basicA forKey:@"basicA"];
+//    //动画完成时，会自动删除动画
+//    basicA.removedOnCompletion = NO;
+//    //默认是最后，因为动画默认经过了 A->B->A
+//    basicA.fillMode = kCAFillModeForwards;
+//    //添加动画
+//    [self.redView.layer addAnimation:basicA forKey:@"basicA"];
     
     //创建对象
     CABasicAnimation *basicB = [CABasicAnimation animation];
@@ -66,8 +66,16 @@
     basicB.duration = 0.5;
     //自动翻转：怎么样去，怎么样回来
     basicB.autoreverses = YES;
+    
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.animations = @[basicA,basicB];
+    group.removedOnCompletion = NO;
+    group.fillMode = kCAFillModeForwards;
     //添加动画
-    [self.imageV.layer addAnimation:basicB forKey:@"basicB"];
+    [self.imageV.layer addAnimation:group forKey:@"basicB"];
+    
+    
     [self iconshake];
     
     [self iconPath];
@@ -77,6 +85,8 @@
 //转场动画
 -(void) changeImageByAnimation
 {
+    
+   
     //转场动画和转场代码必须在一个方法中
     self.imageV.image = [UIImage imageNamed:@"小孩"];
     //添加转场动画
