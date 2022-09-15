@@ -58,16 +58,30 @@
  属性所指的位置，以自己的左上角为原点， x,y取值范围都是0-1，默认都是0.5     */
     
     
+    /*
+     每一个UIView内部都默认关联着一个CALayer，我们称这个layer为Root Layer根层
+     所有的非Root layer，也就是手动传家的CALayer对象，都存在着隐式动画
+     隐式动画：当对非root layer的部分属性（Anuimatable Properties可动画属性：bounds,backgroundColor,position ）进行修改时，默认会自动产生一些动画效果
+     [CATransaction begin];
+     [CATransaction setDisableActions:YES];
+     [CATransaction commit];
+     */
+   
+    
     
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 [self imageViewLayer];
+    //通过事物关闭隐式动画
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
     self.layer.position = self.view.center;
     self.layer.anchorPoint = CGPointMake(0, 0);
     //position和anchorPoint始终重合
     //UIViewde center和position是一个东西
+    [CATransaction commit];
  
 }
 
