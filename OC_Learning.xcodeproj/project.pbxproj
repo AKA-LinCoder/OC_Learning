@@ -201,7 +201,6 @@
 		CE305CE428D2F72300B15F5A /* ClockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CE228D2F72300B15F5A /* ClockVC.xib */; };
 		CE305CE828D3031C00B15F5A /* CoreAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CE728D3031C00B15F5A /* CoreAnimationVC.m */; };
 		CE305CEC28D319E200B15F5A /* truntableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CEB28D319E200B15F5A /* truntableVC.m */; };
-		CE305CEE28D31AA800B15F5A /* truntableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CED28D31AA800B15F5A /* truntableVC.xib */; };
 		CE305CF128D31B6800B15F5A /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CF028D31B6800B15F5A /* WheelView.m */; };
 		CE305CF328D31B7B00B15F5A /* WheelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CF228D31B7B00B15F5A /* WheelView.xib */; };
 /* End PBXBuildFile section */
@@ -551,7 +550,6 @@
 		CE305CE728D3031C00B15F5A /* CoreAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationVC.m; sourceTree = "<group>"; };
 		CE305CEA28D319E200B15F5A /* truntableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = truntableVC.h; sourceTree = "<group>"; };
 		CE305CEB28D319E200B15F5A /* truntableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = truntableVC.m; sourceTree = "<group>"; };
-		CE305CED28D31AA800B15F5A /* truntableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = truntableVC.xib; sourceTree = "<group>"; };
 		CE305CEF28D31B6800B15F5A /* WheelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WheelView.h; sourceTree = "<group>"; };
 		CE305CF028D31B6800B15F5A /* WheelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WheelView.m; sourceTree = "<group>"; };
 		CE305CF228D31B7B00B15F5A /* WheelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WheelView.xib; sourceTree = "<group>"; };
@@ -1471,7 +1469,6 @@
 			children = (
 				CE305CEA28D319E200B15F5A /* truntableVC.h */,
 				CE305CEB28D319E200B15F5A /* truntableVC.m */,
-				CE305CED28D31AA800B15F5A /* truntableVC.xib */,
 				CE305CEF28D31B6800B15F5A /* WheelView.h */,
 				CE305CF028D31B6800B15F5A /* WheelView.m */,
 				CE305CF228D31B7B00B15F5A /* WheelView.xib */,
@@ -1581,7 +1578,6 @@
 				6934223128918CD2007561A1 /* Assets.xcassets in Resources */,
 				695E8CFC28A3D7B500A7914A /* apps.plist in Resources */,
 				CE305CDE28D2B1CF00B15F5A /* CALayerVC.xib in Resources */,
-				CE305CEE28D31AA800B15F5A /* truntableVC.xib in Resources */,
 				6959201428B5F8540066AA46 /* PhtotCell.xib in Resources */,
 				695AF3DC28C471AA0084D982 /* SelfPickerVC.xib in Resources */,
 				69424E3E28AE2AB800DF0939 /* status.plist in Resources */,
