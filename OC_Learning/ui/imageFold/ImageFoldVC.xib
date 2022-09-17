@@ -28,11 +28,25 @@
                     <rect key="frame" x="87" y="138" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Fk-yC-iD3">
+                    <rect key="frame" x="82" y="77" width="250" height="250"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="yLx-NT-kO1" appends="YES" id="xmm-0L-Pbe"/>
+                    </connections>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <point key="canvasLocation" x="132" y="78"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="yLx-NT-kO1">
+            <connections>
+                <action selector="pann:" destination="-1" id="u6r-AL-WDK"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="小孩" width="200" height="246"/>
