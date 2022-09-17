@@ -39,12 +39,32 @@
     CGFloat btnW = 65;
     CGFloat btnH = 143;
     CGFloat angle = 0;
+    
+    //加载原始大图
+    UIImage *orilImage = [UIImage imageNamed:@"LuckyAnimal"];
+    CGFloat x = 0;
+    CGFloat y = 0;
+    CGFloat clipW = orilImage.size.width/12 *[UIScreen mainScreen].scale;
+    CGFloat clipH = orilImage.size.height*[UIScreen mainScreen].scale;
+    
     for(int i = 0;i<12;i++){
         UIButton *btn = [WheelBtn buttonWithType:UIButtonTypeCustom];
         btn.bounds =CGRectMake(0, 0, btnW, btnH);
+        x = btnW * i;
+        //设置按钮选中状态下背景图片
+        [btn setBackgroundImage:[UIImage imageNamed:@"LuckyRototeSelected"] forState:UIControlStateSelected];
         
-        //设置按钮选中状态下图片
-        [btn setImage:[UIImage imageNamed:@"LuckyRototeSelected"] forState:UIControlStateSelected];
+        //裁剪的图片
+        CGImageRef normalImage =  CGImageCreateWithImageInRect(orilImage.CGImage, CGRectMake(x, y, clipW, clipH));
+        //设置按钮正常状态图片
+        [btn setImage:[UIImage imageWithCGImage:normalImage] forState:UIControlStateNormal];
+        
+        //裁剪的图片
+        //CGImageCreateWithImageInRect这是C语言的方法，以像素点坐标和iOS（点坐标）不一样
+        CGImageRef selectedImage =  CGImageCreateWithImageInRect(orilImage.CGImage, CGRectMake(x, y, clipW, clipH));
+        //设置按钮正常状态图片
+        [btn setImage:[UIImage imageWithCGImage:selectedImage] forState:UIControlStateSelected];
+    
         
         
         
