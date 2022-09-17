@@ -61,7 +61,6 @@
 
 
 - (IBAction)pann:(UIPanGestureRecognizer *)pan {
-    NSLog(@"%s",__func__);
     //获取移动的偏移量
     CGPoint transP =  [pan translationInView:pan.view];
     //上图旋转角度
@@ -76,10 +75,17 @@
     
     self.topImageV.layer.transform = CATransform3DRotate(trans, -angle, 1, 0, 0);
     
-    
+    //当停止拖动时进行复位操作
     if (pan.state == UIGestureRecognizerStateEnded) {
+        self.grandientL.opacity = NO;
         //上部图片复位
-        self.topImageV.layer.transform = CATransform3DIdentity;
+        [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.1 initialSpringVelocity:0  options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    
+                } completion:^(BOOL finished) {
+                    self.topImageV.layer.transform = CATransform3DIdentity;
+                  
+                }];
+       
     }
     
 //    [UIView animateWithDuration:0.5 animations:^{
