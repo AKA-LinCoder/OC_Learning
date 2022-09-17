@@ -208,6 +208,7 @@
 		CE64F58328D574EC00AFB383 /* ImageFoldVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F58128D574EC00AFB383 /* ImageFoldVC.xib */; };
 		CE64F58828D5AC0700AFB383 /* volumeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58628D5AC0700AFB383 /* volumeVC.m */; };
 		CE64F58928D5AC0700AFB383 /* volumeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F58728D5AC0700AFB383 /* volumeVC.xib */; };
+		CE64F58C28D5B5AD00AFB383 /* VCView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58B28D5B5AD00AFB383 /* VCView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -566,6 +567,8 @@
 		CE64F58528D5AC0700AFB383 /* volumeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = volumeVC.h; sourceTree = "<group>"; };
 		CE64F58628D5AC0700AFB383 /* volumeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = volumeVC.m; sourceTree = "<group>"; };
 		CE64F58728D5AC0700AFB383 /* volumeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = volumeVC.xib; sourceTree = "<group>"; };
+		CE64F58A28D5B5AD00AFB383 /* VCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCView.h; sourceTree = "<group>"; };
+		CE64F58B28D5B5AD00AFB383 /* VCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCView.m; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1509,6 +1512,8 @@
 				CE64F58528D5AC0700AFB383 /* volumeVC.h */,
 				CE64F58628D5AC0700AFB383 /* volumeVC.m */,
 				CE64F58728D5AC0700AFB383 /* volumeVC.xib */,
+				CE64F58A28D5B5AD00AFB383 /* VCView.h */,
+				CE64F58B28D5B5AD00AFB383 /* VCView.m */,
 			);
 			path = volume;
 			sourceTree = "<group>";
@@ -1795,6 +1800,7 @@
 				6973863D28A23B4100F4239C /* PthreadVC.m in Sources */,
 				69DF0E9328CDB69A00520043 /* DrawView.m in Sources */,
 				69B49EA528CAECD90006DD34 /* TemplateVC.m in Sources */,
+				CE64F58C28D5B5AD00AFB383 /* VCView.m in Sources */,
 				695E8CEC28A3881400A7914A /* LinOperation.m in Sources */,
 				69BE3E8728AB208900F6E4C3 /* NSURLSessionVC.m in Sources */,
 				69BE3E9B28ABAC9B00F6E4C3 /* LinWebView.m in Sources */,

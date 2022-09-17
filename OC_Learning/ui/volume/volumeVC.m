@@ -9,6 +9,7 @@
 
 @interface volumeVC ()
 @property (weak, nonatomic) IBOutlet UIView *contentV;
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
 
 @end
 
@@ -52,6 +53,19 @@
     replicatorL.instanceTransform = CATransform3DMakeTranslation(45, 0, 0);
     //设置复制出来的子层动画延迟执行时长
     replicatorL.instanceDelay = 1;
+    
+    
+    
+    ///复制图片制作倒影
+    NSLog(@"%@",self.view.layer);
+    CAReplicatorLayer *rep = (CAReplicatorLayer *)self.view.layer;
+    rep.instanceCount  = 2;
+    rep.instanceRedOffset -= 0.1;
+    rep.instanceGreenOffset -= 0.1;
+    rep.instanceBlueOffset -= 0.1;
+    rep.instanceAlphaOffset -= 0.1;
+    //绕着复制层的锚点旋转
+    rep.instanceTransform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
     
 }
 
