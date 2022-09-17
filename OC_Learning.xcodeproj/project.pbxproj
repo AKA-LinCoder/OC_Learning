@@ -206,6 +206,8 @@
 		CE64F57D28D55C4C00AFB383 /* WheelBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F57C28D55C4C00AFB383 /* WheelBtn.m */; };
 		CE64F58228D574EC00AFB383 /* ImageFoldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58028D574EC00AFB383 /* ImageFoldVC.m */; };
 		CE64F58328D574EC00AFB383 /* ImageFoldVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F58128D574EC00AFB383 /* ImageFoldVC.xib */; };
+		CE64F58828D5AC0700AFB383 /* volumeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58628D5AC0700AFB383 /* volumeVC.m */; };
+		CE64F58928D5AC0700AFB383 /* volumeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F58728D5AC0700AFB383 /* volumeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -561,6 +563,9 @@
 		CE64F57F28D574EC00AFB383 /* ImageFoldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFoldVC.h; sourceTree = "<group>"; };
 		CE64F58028D574EC00AFB383 /* ImageFoldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageFoldVC.m; sourceTree = "<group>"; };
 		CE64F58128D574EC00AFB383 /* ImageFoldVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageFoldVC.xib; sourceTree = "<group>"; };
+		CE64F58528D5AC0700AFB383 /* volumeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = volumeVC.h; sourceTree = "<group>"; };
+		CE64F58628D5AC0700AFB383 /* volumeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = volumeVC.m; sourceTree = "<group>"; };
+		CE64F58728D5AC0700AFB383 /* volumeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = volumeVC.xib; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -752,6 +757,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CE64F58428D5ABF400AFB383 /* volume */,
 				CE64F57E28D574C800AFB383 /* imageFold */,
 				CE305CE928D316BD00B15F5A /* turntable(转盘) */,
 				CE305CE528D3030100B15F5A /* CoreAnimation */,
@@ -1497,6 +1503,16 @@
 			path = imageFold;
 			sourceTree = "<group>";
 		};
+		CE64F58428D5ABF400AFB383 /* volume */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F58528D5AC0700AFB383 /* volumeVC.h */,
+				CE64F58628D5AC0700AFB383 /* volumeVC.m */,
+				CE64F58728D5AC0700AFB383 /* volumeVC.xib */,
+			);
+			path = volume;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1574,6 +1590,7 @@
 				CE305CF328D31B7B00B15F5A /* WheelView.xib in Resources */,
 				6951B34C28C8D179002E06B3 /* SelfPageVC.xib in Resources */,
 				69D2CA6328C5FA02000708E3 /* AddressBookAddVC.xib in Resources */,
+				CE64F58928D5AC0700AFB383 /* volumeVC.xib in Resources */,
 				69D2CA5B28C5D172000708E3 /* AddressBoolLoginVC.xib in Resources */,
 				CE64F58328D574EC00AFB383 /* ImageFoldVC.xib in Resources */,
 				6914762928B0C14B001F5BB6 /* WangyiVC.xib in Resources */,
@@ -1799,6 +1816,7 @@
 				69EA7A9A28AF1E85006A6B4B /* User.m in Sources */,
 				69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */,
 				694114C528AC878D00BE6792 /* Reachability.m in Sources */,
+				CE64F58828D5AC0700AFB383 /* volumeVC.m in Sources */,
 				69BFB8FE28AF6273001A9BB1 /* SubPerson.m in Sources */,
 				69FC5D0928B4D599005DF2E5 /* BlockTableVC.m in Sources */,
 				69B9D0DC28C4A42100919086 /* DateTextF.m in Sources */,
