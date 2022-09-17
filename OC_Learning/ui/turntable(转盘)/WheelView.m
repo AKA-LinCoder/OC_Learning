@@ -9,7 +9,7 @@
 #import "WheelBtn.h"
 
 #define angle2Rad(angle)((angle)/180.0*M_PI)
-@interface WheelView()
+@interface WheelView()<CAAnimationDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *bgView;
 @property(nonatomic,weak) WheelBtn *selectedBtn;
 @property(nonatomic,strong) CADisplayLink *link;
@@ -125,6 +125,39 @@
     self.link.paused = NO;
     
 }
+- (IBAction)startChoose:(id)sender {
+    //让转盘快速的旋转几圈，当前旋转的按钮指向最上方
+        CABasicAnimation *anim = [CABasicAnimation animation];
+        //设置属性
+        anim.keyPath = @"transform.rotation";
+        anim.toValue = @(M_PI*4);
+        anim.duration = 0.5;
+        anim.delegate = self;
+//        anim.repeatCount = MAXFLOAT;
+        //添加动画
+        [self.bgView.layer addAnimation:anim forKey:nil];
+        //动画结束时旋转的按钮指向最上方
+}
+
+//非正式协议：给分类添加协议的方法
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    
+}
+//动画结束时调用
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    //让当前选中按钮的父控件倒这旋转回去
+    //当前按钮旋转的角度
+    
+    CGAffineTransform transform = self.selectedBtn.transform;
+    //通过transform获取当前旋转的度数
+    CGFloat angle =  atan2(transform.b,transform.a);
+    self.bgView.transform = CGAffineTransformMakeRotation(-angle);
+}
+
+
+
 //让按钮真实旋转
 -(void) update
 {
