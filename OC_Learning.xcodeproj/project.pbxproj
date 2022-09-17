@@ -203,6 +203,7 @@
 		CE305CEC28D319E200B15F5A /* truntableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CEB28D319E200B15F5A /* truntableVC.m */; };
 		CE305CF128D31B6800B15F5A /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE305CF028D31B6800B15F5A /* WheelView.m */; };
 		CE305CF328D31B7B00B15F5A /* WheelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE305CF228D31B7B00B15F5A /* WheelView.xib */; };
+		CE64F57D28D55C4C00AFB383 /* WheelBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F57C28D55C4C00AFB383 /* WheelBtn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -553,6 +554,8 @@
 		CE305CEF28D31B6800B15F5A /* WheelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WheelView.h; sourceTree = "<group>"; };
 		CE305CF028D31B6800B15F5A /* WheelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WheelView.m; sourceTree = "<group>"; };
 		CE305CF228D31B7B00B15F5A /* WheelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WheelView.xib; sourceTree = "<group>"; };
+		CE64F57B28D55C4C00AFB383 /* WheelBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WheelBtn.h; sourceTree = "<group>"; };
+		CE64F57C28D55C4C00AFB383 /* WheelBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WheelBtn.m; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1472,6 +1475,8 @@
 				CE305CEF28D31B6800B15F5A /* WheelView.h */,
 				CE305CF028D31B6800B15F5A /* WheelView.m */,
 				CE305CF228D31B7B00B15F5A /* WheelView.xib */,
+				CE64F57B28D55C4C00AFB383 /* WheelBtn.h */,
+				CE64F57C28D55C4C00AFB383 /* WheelBtn.m */,
 			);
 			path = "turntable(转盘)";
 			sourceTree = "<group>";
@@ -1643,6 +1648,7 @@
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				69B62FDC28CF1715007C0433 /* WipeVC.m in Sources */,
 				69DE74A228CB87F900B78DA8 /* blueView.m in Sources */,
+				CE64F57D28D55C4C00AFB383 /* WheelBtn.m in Sources */,
 				69B9D0D128C4893300919086 /* FlagItem.m in Sources */,
 				693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */,
 				69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */,
