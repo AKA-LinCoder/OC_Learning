@@ -39,7 +39,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [UIView animateWithDuration:0.5 animations:^{
-            self.topImageV.layer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+        self.topImageV.layer.transform = CATransform3DRotate(self.topImageV.layer.transform, M_PI, 1, 0, 0);
     }];
 }
 
