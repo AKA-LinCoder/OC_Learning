@@ -209,6 +209,9 @@
 		CE64F58828D5AC0700AFB383 /* volumeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58628D5AC0700AFB383 /* volumeVC.m */; };
 		CE64F58928D5AC0700AFB383 /* volumeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F58728D5AC0700AFB383 /* volumeVC.xib */; };
 		CE64F58C28D5B5AD00AFB383 /* VCView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58B28D5B5AD00AFB383 /* VCView.m */; };
+		CE64F59128D5B86200AFB383 /* ParticleEffectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58F28D5B86200AFB383 /* ParticleEffectVC.m */; };
+		CE64F59228D5B86200AFB383 /* ParticleEffectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */; };
+		CE64F59528D5B8B800AFB383 /* VCCView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F59428D5B8B800AFB383 /* VCCView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -569,6 +572,11 @@
 		CE64F58728D5AC0700AFB383 /* volumeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = volumeVC.xib; sourceTree = "<group>"; };
 		CE64F58A28D5B5AD00AFB383 /* VCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCView.h; sourceTree = "<group>"; };
 		CE64F58B28D5B5AD00AFB383 /* VCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCView.m; sourceTree = "<group>"; };
+		CE64F58E28D5B86200AFB383 /* ParticleEffectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParticleEffectVC.h; sourceTree = "<group>"; };
+		CE64F58F28D5B86200AFB383 /* ParticleEffectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParticleEffectVC.m; sourceTree = "<group>"; };
+		CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticleEffectVC.xib; sourceTree = "<group>"; };
+		CE64F59328D5B8B800AFB383 /* VCCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCView.h; sourceTree = "<group>"; };
+		CE64F59428D5B8B800AFB383 /* VCCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCView.m; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -760,6 +768,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CE64F58D28D5B83400AFB383 /* 粒子效果 */,
 				CE64F58428D5ABF400AFB383 /* volume */,
 				CE64F57E28D574C800AFB383 /* imageFold */,
 				CE305CE928D316BD00B15F5A /* turntable(转盘) */,
@@ -1518,6 +1527,18 @@
 			path = volume;
 			sourceTree = "<group>";
 		};
+		CE64F58D28D5B83400AFB383 /* 粒子效果 */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F58E28D5B86200AFB383 /* ParticleEffectVC.h */,
+				CE64F58F28D5B86200AFB383 /* ParticleEffectVC.m */,
+				CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */,
+				CE64F59328D5B8B800AFB383 /* VCCView.h */,
+				CE64F59428D5B8B800AFB383 /* VCCView.m */,
+			);
+			path = "粒子效果";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1593,6 +1614,7 @@
 				69F6F6E328B32E8400675D4C /* ScrollviewAutoLayoutVC.xib in Resources */,
 				6912DE6328CC7781005502C4 /* tapVC.xib in Resources */,
 				CE305CF328D31B7B00B15F5A /* WheelView.xib in Resources */,
+				CE64F59228D5B86200AFB383 /* ParticleEffectVC.xib in Resources */,
 				6951B34C28C8D179002E06B3 /* SelfPageVC.xib in Resources */,
 				69D2CA6328C5FA02000708E3 /* AddressBookAddVC.xib in Resources */,
 				CE64F58928D5AC0700AFB383 /* volumeVC.xib in Resources */,
@@ -1773,7 +1795,9 @@
 				69C8E3D428C838E4007CE55B /* FilesVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
 				6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */,
+				CE64F59528D5B8B800AFB383 /* VCCView.m in Sources */,
 				6978332928B726F500116C7A /* LocationVC.m in Sources */,
+				CE64F59128D5B86200AFB383 /* ParticleEffectVC.m in Sources */,
 				694114D328AC9A2E00BE6792 /* NSString+Hash.m in Sources */,
 				695E8CDE28A34BB900A7914A /* GCDGroupQueueVC.m in Sources */,
 				CE305CF128D31B6800B15F5A /* WheelView.m in Sources */,
