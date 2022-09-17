@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+  
+    
+    //复制层
+    CAReplicatorLayer *replicatorL = [CAReplicatorLayer layer];
+//    replicatorL.backgroundColor = [UIColor greenColor].CGColor;
+    replicatorL.frame = self.contentV.bounds;
+    [self.contentV.layer addSublayer:replicatorL];
+    
     //创建一个条
     CALayer *layer = [CALayer layer];
     layer.backgroundColor = [UIColor redColor].CGColor;
@@ -24,7 +32,7 @@
     layer.bounds = CGRectMake(0, 0, 30, 100);
     layer.position = CGPointMake(0, self.contentV.bounds.size.height);
 //    layer.frame = CGRectMake(0, self.contentV.bounds.size.height-100, 30, 100);
-    [self.contentV.layer addSublayer:layer];
+    [replicatorL addSublayer:layer];
     
     //添加动画
     CABasicAnimation *anim = [CABasicAnimation animation];
@@ -34,6 +42,17 @@
     anim.duration = 1;
     anim.autoreverses = YES;
     [layer addAnimation:anim forKey:nil];
+    
+    
+    
+    
+    //复制的份数(包括他自己)
+    replicatorL.instanceCount = 6;
+    //对复制出来的子层进行平移操作(每一个都是相对于上一个子层做的形变)
+    replicatorL.instanceTransform = CATransform3DMakeTranslation(45, 0, 0);
+    //设置复制出来的子层动画延迟执行时长
+    replicatorL.instanceDelay = 1;
+    
 }
 
 
