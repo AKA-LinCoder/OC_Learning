@@ -12,11 +12,21 @@
 @interface WheelView()
 @property (weak, nonatomic) IBOutlet UIImageView *bgView;
 @property(nonatomic,weak) WheelBtn *selectedBtn;
+@property(nonatomic,strong) CADisplayLink *link;
 
 @end
 
 @implementation WheelView
 
+- (CADisplayLink *)link
+{
+    if(_link == nil){
+        CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+        [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+        _link = link;
+    }
+    return _link;
+}
 + (instancetype)wheelView
 {
     
@@ -41,7 +51,8 @@
     CGFloat angle = 0;
     
     //加载原始大图
-    UIImage *orilImage = [UIImage imageNamed:@"LuckyAnimal"];
+    UIImage *orilImage = [UIImage imageNamed:@"LuckyAstrology"];
+    UIImage *orilSelImage = [UIImage imageNamed:@"LuckyAstrologyPressed"];
     CGFloat x = 0;
     CGFloat y = 0;
     CGFloat clipW = orilImage.size.width/12 *[UIScreen mainScreen].scale;
@@ -50,7 +61,7 @@
     for(int i = 0;i<12;i++){
         UIButton *btn = [WheelBtn buttonWithType:UIButtonTypeCustom];
         btn.bounds =CGRectMake(0, 0, btnW, btnH);
-        x = btnW * i;
+        x = clipW * i;
         //设置按钮选中状态下背景图片
         [btn setBackgroundImage:[UIImage imageNamed:@"LuckyRototeSelected"] forState:UIControlStateSelected];
         
@@ -61,7 +72,7 @@
         
         //裁剪的图片
         //CGImageCreateWithImageInRect这是C语言的方法，以像素点坐标和iOS（点坐标）不一样
-        CGImageRef selectedImage =  CGImageCreateWithImageInRect(orilImage.CGImage, CGRectMake(x, y, clipW, clipH));
+        CGImageRef selectedImage =  CGImageCreateWithImageInRect(orilSelImage.CGImage, CGRectMake(x, y, clipW, clipH));
         //设置按钮正常状态图片
         [btn setImage:[UIImage imageWithCGImage:selectedImage] forState:UIControlStateSelected];
     
@@ -100,19 +111,29 @@
 }
 - (void)startRotation
 {
-    CABasicAnimation *anim = [CABasicAnimation animation];
-    //设置属性
-    anim.keyPath = @"transform.rotation";
-    anim.toValue = @(M_PI*3);
-    anim.duration = 1;
-    anim.repeatCount = MAXFLOAT;
-    //添加动画
+    //这是使用layer旋转，实际上位置那些都没有改变所以不能用这种方式，得使用UIView的动画
+//    CABasicAnimation *anim = [CABasicAnimation animation];
+//    //设置属性
+//    anim.keyPath = @"transform.rotation";
+//    anim.toValue = @(M_PI*3);
+//    anim.duration = 1;
+//    anim.repeatCount = MAXFLOAT;
+//    //添加动画
+//
+//    [self.bgView.layer addAnimation:anim forKey:nil];
+    //添加定时器，保持一直旋转
+    self.link.paused = NO;
     
-    [self.bgView.layer addAnimation:anim forKey:nil];
+}
+//让按钮真实旋转
+-(void) update
+{
+    self.bgView.transform = CGAffineTransformRotate(self.bgView.transform, M_PI/200.0);
 }
 
 - (void)stopRotation
 {
-    [self.bgView.layer removeAllAnimations];
+    self.link.paused = YES;
+//    [self.bgView.layer removeAllAnimations];
 }
 @end
