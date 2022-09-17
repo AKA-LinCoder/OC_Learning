@@ -69,7 +69,7 @@
     //近大远小效果
     CATransform3D trans = CATransform3DIdentity;
     //眼睛离屏幕距离
-    trans.m34 = -1/500.0;
+    trans.m34 = -1/300.0;
     
     self.grandientL.opacity = transP.y * 1/ 200.0;
     
