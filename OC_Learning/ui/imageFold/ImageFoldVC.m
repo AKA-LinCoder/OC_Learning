@@ -10,6 +10,7 @@
 @interface ImageFoldVC ()
 @property (weak, nonatomic) IBOutlet UIImageView *topImageV;
 @property (weak, nonatomic) IBOutlet UIImageView *bottomImageV;
+@property(nonatomic,weak)  CAGradientLayer *grandientL;
 
 @end
 
@@ -23,7 +24,39 @@
     self.bottomImageV.layer.contentsRect = CGRectMake(0, 0.5, 1, 0.5);
     self.topImageV.layer.anchorPoint = CGPointMake(0.5, 1);
     self.bottomImageV.layer.anchorPoint = CGPointMake(0.5, 0);
+    
+    //渐变层
+    CAGradientLayer *grandientL = [CAGradientLayer layer];
+    grandientL.frame = self.bottomImageV.bounds;
+   
+    //渐变颜色
+    grandientL.colors = @[(id)[UIColor clearColor].CGColor,(id)[UIColor blackColor].CGColor];
+    //设置渐变透明
+    grandientL.opacity = 0;
+    
+    
+    //设置一个渐变到另一个渐变的起始位置
+    grandientL.locations= @[@0.3,@0.5];
+    self.grandientL = grandientL;
+    [self.bottomImageV.layer addSublayer:grandientL];
+    
 
+}
+
+-(void)grandientLayer
+{
+    //渐变层
+    CAGradientLayer *grandientL = [CAGradientLayer layer];
+    grandientL.frame = self.bottomImageV.bounds;
+    //渐变方向
+    grandientL.startPoint = CGPointMake(0, 0);
+    grandientL.endPoint = CGPointMake(1, 0);
+    //渐变颜色
+    grandientL.colors = @[(id)[UIColor redColor].CGColor,(id)[UIColor greenColor].CGColor,(id)[UIColor blueColor].CGColor];
+    //设置一个渐变到另一个渐变的起始位置
+    grandientL.locations= @[@0.3,@0.5];
+    
+    [self.bottomImageV.layer addSublayer:grandientL];
 }
 
 
@@ -38,10 +71,16 @@
     CATransform3D trans = CATransform3DIdentity;
     //眼睛离屏幕距离
     trans.m34 = -1/500.0;
+    
+    self.grandientL.opacity = transP.y * 1/ 200.0;
+    
     self.topImageV.layer.transform = CATransform3DRotate(trans, -angle, 1, 0, 0);
     
     
-    
+    if (pan.state == UIGestureRecognizerStateEnded) {
+        //上部图片复位
+        self.topImageV.layer.transform = CATransform3DIdentity;
+    }
     
 //    [UIView animateWithDuration:0.5 animations:^{
 //        self.topImageV.layer.transform = CATransform3DRotate(self.topImageV.layer.transform, M_PI, 1, 0, 0);
