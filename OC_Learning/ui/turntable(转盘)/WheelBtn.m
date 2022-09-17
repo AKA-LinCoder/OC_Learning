@@ -21,6 +21,19 @@
 //
 //}
 
+//设置按钮部分区域可以点击
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    CGFloat w= (self.bounds.size.width)*0.5;
+    CGFloat h= (self.bounds.size.height)*0.5;
+    CGRect rect =  CGRectMake(0, 0, w, h);
+    if(CGRectContainsPoint(rect, point)){
+        return [super hitTest:point withEvent:event];
+    }else{
+        return nil;
+    }
+}
+
 
 - (CGRect)imageRectForContentRect:(CGRect)contentRect
 {
