@@ -30,6 +30,7 @@
 #import "ImageFoldVC.h"
 #import "volumeVC.h"
 #import "ParticleEffectVC.h"
+#import "BadgeVC.h"
 
 @interface UIVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -51,14 +52,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.array = @[@"picker",@"自定义Picker",@"通讯录",@"文件存储",
-                   @"个人主页",@"通用模板",@"手动modal",@"启动超级变换形态",@"拖拽事件",@"hittest01",@"hittest02",@"手势识别",@"抽屉效果",@"Quartz2D",@"图片相关",@"CALayer",@"时钟",@"CoreAnimation",@"转盘",@"图片折叠",@"音量条",@"粒子效果"];
+                   @"个人主页",@"通用模板",@"手动modal",@"启动超级变换形态",@"拖拽事件",@"hittest01",@"hittest02",@"手势识别",@"抽屉效果",@"Quartz2D",@"图片相关",@"CALayer",@"时钟",@"CoreAnimation",@"转盘",@"图片折叠",@"音量条",@"粒子效果",@"QQ粘性布局"];
     lsaac *one = [lsaac sharedLsaac];
     lsaac *two = [lsaac sharedLsaac];
-    NSLog(@"one--%p,two--%p",one,two);
+//    NSLog(@"one--%p,two--%p",one,two);
     //会崩溃
 //    lsaac *three = [[lsaac alloc] init];
 //    NSLog(@"one--%p,two--%p,three--%p",one,two,three);
-    NSLog(@"%@",NSHomeDirectory());
+//    NSLog(@"%@",NSHomeDirectory());
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"] options:@{} completionHandler:^(BOOL success) {
 //            
 //    }];
@@ -233,6 +234,10 @@
          [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==21){
         ParticleEffectVC *vc = [[ParticleEffectVC alloc] init];
+        vc.navigationItem.title = self.array[indexPath.row];
+         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row==22){
+        BadgeVC *vc = [[BadgeVC alloc] init];
         vc.navigationItem.title = self.array[indexPath.row];
          [self.navigationController pushViewController:vc animated:YES];
     }

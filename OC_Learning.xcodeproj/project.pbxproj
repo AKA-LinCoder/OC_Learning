@@ -212,6 +212,9 @@
 		CE64F59128D5B86200AFB383 /* ParticleEffectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58F28D5B86200AFB383 /* ParticleEffectVC.m */; };
 		CE64F59228D5B86200AFB383 /* ParticleEffectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */; };
 		CE64F59528D5B8B800AFB383 /* VCCView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F59428D5B8B800AFB383 /* VCCView.m */; };
+		CEC1738C28D6B358001123BA /* BadgeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC1738B28D6B358001123BA /* BadgeValue.m */; };
+		CEC1739028D6B3A2001123BA /* BadgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC1738E28D6B3A2001123BA /* BadgeVC.m */; };
+		CEC1739128D6B3A2001123BA /* BadgeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC1738F28D6B3A2001123BA /* BadgeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -577,6 +580,11 @@
 		CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticleEffectVC.xib; sourceTree = "<group>"; };
 		CE64F59328D5B8B800AFB383 /* VCCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCView.h; sourceTree = "<group>"; };
 		CE64F59428D5B8B800AFB383 /* VCCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCView.m; sourceTree = "<group>"; };
+		CEC1738A28D6B358001123BA /* BadgeValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeValue.h; sourceTree = "<group>"; };
+		CEC1738B28D6B358001123BA /* BadgeValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgeValue.m; sourceTree = "<group>"; };
+		CEC1738D28D6B3A2001123BA /* BadgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeVC.h; sourceTree = "<group>"; };
+		CEC1738E28D6B3A2001123BA /* BadgeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgeVC.m; sourceTree = "<group>"; };
+		CEC1738F28D6B3A2001123BA /* BadgeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeVC.xib; sourceTree = "<group>"; };
 		E9E28AFC560A7DCF01A7100F /* Pods-OC_Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC_Learning.debug.xcconfig"; path = "Target Support Files/Pods-OC_Learning/Pods-OC_Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -768,6 +776,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CEC1738928D6B336001123BA /* Badge */,
 				CE64F58D28D5B83400AFB383 /* 粒子效果 */,
 				CE64F58428D5ABF400AFB383 /* volume */,
 				CE64F57E28D574C800AFB383 /* imageFold */,
@@ -1539,6 +1548,18 @@
 			path = "粒子效果";
 			sourceTree = "<group>";
 		};
+		CEC1738928D6B336001123BA /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				CEC1738A28D6B358001123BA /* BadgeValue.h */,
+				CEC1738B28D6B358001123BA /* BadgeValue.m */,
+				CEC1738D28D6B3A2001123BA /* BadgeVC.h */,
+				CEC1738E28D6B3A2001123BA /* BadgeVC.m */,
+				CEC1738F28D6B3A2001123BA /* BadgeVC.xib */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1638,6 +1659,7 @@
 				6959200C28B5F2000066AA46 /* CollectionViewVC.xib in Resources */,
 				6934223428918CD2007561A1 /* LaunchScreen.storyboard in Resources */,
 				6978333528B7840F00116C7A /* CompassVC.xib in Resources */,
+				CEC1739128D6B3A2001123BA /* BadgeVC.xib in Resources */,
 				69C8E3D628C8393C007CE55B /* FilesVC.xib in Resources */,
 				69B49EAE28CB14F30006DD34 /* TransformVC.xib in Resources */,
 				69BE3E8F28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.xib in Resources */,
@@ -1708,6 +1730,7 @@
 				6914762828B0C14B001F5BB6 /* WangyiVC.m in Sources */,
 				6934222C28918CD0007561A1 /* ViewController.m in Sources */,
 				69B62FDC28CF1715007C0433 /* WipeVC.m in Sources */,
+				CEC1739028D6B3A2001123BA /* BadgeVC.m in Sources */,
 				69DE74A228CB87F900B78DA8 /* blueView.m in Sources */,
 				CE64F57D28D55C4C00AFB383 /* WheelBtn.m in Sources */,
 				69B9D0D128C4893300919086 /* FlagItem.m in Sources */,
@@ -1724,6 +1747,7 @@
 				69424E2C28ADCA7F00DF0939 /* runtimeVC.m in Sources */,
 				6934222628918CD0007561A1 /* AppDelegate.m in Sources */,
 				CE305CDD28D2B1CF00B15F5A /* CALayerVC.m in Sources */,
+				CEC1738C28D6B358001123BA /* BadgeValue.m in Sources */,
 				69D2CA5A28C5D172000708E3 /* AddressBoolLoginVC.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				69DF0E9F28CE15C800520043 /* SnowView.m in Sources */,
