@@ -776,6 +776,7 @@
 		693D1D9A28C2EA3700E3EF3C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CEC1739228D6BEB0001123BA /* stock(股票) */,
 				CEC1738928D6B336001123BA /* Badge */,
 				CE64F58D28D5B83400AFB383 /* 粒子效果 */,
 				CE64F58428D5ABF400AFB383 /* volume */,
@@ -1558,6 +1559,13 @@
 				CEC1738F28D6B3A2001123BA /* BadgeVC.xib */,
 			);
 			path = Badge;
+			sourceTree = "<group>";
+		};
+		CEC1739228D6BEB0001123BA /* stock(股票) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "stock(股票)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
