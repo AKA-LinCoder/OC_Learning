@@ -31,6 +31,7 @@
 #import "volumeVC.h"
 #import "ParticleEffectVC.h"
 #import "BadgeVC.h"
+#import "StockTabBarVC.h"
 
 @interface UIVC ()
 @property(nonatomic,strong)NSArray *array;
@@ -52,7 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.array = @[@"picker",@"自定义Picker",@"通讯录",@"文件存储",
-                   @"个人主页",@"通用模板",@"手动modal",@"启动超级变换形态",@"拖拽事件",@"hittest01",@"hittest02",@"手势识别",@"抽屉效果",@"Quartz2D",@"图片相关",@"CALayer",@"时钟",@"CoreAnimation",@"转盘",@"图片折叠",@"音量条",@"粒子效果",@"QQ粘性布局"];
+                   @"个人主页",@"通用模板",@"手动modal",@"启动超级变换形态",@"拖拽事件",@"hittest01",@"hittest02",@"手势识别",@"抽屉效果",@"Quartz2D",@"图片相关",@"CALayer",@"时钟",@"CoreAnimation",@"转盘",@"图片折叠",@"音量条",@"粒子效果",@"QQ粘性布局",@"股票"];
     lsaac *one = [lsaac sharedLsaac];
     lsaac *two = [lsaac sharedLsaac];
 //    NSLog(@"one--%p,two--%p",one,two);
@@ -239,6 +240,10 @@
     }else if (indexPath.row==22){
         BadgeVC *vc = [[BadgeVC alloc] init];
         vc.navigationItem.title = self.array[indexPath.row];
+         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row==23){
+        StockTabBarVC *vc = [[StockTabBarVC alloc] init];
+//        vc.navigationItem.title = self.array[indexPath.row];
          [self.navigationController pushViewController:vc animated:YES];
     }
     

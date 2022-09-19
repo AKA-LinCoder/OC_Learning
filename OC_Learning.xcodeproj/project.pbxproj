@@ -212,6 +212,12 @@
 		CE64F59128D5B86200AFB383 /* ParticleEffectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58F28D5B86200AFB383 /* ParticleEffectVC.m */; };
 		CE64F59228D5B86200AFB383 /* ParticleEffectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */; };
 		CE64F59528D5B8B800AFB383 /* VCCView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F59428D5B8B800AFB383 /* VCCView.m */; };
+		CE975DC928D85B7D00C91F4D /* StockTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DC828D85B7D00C91F4D /* StockTabBarVC.m */; };
+		CE975DE728D8777C00C91F4D /* HallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DE628D8777C00C91F4D /* HallVC.m */; };
+		CE975DEA28D877A800C91F4D /* ArenaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DE928D877A800C91F4D /* ArenaVC.m */; };
+		CE975DED28D877D700C91F4D /* DiscoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DEC28D877D700C91F4D /* DiscoverVC.m */; };
+		CE975DF028D877EE00C91F4D /* HistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DEF28D877EE00C91F4D /* HistoryVC.m */; };
+		CE975DF328D8780700C91F4D /* MyLotteryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DF228D8780700C91F4D /* MyLotteryVC.m */; };
 		CEC1738C28D6B358001123BA /* BadgeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC1738B28D6B358001123BA /* BadgeValue.m */; };
 		CEC1739028D6B3A2001123BA /* BadgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC1738E28D6B3A2001123BA /* BadgeVC.m */; };
 		CEC1739128D6B3A2001123BA /* BadgeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC1738F28D6B3A2001123BA /* BadgeVC.xib */; };
@@ -580,6 +586,18 @@
 		CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticleEffectVC.xib; sourceTree = "<group>"; };
 		CE64F59328D5B8B800AFB383 /* VCCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCView.h; sourceTree = "<group>"; };
 		CE64F59428D5B8B800AFB383 /* VCCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCView.m; sourceTree = "<group>"; };
+		CE975DC728D85B7D00C91F4D /* StockTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockTabBarVC.h; sourceTree = "<group>"; };
+		CE975DC828D85B7D00C91F4D /* StockTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockTabBarVC.m; sourceTree = "<group>"; };
+		CE975DE528D8777C00C91F4D /* HallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HallVC.h; sourceTree = "<group>"; };
+		CE975DE628D8777C00C91F4D /* HallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HallVC.m; sourceTree = "<group>"; };
+		CE975DE828D877A800C91F4D /* ArenaVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArenaVC.h; sourceTree = "<group>"; };
+		CE975DE928D877A800C91F4D /* ArenaVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArenaVC.m; sourceTree = "<group>"; };
+		CE975DEB28D877D700C91F4D /* DiscoverVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverVC.h; sourceTree = "<group>"; };
+		CE975DEC28D877D700C91F4D /* DiscoverVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverVC.m; sourceTree = "<group>"; };
+		CE975DEE28D877EE00C91F4D /* HistoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryVC.h; sourceTree = "<group>"; };
+		CE975DEF28D877EE00C91F4D /* HistoryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryVC.m; sourceTree = "<group>"; };
+		CE975DF128D8780700C91F4D /* MyLotteryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLotteryVC.h; sourceTree = "<group>"; };
+		CE975DF228D8780700C91F4D /* MyLotteryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLotteryVC.m; sourceTree = "<group>"; };
 		CEC1738A28D6B358001123BA /* BadgeValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeValue.h; sourceTree = "<group>"; };
 		CEC1738B28D6B358001123BA /* BadgeValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgeValue.m; sourceTree = "<group>"; };
 		CEC1738D28D6B3A2001123BA /* BadgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeVC.h; sourceTree = "<group>"; };
@@ -1549,6 +1567,204 @@
 			path = "粒子效果";
 			sourceTree = "<group>";
 		};
+		CE975DCA28D8632E00C91F4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE975DCB28D8633600C91F4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975DCC28D8633D00C91F4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE975DCD28D863B200C91F4D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DC728D85B7D00C91F4D /* StockTabBarVC.h */,
+				CE975DC828D85B7D00C91F4D /* StockTabBarVC.m */,
+				CE975DCC28D8633D00C91F4D /* Model */,
+				CE975DCB28D8633600C91F4D /* View */,
+				CE975DCA28D8632E00C91F4D /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE975DCE28D863FC00C91F4D /* Hall(购票大厅) */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DE428D8776800C91F4D /* Controller */,
+				CE975DE328D8772A00C91F4D /* View */,
+				CE975DE228D8772400C91F4D /* Model */,
+			);
+			path = "Hall(购票大厅)";
+			sourceTree = "<group>";
+		};
+		CE975DCF28D864A800C91F4D /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DE128D8771D00C91F4D /* Model */,
+				CE975DE028D8771700C91F4D /* View */,
+				CE975DDF28D8771000C91F4D /* Controller */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		CE975DD028D864EE00C91F4D /* Arena(竞技场) */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DDC28D868A400C91F4D /* Controller */,
+				CE975DDB28D8689F00C91F4D /* View */,
+				CE975DDA28D8689900C91F4D /* Model */,
+			);
+			path = "Arena(竞技场)";
+			sourceTree = "<group>";
+		};
+		CE975DD128D8650500C91F4D /* History(开奖信息) */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DD928D8689200C91F4D /* Controller */,
+				CE975DD828D8688C00C91F4D /* View */,
+				CE975DD728D8688600C91F4D /* Model */,
+			);
+			path = "History(开奖信息)";
+			sourceTree = "<group>";
+		};
+		CE975DD228D8651400C91F4D /* MyLottery(我的彩票) */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DD528D8686C00C91F4D /* View */,
+				CE975DD428D8686000C91F4D /* Controller */,
+				CE975DD628D8687200C91F4D /* Model */,
+			);
+			path = "MyLottery(我的彩票)";
+			sourceTree = "<group>";
+		};
+		CE975DD428D8686000C91F4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DF128D8780700C91F4D /* MyLotteryVC.h */,
+				CE975DF228D8780700C91F4D /* MyLotteryVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE975DD528D8686C00C91F4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975DD628D8687200C91F4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE975DD728D8688600C91F4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE975DD828D8688C00C91F4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975DD928D8689200C91F4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DEE28D877EE00C91F4D /* HistoryVC.h */,
+				CE975DEF28D877EE00C91F4D /* HistoryVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE975DDA28D8689900C91F4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE975DDB28D8689F00C91F4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975DDC28D868A400C91F4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DE828D877A800C91F4D /* ArenaVC.h */,
+				CE975DE928D877A800C91F4D /* ArenaVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE975DDF28D8771000C91F4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DEB28D877D700C91F4D /* DiscoverVC.h */,
+				CE975DEC28D877D700C91F4D /* DiscoverVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE975DE028D8771700C91F4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975DE128D8771D00C91F4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE975DE228D8772400C91F4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE975DE328D8772A00C91F4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975DE428D8776800C91F4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE975DE528D8777C00C91F4D /* HallVC.h */,
+				CE975DE628D8777C00C91F4D /* HallVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CEC1738928D6B336001123BA /* Badge */ = {
 			isa = PBXGroup;
 			children = (
@@ -1564,6 +1780,12 @@
 		CEC1739228D6BEB0001123BA /* stock(股票) */ = {
 			isa = PBXGroup;
 			children = (
+				CE975DD228D8651400C91F4D /* MyLottery(我的彩票) */,
+				CE975DD128D8650500C91F4D /* History(开奖信息) */,
+				CE975DD028D864EE00C91F4D /* Arena(竞技场) */,
+				CE975DCF28D864A800C91F4D /* Discover(发现) */,
+				CE975DCE28D863FC00C91F4D /* Hall(购票大厅) */,
+				CE975DCD28D863B200C91F4D /* Main */,
 			);
 			path = "stock(股票)";
 			sourceTree = "<group>";
@@ -1746,6 +1968,7 @@
 				693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */,
 				69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */,
 				6914760528B074E8001F5BB6 /* GlobalConst.m in Sources */,
+				CE975DF328D8780700C91F4D /* MyLotteryVC.m in Sources */,
 				69F6F6E728B35E4000675D4C /* SizeAndCenterVC.m in Sources */,
 				69D19B2028CEDD2E00630427 /* screenshootVC.m in Sources */,
 				6912DE5928CC6AEC005502C4 /* hittest02VC.m in Sources */,
@@ -1759,6 +1982,7 @@
 				69D2CA5A28C5D172000708E3 /* AddressBoolLoginVC.m in Sources */,
 				6934223728918CD2007561A1 /* main.m in Sources */,
 				69DF0E9F28CE15C800520043 /* SnowView.m in Sources */,
+				CE975DED28D877D700C91F4D /* DiscoverVC.m in Sources */,
 				694114CB28AC99DE00BE6792 /* YYHttpTool.m in Sources */,
 				69C71E8828A7AAC20025F49F /* ThreadVC.m in Sources */,
 				694114D428AC9A2E00BE6792 /* RSACryptor.m in Sources */,
@@ -1824,8 +2048,10 @@
 				69BE3E8A28AB2FFA00F6E4C3 /* DownloadBigBySessionVC.m in Sources */,
 				695E8CEF28A3982300A7914A /* NSOperationSerndInfoVC.m in Sources */,
 				69DE749628CB7EE700B78DA8 /* redView.m in Sources */,
+				CE975DE728D8777C00C91F4D /* HallVC.m in Sources */,
 				69C8E3D428C838E4007CE55B /* FilesVC.m in Sources */,
 				6973864D28A289C800F4239C /* GCDVC.m in Sources */,
+				CE975DF028D877EE00C91F4D /* HistoryVC.m in Sources */,
 				6965ACDC28A9DCE1000A8202 /* NSDictionary+Log.m in Sources */,
 				CE64F59528D5B8B800AFB383 /* VCCView.m in Sources */,
 				6978332928B726F500116C7A /* LocationVC.m in Sources */,
@@ -1846,6 +2072,7 @@
 				69424E4428AE2D6F00DF0939 /* NSDictionary+Property.m in Sources */,
 				69F6F6E228B32E8400675D4C /* ScrollviewAutoLayoutVC.m in Sources */,
 				69B49EA828CAFA540006DD34 /* ModalVC.m in Sources */,
+				CE975DEA28D877A800C91F4D /* ArenaVC.m in Sources */,
 				694114C228AC7BA700BE6792 /* NetworkStatusVC.m in Sources */,
 				695E8CE228A3597600A7914A /* LinTool.m in Sources */,
 				6912DE6828CC82F4005502C4 /* DrawerVC.m in Sources */,
@@ -1878,6 +2105,7 @@
 				69EA7A9A28AF1E85006A6B4B /* User.m in Sources */,
 				69424E3628AE0A6F00DF0939 /* UIImage+image.m in Sources */,
 				694114C528AC878D00BE6792 /* Reachability.m in Sources */,
+				CE975DC928D85B7D00C91F4D /* StockTabBarVC.m in Sources */,
 				CE64F58828D5AC0700AFB383 /* volumeVC.m in Sources */,
 				69BFB8FE28AF6273001A9BB1 /* SubPerson.m in Sources */,
 				69FC5D0928B4D599005DF2E5 /* BlockTableVC.m in Sources */,
