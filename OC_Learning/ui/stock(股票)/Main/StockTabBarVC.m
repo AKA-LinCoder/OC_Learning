@@ -11,13 +11,20 @@
 #import "DiscoverVC.h"
 #import "ArenaVC.h"
 #import "HistoryVC.h"
+#import "LinTabBar.h"
 
-@interface StockTabBarVC ()
-
+@interface StockTabBarVC ()<LinTabBarDelegate>
+@property(nonatomic,strong)NSMutableArray* array;
 @end
 
 @implementation StockTabBarVC
-
+- (NSMutableArray *)array
+{
+    if(_array == nil){
+        _array = [NSMutableArray array];
+    }
+    return  _array;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -35,15 +42,31 @@
     [self setupChildren:vc2 title:@"发现"];
     [self setupChildren:vc3 title:@"开奖信息"];
     [self setupChildren:vc4 title:@"我的"];
+    [self setupTabBar];
 
+}
+
+//自定义tabbar
+-(void)setupTabBar
+{
+    //移除系统tabbar
+    [self.tabBar removeFromSuperview];
+    LinTabBar *tabBar = [[LinTabBar alloc]init];
+//    tabBar.tabBarCount = self.childViewControllers.count;
+    tabBar.items = self.array;
+    [self.view addSubview:tabBar];
+    tabBar.backgroundColor = [UIColor grayColor];
+    tabBar.frame = self.tabBar.frame;
+    tabBar.delegate = self;
 }
 
 -(void) setupChildren:(UIViewController *)vc title:(NSString *) titleName
 {
     
-    vc.view.backgroundColor = [UIColor redColor];
+//    vc.view.backgroundColor = [UIColor redColor];
     vc.tabBarItem.title = titleName;
     [self addChildViewController:vc];
+    [self.array addObject:vc.tabBarItem];
 
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -55,5 +78,12 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.hidden = NO;
+}
+
+#pragma mark- LinTabBarDelagate
+- (void)linTabBar:(LinTabBar *)tabBar index:(NSInteger)index
+{
+    //切换子控制器
+    self.selectedIndex = index;
 }
 @end

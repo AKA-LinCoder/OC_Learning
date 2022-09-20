@@ -212,6 +212,8 @@
 		CE64F59128D5B86200AFB383 /* ParticleEffectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F58F28D5B86200AFB383 /* ParticleEffectVC.m */; };
 		CE64F59228D5B86200AFB383 /* ParticleEffectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */; };
 		CE64F59528D5B8B800AFB383 /* VCCView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F59428D5B8B800AFB383 /* VCCView.m */; };
+		CE8D96D328D9497900C5864E /* LinTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D96D228D9497900C5864E /* LinTabBar.m */; };
+		CE8D96D628D9500200C5864E /* LinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D96D528D9500200C5864E /* LinButton.m */; };
 		CE975DC928D85B7D00C91F4D /* StockTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DC828D85B7D00C91F4D /* StockTabBarVC.m */; };
 		CE975DE728D8777C00C91F4D /* HallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DE628D8777C00C91F4D /* HallVC.m */; };
 		CE975DEA28D877A800C91F4D /* ArenaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE975DE928D877A800C91F4D /* ArenaVC.m */; };
@@ -586,6 +588,10 @@
 		CE64F59028D5B86200AFB383 /* ParticleEffectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticleEffectVC.xib; sourceTree = "<group>"; };
 		CE64F59328D5B8B800AFB383 /* VCCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCView.h; sourceTree = "<group>"; };
 		CE64F59428D5B8B800AFB383 /* VCCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCView.m; sourceTree = "<group>"; };
+		CE8D96D128D9497900C5864E /* LinTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinTabBar.h; sourceTree = "<group>"; };
+		CE8D96D228D9497900C5864E /* LinTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinTabBar.m; sourceTree = "<group>"; };
+		CE8D96D428D9500200C5864E /* LinButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinButton.h; sourceTree = "<group>"; };
+		CE8D96D528D9500200C5864E /* LinButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinButton.m; sourceTree = "<group>"; };
 		CE975DC728D85B7D00C91F4D /* StockTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockTabBarVC.h; sourceTree = "<group>"; };
 		CE975DC828D85B7D00C91F4D /* StockTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockTabBarVC.m; sourceTree = "<group>"; };
 		CE975DE528D8777C00C91F4D /* HallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HallVC.h; sourceTree = "<group>"; };
@@ -1577,6 +1583,10 @@
 		CE975DCB28D8633600C91F4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D96D128D9497900C5864E /* LinTabBar.h */,
+				CE8D96D228D9497900C5864E /* LinTabBar.m */,
+				CE8D96D428D9500200C5864E /* LinButton.h */,
+				CE8D96D528D9500200C5864E /* LinButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1964,6 +1974,7 @@
 				69DE74A228CB87F900B78DA8 /* blueView.m in Sources */,
 				CE64F57D28D55C4C00AFB383 /* WheelBtn.m in Sources */,
 				69B9D0D128C4893300919086 /* FlagItem.m in Sources */,
+				CE8D96D628D9500200C5864E /* LinButton.m in Sources */,
 				CE64F58228D574EC00AFB383 /* ImageFoldVC.m in Sources */,
 				693D1D9D28C2EA6400E3EF3C /* UIVC.m in Sources */,
 				69B49EAD28CB14F30006DD34 /* TransformVC.m in Sources */,
@@ -2038,6 +2049,7 @@
 				69D5005E28D0864E0031A9ED /* HandleImageView.m in Sources */,
 				69F6F6DD28B32A8800675D4C /* ExtensionWangyiVC.m in Sources */,
 				6978334028B78E8100116C7A /* GeocodingVC.m in Sources */,
+				CE8D96D328D9497900C5864E /* LinTabBar.m in Sources */,
 				6965ACE728AA3C20000A8202 /* DownloadByOutPutVC.m in Sources */,
 				6959200B28B5F2000066AA46 /* CollectionViewVC.m in Sources */,
 				69BE3E8E28AB49FE00F6E4C3 /* DownloadBigBySessionTwoVC.m in Sources */,
